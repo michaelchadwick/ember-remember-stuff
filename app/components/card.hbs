@@ -1,0 +1,10 @@
+<div class="card">
+  {{#if (has-block "title")}}
+    <div class="card__title">
+      {{yield to="title"}}
+    </div>
+  {{/if}}
+  <div class="card__content">
+    {{yield}}
+  </div>
+</div>
