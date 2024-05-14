@@ -60,6 +60,25 @@ body {
   background-color: #30aba5;
 }
 
+.counter {
+  max-width: 150px;
+  padding: 10px;
+}
+
+.counter > * {
+  padding: 0 5px;
+}
+
+.counter .count,
+.counter .total {
+  text-align: right;
+}
+
+.counter .multiple {
+  display: flex;
+  justify-content: space-between;
+}
+
 form {
   display: grid;
   grid-template-columns: 1fr 6em;

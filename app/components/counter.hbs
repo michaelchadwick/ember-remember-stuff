@@ -1,0 +1,14 @@
+<div class="counter">
+  <div class="count">{{this.count}}</div>
+  <div class="multiple">
+    <span class="x">x</span>
+    <span class="num">{{@multiple}}</span>
+  </div>
+  <hr />
+  <div class="total">{{this.total}}</div>
+
+  <button type="button" {{on "click" (fn this.change 1)}}>Count +1</button>
+  <button type="button" {{on "click" (fn this.change -1)}}>Count -1</button>
+
+  <button type="button" {{on "click" this.double}}>Double Multiplier</button>
+</div>
