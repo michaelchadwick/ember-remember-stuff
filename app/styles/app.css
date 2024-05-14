@@ -89,3 +89,7 @@ form > button {
   font-size: 1em;
   grid-area: 2 / 2 / 3 / 3;
 }
+
+footer {
+  max-width: 800px;
+}
