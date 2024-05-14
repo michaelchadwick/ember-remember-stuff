@@ -1,6 +1,6 @@
 <Message::Avatar
   @title="{{@username}}'s avatar"
-  @initial={{@avatarInitial}}
+  @initial={{substring @username start=0 end=1}}
   @isActive={{@userIsActive}}
   class="{{if @isCurrentUser "current-user"}}"
 />
