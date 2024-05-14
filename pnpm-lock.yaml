@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      ember-cli-head:
+        specifier: ^2.0.0
+        version: 2.0.0
     devDependencies:
       '@babel/core':
         specifier: ^7.24.4
@@ -2801,6 +2805,10 @@ packages:
   ember-cli-get-component-path-option@1.0.0:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
 
+  ember-cli-head@2.0.0:
+    resolution: {integrity: sha512-i9qwljBlpzU/ei0xN+FiCHUvU1ZdjVXk0OzRKoeMZJK3m4p29CvB095klT0q+PigvYFYHIyTaeSWmbgjP8CZiw==}
+    engines: {node: 12.* || >= 14}
+
   ember-cli-htmlbars@5.7.2:
     resolution: {integrity: sha512-Uj6R+3TtBV5RZoJY14oZn/sNPnc+UgmC8nb5rI4P3fR/gYoyTFIZSXiIM7zl++IpMoIrocxOrgt+mhonKphgGg==}
     engines: {node: 10.* || >= 12.*}
@@ -2893,6 +2901,10 @@ packages:
   ember-fetch@8.1.2:
     resolution: {integrity: sha512-TVx24/jrvDIuPL296DV0hBwp7BWLcSMf0I8464KGz01sPytAB+ZAePbc9ooBTJDkKZEGFgatJa4nj3yF1S9Bpw==}
     engines: {node: '>= 10'}
+
+  ember-in-element-polyfill@1.0.1:
+    resolution: {integrity: sha512-eHs+7D7PuQr8a1DPqsJTsEyo3FZ1XuH6WEZaEBPDa9s0xLlwByCNKl8hi1EbXOgvgEZNHHi9Rh0vjxyfakrlgg==}
+    engines: {node: 10.* || >= 12}
 
   ember-inflector@4.0.2:
     resolution: {integrity: sha512-+oRstEa52mm0jAFzhr51/xtEWpCEykB3SEBr7vUg8YnXUZJ5hKNBppP938q8Zzr9XfJEbzrtDSGjhKwJCJv6FQ==}
@@ -9677,6 +9689,14 @@ snapshots:
 
   ember-cli-get-component-path-option@1.0.0: {}
 
+  ember-cli-head@2.0.0:
+    dependencies:
+      ember-cli-babel: 7.26.11
+      ember-cli-htmlbars: 5.7.2
+      ember-in-element-polyfill: 1.0.1
+    transitivePeerDependencies:
+      - supports-color
+
   ember-cli-htmlbars@5.7.2:
     dependencies:
       '@ember/edition-utils': 1.2.0
@@ -10050,6 +10070,15 @@ snapshots:
       whatwg-fetch: 3.6.20
     transitivePeerDependencies:
       - encoding
+      - supports-color
+
+  ember-in-element-polyfill@1.0.1:
+    dependencies:
+      debug: 4.3.4(supports-color@9.4.0)
+      ember-cli-babel: 7.26.11
+      ember-cli-htmlbars: 5.7.2
+      ember-cli-version-checker: 5.1.2
+    transitivePeerDependencies:
       - supports-color
 
   ember-inflector@4.0.2:
