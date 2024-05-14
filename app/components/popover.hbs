@@ -1,0 +1,10 @@
+<div class="popover">
+  <div class="popover__trigger">
+    {{yield this.isOpen to="trigger"}}
+  </div>
+  {{#if this.isOpen}}
+    <div class="popover__content">
+      {{yield to="content"}}
+    </div>
+  {{/if}}
+</div>
