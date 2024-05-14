@@ -1,0 +1,15 @@
+<Message::Avatar
+  @title="{{@username}}'s avatar"
+  @initial={{@avatarInitial}}
+  @isActive={{@userIsActive}}
+  class="{{if @isCurrentUser "current-user"}}"
+/>
+<section>
+  <Message::Username
+    @name={{@username}}
+    @localTime={{@userLocalTime}}
+  />
+
+  {{!-- yield allows for any extra instructions, like an actual message --}}
+  {{yield}}
+</section>
