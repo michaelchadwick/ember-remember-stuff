@@ -1,13 +1,25 @@
-<div class="audio-player">
+<div class="audio-player{{if this.isPlaying ' is-playing'}}">
   <h3>AudioPlayer</h3>
-  <audio src={{@srcURL}} {{play-when this.isPlaying}}>
-    <track kind="captions" />
-  </audio>
+  {{#if @shouldLoop}}
+    <audio loop {{play-when this.isPlaying}}>
+      <source src={{@srcURL}} />
+      <track kind="captions" />
+      Your browser does not support the audio element.
+    </audio>
+  {{else}}
+    <audio {{play-when this.isPlaying}}>
+      <source src={{@srcURL}} />
+      <track kind="captions" />
+      Your browser does not support the audio element.
+    </audio>
+  {{/if}}
 
-  <button type="button" {{on "click" this.play}}>
+  <div class="audio-title">{{split @srcURL delimiter="/" index=3}}</div>
+
+  <button type="button" id="btn-audio-play" {{on "click" this.play}}>
     <FaIcon @icon="play" />
   </button>
-  <button type="button" {{on "click" this.pause}}>
+  <button type="button" id="btn-audio-pause" {{on "click" this.pause}}>
     <FaIcon @icon="pause" />
   </button>
 </div>

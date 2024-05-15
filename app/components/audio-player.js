@@ -4,6 +4,7 @@ import { action } from '@ember/object';
 
 export default class AudioPlayerComponent extends Component {
   @tracked isPlaying = false;
+  @tracked volume = 0.2;
 
   @action
   play() {
