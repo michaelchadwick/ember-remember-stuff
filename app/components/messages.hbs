@@ -9,6 +9,8 @@
     >
       {{sanitize message.content}}
     </Message>
+  {{else}}
+    No messages yet. Add one below!
   {{/each}}
 
   <NewMessageInput @onCreate={{this.addMessage}} />
