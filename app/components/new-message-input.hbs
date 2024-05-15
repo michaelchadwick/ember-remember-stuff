@@ -1,6 +1,12 @@
-<form>
+<form {{on "submit" this.createMessage}}>
   <label for="message">Message</label>
-  <input id="message" />
+  {{! template-lint-disable no-autofocus-attribute }}
+  <Input
+    @value={{this.message}}
+    id="message"
+    placeholder="Type message here and hit enter"
+    autofocus="autofocus"
+  />
   <button type="submit">
     Send
   </button>

@@ -3,6 +3,8 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 export default class MessagesComponent extends Component {
+  @tracked username = 'anonymous';
+
   @action
   addMessage(messageText) {
     this.messages = [
@@ -10,6 +12,11 @@ export default class MessagesComponent extends Component {
       {
         username: this.username,
         active: true,
+        localTime: new Date().toLocaleTimeString('en-US', {
+          hour12: true,
+          hour: 'numeric',
+          minute: '2-digit',
+        }),
         content: `<p>${messageText}</p>`,
       },
     ];
@@ -19,7 +26,7 @@ export default class MessagesComponent extends Component {
     {
       username: 'Tomster',
       active: true,
-      localTime: '4:56pm',
+      localTime: '4:56 PM',
       content: `
         <p>
           Hey Zoey, have you had a chance to look at the EmberConf
@@ -30,7 +37,7 @@ export default class MessagesComponent extends Component {
     {
       username: 'Zoey',
       active: false,
-      localTime: '5:56pm',
+      localTime: '5:56 PM',
       current: true,
       content: `
         <p>Hey!</p>
