@@ -6,8 +6,7 @@
       @userIsCurrent={{message.current}}
       @userLocaltime={{message.localTime}}
     >
-      {{! template-lint-disable no-triple-curlies }}
-      {{{message.content}}}
+      {{sanitize message.content}}
     </Message>
   {{/each}}
 
