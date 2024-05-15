@@ -56,7 +56,7 @@ body {
   right: 0;
 }
 
-.current-user .avatar {
+.avatar.current-user {
   background-color: #30aba5;
 }
 
