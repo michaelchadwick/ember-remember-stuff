@@ -130,3 +130,8 @@ footer {
   max-width: 800px;
   padding: 1em;
 }
+
+footer .debug {
+  display: flex;
+  gap: 1em;
+}
