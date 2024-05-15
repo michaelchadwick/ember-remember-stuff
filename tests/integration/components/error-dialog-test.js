@@ -12,15 +12,15 @@ module('Integration | Component | error-dialog', function (hooks) {
 
     await render(hbs`<ErrorDialog />`);
 
-    assert.dom().hasText('');
+    assert.dom().hasText('An unknown error occurred!');
 
     // Template block usage:
     await render(hbs`
       <ErrorDialog>
-        template block text
+        <p>OMG something bad happened!</p>
       </ErrorDialog>
     `);
 
-    assert.dom().hasText('template block text');
+    assert.dom().hasText('OMG something bad happened!');
   });
 });

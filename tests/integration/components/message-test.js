@@ -7,20 +7,21 @@ module('Integration | Component | message', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Message />`);
-
-    assert.dom().hasText('');
-
-    // Template block usage:
     await render(hbs`
-      <Message>
-        template block text
+      <Message
+        @id="message-0"
+        @username='Tomster'
+        @userIsActive={{true}}
+        @userIsCurrent={{false}}
+        @userLocalTime="5:15 PM"
+      >
+        <p>Hello, I'm Tomster</p>
       </Message>
     `);
 
-    assert.dom().hasText('template block text');
+    assert.dom('.message').exists();
+    assert.dom('.message aside').exists();
+    assert.dom('.message section').exists();
+    assert.dom('.message section p').hasText("Hello, I'm Tomster");
   });
 });

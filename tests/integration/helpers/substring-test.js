@@ -6,12 +6,11 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | substring', function (hooks) {
   setupRenderingTest(hooks);
 
-  // TODO: Replace this with your real tests.
   test('it renders', async function (assert) {
-    this.set('inputValue', '1234');
+    this.set('inputValue', 'Tomster');
 
-    await render(hbs`{{substring this.inputValue}}`);
+    await render(hbs`{{substring this.inputValue start=0 end=1}}`);
 
-    assert.dom().hasText('1234');
+    assert.dom().hasText('T');
   });
 });
