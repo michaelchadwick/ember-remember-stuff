@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import ENV from 'ember-components/config/environment';
+import ENV from 'ember-fake-chat/config/environment';
 
 export default class ApplicationRoute extends Route {
   @service headData;
