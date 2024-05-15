@@ -1,0 +1,13 @@
+<div class="audio-player">
+  <h3>AudioPlayer</h3>
+  <audio src={{@srcURL}} {{play-when this.isPlaying}}>
+    <track kind="captions" />
+  </audio>
+
+  <button type="button" {{on "click" this.play}}>
+    <FaIcon @icon="play" />
+  </button>
+  <button type="button" {{on "click" this.pause}}>
+    <FaIcon @icon="pause" />
+  </button>
+</div>
