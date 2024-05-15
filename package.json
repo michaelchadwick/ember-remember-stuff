@@ -33,6 +33,9 @@
     "@ember/optional-features": "^2.1.0",
     "@ember/string": "^3.1.1",
     "@ember/test-helpers": "^3.3.0",
+    "@fortawesome/ember-fontawesome": "^2.0.0",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
     "broccoli-asset-rev": "^3.0.0",
@@ -43,6 +46,7 @@
     "ember-cli-babel": "^8.2.0",
     "ember-cli-clean-css": "^3.0.0",
     "ember-cli-dependency-checker": "^3.3.2",
+    "ember-cli-head": "^2.0.0",
     "ember-cli-htmlbars": "^6.3.0",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
@@ -56,6 +60,7 @@
     "ember-resolver": "^11.0.1",
     "ember-source": "~5.8.0",
     "ember-template-lint": "^5.13.0",
+    "ember-truth-helpers": "^4.0.3",
     "ember-welcome-page": "^7.0.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -79,10 +84,6 @@
   },
   "ember": {
     "edition": "octane"
-  },
-  "dependencies": {
-    "@fortawesome/ember-fontawesome": "^2.0.0",
-    "ember-cli-head": "^2.0.0"
   },
   "packageManager": "pnpm@9.1.1+sha512.14e915759c11f77eac07faba4d019c193ec8637229e62ec99eefb7cf3c3b75c64447882b7c485142451ee3a6b408059cdfb7b7fa0341b975f12d0f7629c71195"
 }
