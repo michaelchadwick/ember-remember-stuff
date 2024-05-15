@@ -1,11 +1,13 @@
-<Message::Avatar
-  @title="{{@username}}'s avatar"
-  @initial={{substring @username start=0 end=1}}
-  @isActive={{@userIsActive}}
-  @isCurrent={{@userIsCurrent}}
-/>
-<section>
-  <Message::Username @name={{@username}} @localTime={{@userLocalTime}} />
+<div class="message" id="{{@id}}">
+  <Message::Avatar
+    @title="{{@username}}'s avatar"
+    @initial={{substring @username start=0 end=1}}
+    @isActive={{@userIsActive}}
+    @isCurrent={{@userIsCurrent}}
+  />
+  <section>
+    <Message::Username @name={{@username}} @localTime={{@userLocalTime}} />
 
-  {{yield}}
-</section>
+    {{yield}}
+  </section>
+</div>

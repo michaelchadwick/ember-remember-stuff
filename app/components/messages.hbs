@@ -1,6 +1,7 @@
 <div class="messages">
-  {{#each this.messages as |message|}}
+  {{#each this.messages as |message index|}}
     <Message
+      @id="message-{{index}}"
       @username={{message.username}}
       @userIsActive={{message.active}}
       @userIsCurrent={{message.current}}
