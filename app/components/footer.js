@@ -1,4 +1,5 @@
 import Component from '@glimmer/component';
+import ENV from 'ember-fake-chat/config/environment';
 
 export default class FooterComponent extends Component {
   get links() {
@@ -24,6 +25,14 @@ export default class FooterComponent extends Component {
       title: 'Ember Tutorial',
       target: '_blank',
     });
+
+    if (ENV.environment != 'production') {
+      links.push({
+        route: 'tests',
+        title: '[Tests]',
+        target: '_blank',
+      });
+    }
 
     return links;
   }
