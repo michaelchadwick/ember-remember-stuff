@@ -9,6 +9,22 @@ body {
   padding: 0 2em;
 }
 
+a {
+  color: #016aba;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2e97e7;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
 form {
   display: grid;
   grid-template-columns: 1fr 6em;
@@ -37,6 +53,50 @@ form > button {
   border: 1px solid #ccc;
   font-size: 1em;
   grid-area: 2 / 2 / 3 / 3;
+}
+
+/**
+ * Top Navigation
+ */
+
+.menu {
+  align-items: baseline;
+  display: flex;
+  height: 5em;
+}
+
+.menu h1 {
+  display: inline-block;
+  padding: 0 0.5em 0 0;
+  font-size: 2.5em;
+  color: #ff6338;
+  text-shadow: 2px 2px 2px #5d0202;
+  text-transform: small-caps;
+}
+
+.menu h1:hover {
+  color: #ff7752;
+}
+
+.menu .links {
+  align-items: center;
+  display: flex;
+  padding: 0.25em 1em;
+}
+
+.menu .links a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 1em 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  bottom: 5px;
+}
+
+.menu .links a:hover,
+.menu .links a.active {
+  opacity: 1;
 }
 
 .messages {
@@ -127,7 +187,7 @@ form > button {
   background-color: lightgreen;
 }
 
-footer {
+section.debug {
   background-color: #fdfdfd;
   border-radius: 0.5em;
   box-shadow: 0 0.25em 1.5em 0.25em rgba(0 0 0 / 10%);
@@ -136,12 +196,12 @@ footer {
   padding: 1em;
 }
 
-footer .debug {
+section.debug .gallery {
   display: flex;
   gap: 1em;
 }
 
-footer .debug > div {
+section.debug .gallery > div {
   border-radius: 1em;
   box-shadow: 0 0.25em 1.5em 0.25em rgba(0 0 0 / 10%);
   max-width: 175px;
@@ -149,6 +209,17 @@ footer .debug > div {
   padding: 1em;
 }
 
-footer .debug > div h3 {
+section.debug .gallery > div h3 {
   margin-top: 0;
+}
+
+/**
+ * Footer
+ */
+footer.menu {
+  height: 2em;
+  margin: 2em 0;
+  padding: 1em 0 0.25em;
+  background-color: #ffedbb;
+  border-radius: 0.5em;
 }

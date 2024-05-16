@@ -1,0 +1,17 @@
+<nav class="menu">
+  <LinkTo @route="index" class="menu-index">
+    <h1>Ember Fake Chat</h1>
+  </LinkTo>
+
+  <div class="links">
+    {{#each this.links as |link|}}
+      <LinkTo
+        @route={{link.route}}
+        class="menu-{{link.route}}"
+        target={{link.target}}
+      >
+        {{link.title}}
+      </LinkTo>
+    {{/each}}
+  </div>
+</nav>

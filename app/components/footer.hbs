@@ -1,0 +1,12 @@
+<footer class="menu">
+  <div class="links">
+    {{#each this.links as |link|}}
+      <a href={{link.url}}
+        class="menu-{{link.route}}"
+        target={{link.target}}
+      >
+        {{link.title}}
+      </a>
+    {{/each}}
+  </div>
+</footer>

@@ -4,18 +4,19 @@
 <HeadLayout />
 
 <header>
-  <h1>Ember Fake Chat</h1>
+  <NavBar />
 </header>
 
 <main>
-  <Messages />
-
   {{outlet}}
 </main>
 
-<footer>
-  <div class="debug">
+<section class="debug">
+  <h3>Debug Stuff</h3>
+  <div class="gallery">
     <DoubleIt />
     <AudioPlayer @srcURL="/assets/audio/fezzish.mp3" @shouldLoop={{true}} />
   </div>
-</footer>
+</section>
+
+<Footer />
