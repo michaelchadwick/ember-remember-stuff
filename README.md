@@ -39,3 +39,7 @@ You will need the following things properly installed on your computer.
 
 - `ember build` (development)
 - `ember build --environment=production` (production)
+
+### Deploying
+
+Currently being built on [Netlify](https://mc-emberjs-fake-chat.netlify.app). Re-deploys on pushes to master.
