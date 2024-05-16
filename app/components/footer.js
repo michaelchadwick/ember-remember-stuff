@@ -28,6 +28,7 @@ export default class FooterComponent extends Component {
 
     if (ENV.environment != 'production') {
       links.push({
+        url: '/tests?nocontainer',
         route: 'tests',
         title: '[Tests]',
         target: '_blank',

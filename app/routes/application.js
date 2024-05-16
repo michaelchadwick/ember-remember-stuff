@@ -6,8 +6,8 @@ export default class ApplicationRoute extends Route {
   @service headData;
 
   afterModel() {
-    this.headData.title = 'Tutorial: Ember Components';
-    this.headData.ogTitle = 'Tutorial: Ember Components';
+    this.headData.title = 'FakeChat';
+    this.headData.ogTitle = 'FakeChat Ember Tutorial';
 
     const env = ENV.environment;
 
