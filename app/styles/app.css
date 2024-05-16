@@ -97,6 +97,7 @@ form > button {
 .menu .links a:hover,
 .menu .links a.active {
   opacity: 1;
+  text-decoration: underline;
 }
 
 .messages {
