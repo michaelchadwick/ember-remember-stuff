@@ -6,12 +6,19 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | split', function (hooks) {
   setupRenderingTest(hooks);
 
-  // TODO: Replace this with your real tests.
-  test('it renders', async function (assert) {
-    this.set('inputValue', '1234');
+  test('it gets first directory in file path', async function (assert) {
+    this.set('inputValue', '/foo/bar/baz');
 
-    await render(hbs`{{split this.inputValue}}`);
+    await render(hbs`{{split this.inputValue delimiter='/' index=1}}`);
 
-    assert.dom().hasText('1234');
+    assert.strictEqual(this.element.textContent.trim(), 'foo');
+  });
+
+  test('it gets last directory in file path', async function (assert) {
+    this.set('inputValue', '/foo/bar/baz');
+
+    await render(hbs`{{split this.inputValue delimiter='/' index=3}}`);
+
+    assert.strictEqual(this.element.textContent.trim(), 'baz');
   });
 });

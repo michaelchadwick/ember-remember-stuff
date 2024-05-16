@@ -6,9 +6,16 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Modifier | play-when', function (hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function (assert) {
-    await render(hbs`<div {{play-when}}></div>`);
+    this.set('isPlaying', false);
+
+    await render(hbs`
+      <audio {{play-when this.isPlaying}}>
+        <source src={{@srcURL}} />
+        <track kind="captions" />
+        Your browser does not support the audio element.
+      </audio>
+    `);
 
     assert.ok(true);
   });
