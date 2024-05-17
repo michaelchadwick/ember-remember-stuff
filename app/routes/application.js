@@ -29,9 +29,7 @@ export default class ApplicationRoute extends Route {
         break;
       }
       case 'production': {
-        console.log(
-          "ENV: Oh, boy! This tutorial is running in production! Don't do anything critical here.",
-        );
+        console.log('ENV: Oh, boy! This tutorial is running in production! Be careful.');
         break;
       }
       default: {
