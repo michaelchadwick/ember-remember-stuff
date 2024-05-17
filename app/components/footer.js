@@ -8,6 +8,8 @@ export default class FooterComponent extends Component {
     links.push({
       url: 'https://michaelchadwick.info',
       route: 'author',
+      icon: 'at',
+      iconType: 'fas',
       title: 'Author',
       target: '_blank',
     });
@@ -15,14 +17,18 @@ export default class FooterComponent extends Component {
     links.push({
       url: 'https://github.com/michaelchadwick/ember-fake-chat',
       route: 'source',
-      title: 'Github Source',
+      icon: 'github',
+      iconType: 'fab',
+      title: 'Source',
       target: '_blank',
     });
 
     links.push({
       url: 'https://guides.emberjs.com/release/components/',
       route: 'tutorial',
-      title: 'Ember Tutorial',
+      icon: 'book',
+      iconType: 'fas',
+      title: 'Docs',
       target: '_blank',
     });
 
@@ -30,6 +36,8 @@ export default class FooterComponent extends Component {
       links.push({
         url: '/tests?nocontainer',
         route: 'tests',
+        icon: 'flask',
+        iconType: 'fas',
         title: '[Tests]',
         target: '_blank',
       });

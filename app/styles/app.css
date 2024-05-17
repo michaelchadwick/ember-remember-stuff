@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 body {
   background-attachment: fixed;
   background-color: #fdfdfd;
@@ -53,6 +54,10 @@ form > button {
   border: 1px solid #ccc;
   font-size: 1em;
   grid-area: 2 / 2 / 3 / 3;
+}
+
+svg.svg-inline--fa {
+  margin-right: 0.25em;
 }
 
 /**

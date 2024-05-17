@@ -1,11 +1,8 @@
 <footer class="menu">
   <div class="links">
     {{#each this.links as |link|}}
-      <a href={{link.url}}
-        class="menu-{{link.route}}"
-        target={{link.target}}
-      >
-        {{link.title}}
+      <a href={{link.url}} class="menu-{{link.route}}" target={{link.target}}>
+        <FaIcon @icon={{link.icon}} @prefix={{link.iconType}} />{{link.title}}
       </a>
     {{/each}}
   </div>

@@ -36,6 +36,8 @@
     "@ember/test-helpers": "^3.3.0",
     "@fortawesome/ember-fontawesome": "^2.0.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
