@@ -1,0 +1,14 @@
+<h2>Related Links</h2>
+{{#if @model}}
+  <ul>
+    {{#each @model as |link|}}
+      <li>
+        <a href={{link.url}} target={{link.target}}>
+          {{link.title}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No links found.</p>
+{{/if}}

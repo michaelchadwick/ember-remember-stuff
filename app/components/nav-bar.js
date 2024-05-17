@@ -10,6 +10,12 @@ export default class NavBarComponent extends Component {
       target: '_self',
     });
 
+    links.push({
+      route: 'links',
+      title: 'Links',
+      target: '_self',
+    });
+
     return links;
   }
 }
