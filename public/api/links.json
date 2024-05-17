@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "type": "links",
+      "id": "emberjs",
+      "attributes": {
+        "url": "https://emberjs.com",
+        "title": "EmberJS",
+        "target": "_blank"
+      }
+    },
+    {
+      "type": "links",
+      "id": "emberjs-guides",
+      "attributes": {
+        "url": "https://guides.emberjs.com",
+        "title": "EmberJS Guides",
+        "target": "_blank"
+      }
+    },
+    {
+      "type": "links",
+      "id": "emberjs-github-source",
+      "attributes": {
+        "url": "https://github.com/emberjs/ember.js",
+        "title": "EmberJS Github Source",
+        "target": "_blank"
+      }
+    }
+  ]
+}
