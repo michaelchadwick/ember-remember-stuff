@@ -52,8 +52,8 @@ module('Acceptance | fake chat', function (hooks) {
 
     assert.dom('footer').exists();
     assert.dom('footer a.menu-author').hasText('Author');
-    assert.dom('footer a.menu-source').hasText('Github Source');
-    assert.dom('footer a.menu-tutorial').hasText('Ember Tutorial');
+    assert.dom('footer a.menu-source').hasText('Source');
+    assert.dom('footer a.menu-tutorial').hasText('Docs');
     if (ENV.environment != 'production') {
       assert.dom('footer a.menu-tests').hasText('[Tests]');
     }
