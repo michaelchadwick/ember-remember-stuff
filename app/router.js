@@ -10,7 +10,6 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   this.route('about');
   this.route('links');
-  this.route('link', { path: '/links/:links_id' });
 
   if (ENV.environment != 'production') {
     this.route('tests', { path: '/tests?nocontainer' });
