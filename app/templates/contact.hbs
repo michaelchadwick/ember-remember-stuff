@@ -1,18 +1,2 @@
 <h2>Contact</h2>
-<p>Want to say hello? Have a suggestion for this app? Drop me a line.</p>
-
-<form {{on "submit" this.sendMessage}}>
-  <label for="name"></label>
-  <Input @value={{this.name}} id="name" class="light" placeholder="Name" />
-  <label for="email"></label>
-  <Input @value={{this.email}} id="email" class="light" placeholder="Email" />
-  <label for="message"></label>
-  <Textarea
-    @value={{this.message}}
-    id="message"
-    class="light"
-    placeholder="Message"
-  />
-
-  <button type="submit">Send</button>
-</form>
+<ContactForm />
