@@ -39,12 +39,20 @@ module('Acceptance | fake chat', function (hooks) {
     assert.dom('nav').exists();
     assert.dom('nav a.menu-index').hasText('Ember Fake Chat');
     assert.dom('nav a.menu-about').hasText('About');
+    assert.dom('nav a.menu-links').hasText('Links');
+    assert.dom('nav a.menu-contact').hasText('Contact');
 
     await click('nav a.menu-index');
     assert.strictEqual(currentURL(), '/');
 
     await click('nav a.menu-about');
     assert.strictEqual(currentURL(), '/about');
+
+    await click('nav a.menu-links');
+    assert.strictEqual(currentURL(), '/links');
+
+    await click('nav a.menu-contact');
+    assert.strictEqual(currentURL(), '/contact');
   });
 
   test('navigating using the footer', async function (assert) {
