@@ -1,0 +1,17 @@
+.counter > * {
+  padding: 0 5px;
+}
+
+.counter .count,
+.counter .total {
+  text-align: right;
+}
+
+.counter .multiple {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter button {
+  margin-top: 1em;
+}

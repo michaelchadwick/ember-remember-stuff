@@ -1,0 +1,29 @@
+.messages {
+  background-color: #fdfdfd;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 1.5em 0.25em rgba(0 0 0 / 10%);
+  padding: 2em;
+}
+
+.messages > .message {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
+
+.messages > .message > section {
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
+}
+
+.messages p,
+.messages ul,
+.username {
+  margin: 0.5em 0;
+}
+
+.local-time {
+  font-size: 0.8em;
+  color: #da6c4d;
+  font-weight: normal;
+  margin-left: 10px;
+}

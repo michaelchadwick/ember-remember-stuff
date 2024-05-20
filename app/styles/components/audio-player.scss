@@ -1,0 +1,11 @@
+.audio-player #btn-audio-pause {
+  background-color: lightpink;
+}
+
+.audio-player.is-playing #btn-audio-pause {
+  background-color: #fdfdfd;
+}
+
+.audio-player.is-playing #btn-audio-play {
+  background-color: lightgreen;
+}

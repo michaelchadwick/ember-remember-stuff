@@ -1,0 +1,27 @@
+.avatar {
+  position: relative;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-weight: bold;
+  background-color: #ff907b;
+}
+
+.avatar.is-active::after {
+  content: " ";
+  height: 14px;
+  width: 14px;
+  border: solid 3px white;
+  border-radius: 50%;
+  background-color: #8bc34a;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.avatar.current-user {
+  background-color: #30aba5;
+}
