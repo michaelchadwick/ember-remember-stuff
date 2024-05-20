@@ -110,9 +110,6 @@ importers:
       ember-modifier:
         specifier: ^4.1.0
         version: 4.1.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0))
-      ember-page-title:
-        specifier: ^8.2.3
-        version: 8.2.3(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0))
       ember-qunit:
         specifier: ^8.0.2
         version: 8.0.2(@ember/test-helpers@3.3.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0))(webpack@5.91.0))(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0))(qunit@2.20.1)
@@ -3094,12 +3091,6 @@ packages:
     peerDependenciesMeta:
       ember-source:
         optional: true
-
-  ember-page-title@8.2.3:
-    resolution: {integrity: sha512-9XH4EVPCpSCyXRsLPzdDydU4HgQnaVeJJTrRF0WVh5bZERI9DgxuHv1NPmZU28todHRH91KcBc5nx8kIVJmqUw==}
-    engines: {node: 16.* || >= 18}
-    peerDependencies:
-      ember-source: '>= 3.28.0'
 
   ember-qunit@8.0.2:
     resolution: {integrity: sha512-Rf60jeUTWNsF3Imf/FLujW/B/DFmKVXKmXO1lirTXjpertKfwRhp/3MnN8a/U/WyodTIsERkInGT1IqTtphCdQ==}
@@ -10589,14 +10580,6 @@ snapshots:
       ember-cli-normalize-entity-name: 1.0.0
       ember-cli-string-utils: 1.1.0
     optionalDependencies:
-      ember-source: 5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0)
-    transitivePeerDependencies:
-      - supports-color
-
-  ember-page-title@8.2.3(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0)):
-    dependencies:
-      '@embroider/addon-shim': 1.8.8
-      '@simple-dom/document': 1.4.0
       ember-source: 5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0)
     transitivePeerDependencies:
       - supports-color
