@@ -1,0 +1,34 @@
+<div class="contact-form" data-test-contact-form ...attributes>
+  <p>Want to say hello? Have a suggestion for this app? Drop me a line.</p>
+
+  <form data-test-form>
+    <div class="item" data-test-name>
+      <label for="name"></label>
+      <Input @value={{this.name}} id="name" class="light" placeholder="Name" />
+    </div>
+    <div class="item" data-test-email>
+      <label for="email"></label>
+      <Input
+        @value={{this.email}}
+        autocapitalize="off"
+        autocorrect="off"
+        id="email"
+        class="light"
+        placeholder="Email"
+      />
+    </div>
+    <div class="item" data-test-message>
+      <label for="message"></label>
+      <Textarea
+        @value={{this.message}}
+        id="message"
+        class="light"
+        placeholder="Message"
+      />
+    </div>
+
+    <button type="button" {{on "click" this.sendMessage}} data-test-submit>
+      Send Message
+    </button>
+  </form>
+</div>
