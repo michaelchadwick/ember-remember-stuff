@@ -4,13 +4,13 @@
   </LinkTo>
 
   <div class="links">
-    {{#each this.links as |link|}}
+    {{#each this.routes as |route|}}
       <LinkTo
-        @route={{link.route}}
-        class="menu-{{link.route}}"
-        target={{link.target}}
+        @route={{route.route}}
+        class="menu-{{route.route}}"
+        target={{route.target}}
       >
-        {{link.title}}
+        {{route.title}}
       </LinkTo>
     {{/each}}
   </div>

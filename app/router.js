@@ -14,4 +14,5 @@ Router.map(function () {
   if (ENV.environment != 'production') {
     this.route('tests', { path: '/tests?nocontainer' });
   }
+  this.route('contact');
 });
