@@ -44,8 +44,6 @@ form > textarea::placeholder {
 }
 
 form > input {
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
   border: 1px solid #ccc;
 }
 
@@ -54,9 +52,7 @@ form > textarea {
 }
 
 form > button {
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-  border: 1px solid #ccc;
+  cursor: pointer;
   font-size: 1em;
 }
 
