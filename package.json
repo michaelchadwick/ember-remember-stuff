@@ -42,6 +42,7 @@
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
     "broccoli-asset-rev": "^3.0.0",
+    "class-validator": "^0.14.1",
     "concurrently": "^8.2.2",
     "ember-auto-import": "^2.7.2",
     "ember-cli": "~5.8.1",
@@ -80,9 +81,11 @@
     "qunit-dom": "^2.0.0",
     "sass": "^1.77.2",
     "stylelint": "^15.11.0",
+    "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-prettier": "^4.1.0",
     "tracked-built-ins": "^3.3.0",
+    "validator": "^13.12.0",
     "webpack": "^5.91.0"
   },
   "engines": {
@@ -91,8 +94,5 @@
   "ember": {
     "edition": "octane"
   },
-  "packageManager": "pnpm@9.1.1+sha512.14e915759c11f77eac07faba4d019c193ec8637229e62ec99eefb7cf3c3b75c64447882b7c485142451ee3a6b408059cdfb7b7fa0341b975f12d0f7629c71195",
-  "dependencies": {
-    "stylelint-config-recommended-scss": "^14.0.0"
-  }
+  "packageManager": "pnpm@9.1.1+sha512.14e915759c11f77eac07faba4d019c193ec8637229e62ec99eefb7cf3c3b75c64447882b7c485142451ee3a6b408059cdfb7b7fa0341b975f12d0f7629c71195"
 }
