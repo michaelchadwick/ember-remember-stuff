@@ -10,6 +10,7 @@ export default class ApplicationRoute extends Route {
   afterModel() {
     this.headData.title = 'FakeChat';
     this.headData.ogTitle = 'FakeChat Ember Tutorial';
+    this.headData.routeTitle = null;
 
     const env = ENV.environment;
 

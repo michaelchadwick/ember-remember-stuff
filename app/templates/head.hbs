@@ -1,4 +1,8 @@
-<title>({{this.model.envTitle}}) {{this.model.title}}</title>
+<title>({{this.model.envTitle}})
+  {{this.model.title}}{{if
+    this.model.routeTitle
+    (concat " | " this.model.routeTitle)
+  }}</title>
 
 {{! template-lint-disable no-forbidden-elements }}
 <meta property="og:title" content={{this.model.ogTitle}} />
