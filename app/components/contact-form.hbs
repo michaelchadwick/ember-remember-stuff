@@ -1,33 +1,52 @@
 <div class="contact-form" data-test-contact-form ...attributes>
   <p>Want to say hello? Have a suggestion for this app? Drop me a line.</p>
 
-  <form data-test-form>
+  <form {{on "submit" this.handleSubmit}} data-test-form>
     <div class="item" data-test-name>
       <label for="name"></label>
-      <Input @value={{this.name}} id="name" class="light" placeholder="Name" />
+      <input
+        value={{this.name}}
+        {{on "input" this.handleInput}}
+        autocapitalize="off"
+        autocorrect="off"
+        id="name"
+        class="light{{if this.errors.name ' error'}}"
+        placeholder="Name"
+      />
+      {{#if this.errors.name}}
+        <div class="validation-error">{{this.errors.name}}</div>
+      {{/if}}
     </div>
     <div class="item" data-test-email>
       <label for="email"></label>
-      <Input
-        @value={{this.email}}
+      <input
+        value={{this.email}}
+        {{on "input" this.handleInput}}
         autocapitalize="off"
         autocorrect="off"
         id="email"
-        class="light"
+        class="light{{if this.errors.email ' error'}}"
         placeholder="Email"
       />
+      {{#if this.errors.email}}
+        <div class="validation-error">{{this.errors.email}}</div>
+      {{/if}}
     </div>
     <div class="item" data-test-message>
       <label for="message"></label>
-      <Textarea
-        @value={{this.message}}
+      <textarea
+        value={{this.message}}
+        {{on "input" this.handleInput}}
         id="message"
-        class="light"
+        class="light{{if this.errors.message ' error'}}"
         placeholder="Message"
       />
+      {{#if this.errors.message}}
+        <div class="validation-error">{{this.errors.message}}</div>
+      {{/if}}
     </div>
 
-    <button type="button" {{on "click" this.sendMessage}} data-test-submit>
+    <button type="submit" data-test-submit>
       Send Message
     </button>
   </form>
