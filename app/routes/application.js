@@ -1,9 +1,11 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
 import ENV from 'ember-fake-chat/config/environment';
 
 export default class ApplicationRoute extends Route {
   @service headData;
+  @tracked env;
 
   afterModel() {
     this.headData.title = 'FakeChat';
