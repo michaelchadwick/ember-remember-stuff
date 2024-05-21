@@ -15,7 +15,11 @@
   {{/if}}
   {{! <input type="range" min="0" max="100" step="1" value="20" id="audio-volume" /> }}
 
-  <div class="audio-title">{{split @srcURL delimiter="/" index=3}}</div>
+  {{#if (eq this.env "production")}}
+    <div class="audio-title">{{split @srcURL delimiter="/" index=5}}</div>
+  {{else}}
+    <div class="audio-title">{{split @srcURL delimiter="/" index=3}}</div>
+  {{/if}}
 
   <button type="button" id="btn-audio-play" {{on "click" this.play}}>
     <FaIcon @icon="play" />
