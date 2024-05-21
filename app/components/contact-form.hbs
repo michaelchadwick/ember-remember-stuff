@@ -5,14 +5,14 @@
     <div class="item" data-test-name>
       <label for="name"></label>
       <input
-        value={{this.name}}
-        {{on "input" this.handleInput}}
         autocapitalize="off"
         autocorrect="off"
-        id="name"
         class="light{{if this.errors.name ' error'}}"
+        id="name"
         name="name"
         placeholder="Name"
+        value={{this.name}}
+        {{on "input" this.handleInput}}
       />
       {{#if this.errors.name}}
         <div class="validation-error">{{this.errors.name}}</div>
@@ -21,14 +21,14 @@
     <div class="item" data-test-email>
       <label for="email"></label>
       <input
-        value={{this.email}}
-        {{on "input" this.handleInput}}
         autocapitalize="off"
         autocorrect="off"
+        class="light{{if this.errors.email ' error'}}"
         id="email"
         name="email"
-        class="light{{if this.errors.email ' error'}}"
         placeholder="Email"
+        value={{this.email}}
+        {{on "input" this.handleInput}}
       />
       {{#if this.errors.email}}
         <div class="validation-error">{{this.errors.email}}</div>
@@ -37,12 +37,12 @@
     <div class="item" data-test-message>
       <label for="message"></label>
       <textarea
-        value={{this.message}}
-        {{on "input" this.handleInput}}
+        class="light{{if this.errors.message ' error'}}"
         id="message"
         name="message"
-        class="light{{if this.errors.message ' error'}}"
         placeholder="Message"
+        value={{this.message}}
+        {{on "input" this.handleInput}}
       />
       {{#if this.errors.message}}
         <div class="validation-error">{{this.errors.message}}</div>
