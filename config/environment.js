@@ -15,8 +15,9 @@ module.exports = function (environment) {
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      MUSIC_API_ROOT: 'https://music.nebyoolae.com',
+      SONG_API_URL:
+        'https://music.nebyoolae.com/jsonapi/views/songs/songs_neb?include=field_album_id,field_album_id.field_album_cover,field_artist_id',
     },
   };
 

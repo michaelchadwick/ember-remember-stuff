@@ -1,0 +1,20 @@
+<h2>Songs</h2>
+<p>The author of this web app is also a musician! Here are 5 random songs
+  they've done.</p>
+{{#if @model}}
+  <ul>
+    {{#each @model as |song|}}
+      <li>
+        <a href={{song.url}} target="_blank" rel="noopener noreferrer">
+          {{song.title}}
+        </a>
+        from
+        <strong>{{song.album}}</strong>
+        by
+        <em>{{song.artist}}</em>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No songs found.</p>
+{{/if}}

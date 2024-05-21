@@ -18,6 +18,11 @@ export default class NavBarComponent extends Component {
         title: 'Contact',
         target: '_self',
       },
+      {
+        route: 'songs',
+        title: 'Songs',
+        target: '_self',
+      },
     ];
   }
 }
