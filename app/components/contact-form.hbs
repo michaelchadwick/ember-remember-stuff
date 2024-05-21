@@ -11,6 +11,7 @@
         autocorrect="off"
         id="name"
         class="light{{if this.errors.name ' error'}}"
+        name="name"
         placeholder="Name"
       />
       {{#if this.errors.name}}
@@ -25,6 +26,7 @@
         autocapitalize="off"
         autocorrect="off"
         id="email"
+        name="email"
         class="light{{if this.errors.email ' error'}}"
         placeholder="Email"
       />
@@ -38,6 +40,7 @@
         value={{this.message}}
         {{on "input" this.handleInput}}
         id="message"
+        name="message"
         class="light{{if this.errors.message ' error'}}"
         placeholder="Message"
       />

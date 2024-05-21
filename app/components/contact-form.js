@@ -44,15 +44,12 @@ export default class ContactFormComponent extends Component {
         this.errors.message = this.isMessageValid ? null : 'Message is required.';
         break;
     }
-    // console.log('this.errors', this.errors);
   }
 
   @action
   handleInput(event) {
     let { name, value } = event.target;
     this[name] = value;
-
-    // console.log('handleInput(event)', name, value);
 
     this.validateField(name);
   }
@@ -74,12 +71,10 @@ export default class ContactFormComponent extends Component {
 
   @action
   sendMessage() {
-    // Handle form submission, e.g., send data to the server
-    console.log('Form submitted:', {
-      name: this.name,
-      email: this.email,
-      message: this.message,
-    });
+    window.alert(
+      `${this.name} (${this.email}) said:\n${this.message}\n\nTODO: actually send this somewhere :D`,
+    );
+
     // Clear the form
     this.name = '';
     this.email = '';
