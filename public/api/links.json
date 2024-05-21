@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "type": "links",
+      "type": "link",
       "id": "emberjs",
       "attributes": {
         "url": "https://emberjs.com",
@@ -10,7 +10,7 @@
       }
     },
     {
-      "type": "links",
+      "type": "link",
       "id": "emberjs-guides",
       "attributes": {
         "url": "https://guides.emberjs.com",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "type": "links",
+      "type": "link",
       "id": "emberjs-github-source",
       "attributes": {
         "url": "https://github.com/emberjs/ember.js",
