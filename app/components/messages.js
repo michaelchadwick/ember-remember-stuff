@@ -29,8 +29,7 @@ export default class MessagesComponent extends Component {
       localTime: '4:56 PM',
       content: `
         <p>
-          Hey Zoey, have you had a chance to look at the
-          <strong>DecEmberConfRants</strong> brainstorming doc I sent you?
+          Hey Zoey, did you look at the <strong>DecEmberConfRants</strong> brainstorming doc?
         </p>
       `,
     },
@@ -40,18 +39,12 @@ export default class MessagesComponent extends Component {
       localTime: '5:56 PM',
       current: true,
       content: `
-        <p>Hey!</p>
-
-        <p>
+        <p>Hey!
           I love the ideas! I'm really excited about where this year's
           <strong>DecEmberConfRants</strong> is going, I'm sure it's going to be the best one yet. Some quick notes:
         </p>
 
         <ul>
-          <li>
-            Definitely agree that we should double the coffee budget this
-            year (it really is impressive how much we go through!)
-          </li>
           <li>
             A personal plane for each attendee would definitely make the getting to the venue ultra cool, but I think it might be a bit out of our budget. Maybe we could rent some electric scooters instead?
           </li>
