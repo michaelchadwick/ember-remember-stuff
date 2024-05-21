@@ -26,8 +26,38 @@ module('Acceptance | fake chat', function (hooks) {
     assert.dom('nav').exists();
     assert.dom('h1').hasText('Ember Fake Chat');
     assert.dom('h2').hasText('About');
+    assert
+      .dom('p')
+      .hasText('Ember Fake Chat is a web application built to learn about EmberJS Core Concepts.');
 
-    assert.dom('nav a h1').hasText('Ember Fake Chat');
+    await click('nav a h1');
+
+    assert.strictEqual(currentURL(), '/');
+  });
+
+  test('visiting /links', async function (assert) {
+    await visit('/links');
+
+    assert.strictEqual(currentURL(), '/links');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('Ember Fake Chat');
+    assert.dom('h2').hasText('Related Links');
+    assert.dom('ul li').exists();
+
+    await click('nav a h1');
+
+    assert.strictEqual(currentURL(), '/');
+  });
+
+  test('visiting /contact', async function (assert) {
+    await visit('/contact');
+
+    assert.strictEqual(currentURL(), '/contact');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('Ember Fake Chat');
+    assert.dom('h2').hasText('Contact');
+    assert.dom('.contact-form form').exists();
+
     await click('nav a h1');
 
     assert.strictEqual(currentURL(), '/');
@@ -64,6 +94,7 @@ module('Acceptance | fake chat', function (hooks) {
     assert.dom('footer a.menu-tutorial').hasText('Docs');
     if (ENV.environment != 'production') {
       assert.dom('footer a.menu-tests').hasText('[Tests]');
+      assert.dom('footer a.menu-prod').hasText('[Prod]');
     }
   });
 });
