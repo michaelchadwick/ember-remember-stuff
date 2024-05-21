@@ -1,6 +1,6 @@
 # Ember Fake Chat Tutorial Site
 
-Tutorial app to learn about Ember Components. Displays hard-coded chat messages, and allows for new ones to be created.
+Tutorial app to learn about [Ember Core Concepts](https://guides.emberjs.com/release/components/). Displays hard-coded chat messages, and allows for new ones to be created.
 
 ## Prerequisites
 
