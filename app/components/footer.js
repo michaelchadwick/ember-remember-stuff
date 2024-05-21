@@ -41,6 +41,15 @@ export default class FooterComponent extends Component {
         title: '[Tests]',
         target: '_blank',
       });
+
+      links.push({
+        url: 'https://mc-emberjs-fake-chat.netlify.app',
+        route: 'prod',
+        icon: 'square-up-right',
+        iconType: 'fas',
+        title: '[Prod]',
+        target: '_blank',
+      });
     }
 
     return links;
