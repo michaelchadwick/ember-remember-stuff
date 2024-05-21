@@ -4,17 +4,19 @@ import { tracked } from '@glimmer/tracking';
 import ENV from 'ember-fake-chat/config/environment';
 
 export default class ApplicationRoute extends Route {
+  setupController(controller) {
+    controller.set('env', ENV.environment);
+  }
+
   @service headData;
-  @tracked env;
+  @tracked env = ENV.environment;
 
   afterModel() {
     this.headData.title = 'FakeChat';
     this.headData.ogTitle = 'FakeChat Ember Tutorial';
     this.headData.routeTitle = null;
 
-    const env = ENV.environment;
-
-    if (env === 'production') {
+    if (this.env === 'production') {
       this.headData.faviconType = 'prod';
       this.headData.envTitle = 'prod';
     } else {
@@ -22,7 +24,7 @@ export default class ApplicationRoute extends Route {
       this.headData.envTitle = 'dev';
     }
 
-    switch (env) {
+    switch (this.env) {
       case 'development': {
         console.log('ENV: Oh, boy! This tutorial is running in development! Go nuts!');
         break;
