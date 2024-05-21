@@ -1,15 +1,23 @@
 import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
+import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import ENV from 'ember-fake-chat/config/environment';
 
 export default class ApplicationRoute extends Route {
+  @service headData;
+  @service store;
+  @tracked env = ENV.environment;
+  @tracked ghUsername = 'michaelchadwick';
+  @tracked ghUserObject;
+
   setupController(controller) {
     controller.set('env', ENV.environment);
+    controller.set('ghUsername', this.ghUsername);
   }
 
-  @service headData;
-  @tracked env = ENV.environment;
+  model() {
+    return this.store.findRecord('gh-user', this.ghUsername);
+  }
 
   afterModel() {
     this.headData.title = 'FakeChat';
