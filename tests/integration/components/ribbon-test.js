@@ -7,11 +7,11 @@ module('Integration | Component | ribbon', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`<Ribbon />`);
+    await render(hbs`<Layout::Ribbon />`);
 
     assert.dom('.ribbon').exists();
 
-    await render(hbs`<Ribbon @position="left" @content="Foobar" />`);
+    await render(hbs`<Layout::Ribbon @position="left" @content="Foobar" />`);
 
     assert.dom('.ribbon').hasClass('left');
     assert.dom('.ribbon').hasText('Foobar');

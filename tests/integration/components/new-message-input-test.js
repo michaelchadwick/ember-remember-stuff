@@ -7,7 +7,7 @@ module('Integration | Component | new-message-input', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`<NewMessageInput />`);
+    await render(hbs`<Forms::NewMessageInput />`);
 
     assert.dom('input#new-message-text').exists();
   });
