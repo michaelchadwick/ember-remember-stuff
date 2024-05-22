@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-import ENV from 'ember-fake-chat/config/environment';
+import ENV from 'remember-stuff/config/environment';
 
 export default class ApplicationRoute extends Route {
   @service headData;
@@ -20,8 +20,8 @@ export default class ApplicationRoute extends Route {
   }
 
   afterModel() {
-    this.headData.title = 'FakeChat';
-    this.headData.ogTitle = 'FakeChat Ember Tutorial';
+    this.headData.title = 'RemEmberStuff';
+    this.headData.ogTitle = 'RemEmberStuff Tutorial';
     this.headData.routeTitle = null;
 
     if (this.env === 'production') {

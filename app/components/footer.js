@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-import ENV from 'ember-fake-chat/config/environment';
+import ENV from 'remember-stuff/config/environment';
 
 export default class FooterComponent extends Component {
   get links() {
@@ -15,7 +15,7 @@ export default class FooterComponent extends Component {
     });
 
     links.push({
-      url: 'https://github.com/michaelchadwick/ember-fake-chat',
+      url: 'https://github.com/michaelchadwick/remember-stuff',
       route: 'source',
       icon: 'github',
       iconType: 'fab',
@@ -43,7 +43,7 @@ export default class FooterComponent extends Component {
       });
 
       links.push({
-        url: 'https://mc-emberjs-fake-chat.netlify.app',
+        url: 'https://mc-emberjs-remember-stuff.netlify.app',
         route: 'prod',
         icon: 'square-up-right',
         iconType: 'fas',

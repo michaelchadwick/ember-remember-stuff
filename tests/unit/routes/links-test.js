@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { setupTest } from 'ember-fake-chat/tests/helpers';
+import { setupTest } from 'remember-stuff/tests/helpers';
 
 module('Unit | Route | links', function (hooks) {
   setupTest(hooks);

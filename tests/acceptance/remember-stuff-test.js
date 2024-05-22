@@ -1,9 +1,9 @@
 import { module, test } from 'qunit';
 import { click, visit, currentURL } from '@ember/test-helpers';
-import { setupApplicationTest } from 'ember-fake-chat/tests/helpers';
-import ENV from 'ember-fake-chat/config/environment';
+import { setupApplicationTest } from 'remember-stuff/tests/helpers';
+import ENV from 'remember-stuff/config/environment';
 
-module('Acceptance | fake chat', function (hooks) {
+module('Acceptance | remember stuff', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /', async function (assert) {
@@ -11,7 +11,7 @@ module('Acceptance | fake chat', function (hooks) {
 
     assert.strictEqual(currentURL(), '/');
     assert.dom('nav').exists();
-    assert.dom('h1').hasText('Ember Fake Chat');
+    assert.dom('h1').hasText('RemEmber Stuff');
 
     assert.dom('nav .links a:first-of-type').hasText('About');
     await click('nav .links a:first-of-type');
@@ -24,7 +24,7 @@ module('Acceptance | fake chat', function (hooks) {
 
     assert.strictEqual(currentURL(), '/about');
     assert.dom('nav').exists();
-    assert.dom('h1').hasText('Ember Fake Chat');
+    assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('About');
     assert.dom('p').hasText('RemEmber Stuff is a web application I built to learn about EmberJS.');
 
@@ -38,7 +38,7 @@ module('Acceptance | fake chat', function (hooks) {
 
     assert.strictEqual(currentURL(), '/links');
     assert.dom('nav').exists();
-    assert.dom('h1').hasText('Ember Fake Chat');
+    assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Related Links');
     assert.dom('ul li').exists();
 
@@ -52,7 +52,7 @@ module('Acceptance | fake chat', function (hooks) {
 
     assert.strictEqual(currentURL(), '/contact');
     assert.dom('nav').exists();
-    assert.dom('h1').hasText('Ember Fake Chat');
+    assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Contact');
     assert.dom('.contact-form form').exists();
 
@@ -65,7 +65,7 @@ module('Acceptance | fake chat', function (hooks) {
     await visit('/');
 
     assert.dom('nav').exists();
-    assert.dom('nav a.menu-index').hasText('Ember Fake Chat');
+    assert.dom('nav a.menu-index').hasText('RemEmber Stuff');
     assert.dom('nav a.menu-about').hasText('About');
     assert.dom('nav a.menu-messages').hasText('Messages');
     assert.dom('nav a.menu-music').hasText('Music');

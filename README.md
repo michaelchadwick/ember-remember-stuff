@@ -1,4 +1,4 @@
-# Ember Fake Chat Tutorial Site
+# RemEmber Stuff Tutorial Site
 
 Tutorial app to learn about [Ember Core Concepts](https://guides.emberjs.com/release/components/). Displays hard-coded chat messages, and allows for new ones to be created.
 
@@ -16,7 +16,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 - `git clone <repository-url>` this repository
-- `cd ember-fake-chat`
+- `cd remember-stuff`
 - `pnpm install`
 
 ## Running / Development

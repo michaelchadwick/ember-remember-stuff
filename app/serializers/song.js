@@ -1,5 +1,5 @@
 import JSONAPISerializer from '@ember-data/serializer/json-api';
-import ENV from 'ember-fake-chat/config/environment';
+import ENV from 'remember-stuff/config/environment';
 
 export default class SongSerializer extends JSONAPISerializer {
   normalize(type, payload) {

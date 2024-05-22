@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'ember-fake-chat',
+    modulePrefix: 'remember-stuff',
     environment,
     rootURL: '/',
     locationType: 'history',

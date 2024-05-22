@@ -1,4 +1,4 @@
-import { formatCurrency } from 'ember-fake-chat/helpers/format-currency';
+import { formatCurrency } from 'remember-stuff/helpers/format-currency';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | format currency', function () {

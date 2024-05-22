@@ -1,5 +1,5 @@
-import Application from 'ember-fake-chat/app';
-import config from 'ember-fake-chat/config/environment';
+import Application from 'remember-stuff/app';
+import config from 'remember-stuff/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';

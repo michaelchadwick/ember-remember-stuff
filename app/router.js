@@ -1,6 +1,6 @@
 import EmberRouter from '@ember/routing/router';
-import config from 'ember-fake-chat/config/environment';
-import ENV from 'ember-fake-chat/config/environment';
+import config from 'remember-stuff/config/environment';
+import ENV from 'remember-stuff/config/environment';
 
 export default class Router extends EmberRouter {
   location = config.locationType;
