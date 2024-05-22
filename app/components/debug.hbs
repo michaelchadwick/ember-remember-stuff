@@ -1,0 +1,17 @@
+<details class="debug" open>
+  <summary>Component Debugging</summary>
+  <div class="gallery">
+    <DoubleIt />
+
+    {{#if (eq this.env "production")}}
+      <AudioPlayer
+        @srcURL="https://neb.host/files/p/fezzish.mp3"
+        @shouldLoop={{true}}
+      />
+    {{else}}
+      <AudioPlayer @srcURL="/assets/audio/fezzish.mp3" @shouldLoop={{true}} />
+    {{/if}}
+
+    <GhUser @username={{@model.name}} @publicRepos={{@model.publicRepos}} />
+  </div>
+</details>
