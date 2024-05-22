@@ -1,15 +1,26 @@
 <div class="counter">
   <h3>Counter</h3>
-  <div class="count">{{this.count}}</div>
-  <div class="multiple">
-    <span class="x">x</span>
-    <span class="num">{{@multiple}}</span>
+
+  <div class="frame">
+    <div class="count">{{this.count}}</div>
+    <div><label>Count</label></div>
+    <div class="multiple">
+      <span class="x">x</span>
+      <span class="num">{{@multiple}}</span>
+    </div>
+    <div><label>Multi</label></div>
+    <div><hr /></div>
+    <div><label class="blank">&nbsp;</label></div>
+    <div class="total">{{this.total}}</div>
+    <div><label>Total</label></div>
   </div>
-  <hr />
-  <div class="total">{{this.total}}</div>
 
-  <button type="button" {{on "click" (fn this.change 1)}}>Count +1</button>
-  <button type="button" {{on "click" (fn this.change -1)}}>Count -1</button>
+  <div class="buttons">
+    <button type="button" {{on "click" (fn this.change 1)}}>Count +1</button>
+    <button type="button" {{on "click" (fn this.change -1)}}>Count -1</button>
 
-  <button type="button" {{on "click" this.double}}>Double Multiplier</button>
+    <button type="button" {{on "click" this.double}}>Multi x2</button>
+
+    <button type="button" {{on "click" this.reset}}>Reset</button>
+  </div>
 </div>

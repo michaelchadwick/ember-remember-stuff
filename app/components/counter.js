@@ -18,4 +18,10 @@ export default class CounterComponent extends Component {
   double() {
     this.args.updateMultiple(this.args.multiple * 2);
   }
+
+  @action
+  reset() {
+    this.count = 0;
+    this.args.updateMultiple(1);
+  }
 }
