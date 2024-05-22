@@ -1,6 +1,6 @@
 # RemEmber Stuff Tutorial Site
 
-Tutorial app to learn about [Ember Core Concepts](https://guides.emberjs.com/release/components/). Displays hard-coded chat messages, and allows for new ones to be created.
+Tutorial app to learn about [Ember Core Concepts](https://guides.emberjs.com/release/components/).
 
 ## Prerequisites
 
@@ -42,4 +42,4 @@ You will need the following things properly installed on your computer.
 
 ### Deploying
 
-Currently being built on [Netlify](https://mc-emberjs-fake-chat.netlify.app). Re-deploys on pushes to master.
+Currently being built on [Netlify](https://mc-emberjs-remember-stuff.netlify.app). Re-deploys on pushes to master.
