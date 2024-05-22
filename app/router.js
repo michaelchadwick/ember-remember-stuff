@@ -12,6 +12,7 @@ Router.map(function () {
     this.route('tests', { path: '/tests?nocontainer' });
   }
 
+  this.route('messages');
   this.route('music');
   this.route('about');
   this.route('links');

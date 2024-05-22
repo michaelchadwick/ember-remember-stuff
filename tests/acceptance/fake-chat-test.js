@@ -26,9 +26,7 @@ module('Acceptance | fake chat', function (hooks) {
     assert.dom('nav').exists();
     assert.dom('h1').hasText('Ember Fake Chat');
     assert.dom('h2').hasText('About');
-    assert
-      .dom('p')
-      .hasText('Ember Fake Chat is a web application built to learn about EmberJS Core Concepts.');
+    assert.dom('p').hasText('RemEmber Stuff is a web application I built to learn about EmberJS.');
 
     await click('nav a h1');
 
@@ -69,6 +67,7 @@ module('Acceptance | fake chat', function (hooks) {
     assert.dom('nav').exists();
     assert.dom('nav a.menu-index').hasText('Ember Fake Chat');
     assert.dom('nav a.menu-about').hasText('About');
+    assert.dom('nav a.menu-messages').hasText('Messages');
     assert.dom('nav a.menu-music').hasText('Music');
     assert.dom('nav a.menu-links').hasText('Links');
     assert.dom('nav a.menu-contact').hasText('Contact');
@@ -78,6 +77,9 @@ module('Acceptance | fake chat', function (hooks) {
 
     await click('nav a.menu-about');
     assert.strictEqual(currentURL(), '/about');
+
+    await click('nav a.menu-messages');
+    assert.strictEqual(currentURL(), '/messages');
 
     await click('nav a.menu-music');
     assert.strictEqual(currentURL(), '/music');
