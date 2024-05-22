@@ -69,6 +69,7 @@ module('Acceptance | fake chat', function (hooks) {
     assert.dom('nav').exists();
     assert.dom('nav a.menu-index').hasText('Ember Fake Chat');
     assert.dom('nav a.menu-about').hasText('About');
+    assert.dom('nav a.menu-music').hasText('Music');
     assert.dom('nav a.menu-links').hasText('Links');
     assert.dom('nav a.menu-contact').hasText('Contact');
 
@@ -77,6 +78,9 @@ module('Acceptance | fake chat', function (hooks) {
 
     await click('nav a.menu-about');
     assert.strictEqual(currentURL(), '/about');
+
+    await click('nav a.menu-music');
+    assert.strictEqual(currentURL(), '/music');
 
     await click('nav a.menu-links');
     assert.strictEqual(currentURL(), '/links');

@@ -1,11 +1,11 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-fake-chat/tests/helpers';
 
-module('Unit | Route | songs', function (hooks) {
+module('Unit | Route | music', function (hooks) {
   setupTest(hooks);
 
   test('it exists', function (assert) {
-    let route = this.owner.lookup('route:songs');
+    let route = this.owner.lookup('route:music');
     assert.ok(route);
   });
 });

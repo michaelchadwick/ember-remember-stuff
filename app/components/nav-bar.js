@@ -9,6 +9,11 @@ export default class NavBarComponent extends Component {
         target: '_self',
       },
       {
+        route: 'music',
+        title: 'Music',
+        target: '_self',
+      },
+      {
         route: 'links',
         title: 'Links',
         target: '_self',
@@ -16,11 +21,6 @@ export default class NavBarComponent extends Component {
       {
         route: 'contact',
         title: 'Contact',
-        target: '_self',
-      },
-      {
-        route: 'songs',
-        title: 'Songs',
         target: '_self',
       },
     ];
