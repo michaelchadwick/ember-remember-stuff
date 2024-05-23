@@ -5,6 +5,7 @@ import ENV from 'remember-stuff/config/environment';
 
 export default class DebugComponent extends Component {
   @tracked env = ENV.environment;
+  @tracked app = ENV.APP;
   @tracked isExpanded = this.args.debugIsExpanded;
 
   @action
@@ -19,7 +20,7 @@ export default class DebugComponent extends Component {
     if (event.target.tagName == 'SUMMARY') {
       this.isExpanded = !this.isExpanded;
 
-      localStorage.setItem(ENV.APP.DEBUG_VISIBILITY_KEY, this.isExpanded);
+      localStorage.setItem(this.app.DEBUG_VISIBILITY_KEY, this.isExpanded);
     }
   }
 }

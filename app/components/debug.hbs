@@ -8,12 +8,12 @@
 
     {{#if (eq this.env "production")}}
       <AudioPlayer
-        @srcURL="https://neb.host/files/p/fezzish.mp3"
+        @srcURL={{this.app.AUDIO_PLAYER_FILE_REMOTE}}
         @shouldLoop={{true}}
       />
     {{else}}
       <AudioPlayer
-        @srcURL="/assets/audio/fezzish.mp3"
+        @srcURL={{this.app.AUDIO_PLAYER_FILE_LOCAL}}
         @shouldLoop={{true}}
       />
     {{/if}}
