@@ -1,12 +1,16 @@
 /* stylelint-disable selector-class-pattern */
 @import "components";
 
+:root {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
 body {
   background-attachment: fixed;
   background-color: #fdfdfd;
   background-image: url("/assets/images/liquid-cheese.svg");
   background-size: cover;
-  font-family: sans-serif;
   line-height: 1.1;
   margin: auto;
   max-width: 800px;
@@ -101,18 +105,30 @@ ul.code {
  */
 
 .menu {
-  align-items: baseline;
-  display: flex;
-  height: 5em;
+  align-items: end;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    align-items: center;
+    display: flex;
+  }
 }
 
 .menu h1 {
   display: inline-block;
   padding: 0 0.5em 0 0;
-  font-size: 2.25em;
+  font-size: 1.75em;
   color: #ff6338;
   text-shadow: 2px 2px 2px #5d0202;
   text-transform: small-caps;
+}
+
+@media (min-width: 768px) {
+  .menu h1 {
+    font-size: 2em;
+  }
 }
 
 .menu h1:hover {
@@ -122,17 +138,30 @@ ul.code {
 .menu .links {
   align-items: center;
   display: flex;
-  padding: 0.25em 1em;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .menu .links {
+    padding: 0.25em 0.5em 0.25em 1em;
+  }
 }
 
 .menu .links a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0 1em 0 0;
-  font-size: 20px;
-  font-weight: bold;
-  position: relative;
   bottom: 5px;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0 1em 0 0;
+  position: relative;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .menu .links a {
+    font-size: 1.25em;
+  }
 }
 
 .menu .links a:hover,
@@ -153,15 +182,4 @@ ul.code {
 
 main {
   margin-top: 1em;
-}
-
-/**
- * Footer
- */
-footer.menu {
-  height: 2em;
-  margin: 2em 0;
-  padding: 1em 0 0.25em;
-  background-color: #ffedbb;
-  border-radius: 0.5em;
 }
