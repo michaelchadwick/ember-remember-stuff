@@ -1,7 +1,10 @@
 import Component from '@glimmer/component';
 import ENV from 'remember-stuff/config/environment';
+import { service } from '@ember/service';
 
 export default class FooterComponent extends Component {
+  @service intl;
+
   get links() {
     const links = [];
 
@@ -10,7 +13,7 @@ export default class FooterComponent extends Component {
       route: 'author',
       icon: 'at',
       iconType: 'fas',
-      title: 'Author',
+      title: this.intl.t('layout.footAuthor'),
       target: '_blank',
     });
 
@@ -19,7 +22,7 @@ export default class FooterComponent extends Component {
       route: 'source',
       icon: 'github',
       iconType: 'fab',
-      title: 'Source',
+      title: this.intl.t('layout.footSource'),
       target: '_blank',
     });
 
@@ -28,7 +31,7 @@ export default class FooterComponent extends Component {
       route: 'tutorial',
       icon: 'book',
       iconType: 'fas',
-      title: 'Docs',
+      title: this.intl.t('layout.footDocs'),
       target: '_blank',
     });
 
@@ -38,7 +41,7 @@ export default class FooterComponent extends Component {
         route: 'tests',
         icon: 'flask',
         iconType: 'fas',
-        title: '[Tests]',
+        title: `[${this.intl.t('layout.footTests')}]`,
         target: '_blank',
       });
 
@@ -47,7 +50,7 @@ export default class FooterComponent extends Component {
         route: 'prod',
         icon: 'square-up-right',
         iconType: 'fas',
-        title: '[Prod]',
+        title: `[${this.intl.t('layout.footProd')}]`,
         target: '_blank',
       });
     }
