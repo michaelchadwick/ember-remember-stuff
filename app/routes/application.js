@@ -7,12 +7,10 @@ export default class ApplicationRoute extends Route {
   @service headData;
   @service store;
   @tracked env = ENV.environment;
-  @tracked ghUsername = 'michaelchadwick';
-  @tracked ghUserObject;
+  @tracked ghUsername = ENV.APP.GH_USERNAME;
 
   setupController(controller) {
     controller.set('env', ENV.environment);
-    controller.set('ghUsername', this.ghUsername);
   }
 
   model() {

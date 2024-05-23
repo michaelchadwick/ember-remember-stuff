@@ -11,6 +11,10 @@
   {{outlet}}
 </main>
 
-<Debug />
+<Debug
+  @ghUsername={{@model.ghUsername}}
+  @ghPublicRepos={{@model.ghPublicRepos}}
+  @isExpanded={{this.debugIsExpanded}}
+/>
 
 <Layout::Footer />
