@@ -1,5 +1,5 @@
 details.debug {
-  background-color: #f5bfff;
+  background-color: #f9d8ff;
   border: 1px solid #e2b3e2;
   border-radius: 0.5em;
   box-shadow: 0 0.25em 1.5em 0.25em rgba(0 0 0 / 10%);
@@ -8,12 +8,12 @@ details.debug {
 }
 
 details.debug:hover {
-  background-color: #f3aeff;
+  background-color: #f7c7ff;
   border-color: #210039;
 }
 
 details.debug summary:hover {
-  background-color: #ae5abc;
+  background-color: #f2a6ff;
   border-color: #632b2b;
 }
 
@@ -24,6 +24,7 @@ details.debug .gallery {
 }
 
 details.debug .gallery > div {
+  background-color: #fff;
   border-radius: 1em;
   box-shadow: 0 0.25em 1.5em 0.25em rgba(0 0 0 / 10%);
   max-width: 175px;
