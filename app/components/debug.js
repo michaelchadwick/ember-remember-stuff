@@ -15,9 +15,11 @@ export default class DebugComponent extends Component {
   }
 
   @action
-  saveDebugVisibility() {
-    this.isExpanded = !this.isExpanded;
+  saveDebugVisibility(event) {
+    if (event.target.tagName == 'SUMMARY') {
+      this.isExpanded = !this.isExpanded;
 
-    console.log('saveDebugVisibility', this.isExpanded);
+      localStorage.setItem(ENV.APP.DEBUG_VISIBILITY_KEY, this.isExpanded);
+    }
   }
 }

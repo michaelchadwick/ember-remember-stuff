@@ -15,6 +15,7 @@ module.exports = function (environment) {
     },
 
     APP: {
+      DEBUG_VISIBILITY_KEY: 'remember-stuff-debug-visibility',
       GH_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',
       SONG_API_URL:
