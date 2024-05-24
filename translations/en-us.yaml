@@ -23,6 +23,7 @@ general:
   durationHours: "{count, plural, =1 {1 hour} other {# hours}}"
   durationMinutes: "{count, plural, =1 {1 minute} other {# minutes}}"
   edit: Edit
+  email: Email
   end: End
   endDate: End Date
   ends: Ends
@@ -57,6 +58,7 @@ general:
   minutes: Minutes
   monday: Monday
   month: Month
+  name: Name
   navigation: Navigation
   next: Next
   no: No
