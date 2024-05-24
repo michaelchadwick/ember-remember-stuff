@@ -25,8 +25,22 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.strictEqual(currentURL(), '/about');
     assert.dom('nav').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
-    assert.dom('h2').hasText('About');
+    assert.dom('h2').hasText('About the Site');
     assert.dom('p').hasText('RemEmber Stuff is a web application I built to learn about EmberJS.');
+
+    await click('nav a h1');
+
+    assert.strictEqual(currentURL(), '/');
+  });
+
+  test('visiting /messages', async function (assert) {
+    await visit('/messages');
+
+    assert.strictEqual(currentURL(), '/messages');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h2').hasText('Chat Messages');
+    assert.dom('div.messages').exists();
 
     await click('nav a h1');
 
