@@ -1,20 +1,22 @@
 {{! ember-cli-head }}
 <HeadLayout />
 
-<Layout::Ribbon @position="right" @content={{this.env}} />
+<div class="application-wrapper">
+  <Layout::Ribbon @position="right" @content={{this.env}} />
 
-<header>
-  <Layout::NavBar />
-</header>
+  <header>
+    <Layout::NavBar />
+  </header>
 
-<main>
-  {{outlet}}
-</main>
+  <main>
+    {{outlet}}
+  </main>
 
-<Debug
-  @ghUsername={{@model.ghUsername}}
-  @ghPublicRepos={{@model.ghPublicRepos}}
-  @isExpanded={{this.debugIsExpanded}}
-/>
+  <Debug
+    @ghUsername={{@model.ghUsername}}
+    @ghPublicRepos={{@model.ghPublicRepos}}
+    @isExpanded={{this.debugIsExpanded}}
+  />
 
-<Layout::Footer />
+  <Layout::Footer />
+</div>
