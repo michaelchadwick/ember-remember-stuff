@@ -4,7 +4,10 @@
   <summary>{{if checklist.summary checklist.summary "Details"}}</summary>
   {{#each checklist.lists as |list|}}
   <ul class="checklist">
-    <li><strong>{{list.title}}</strong>
+    <li>
+      <span class={{if list.checked "checked"}}>
+        <strong>{{list.title}}</strong>
+      </span>
       <ul class="{{if list.code "code"}}">
         {{#each list.items as |item|}}
         <li>{{item}}</li>

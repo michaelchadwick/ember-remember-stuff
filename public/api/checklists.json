@@ -9,7 +9,7 @@
         "lists": [
           {
             "title": "Components",
-            "checked": false,
+            "checked": true,
             "code": true,
             "items": [
               "AudioPlayer",
@@ -26,7 +26,7 @@
           },
           {
             "title": "Routing",
-            "checked": false,
+            "checked": true,
             "code": true,
             "items": [
               "About",
@@ -38,15 +38,16 @@
           },
           {
             "title": "Services",
-            "checked": false,
+            "checked": true,
             "code": true,
             "items": [
-              "HeadData (vendor)"
+              "HeadData (vendor)",
+              "LocalStorage"
             ]
           },
           {
             "title": "EmberData",
-            "checked": false,
+            "checked": true,
             "code": true,
             "items": [
               "Github (fake local api)",
