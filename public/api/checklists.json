@@ -5,10 +5,12 @@
       "id": "core-concepts",
       "attributes": {
         "title": "Core Concepts",
+        "summary": "Core Concepts",
         "lists": [
           {
             "title": "Components",
             "checked": false,
+            "code": true,
             "items": [
               "AudioPlayer",
               "ContactForm",
@@ -25,6 +27,7 @@
           {
             "title": "Routing",
             "checked": false,
+            "code": true,
             "items": [
               "About",
               "Messages",
@@ -36,6 +39,7 @@
           {
             "title": "Services",
             "checked": false,
+            "code": true,
             "items": [
               "HeadData (vendor)"
             ]
@@ -43,6 +47,7 @@
           {
             "title": "EmberData",
             "checked": false,
+            "code": true,
             "items": [
               "Github (fake local api)",
               "Muzcom (real remote api)"
@@ -56,6 +61,7 @@
       "id": "application-development",
       "attributes": {
         "title": "Application Development",
+        "summary": "Application Development",
         "lists": [
           {
             "title": "",
