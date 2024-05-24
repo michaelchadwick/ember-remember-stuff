@@ -1,6 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import { service } from '@ember/service';
 
 class Errors {
   @tracked name = null;
@@ -13,6 +14,7 @@ export default class ContactFormComponent extends Component {
   @tracked email = '';
   @tracked message = '';
   @tracked errors = new Errors();
+  @service intl;
 
   get isNameValid() {
     return this.name.trim().length > 0;
@@ -35,13 +37,19 @@ export default class ContactFormComponent extends Component {
   validateField(fieldName) {
     switch (fieldName) {
       case 'name':
-        this.errors.name = this.isNameValid ? null : 'Name is required.';
+        this.errors.name = this.isNameValid
+          ? null
+          : this.intl.t('errors.required', { description: 'Name' });
         break;
       case 'email':
-        this.errors.email = this.isEmailValid ? null : 'Email is invalid.';
+        this.errors.email = this.isEmailValid
+          ? null
+          : this.intl.t('errors.invalid', { description: 'Email' });
         break;
       case 'message':
-        this.errors.message = this.isMessageValid ? null : 'Message is required.';
+        this.errors.message = this.isMessageValid
+          ? null
+          : this.intl.t('errors.required', { description: 'Message' });
         break;
     }
   }

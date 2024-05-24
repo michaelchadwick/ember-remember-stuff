@@ -1,4 +1,4 @@
-<h2>{{t "layout.headLinks" }}</h2>
+<h2>{{t "layout.headLinks"}}</h2>
 {{#if @model}}
   <ul>
     {{#each @model as |link|}}
@@ -10,5 +10,5 @@
     {{/each}}
   </ul>
 {{else}}
-  <p>No links found.</p>
+  <p>{{t "general.noneFound" items="links"}}</p>
 {{/if}}

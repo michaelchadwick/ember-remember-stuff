@@ -2,7 +2,6 @@ general:
   actions: Actions
   add: Add
   addNew: Add New
-  appDev: Application Development
   author: Author
   back: Back
   cancel: Cancel
@@ -10,7 +9,6 @@ general:
   close: Close
   collapse: collapse
   complete: Complete
-  coreConcepts: Core Concepts
   currentlySearchingPrompt: searching...
   date: Date
   dateTime: Date/Time
@@ -57,6 +55,7 @@ general:
   navigation: Navigation
   next: Next
   no: No
+  noneFound: "No {items} found."
   notes: Notes
   notFoundMessage: "Rats! I couldn't find that. Please check your page address, and try again."
   overview: Overview
@@ -103,7 +102,7 @@ layout:
   navLinks: Links
   navMessages: Messages
   navMusic: Music
-  headAbout: About
+  headAbout: About The Site
   headContact: Contact
   headLinks: Related Links
   headMessages: Chat Messages
@@ -123,3 +122,22 @@ errors:
   tooLong: "{description} is too long (maximum is {max} characters)"
   tooShort: "{description} is too short (minimum is {min} characters)"
   url: "{description} must be a valid url"
+sections:
+  index:
+    headerAppDev: Application Development
+    headerCoreConcepts: Core Concepts
+  about:
+    description: "<p><strong>RemEmber Stuff</strong> is a web application I built to learn about EmberJS.</p>
+
+    <p>It started as a fake chat application, like <a href=https://guides.emberjs.com/v5.8.0/components/introducing-components/>this</a>. However, it's grown into more of a personal homepage incorporating what I've learned about EmberJS in the last month or so. Using my own interests, and applying them through the concepts in the EmberJS documentation, I've grown to understand EmberJS better.</p>
+
+    <p>The homepage will be updated as I go through each concept and apply it to this site.</p>"
+  links:
+    noLinksFound: No links found.
+  messages:
+    addNew: Add one below!
+  music:
+    description: The author of this web app is also a musician! Here are 5 random songs they've done.
+    noSongsFound: No songs found.
+  contact:
+    description: Want to say hello? Have a suggestion for this app? Drop me a line.

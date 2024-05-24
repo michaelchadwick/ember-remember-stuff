@@ -10,7 +10,7 @@
       {{sanitize message.content}}
     </Message>
   {{else}}
-    No messages yet. Add one below!
+    <p>{{t "general.noneFound" items="messages"}}</p> {{t "sections.messages.addNew"}}
   {{/each}}
 
   <Forms::NewMessageInput @onCreate={{this.addMessage}} />

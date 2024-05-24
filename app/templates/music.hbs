@@ -1,6 +1,5 @@
-<h2>{{t "layout.headMusic" }}</h2>
-<p>The author of this web app is also a musician! Here are 5 random songs
-  they've done.</p>
+<h2>{{t "layout.headMusic"}}</h2>
+<p>{{t "sections.music.description"}}</p>
 {{#if @model}}
   <ul>
     {{#each @model as |song|}}
@@ -16,5 +15,5 @@
     {{/each}}
   </ul>
 {{else}}
-  <p>No songs found.</p>
+  <p>{{t "general.noneFound" items="songs"}}</p>
 {{/if}}
