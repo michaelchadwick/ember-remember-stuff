@@ -1,3 +1,32 @@
+{{#if @isExpanded}}
+<details
+  class="debug"
+  {{on "click" this.saveDebugVisibility}}
+  open
+>
+  <summary>{{t "components.debug.summary"}}</summary>
+  <div class="gallery">
+    <DoubleIt />
+
+    {{#if (eq this.env "production")}}
+      <AudioPlayer
+        @srcURL={{this.app.AUDIO_PLAYER_FILE_REMOTE}}
+        @shouldLoop={{true}}
+      />
+    {{else}}
+      <AudioPlayer
+        @srcURL={{this.app.AUDIO_PLAYER_FILE_LOCAL}}
+        @shouldLoop={{true}}
+      />
+    {{/if}}
+
+    <GhUser
+      @username={{@ghUsername}}
+      @publicRepos={{@ghPublicRepos}}
+    />
+  </div>
+</details>
+{{else}}
 <details
   class="debug"
   {{on "click" this.saveDebugVisibility}}
@@ -24,3 +53,4 @@
     />
   </div>
 </details>
+{{/if}}

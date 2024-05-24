@@ -1,16 +1,12 @@
 import Controller from '@ember/controller';
-import { tracked } from '@glimmer/tracking';
-import ENV from 'remember-stuff/config/environment';
+import { service } from '@ember/service';
 
 export default class ApplicationController extends Controller {
-  @tracked debugIsExpanded;
+  @service localStorage;
 
-  constructor() {
-    super(...arguments);
-    const lsDebugSetting = localStorage.getItem(ENV.APP.DEBUG_VISIBILITY_KEY);
+  get debugVisibility() {
+    const debugExpanded = this.localStorage.get('debugExpanded');
 
-    this.debugIsExpanded = lsDebugSetting || '';
-
-    console.log('LS debugIsExpanded set to:', this.debugIsExpanded);
+    return debugExpanded;
   }
 }

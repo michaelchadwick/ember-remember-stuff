@@ -17,7 +17,7 @@ module.exports = function (environment) {
     APP: {
       AUDIO_PLAYER_FILE_LOCAL: '/assets/audio/fezzish.mp3',
       AUDIO_PLAYER_FILE_REMOTE: 'https://neb.host/files/p/fezzish.mp3',
-      DEBUG_VISIBILITY_KEY: 'remember-stuff-debug-visibility',
+      LOCAL_STORAGE_KEY: 'remember-stuff',
       GH_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',
       SONG_API_URL:

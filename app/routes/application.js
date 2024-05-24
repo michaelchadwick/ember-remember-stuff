@@ -4,11 +4,11 @@ import { tracked } from '@glimmer/tracking';
 import ENV from 'remember-stuff/config/environment';
 
 export default class ApplicationRoute extends Route {
+  @tracked env = ENV.environment;
+  @tracked ghUsername = ENV.APP.GH_USERNAME;
   @service headData;
   @service store;
   @service intl;
-  @tracked env = ENV.environment;
-  @tracked ghUsername = ENV.APP.GH_USERNAME;
 
   setupController(controller) {
     controller.set('env', ENV.environment);

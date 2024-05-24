@@ -77,17 +77,17 @@ details {
   border: 1px solid #c7c7c7;
   border-radius: 0.5em;
   box-shadow: 0 0.25em 1.5em 0.25em rgba(0 0 0 / 10%);
-  cursor: pointer;
   padding: 0;
 }
 
 details:hover {
-  background-color: #eeeeee;
+  background-color: #f3f3f3;
   border-color: #3b3b3b;
 }
 
 details summary {
-  border-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
   padding: 1em;
 }
 
