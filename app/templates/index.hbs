@@ -1,7 +1,7 @@
 {{#each @model as |checklist|}}
 <h2>{{checklist.title}}</h2>
 <details>
-  <summary>{{checklist.summary}}</summary>
+  <summary>{{if checklist.summary checklist.summary "Details"}}</summary>
   {{#each checklist.lists as |list|}}
   <ul class="checklist">
     <li><strong>{{list.title}}</strong>
