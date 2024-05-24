@@ -9,7 +9,6 @@ You will need the following things properly installed on your computer.
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/) (with npm)
 - [Ember CLI](https://cli.emberjs.com/release/)
-  - [Ember CLI Head](https://www.npmjs.com/package/ember-cli-head)
 - [PNPM](https://pnpm.io/installation)
 - [Web browser](https://browser-update.org/browsers.html)
 
@@ -43,3 +42,12 @@ You will need the following things properly installed on your computer.
 ### Deploying
 
 Currently being built on [Netlify](https://mc-emberjs-remember-stuff.netlify.app). Re-deploys on pushes to master.
+
+### Notable Dependencies
+
+- [Ember CLI DotEnv](https://www.npmjs.com/package/ember-cli-dotenv)
+- [Ember CLI Head](https://www.npmjs.com/package/ember-cli-head)
+- [Ember CLI Sass](https://www.npmjs.com/package/ember-cli-sass)
+- [Ember CLI Truth Helpers](https://www.npmjs.com/package/ember-truth-helpers)
+- [Fontawesome](https://www.npmjs.com/package/@fortawesome/ember-fontawesome)
+- [Husky](https://github.com/typicode/husky)
