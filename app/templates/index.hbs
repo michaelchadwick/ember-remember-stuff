@@ -1,56 +1,16 @@
-<h2>{{t "sections.index.headerCoreConcepts"}}</h2>
+{{#each @model as |checklist|}}
+<h2>{{checklist.title}}</h2>
 <details>
+  {{#each checklist.lists as |list|}}
   <ul class="checklist">
-    <li>Components
-      <ul class="code">
-        <li>AudioPlayer</li>
-        <li>ContactForm</li>
-        <li>Counter</li>
-        <li>Debug</li>
-        <li>Footer</li>
-        <li>GhUser</li>
-        <li>Messages
-          <ul>
-            <li>Message</li>
-          </ul>
-        </li>
-        <li>NavBar</li>
-        <li>NewMessageInput</li>
-        <li>Ribbon</li>
+    <li><strong>{{list.title}}</strong>
+      <ul class="{{if list.code "code"}}">
+        {{#each list.items as |item|}}
+        <li>{{item}}</li>
+        {{/each}}
       </ul>
     </li>
-    <li>Routing
-      <ul class="code">
-        <li>About</li>
-        <li>Messages</li>
-        <li>Music</li>
-        <li>Links</li>
-        <li>Contact</li>
-      </ul>
-    </li>
-    <li>Services
-      <ul class="code">
-        <li>HeadData (vendor)</li>
-      </ul>
-    </li>
-    <li>EmberData
-      <ul class="code">
-        <li>Github (fake local api)</li>
-        <li>Muzcom (real remote api)</li>
-      </ul>
-    </li>
-    <li>In-Depth Topics</li>
-</ul>
-</details>
-
-<h2>{{t "index.headerAppDev"}}</h2>
-<details>
-  <ul class="checklist">
-    <li>Application Concerns</li>
-    <li>Accessibility</li>
-    <li>Configuration</li>
-    <li>Testing</li>
-    <li>Addons and Dependencies</li>
-    <li>Using TypeScript</li>
   </ul>
+  {{/each}}
 </details>
+{{/each}}

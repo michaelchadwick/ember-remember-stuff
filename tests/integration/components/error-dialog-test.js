@@ -7,9 +7,6 @@ module('Integration | Component | error-dialog', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<ErrorDialog />`);
 
     assert.dom().hasText('An unknown error occurred!');
@@ -17,10 +14,10 @@ module('Integration | Component | error-dialog', function (hooks) {
     // Template block usage:
     await render(hbs`
       <ErrorDialog>
-        <p>OMG something bad happened!</p>
+        <p>{{t "errors.unknown"}}</p>
       </ErrorDialog>
     `);
 
-    assert.dom().hasText('OMG something bad happened!');
+    assert.dom().hasText(this.intl.t('errors.unknown'));
   });
 });

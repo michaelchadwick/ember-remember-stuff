@@ -13,7 +13,7 @@ module('Integration | Modifier | play-when', function (hooks) {
       <audio {{play-when this.isPlaying}}>
         <source src={{@srcURL}} />
         <track kind="captions" />
-        Your browser does not support the audio element.
+        {{t "errors.audio"}}
       </audio>
     `);
 

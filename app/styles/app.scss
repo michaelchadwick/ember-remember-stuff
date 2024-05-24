@@ -183,3 +183,7 @@ ul.code {
 main {
   margin-top: 1em;
 }
+
+.checklist > li:first-of-type {
+  list-style-type: none;
+}

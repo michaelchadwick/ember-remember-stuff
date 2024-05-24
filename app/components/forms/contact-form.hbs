@@ -10,7 +10,7 @@
         class="light{{if this.errors.name ' error'}}"
         id="name"
         name="name"
-        placeholder="Name"
+        placeholder={{t "general.name"}}
         value={{this.name}}
         {{on "input" this.handleInput}}
       />
@@ -26,7 +26,7 @@
         class="light{{if this.errors.email ' error'}}"
         id="email"
         name="email"
-        placeholder="Email"
+        placeholder={{t "general.email"}}
         value={{this.email}}
         {{on "input" this.handleInput}}
       />
@@ -40,7 +40,7 @@
         class="light{{if this.errors.message ' error'}}"
         id="message"
         name="message"
-        placeholder="Message"
+        placeholder={{t "general.message"}}
         value={{this.message}}
         {{on "input" this.handleInput}}
       />
@@ -50,7 +50,7 @@
     </div>
 
     <button type="submit" data-test-submit>
-      Send Message
+      {{t "general.sendMessage"}}
     </button>
   </form>
 </div>

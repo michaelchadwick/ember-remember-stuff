@@ -15,7 +15,7 @@ module('Integration | Component | message', function (hooks) {
         @userIsCurrent={{false}}
         @userLocalTime="5:15 PM"
       >
-        <p>Hello, I'm Tomster</p>
+        <p>{{t "general.hello"  name="Tomster"}}</p>
       </Message>
     `);
 

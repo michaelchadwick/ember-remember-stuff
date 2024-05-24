@@ -1,15 +1,15 @@
 <form {{on "submit" this.createMessage}} id="new-message-input">
-  <label for="new-message-text">Message</label>
+  <label for="new-message-text">{{t "general.message"}}</label>
   {{! template-lint-disable no-autofocus-attribute }}
   <Input
     @value={{this.message}}
     id="new-message-text"
-    placeholder="Type message here and hit enter"
+    placeholder={{t "components.newMessageInput.placeholder"}}
     {{autofocus}}
   />
   <button type="submit">
-    Send
+    {{t "general.send"}}
   </button>
 </form>
 
-<p><em>Note</em>: new messages will not be saved (...yet)!</p>
+<p>{{t "components.newMessageInput.nothingSaved" htmlSafe=true}}</p>
