@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "type": "checklist",
+      "id": "core-concepts",
+      "attributes": {
+        "title": "Core Concepts",
+        "lists": [
+          {
+            "title": "Components",
+            "checked": false,
+            "items": [
+              "AudioPlayer",
+              "ContactForm",
+              "Counter",
+              "Debug",
+              "Footer",
+              "GhUser",
+              "Messages -> Message",
+              "NavBar",
+              "NewMessageInput",
+              "Ribbon"
+            ]
+          },
+          {
+            "title": "Routing",
+            "checked": false,
+            "items": [
+              "About",
+              "Messages",
+              "Music",
+              "Links",
+              "Contact"
+            ]
+          },
+          {
+            "title": "Services",
+            "checked": false,
+            "items": [
+              "HeadData (vendor)"
+            ]
+          },
+          {
+            "title": "EmberData",
+            "checked": false,
+            "items": [
+              "Github (fake local api)",
+              "Muzcom (real remote api)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "checklist",
+      "id": "application-development",
+      "attributes": {
+        "title": "Application Development",
+        "lists": [
+          {
+            "title": "",
+            "checked": false,
+            "items": [
+              "Application Concerns",
+              "Accessibility",
+              "Configuration",
+              "Testing",
+              "Addons and Dependencies",
+              "Using TypeScript"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
