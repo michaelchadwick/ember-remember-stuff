@@ -4,13 +4,25 @@
   <ul>
     {{#each @model as |song|}}
       <li>
-        <a href={{song.url}} target="_blank" rel="noopener noreferrer">
-          {{song.title}}
+        <a href={{song.detailUrl}} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          title={{t "general.info"}}
+        >
+          <FaIcon @icon="circle-info" />
         </a>
+        <a href={{song.fileUrl}}
+          target="_blank" 
+          rel="noopener noreferrer"
+          title={{t "general.listen"}} 
+        >
+          <FaIcon @icon="ear-listen" />
+        </a>
+        <strong>{{song.title}}</strong>
         {{t "general.from"}}
-        <strong>{{song.album}}</strong>
-        {{t "general.to"}}
-        <em>{{song.artist}}</em>
+        <em>{{song.album}}</em>
+        {{t "general.by"}}
+        {{song.artist}}
       </li>
     {{/each}}
   </ul>
