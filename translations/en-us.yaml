@@ -45,10 +45,12 @@ general:
   hours: Hours
   inactive: inactive
   include: Include
+  info: Info
   last: Last
   lastUpdate: Last Update
   level: Level
   link: Web Link
+  listen: Listen
   localTime: Local time
   loading: loading...
   location: Location
