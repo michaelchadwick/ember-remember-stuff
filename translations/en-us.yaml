@@ -92,6 +92,7 @@ general:
   time: Time
   timezone: Timezone
   title: Title
+  to: to
   today: Today
   token: Token
   total: Total
