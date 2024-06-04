@@ -52,7 +52,7 @@ general:
   link: Web Link
   listen: Listen
   localTime: Local time
-  loading: loading...
+  loading: Loading...
   location: Location
   login: Login
   message: Message
@@ -169,7 +169,7 @@ sections:
   messages:
     addNew: Add one below!
   music:
-    description: The author of this web app is also a musician! Here are 5 random songs they've done.
+    description: The author of this web app is also a musician! Here are a few random songs they've done.
     noSongsFound: No songs found.
   contact:
     description: Want to say hello? Have a suggestion for this app? Drop me a line.
