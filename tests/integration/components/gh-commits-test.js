@@ -9,6 +9,10 @@ module('Integration | Component | gh-commits', function (hooks) {
   test('it renders', async function (assert) {
     await render(hbs`<GhCommits />`);
 
-    assert.dom().hasText('GitHubCommits');
+    assert.dom().hasText('GitHubCommits No commits found.');
+
+    await render(hbs`<GhCommits @title='Last 5 Commits' />`);
+
+    assert.dom().hasText('Last 5 Commits No commits found.');
   });
 });
