@@ -1,5 +1,4 @@
 import { module, test } from 'qunit';
-
 import { setupTest } from 'remember-stuff/tests/helpers';
 
 module('Unit | Model | link', function (hooks) {
