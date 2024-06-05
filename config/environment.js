@@ -18,7 +18,8 @@ module.exports = function (environment) {
       AUDIO_PLAYER_FILE_LOCAL: '/assets/audio/fezzish.mp3',
       AUDIO_PLAYER_FILE_REMOTE: 'https://neb.host/files/p/fezzish.mp3',
       LOCAL_STORAGE_KEY: 'remember-stuff',
-      GH_USERNAME: 'michaelchadwick',
+      GITHUB_API_URL: 'https://api.github.com',
+      GITHUB_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',
       SONG_API_URL:
         'https://music.nebyoolae.com/jsonapi/views/songs/songs_neb?include=field_album_id,field_album_id.field_album_cover,field_artist_id',

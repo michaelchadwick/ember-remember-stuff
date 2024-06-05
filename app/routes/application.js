@@ -5,7 +5,7 @@ import ENV from 'remember-stuff/config/environment';
 
 export default class ApplicationRoute extends Route {
   @tracked env = ENV.environment;
-  @tracked ghUsername = ENV.APP.GH_USERNAME;
+  @tracked ghUsername = ENV.APP.GITHUB_USERNAME;
   @service headData;
   @service store;
   @service intl;
