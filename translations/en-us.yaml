@@ -150,6 +150,7 @@ components:
   ghUser.repos: repos
   headAudioPlayer: AudioPlayer
   headCounter: Counter
+  headGhCommits: GitHubCommits
   headGhUser: GithubUser
   newMessageInput:
     nothingSaved: "<em>Note</em>: new messages will not be saved (...yet)!"
