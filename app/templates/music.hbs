@@ -1,3 +1,7 @@
 <h2>{{t "layout.headMusic"}}</h2>
 <p>{{t "sections.music.description"}}</p>
-<SongList @songs={{@model}} />
+{{#if this.isLoading}}
+  {{t "general.loading"}}
+{{else}}
+  <SongList @songs={{@model}} />
+{{/if}}
