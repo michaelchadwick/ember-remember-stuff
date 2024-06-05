@@ -1,3 +1,10 @@
 <h2>{{t "layout.headAbout"}}</h2>
 {{t "sections.about.description" htmlSafe=true}}
-{{!-- <GhCommits @username={{@ghCommitsUser}} @repo={{@ghCommitsRepo}} /> --}}
+{{#if this.isLoading}}
+  {{t "general.loading"}}
+{{else}}
+  <GhCommits 
+    @title="Last 5 Commits" 
+    @commits={{@model}} 
+  />
+{{/if}}
