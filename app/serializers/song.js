@@ -8,7 +8,7 @@ export default class SongSerializer extends JSONAPISerializer {
 
     return {
       data: {
-        id: payload.drupal_internal__nid,
+        id: String(payload.drupal_internal__nid),
         type: type.modelName,
         attributes: {
           title: payload.title,
@@ -16,7 +16,7 @@ export default class SongSerializer extends JSONAPISerializer {
           fileUrl: remoteFileUrl,
           artist: payload.field_artist_id.name,
           album: payload.field_album_id.name,
-          nid: payload.drupal_internal__nid,
+          nid: String(payload.drupal_internal__nid),
         },
       },
     };
