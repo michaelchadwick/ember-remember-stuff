@@ -3,15 +3,15 @@
   {{#if @commits}}
   <ul>
     {{#each @commits as |commit|}}
-      <li>
-        {{commit.commit.author.date}} - 
-        <a href={{commit.html_url}} target="_blank" rel="noopener noreferrer">
-          {{commit.commit.message}}
-        </a>
-      </li>
+    <li>
+      {{commit.commit.author.date}} - 
+      <a href={{commit.html_url}} target="_blank" rel="noopener noreferrer">
+        {{commit.commit.message}}
+      </a>
+    </li>
     {{/each}}
   </ul>
-{{else}}
+  {{else}}
   <p>{{t "general.noneFound" items="commits"}}</p>
-{{/if}}
+  {{/if}}
 </div>

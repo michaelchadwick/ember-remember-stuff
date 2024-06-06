@@ -9,6 +9,7 @@ module.exports = function () {
       'pause',
       'play',
       'square-up-right',
+      'spinner',
     ],
     'free-brands-svg-icons': ['github'],
   };

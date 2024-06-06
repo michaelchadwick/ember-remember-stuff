@@ -15,11 +15,6 @@ export default class AboutRoute extends Route {
     const response = await fetch(url);
     const commits = await response.json();
 
-    console.log(
-      'commits',
-      commits.map((c) => c.commit),
-    );
-
     return commits;
   }
 

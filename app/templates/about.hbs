@@ -1,9 +1,10 @@
 <h2>{{t "layout.headAbout"}}</h2>
 {{t "sections.about.description" htmlSafe=true}}
+
 {{#if this.isLoading}}
-  {{t "general.loading"}}
+  <GhCommits::Loading />
 {{else}}
-  <GhCommits 
+  <GhCommits
     @title="Last 5 Commits" 
     @commits={{@model}} 
   />
