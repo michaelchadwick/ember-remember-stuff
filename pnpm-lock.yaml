@@ -62,6 +62,9 @@ importers:
       ember-a11y-testing:
         specifier: ^6.1.1
         version: 6.1.1(@babel/core@7.24.6)(@ember/test-helpers@3.3.0(ember-source@5.8.0(@babel/core@7.24.6)(@glimmer/component@1.1.2(@babel/core@7.24.6))(rsvp@4.8.5)(webpack@5.91.0))(webpack@5.91.0))(qunit@2.21.0)(webpack@5.91.0)
+      ember-async-data:
+        specifier: ^1.0.3
+        version: 1.0.3(ember-source@5.8.0(@babel/core@7.24.6)(@glimmer/component@1.1.2(@babel/core@7.24.6))(rsvp@4.8.5)(webpack@5.91.0))
       ember-auto-import:
         specifier: ^2.7.3
         version: 2.7.3(webpack@5.91.0)
@@ -2936,6 +2939,11 @@ packages:
   ember-ast-helpers@0.4.0:
     resolution: {integrity: sha512-3gBsatspW3AT2hwzD27aQbgyWA29RXeMxCnMYgFBYtmS/T1M6TxuatEgfpofKqai4OC/JijftmN4s6dydeXGzQ==}
     engines: {node: '>= 6'}
+
+  ember-async-data@1.0.3:
+    resolution: {integrity: sha512-54OtoQwNi+/ZvPOVuT4t8fcHR9xL8N7kBydzcZSo6BIEsLYeXPi3+jUR8niWjfjXXhKlJ8EWXR0lTeHleTrxbw==}
+    peerDependencies:
+      ember-source: '>=4.8.4'
 
   ember-auto-import@2.7.3:
     resolution: {integrity: sha512-EQzStGYxNvTPYWCFh0X57HFAzAvA2rHHRgBeWNDKHQ/rENNlHw0c0e0i1XebwEfv+yGHOodE4dN+f/mrYkQXLw==}
@@ -10000,6 +10008,14 @@ snapshots:
       - webpack
 
   ember-ast-helpers@0.4.0: {}
+
+  ember-async-data@1.0.3(ember-source@5.8.0(@babel/core@7.24.6)(@glimmer/component@1.1.2(@babel/core@7.24.6))(rsvp@4.8.5)(webpack@5.91.0)):
+    dependencies:
+      '@ember/test-waiters': 3.1.0
+      '@embroider/addon-shim': 1.8.9
+      ember-source: 5.8.0(@babel/core@7.24.6)(@glimmer/component@1.1.2(@babel/core@7.24.6))(rsvp@4.8.5)(webpack@5.91.0)
+    transitivePeerDependencies:
+      - supports-color
 
   ember-auto-import@2.7.3(webpack@5.91.0):
     dependencies:
