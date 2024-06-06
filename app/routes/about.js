@@ -8,6 +8,10 @@ export default class AboutRoute extends Route {
   @service headData;
   @tracked isLoading = true;
 
+  beforeModel() {
+    this.headData.routeTitle = 'About';
+  }
+
   async model() {
     const repo = 'ember-remember-stuff';
     const url = `${ENV.APP.GITHUB_API_URL}/repos/${ENV.APP.GITHUB_USERNAME}/${repo}/commits?sort=updated&per_page=5`;
@@ -16,9 +20,5 @@ export default class AboutRoute extends Route {
     const commits = await response.json();
 
     return commits;
-  }
-
-  afterModel() {
-    this.headData.routeTitle = 'About';
   }
 }

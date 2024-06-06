@@ -5,11 +5,11 @@ export default class LinksRoute extends Route {
   @service store;
   @service headData;
 
-  model() {
-    return this.store.findAll('link');
+  beforeModel() {
+    this.headData.routeTitle = 'Links';
   }
 
-  afterModel() {
-    this.headData.routeTitle = 'Links';
+  model() {
+    return this.store.findAll('link');
   }
 }

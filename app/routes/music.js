@@ -7,11 +7,11 @@ export default class MusicRoute extends Route {
   @service headData;
   @tracked isLoading = true;
 
-  model() {
-    return this.store.findAll('song');
+  beforeModel() {
+    this.headData.routeTitle = 'Music';
   }
 
-  afterModel() {
-    this.headData.routeTitle = 'Songs';
+  model() {
+    return this.store.findAll('song');
   }
 }

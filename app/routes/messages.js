@@ -4,7 +4,7 @@ import { service } from '@ember/service';
 export default class MessagesRoute extends Route {
   @service headData;
 
-  afterModel() {
+  beforeModel() {
     this.headData.routeTitle = 'Messages';
   }
 }
