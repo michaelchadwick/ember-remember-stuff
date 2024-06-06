@@ -16,7 +16,12 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: {},
+  rules: {
+    'ember/classic-decorator-no-classic-methods': 0,
+    'ember/no-classic-classes': 0,
+    'ember/no-mixins': 0,
+    'ember/no-new-mixins': 0,
+  },
   overrides: [
     // node files
     {
@@ -27,6 +32,7 @@ module.exports = {
         './.template-lintrc.js',
         './ember-cli-build.js',
         './testem.js',
+        './testem.browserstack.js',
         './blueprints/*/index.js',
         './config/**/*.js',
         './lib/*/index.js',
@@ -45,6 +51,10 @@ module.exports = {
       // test files
       files: ['tests/**/*-test.{js,ts}'],
       extends: ['plugin:qunit/recommended'],
+      rules: {
+        'qunit/require-expect': [2, 'except-simple'],
+        'ember/no-classic-classes': 0,
+      },
     },
   ],
 };
