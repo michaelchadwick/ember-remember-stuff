@@ -17,8 +17,11 @@ export default class AboutRoute extends Route {
     const url = `${ENV.APP.GITHUB_API_URL}/repos/${ENV.APP.GITHUB_USERNAME}/${repo}/commits?sort=updated&per_page=5`;
 
     const response = await fetch(url);
-    const commits = await response.json();
 
-    return commits;
+    if (response.ok) {
+      return await response.json();
+    } else {
+      return null;
+    }
   }
 }
