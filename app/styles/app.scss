@@ -193,6 +193,14 @@ main {
   padding-left: 2em;
 }
 
+.checklist li span {
+  font-weight: normal;
+}
+
+.checklist li span.checked {
+  font-weight: bold;
+}
+
 .checklist li span.checked::after {
   content: "✓";
 }

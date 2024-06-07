@@ -7,7 +7,7 @@
   <ul class="checklist">
     <li>
       <span class={{if list.checked "checked"}}>
-        <strong>{{list.title}}</strong>
+        {{list.title}}
       </span>
       <ul class="{{if list.code "code"}}">
         {{#each list.items as |item|}}
