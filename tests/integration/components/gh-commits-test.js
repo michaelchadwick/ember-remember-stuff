@@ -9,10 +9,14 @@ module('Integration | Component | gh-commits', function (hooks) {
   test('it renders', async function (assert) {
     await render(hbs`<GhCommits />`);
 
-    assert.dom().hasText('GitHubCommits No commits found.');
+    assert
+      .dom()
+      .hasText('GithubCommits No commits found. Check the development console for errors.');
 
     await render(hbs`<GhCommits @title='Last 5 Commits' />`);
 
-    assert.dom().hasText('Last 5 Commits No commits found.');
+    assert
+      .dom()
+      .hasText('Last 5 Commits No commits found. Check the development console for errors.');
   });
 });
