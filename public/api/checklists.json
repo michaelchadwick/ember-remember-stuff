@@ -84,7 +84,7 @@
       "id": "application-development",
       "attributes": {
         "title": "III. Application Development",
-        "summary": "Application Development",
+        "summary": "General Application Development Concerns",
         "lists": [
           {
             "title": "Application Concerns",
@@ -127,7 +127,7 @@
     },
     {
       "type": "checklist",
-      "id": "application-development",
+      "id": "developer-tools",
       "attributes": {
         "title": "IV. Developer Tools",
         "summary": "Augment Development",
