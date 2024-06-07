@@ -37,19 +37,19 @@ export default class ApplicationRoute extends Route {
 
     switch (this.env) {
       case 'development': {
-        console.log('ENV: Oh, boy! This tutorial is running in development! Go nuts!');
+        console.log('ENV: App is in development! Go nuts!');
         break;
       }
       case 'test': {
-        console.log('ENV: Oh, boy! This tutorial is running in test! Hope everything passes.');
+        console.log('ENV: App is in test! Hope everything passes.');
         break;
       }
       case 'production': {
-        console.log('ENV: Oh, boy! This tutorial is running in production! Be careful.');
+        console.log('ENV: App is in production! Be careful.');
         break;
       }
       default: {
-        console.log("ENV: Hmm. I don't know what environment this tutorial is running in...");
+        console.log('ENV: App is in an unknown environment...');
         break;
       }
     }
