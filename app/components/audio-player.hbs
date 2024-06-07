@@ -1,5 +1,6 @@
 <div class="audio-player{{if this.isPlaying ' is-playing'}}">
-  <h3>{{t "components.headAudioPlayer"}}</h3>
+  <h3>{{t "components.audioPlayer.head"}}</h3>
+  
   {{#if @shouldLoop}}
     <audio loop {{play-when this.isPlaying}} data-test-audio-player>
       <source src={{@srcURL}} />
