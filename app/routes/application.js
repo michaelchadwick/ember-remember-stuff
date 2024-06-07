@@ -35,17 +35,20 @@ export default class ApplicationRoute extends Route {
       this.headData.envTitle = 'dev';
     }
 
+    // will output in browser dev console
     switch (this.env) {
       case 'development': {
-        console.log('ENV: App is in development! Go nuts!');
-        break;
-      }
-      case 'test': {
-        console.log('ENV: App is in test! Hope everything passes.');
+        console.log(
+          '%cENV: App is in development! Go nuts!',
+          'background: transparent; color: #1da826',
+        );
         break;
       }
       case 'production': {
-        console.log('ENV: App is in production! Be careful.');
+        console.log(
+          '%cENV: App is in production! Be careful.',
+          'background: transparent; color: #cb0b38',
+        );
         break;
       }
       default: {

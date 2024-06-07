@@ -29,8 +29,8 @@ module.exports = function (environment) {
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
@@ -48,6 +48,26 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+  }
+
+  // will output in stdout at build
+  switch (environment) {
+    case 'development': {
+      console.log('ENV: App built for development!');
+      break;
+    }
+    case 'test': {
+      console.log('ENV: App built for test!');
+      break;
+    }
+    case 'production': {
+      console.log('ENV: App built for production!');
+      break;
+    }
+    default: {
+      console.log('ENV: App built for unknown environment...');
+      break;
+    }
   }
 
   return ENV;
