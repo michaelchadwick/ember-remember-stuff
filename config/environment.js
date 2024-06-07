@@ -21,8 +21,6 @@ module.exports = function (environment) {
       GITHUB_API_URL: 'https://api.github.com',
       GITHUB_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',
-      SONG_API_URL:
-        'https://music.nebyoolae.com/jsonapi/views/songs/songs_neb?include=field_album_id,field_album_id.field_album_cover,field_artist_id',
     },
   };
 
