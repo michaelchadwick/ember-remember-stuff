@@ -1,16 +1,33 @@
 <div class="gh-commits">
   <h3>{{if @title @title (t "components.headGhCommits")}}</h3>
   {{#if @commits}}
-  <ul>
-    {{#each @commits as |commit|}}
-    <li>
-      {{commit.commit.author.date}} - 
-      <a href={{commit.html_url}} target="_blank" rel="noopener noreferrer">
-        {{commit.commit.message}}
-      </a>
-    </li>
-    {{/each}}
-  </ul>
+  <table>
+    <thead>
+      <th></th>
+      <th></th>
+    </thead>
+    <tbody>
+      {{#each @commits as |commit|}}
+      <tr>
+        <td class="commit-date">
+          {{format-date
+            commit.commit.author.date
+            month="2-digit"
+            day="2-digit"
+            year="numeric"
+            hour="2-digit"
+            minute="2-digit"
+          }}
+        </td>
+        <td class="commit-message">
+          <a href={{commit.html_url}} target="_blank" rel="noopener noreferrer">
+            {{commit.commit.message}}
+          </a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
   {{else}}
   <p>{{t "general.noneFound" items="commits"}}</p>
   {{/if}}
