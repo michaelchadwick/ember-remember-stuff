@@ -2,10 +2,32 @@
   "data": [
     {
       "type": "checklist",
+      "id": "introduction",
+      "attributes": {
+        "title": "I. Introduction",
+        "summary": "What is Ember?",
+        "lists": [
+          {
+            "title": "Quick Start",
+            "checked": true,
+            "code": false,
+            "items": []
+          },
+          {
+            "title": "Tutorial",
+            "checked": true,
+            "code": false,
+            "items": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "checklist",
       "id": "core-concepts",
       "attributes": {
-        "title": "Core Concepts",
-        "summary": "Core Concepts",
+        "title": "II. Core Concepts",
+        "summary": "Components, Routing, Services, EmberData",
         "lists": [
           {
             "title": "Components",
@@ -61,20 +83,66 @@
       "type": "checklist",
       "id": "application-development",
       "attributes": {
-        "title": "Application Development",
+        "title": "III. Application Development",
         "summary": "Application Development",
         "lists": [
           {
-            "title": "",
+            "title": "Application Concerns",
             "checked": false,
-            "items": [
-              "Application Concerns",
-              "Accessibility",
-              "Configuration",
-              "Testing",
-              "Addons and Dependencies",
-              "Using TypeScript"
-            ]
+            "code": false,
+            "items": []
+          },
+          {
+            "title": "Accessibility",
+            "checked": false,
+            "code": false,
+            "items": []
+          },
+          {
+            "title": "Configuration",
+            "checked": true,
+            "code": false,
+            "items": []
+          },
+          {
+            "title": "Testing",
+            "checked": false,
+            "code": false,
+            "items": []
+          },
+          {
+            "title": "Addons and Dependencies",
+            "checked": false,
+            "code": false,
+            "items": []
+          },
+          {
+            "title": "Using TypeScript",
+            "checked": false,
+            "code": false,
+            "items": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "checklist",
+      "id": "application-development",
+      "attributes": {
+        "title": "IV. Developer Tools",
+        "summary": "Augment Development",
+        "lists": [
+          {
+            "title": "Ember Inspector",
+            "checked": true,
+            "code": false,
+            "items": []
+          },
+          {
+            "title": "Code Editors",
+            "checked": true,
+            "code": false,
+            "items": []
           }
         ]
       }
