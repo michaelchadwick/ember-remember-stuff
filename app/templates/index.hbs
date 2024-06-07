@@ -1,5 +1,6 @@
 {{#each @model as |checklist|}}
 <h2>{{checklist.title}}</h2>
+
 <details>
   <summary>{{if checklist.summary checklist.summary "Details"}}</summary>
   {{#each checklist.lists as |list|}}
