@@ -69,7 +69,7 @@ jobs:
       - name: Upload to CodeClimate
         uses: paambaati/codeclimate-action@v6.0.0
         env:
-          CC_TEST_REPORTER_ID: b2dde9b9e0d2527871c0676385628df9f9778b2dd778f1ccb1425aaa03960a6f
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageLocations:
             coverage.xml:clover
