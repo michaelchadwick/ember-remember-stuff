@@ -1,11 +1,13 @@
-name: CI
+name: Continuous Integration
 
 on:
   push:
     branches:
       - main
       - master
-  pull_request: {}
+  pull_request:
+  schedule:
+    - cron: '30 7 * * *' # weekly, at 7:30am
 
 concurrency:
   group: ci-${{ github.head_ref || github.ref }}
@@ -33,7 +35,7 @@ jobs:
         run: pnpm run lint
 
   test:
-    name: "Test"
+    name: "QUnit Tests"
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
