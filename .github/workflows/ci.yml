@@ -34,7 +34,7 @@ jobs:
       - name: Lint
         run: pnpm run lint
 
-  test:
+  tests:
     name: "QUnit Tests"
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -53,3 +53,24 @@ jobs:
         run: pnpm install
       - name: Run Tests
         run: pnpm test
+
+  coverage:
+    name: Upload Code Coverage
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: tests
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Coverage Report
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-output
+      - run: ls -lh coverage.xml
+      - name: Upload to CodeClimate
+        uses: paambaati/codeclimate-action@v6.0.0
+        env:
+          CC_TEST_REPORTER_ID: b2dde9b9e0d2527871c0676385628df9f9778b2dd778f1ccb1425aaa03960a6f
+        with:
+          coverageLocations:
+            coverage.xml:clover
+
