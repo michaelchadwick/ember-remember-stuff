@@ -47,6 +47,20 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.strictEqual(currentURL(), '/');
   });
 
+  test('visiting /music', async function (assert) {
+    await visit('/music');
+
+    assert.strictEqual(currentURL(), '/music');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h2').hasText('Music');
+    assert.dom('ul.song-list').exists();
+
+    await click('nav a h1');
+
+    assert.strictEqual(currentURL(), '/');
+  });
+
   test('visiting /links', async function (assert) {
     await visit('/links');
 
