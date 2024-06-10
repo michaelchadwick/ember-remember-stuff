@@ -21,9 +21,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         with:
-          version: 9.1.1
+          version: 9.2.0
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -41,13 +41,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         with:
-          version: 9.1.1
+          version: 9.2.0
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: pnpm
       - name: Install Dependencies
         run: pnpm install
