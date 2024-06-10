@@ -21,8 +21,8 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 - `pnpm start`
-- Visit your app at [http://localhost:4211](http://localhost:4211).
-- Visit your tests at [http://localhost:4211/tests](http://localhost:4211/tests).
+- Visit your app at [http://localhost:4200](http://localhost:4200).
+- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
 ### Running Tests
 
