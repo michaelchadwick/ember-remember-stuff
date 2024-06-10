@@ -25,11 +25,11 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    ENV.APP.LOG_TRANSITIONS = true;
-    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_RESOLVER = process.env.LOG_RESOLVER || false;
+    ENV.APP.LOG_ACTIVE_GENERATION = process.env.LOG_ACTIVE_GENERATION || false;
+    ENV.APP.LOG_TRANSITIONS = process.env.LOG_TRANSITIONS || false;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = process.env.LOG_TRANSITIONS_INTERNAL || false;
+    ENV.APP.LOG_VIEW_LOOKUPS = process.env.LOG_VIEW_LOOKUPS || false;
   }
 
   if (environment === 'test') {
@@ -52,6 +52,13 @@ module.exports = function (environment) {
   switch (environment) {
     case 'development': {
       console.log('ENV: App built for development!');
+      console.log('Log Flags', [
+        `LOG_RESOLVER: ${ENV.APP.LOG_RESOLVER}`,
+        `LOG_ACTIVE_GENERATION: ${ENV.APP.LOG_ACTIVE_GENERATION}`,
+        `LOG_TRANSITIONS: ${ENV.APP.LOG_TRANSITIONS}`,
+        `LOG_TRANSITIONS_INTERNAL: ${ENV.APP.LOG_TRANSITIONS_INTERNAL}`,
+        `LOG_VIEW_LOOKUPS: ${ENV.APP.LOG_VIEW_LOOKUPS}`,
+      ]);
       break;
     }
     case 'test': {
