@@ -9,6 +9,8 @@ module('Integration | Component | gh-user', function (hooks) {
   test('it renders with a username', async function (assert) {
     await render(hbs`<GhUser @username='michaelchadwick' />`);
 
-    assert.dom().hasText('GithubUser michaelchadwick (repos: )');
+    assert
+      .dom()
+      .hasText('GithubUser michaelchadwick Public Repos: Public Gists: Followers: Following:');
   });
 });
