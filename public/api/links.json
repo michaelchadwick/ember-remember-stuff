@@ -1,4 +1,7 @@
 {
+  "//": [
+    "I am a comment"
+  ],
   "data": [
     {
       "type": "link",
