@@ -54,23 +54,23 @@ jobs:
       - name: Run Tests
         run: pnpm test
 
-  coverage:
-    name: Upload Code Coverage
-    runs-on: ubuntu-latest
-    if: ${{ always() }}
-    needs: tests
-    steps:
-      - uses: actions/checkout@v4
-      - name: Download Coverage Report
-        uses: actions/download-artifact@v4
-        with:
-          name: coverage-output
-      - run: ls -lh coverage.xml
-      - name: Upload to CodeClimate
-        uses: paambaati/codeclimate-action@v6.0.0
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
-          coverageLocations:
-            coverage.xml:clover
+  # coverage:
+  #   name: Upload Code Coverage
+  #   runs-on: ubuntu-latest
+  #   if: ${{ always() }}
+  #   needs: tests
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Download Coverage Report
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: coverage-output
+  #     - run: ls -lh coverage.xml
+  #     - name: Upload to CodeClimate
+  #       uses: paambaati/codeclimate-action@v6.0.0
+  #       env:
+  #         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+  #       with:
+  #         coverageLocations:
+  #           coverage.xml:clover
 
