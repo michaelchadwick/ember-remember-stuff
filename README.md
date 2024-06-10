@@ -51,3 +51,12 @@ Currently being built on [Netlify](https://mc-emberjs-remember-stuff.netlify.app
 - [Ember CLI Truth Helpers](https://www.npmjs.com/package/ember-truth-helpers)
 - [Fontawesome](https://www.npmjs.com/package/@fortawesome/ember-fontawesome)
 - [Husky](https://github.com/typicode/husky)
+
+### Add Additional Fields to GhUser Component
+
+- Add new model fields to `app/models/gh-user.js`
+- Add new serializer fields to `app/serializers/gh-user.js`
+  - Use fake data from `public/api/gh-users/michaelchadwick.json`
+- Pass new fields into `<Debug>` component in `app/templates/application.hbs`
+- Add those fields to `<GhUser>` component in `app/components/gh-user.hbs`
+  - (Optional) Add new translations to `/translations/*` files

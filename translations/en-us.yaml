@@ -152,8 +152,11 @@ components:
   debug.summary: Component Debugging
   ghCommits.head: GithubCommits
   ghUser:
+    followers: Followers
+    following: Following
+    gists: Public Gists
     head: GithubUser
-    repos: repos
+    repos: Public Repos
   newMessageInput:
     nothingSaved: "<em>Note</em>: new messages will not be saved (...yet)!"
     placeholder: Type message here and hit enter
