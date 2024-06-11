@@ -1,9 +1,40 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import { DateTime } from 'luxon';
 
 export default class MessagesComponent extends Component {
   @tracked username = 'anonymous';
+
+  // Tomster: Los Angeles, CA, USA
+  get tomsterLocalTime() {
+    const f = {
+      month: '2-digit',
+      day: '2-digit',
+      year: 'numeric',
+      minute: '2-digit',
+      hour: '2-digit',
+      hour12: true,
+      zone: 'America/Los_Angeles',
+    };
+
+    return DateTime.fromObject({}, f).setLocale('en-US').toLocaleString(f).toUpperCase();
+  }
+
+  // Zoey: Berlin, Germany, Europe
+  get zoeyLocalTime() {
+    const f = {
+      month: '2-digit',
+      day: '2-digit',
+      year: 'numeric',
+      minute: '2-digit',
+      hour: '2-digit',
+      hour12: true,
+      zone: 'Europe/Berlin',
+    };
+
+    return DateTime.fromObject({}, f).setLocale('en-DE').toLocaleString(f).toUpperCase();
+  }
 
   @action
   addMessage(messageText) {
@@ -13,9 +44,12 @@ export default class MessagesComponent extends Component {
         username: this.username,
         active: true,
         localTime: new Date().toLocaleTimeString('en-US', {
-          hour12: true,
-          hour: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          year: 'numeric',
           minute: '2-digit',
+          hour: 'numeric',
+          hour12: true,
         }),
         content: `<p>${messageText}</p>`,
       },
@@ -26,20 +60,20 @@ export default class MessagesComponent extends Component {
     {
       username: 'Tomster',
       active: true,
-      localTime: '4:56 PM',
+      localTime: this.tomsterLocalTime,
       content: `
         <p>
-          Hey Zoey, did you look at the <strong>DecEmberConfRants</strong> brainstorming doc?
+          Hey Zoey, did you look at the <strong>DecEmberConfRants</strong> brainstorming doc I sent from California, USA?
         </p>
       `,
     },
     {
       username: 'Zoey',
       active: false,
-      localTime: '5:56 PM',
+      localTime: this.zoeyLocalTime,
       current: true,
       content: `
-        <p>Hey!
+        <p>Hallo from Berlin!
           I love the ideas! I'm really excited about where this year's
           <strong>DecEmberConfRants</strong> is going, I'm sure it's going to be the best one yet. Some quick notes:
         </p>
