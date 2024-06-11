@@ -78,6 +78,7 @@
     "eslint-plugin-qunit": "^8.1.1",
     "husky": "^9.0.11",
     "loader.js": "^4.7.0",
+    "luxon": "^3.4.4",
     "prettier": "^3.2.5",
     "qunit": "^2.21.0",
     "qunit-dom": "^2.0.0",

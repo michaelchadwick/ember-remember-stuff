@@ -161,6 +161,9 @@ importers:
       loader.js:
         specifier: ^4.7.0
         version: 4.7.0
+      luxon:
+        specifier: ^3.4.4
+        version: 3.4.4
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -4587,6 +4590,10 @@ packages:
 
   lru-cache@7.18.3:
     resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
+    engines: {node: '>=12'}
+
+  luxon@3.4.4:
+    resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
     engines: {node: '>=12'}
 
   magic-string@0.24.1:
@@ -12495,6 +12502,8 @@ snapshots:
       yallist: 3.1.1
 
   lru-cache@7.18.3: {}
+
+  luxon@3.4.4: {}
 
   magic-string@0.24.1:
     dependencies:
