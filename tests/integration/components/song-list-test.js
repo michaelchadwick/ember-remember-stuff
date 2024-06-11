@@ -14,5 +14,6 @@ module('Integration | Component | song-list', function (hooks) {
     await render(hbs`<SongList @songs={{this.songs}}/>`);
 
     assert.dom('.song-list').exists();
+    assert.dom('.song-list li').exists();
   });
 });
