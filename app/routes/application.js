@@ -44,6 +44,13 @@ export default class ApplicationRoute extends Route {
         );
         break;
       }
+      case 'test': {
+        console.log(
+          '%cENV: App is in test! Hope it all passes.',
+          'background: transparent; color: #b58a24',
+        );
+        break;
+      }
       case 'production': {
         console.log(
           '%cENV: App is in production! Be careful.',
