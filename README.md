@@ -62,5 +62,6 @@ Currently being built on [Netlify](https://mc-emberjs-remember-stuff.netlify.app
 - Add new serializer fields to `app/serializers/gh-user.js`
   - Use fake data from `public/api/gh-users/michaelchadwick.json`
 - Pass new fields into `<Debug>` component in `app/templates/application.hbs`
-- Add those fields to `<GhUser>` component in `app/components/gh-user.hbs`
+- Add those fields to `<GhUser>` component in `app/components/debug.hbs`
   - (Optional) Add new translations to `/translations/*` files
+- Add those fields to `app/components/gh-user.hbs` template

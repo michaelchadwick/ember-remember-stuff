@@ -1,7 +1,7 @@
 <div class="gh-user">
   <h3>{{t "components.ghUser.head"}}</h3>
 
-  <strong>{{@username}}</strong><br />
+  <strong><a href={{@htmlUrl}}>{{@username}}</a></strong><br />
   {{t "components.ghUser.repos"}}: {{@publicRepos}}<br />
   {{t "components.ghUser.gists"}}: {{@publicGists}}<br />
   {{t "components.ghUser.followers"}}: {{@followers}}<br />

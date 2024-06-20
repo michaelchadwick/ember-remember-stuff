@@ -8,6 +8,7 @@ export default class GhUserSerializer extends JSONAPISerializer {
         type: type.modelName,
         attributes: {
           ghUsername: payload.name,
+          ghHtmlUrl: payload.html_url,
           ghPublicRepos: payload.public_repos,
           ghPublicGists: payload.public_gists,
           ghFollowers: payload.followers,
