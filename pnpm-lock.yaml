@@ -29,6 +29,9 @@ importers:
       '@ember/test-helpers':
         specifier: ^3.3.0
         version: 3.3.0(ember-source@5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2(@babel/core@7.24.7))(rsvp@4.8.5)(webpack@5.92.1))(webpack@5.92.1)
+      '@embroider/macros':
+        specifier: ^1.16.4
+        version: 1.16.4
       '@fortawesome/ember-fontawesome':
         specifier: ^2.0.0
         version: 2.0.0(ember-source@5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2(@babel/core@7.24.7))(rsvp@4.8.5)(webpack@5.92.1))(rollup@2.79.1)(webpack@5.92.1)

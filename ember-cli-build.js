@@ -7,6 +7,13 @@ module.exports = function (defaults) {
     sassOptions: {
       extension: 'scss',
     },
+    '@embroider/macros': {
+      setConfig: {
+        'ember-qunit': {
+          theme: 'ember',
+        },
+      },
+    },
   });
 
   return app.toTree();
