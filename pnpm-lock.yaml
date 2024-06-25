@@ -119,6 +119,9 @@ importers:
       ember-intl:
         specifier: ^6.5.5
         version: 6.5.5(typescript@5.4.5)(webpack@5.92.1)
+      ember-keyboard:
+        specifier: ^8.2.1
+        version: 8.2.1(@babel/core@7.24.7)(@ember/test-helpers@3.3.0(ember-source@5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2(@babel/core@7.24.7))(rsvp@4.8.5)(webpack@5.92.1))(webpack@5.92.1))(ember-source@5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2(@babel/core@7.24.7))(rsvp@4.8.5)(webpack@5.92.1))
       ember-load-initializers:
         specifier: ^2.1.2
         version: 2.1.2(@babel/core@7.24.7)
@@ -2900,8 +2903,20 @@ packages:
       typescript:
         optional: true
 
+  ember-keyboard@8.2.1:
+    resolution: {integrity: sha512-wT9xpt3GKsiodGZoifKU4OyeRjXWlmKV9ZHHsp6wJBwMFpl4wWPjTNdINxivk2qg/WFNIh8nUiwuG4+soWXPdw==}
+    peerDependencies:
+      '@ember/test-helpers': ^2.6.0 || ^3.0.0
+    peerDependenciesMeta:
+      '@ember/test-helpers':
+        optional: true
+
   ember-load-initializers@2.1.2:
     resolution: {integrity: sha512-CYR+U/wRxLbrfYN3dh+0Tb6mFaxJKfdyz+wNql6cqTrA0BBi9k6J3AaKXj273TqvEpyyXegQFFkZEiuZdYtgJw==}
+    engines: {node: 6.* || 8.* || >= 10.*}
+
+  ember-modifier-manager-polyfill@1.2.0:
+    resolution: {integrity: sha512-bnaKF1LLKMkBNeDoetvIJ4vhwRPKIIumWr6dbVuW6W6p4QV8ZiO+GdF8J7mxDNlog9CeL9Z/7wam4YS86G8BYA==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
   ember-modifier@4.1.0:
@@ -9886,10 +9901,32 @@ snapshots:
       - supports-color
       - webpack
 
+  ember-keyboard@8.2.1(@babel/core@7.24.7)(@ember/test-helpers@3.3.0(ember-source@5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2(@babel/core@7.24.7))(rsvp@4.8.5)(webpack@5.92.1))(webpack@5.92.1))(ember-source@5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2(@babel/core@7.24.7))(rsvp@4.8.5)(webpack@5.92.1)):
+    dependencies:
+      '@embroider/addon-shim': 1.8.9
+      ember-destroyable-polyfill: 2.0.3(@babel/core@7.24.7)
+      ember-modifier: 4.1.0(ember-source@5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2(@babel/core@7.24.7))(rsvp@4.8.5)(webpack@5.92.1))
+      ember-modifier-manager-polyfill: 1.2.0(@babel/core@7.24.7)
+    optionalDependencies:
+      '@ember/test-helpers': 3.3.0(ember-source@5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2(@babel/core@7.24.7))(rsvp@4.8.5)(webpack@5.92.1))(webpack@5.92.1)
+    transitivePeerDependencies:
+      - '@babel/core'
+      - ember-source
+      - supports-color
+
   ember-load-initializers@2.1.2(@babel/core@7.24.7):
     dependencies:
       ember-cli-babel: 7.26.11
       ember-cli-typescript: 2.0.2(@babel/core@7.24.7)
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+
+  ember-modifier-manager-polyfill@1.2.0(@babel/core@7.24.7):
+    dependencies:
+      ember-cli-babel: 7.26.11
+      ember-cli-version-checker: 2.2.0
+      ember-compatibility-helpers: 1.2.7(@babel/core@7.24.7)
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
