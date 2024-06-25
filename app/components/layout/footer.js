@@ -18,7 +18,7 @@ export default class FooterComponent extends Component {
     });
 
     links.push({
-      url: 'https://github.com/michaelchadwick/remember-stuff',
+      url: 'https://github.com/michaelchadwick/ember-remember-stuff',
       route: 'source',
       icon: 'github',
       iconType: 'fab',
