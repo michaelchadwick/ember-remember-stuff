@@ -3,6 +3,7 @@ module.exports = function () {
     'free-solid-svg-icons': [
       'at',
       'book',
+      'check',
       'circle-info',
       'ear-listen',
       'flask',

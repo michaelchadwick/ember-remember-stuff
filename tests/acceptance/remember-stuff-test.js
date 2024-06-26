@@ -2,6 +2,8 @@ import { module, test } from 'qunit';
 import { click, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'remember-stuff/tests/helpers';
 import ENV from 'remember-stuff/config/environment';
+// import { triggerKeyEvent } from '@ember/test-helpers';
+// import { elementInView } from '../helpers/intersection-observing';
 
 module('Acceptance | remember stuff', function (hooks) {
   setupApplicationTest(hooks);
@@ -130,5 +132,21 @@ module('Acceptance | remember stuff', function (hooks) {
       assert.dom('footer a.menu-tests').hasText('[Tests]');
       assert.dom('footer a.menu-prod').hasText('[Prod]');
     }
+  });
+
+  test('see if tomster works', async function (assert) {
+    await visit('/');
+
+    assert.dom('#tomster-popper').exists();
+
+    // TODO
+    // assert.false(elementInView('tomster-popper'));
+
+    // await triggerKeyEvent('.application-wrapper', 'keyup', 84, {
+    //   shiftKey: true,
+    //   ctrlKey: true,
+    // });
+
+    // assert.true(elementInView('tomster-popper'));
   });
 });

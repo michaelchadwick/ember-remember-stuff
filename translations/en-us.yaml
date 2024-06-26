@@ -90,6 +90,7 @@ general:
   status: Status
   summary: Summary
   sunday: Sunday
+  teachingTomster: Teaching Tomster
   thursday: Thursday
   time: Time
   timezone: Timezone

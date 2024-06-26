@@ -1,0 +1,62 @@
+#tomster-popper {
+  bottom: -100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  position: fixed;
+  z-index: 10;
+}
+#tomster-popper.show {
+  animation-duration: 500ms;
+  animation-name: slidein;
+  bottom: -70px;
+  display: flex;
+}
+#tomster-popper.hide {
+  animation-duration: 1s;
+  animation-name: slideout;
+  bottom: -100vw;
+  display: flex;
+}
+#tomster-popper #greeting {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  bottom: 5px;
+  padding: 5px;
+  position: relative;
+  width: 140px;
+}
+#tomster-popper img {
+  height: 200px;
+  width: 200px;
+}
+
+@keyframes slidein {
+  from {
+    bottom: -100vw;
+    translate: 0 10vw;
+    scale: 50% 50%;
+  }
+
+  to {
+    bottom: -70px;
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes slideout {
+  from {
+    bottom: -70px;
+    translate: 0 0;
+    scale: 100% 1;
+  }
+
+  to {
+    bottom: -100vw;
+    translate: 0 10vw;
+    scale: 50% 50%;
+  }
+}
