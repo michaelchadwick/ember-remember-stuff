@@ -2,6 +2,27 @@
   transition: 100ms;
 }
 
+#mover button.header {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+}
+
+#mover.moving {
+  background-color: #a0e68e;
+}
+
+@media (hover: hover) {
+  #mover button.header:hover {
+    cursor: pointer;
+    color: #228111;
+  }
+
+  #mover.moving button.header:hover {
+    color: #811111;
+  }
+}
+
 #mover p {
   font-size: 1.5rem;
 }

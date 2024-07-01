@@ -11,6 +11,8 @@ module.exports = function () {
       'play',
       'square-up-right',
       'spinner',
+      'toggle-off',
+      'toggle-on',
     ],
     'free-brands-svg-icons': ['github'],
   };

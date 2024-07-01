@@ -1,4 +1,23 @@
-<div id="mover" {{move-randomly}}>
-  <h3>{{t "components.mover.head"}}</h3>
+{{#if this.isEnabled}}
+<div id="mover" class="moving" {{move-randomly-switch}}>
+  <h3>
+    {{t "components.mover.head"}}
+    <button type="button" class="header" {{on "click" this.toggleMovement}}>
+      <FaIcon @icon="toggle-on" />
+    </button>
+  </h3>
+  {{t "components.mover.clickMeOff"}}
   <p>{{yield}}</p>
 </div>
+{{else}}
+<div id="mover">
+  <h3>
+    {{t "components.mover.head"}}
+    <button type="button" class="header" {{on "click" this.toggleMovement}}>
+      <FaIcon @icon="toggle-off" />
+    </button>
+  </h3>
+  {{t "components.mover.clickMeOn"}}
+  <p>{{yield}}</p>
+</div>
+{{/if}}

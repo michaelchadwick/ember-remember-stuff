@@ -161,8 +161,8 @@ components:
     repos: Public Repos
   mover:
     alwaysMoving: Always be moving!
-    clickMeOff: Click me to stop moving!
-    clickMeOn: Click me to start moving!
+    clickMeOff: Click toggle to stop moving!
+    clickMeOn: Click toggle to start moving!
     head: Mover
   newMessageInput:
     nothingSaved: "<em>Note</em>: new messages will not be saved (...yet)!"
