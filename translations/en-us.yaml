@@ -41,6 +41,7 @@ general:
   from: from
   go: Go
   greeting: "Hello, I'm {name}"
+  helloWorld: Hello World!
   hour: Hour
   hours: Hours
   inactive: inactive
@@ -158,6 +159,11 @@ components:
     gists: Public Gists
     head: GithubUser
     repos: Public Repos
+  mover:
+    alwaysMoving: Always be moving!
+    clickMeOff: Click me to stop moving!
+    clickMeOn: Click me to start moving!
+    head: Mover
   newMessageInput:
     nothingSaved: "<em>Note</em>: new messages will not be saved (...yet)!"
     placeholder: Type message here and hit enter
