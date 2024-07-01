@@ -12,6 +12,10 @@ export default class MusicRoute extends Route {
   }
 
   model() {
-    return this.store.findAll('song');
+    if (this.store.peekAll('song').length) {
+      return this.store.peekAll('song');
+    } else {
+      return this.store.findAll('song');
+    }
   }
 }
