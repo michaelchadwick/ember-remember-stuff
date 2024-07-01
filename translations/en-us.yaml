@@ -171,7 +171,7 @@ sections:
   about:
     description: "<p><strong>RemEmber Stuff</strong> is a web application I built to learn about EmberJS.</p>
 
-    <p>It started as a fake chat application, like <a href=https://guides.emberjs.com/v5.8.0/components/introducing-components/>this</a>. However, it's grown into more of a personal homepage incorporating what I've learned about EmberJS in the last month or so. Using my own interests, and applying them through the concepts in the EmberJS documentation, I've grown to understand EmberJS better.</p>
+    <p>It started as a fake chat application, like <a href=https://guides.emberjs.com/v5.8.0/components/introducing-components/>this</a>. However, it's grown into more of a personal homepage incorporating what I've learned about EmberJS so far. Using my own interests, and applying them through the concepts in the EmberJS documentation, I've grown to understand this framework better.</p>
 
     <p>The homepage will be updated as I go through each concept and apply it to this site.</p>"
   links:
