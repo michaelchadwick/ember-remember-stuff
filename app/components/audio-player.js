@@ -5,12 +5,15 @@ import ENV from 'remember-stuff/config/environment';
 
 export default class AudioPlayerComponent extends Component {
   @tracked isPlaying = false;
-  @tracked volume = 20;
+  @tracked rangeVolume = 30;
   @tracked env = ENV.environment;
 
+  maxVolume = 100;
+  decreaseVolume = null;
+
   @action
-  volChange(volume) {
-    this.volume = volume;
+  setVolume(event) {
+    this.rangeVolume = parseInt(event.target.value, 10);
   }
 
   @action
@@ -21,5 +24,9 @@ export default class AudioPlayerComponent extends Component {
   @action
   pause() {
     this.isPlaying = false;
+  }
+
+  get audioVolume() {
+    return (this.rangeVolume / 100).toFixed(2);
   }
 }
