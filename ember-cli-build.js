@@ -14,6 +14,22 @@ module.exports = function (defaults) {
         },
       },
     },
+    'ember-cli-image-transformer': {
+      images: [
+        {
+          inputFilename: 'lib/images/favicon-dev.png',
+          outputFileName: 'favicon-dev',
+          convertTo: 'png',
+          sizes: [16, 32, 48, 96, 150, 512],
+        },
+        {
+          inputFilename: 'lib/images/favicon-prod.png',
+          outputFileName: 'favicon-prod',
+          convertTo: 'png',
+          sizes: [16, 32, 48, 96, 150, 512],
+        },
+      ],
+    },
   });
 
   return app.toTree();
