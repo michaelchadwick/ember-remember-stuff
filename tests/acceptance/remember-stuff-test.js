@@ -11,7 +11,8 @@ module('Acceptance | remember stuff', function (hooks) {
 
   test('visiting /', async function (assert) {
     await visit('/');
-    await percySnapshot(assert + ' | homepage');
+    const percyTestName = assert.test.module.name + ' | ' + assert.test.testName + ' | homepage';
+    await percySnapshot(percyTestName);
 
     assert.strictEqual(currentURL(), '/');
     assert.dom('nav').exists();
