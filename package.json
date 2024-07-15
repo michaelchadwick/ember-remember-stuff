@@ -42,6 +42,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
+    "@percy/cli": "^1.28.9",
+    "@percy/ember": "^4.2.0",
     "broccoli-asset-rev": "^3.0.0",
     "class-validator": "^0.14.1",
     "concurrently": "^8.2.2",
