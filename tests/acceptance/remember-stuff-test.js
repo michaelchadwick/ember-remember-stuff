@@ -1,6 +1,7 @@
 import { module, test } from 'qunit';
 import { click, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'remember-stuff/tests/helpers';
+import percySnapshot from '@percy/ember';
 import ENV from 'remember-stuff/config/environment';
 // import { triggerKeyEvent } from '@ember/test-helpers';
 // import { elementInView } from '../helpers/intersection-observing';
@@ -10,6 +11,7 @@ module('Acceptance | remember stuff', function (hooks) {
 
   test('visiting /', async function (assert) {
     await visit('/');
+    await percySnapshot(assert + ' | homepage');
 
     assert.strictEqual(currentURL(), '/');
     assert.dom('nav').exists();
