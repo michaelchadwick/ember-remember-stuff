@@ -5,6 +5,7 @@ import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';
 import { start } from 'ember-qunit';
 import './helpers/intersection-observing';
+import './helpers/percy-snapshot-name';
 
 setApplication(Application.create(config.APP));
 

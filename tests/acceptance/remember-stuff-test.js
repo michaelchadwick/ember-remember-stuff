@@ -3,6 +3,7 @@ import { click, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'remember-stuff/tests/helpers';
 import percySnapshot from '@percy/ember';
 import ENV from 'remember-stuff/config/environment';
+import { getUniqueName } from '../helpers/percy-snapshot-name';
 // import { triggerKeyEvent } from '@ember/test-helpers';
 // import { elementInView } from '../helpers/intersection-observing';
 
@@ -10,9 +11,9 @@ module('Acceptance | remember stuff', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /', async function (assert) {
+    assert.expect(5);
     await visit('/');
-    const percyTestName = assert.test.module.name + ' | ' + assert.test.testName + ' | homepage';
-    await percySnapshot(percyTestName);
+    await percySnapshot(getUniqueName(assert, 'homepage'));
 
     assert.strictEqual(currentURL(), '/');
     assert.dom('nav').exists();
