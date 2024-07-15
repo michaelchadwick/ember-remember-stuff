@@ -24,7 +24,7 @@
     "start": "ember serve",
     "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
     "test:ember": "ember test",
-    "test:percy": "npx percy exec -- ember test",
+    "test:percy": "npx percy exec --port 7777 -- ember test",
     "prepare": "husky"
   },
   "devDependencies": {
