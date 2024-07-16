@@ -1,11 +1,11 @@
 {
-  "name": "remember-stuff",
-  "version": "0.0.0",
+  "name": "remember-stuff-frontend",
+  "version": "1.0.0",
   "private": true,
-  "description": "Tutorial app that displays various EmberJS stuff for reference.",
-  "repository": "",
+  "description": "Frontend for RemEmber Stuff EmberJS web app.",
+  "repository": "https://github.com/michaelchadwick/ember-remember-stuff",
   "license": "MIT",
-  "author": "",
+  "author": "Michael Chadwick (michael.chadwick@ucsf.edu)",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -99,7 +99,9 @@
     "webpack": "^5.93.0"
   },
   "engines": {
-    "node": ">= 18"
+    "node": ">= 20",
+    "yarn": "use pnpm",
+    "npm": "use pnpm"
   },
   "ember": {
     "edition": "octane"

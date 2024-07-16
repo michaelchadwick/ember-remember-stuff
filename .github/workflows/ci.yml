@@ -1,0 +1,60 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  schedule:
+    - cron: '30 7 * * *' # weekly, at 7:30am
+
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: 'Lint'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm run lint
+
+  tests:
+    name: ${{matrix.workspace}} QUnit Tests (${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [lint]
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [20]
+        workspace:
+          - frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Run Tests
+        run: pnpm --filter ${{ matrix.workspace }} exec ember test

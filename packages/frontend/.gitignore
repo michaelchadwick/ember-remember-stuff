@@ -1,6 +1,7 @@
 # compiled output
 /dist/
 /declarations/
+/tmp/
 
 # dependencies
 /node_modules/
@@ -24,3 +25,7 @@
 
 # broccoli-debug
 /DEBUG/
+
+#browserstack via ember-cli-browserstack
+browserstack-local.pid
+local.log

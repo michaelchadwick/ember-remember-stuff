@@ -8,6 +8,12 @@ importers:
 
   .:
     devDependencies:
+      husky:
+        specifier: ^9.0.11
+        version: 9.0.11
+
+  packages/frontend:
+    devDependencies:
       '@babel/core':
         specifier: ^7.24.9
         version: 7.24.9
@@ -37,16 +43,16 @@ importers:
         version: 2.0.0(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))(rollup@2.79.1)(webpack@5.93.0)
       '@fortawesome/fontawesome-svg-core':
         specifier: ^6.5.2
-        version: 6.5.2
+        version: 6.6.0
       '@fortawesome/free-brands-svg-icons':
         specifier: ^6.5.2
-        version: 6.5.2
+        version: 6.6.0
       '@fortawesome/free-regular-svg-icons':
         specifier: ^6.5.2
-        version: 6.5.2
+        version: 6.6.0
       '@fortawesome/free-solid-svg-icons':
         specifier: ^6.5.2
-        version: 6.5.2
+        version: 6.6.0
       '@glimmer/component':
         specifier: ^1.1.2
         version: 1.1.2(@babel/core@7.24.9)
@@ -55,7 +61,7 @@ importers:
         version: 1.1.2
       '@percy/cli':
         specifier: ^1.28.9
-        version: 1.28.9(typescript@5.4.5)
+        version: 1.28.9
       '@percy/ember':
         specifier: ^4.2.0
         version: 4.2.0
@@ -124,13 +130,13 @@ importers:
         version: 5.3.8(@ember/string@3.1.1)(@ember/test-helpers@3.3.0(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0))(@ember/test-waiters@3.1.0)(ember-inflector@4.0.3(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0)))(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.21.0)
       ember-fetch:
         specifier: ^8.1.2
-        version: 8.1.2(encoding@0.1.13)
+        version: 8.1.2
       ember-inflector:
         specifier: ^4.0.3
         version: 4.0.3(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))
       ember-intl:
         specifier: ^6.5.5
-        version: 6.5.5(typescript@5.4.5)(webpack@5.93.0)
+        version: 6.5.5(webpack@5.93.0)
       ember-keyboard:
         specifier: ^8.2.1
         version: 8.2.1(@babel/core@7.24.9)(@ember/test-helpers@3.3.0(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0))(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))
@@ -196,16 +202,16 @@ importers:
         version: 1.77.8
       stylelint:
         specifier: ^16.7.0
-        version: 16.7.0(typescript@5.4.5)
+        version: 16.7.0
       stylelint-config-recommended-scss:
         specifier: ^14.1.0
-        version: 14.1.0(postcss@8.4.39)(stylelint@16.7.0(typescript@5.4.5))
+        version: 14.1.0(postcss@8.4.39)(stylelint@16.7.0)
       stylelint-config-standard:
         specifier: ^36.0.1
-        version: 36.0.1(stylelint@16.7.0(typescript@5.4.5))
+        version: 36.0.1(stylelint@16.7.0)
       stylelint-prettier:
         specifier: ^4.1.0
-        version: 4.1.0(prettier@3.3.3)(stylelint@16.7.0(typescript@5.4.5))
+        version: 4.1.0(prettier@3.3.3)(stylelint@16.7.0)
       tracked-built-ins:
         specifier: ^3.3.0
         version: 3.3.0
@@ -1110,24 +1116,24 @@ packages:
     peerDependencies:
       ember-source: ^4.0.0 || >=5.0.0
 
-  '@fortawesome/fontawesome-common-types@6.5.2':
-    resolution: {integrity: sha512-gBxPg3aVO6J0kpfHNILc+NMhXnqHumFxOmjYCFfOiLZfwhnnfhtsdA2hfJlDnj+8PjAs6kKQPenOTKj3Rf7zHw==}
+  '@fortawesome/fontawesome-common-types@6.6.0':
+    resolution: {integrity: sha512-xyX0X9mc0kyz9plIyryrRbl7ngsA9jz77mCZJsUkLl+ZKs0KWObgaEBoSgQiYWAsSmjz/yjl0F++Got0Mdp4Rw==}
     engines: {node: '>=6'}
 
-  '@fortawesome/fontawesome-svg-core@6.5.2':
-    resolution: {integrity: sha512-5CdaCBGl8Rh9ohNdxeeTMxIj8oc3KNBgIeLMvJosBMdslK/UnEB8rzyDRrbKdL1kDweqBPo4GT9wvnakHWucZw==}
+  '@fortawesome/fontawesome-svg-core@6.6.0':
+    resolution: {integrity: sha512-KHwPkCk6oRT4HADE7smhfsKudt9N/9lm6EJ5BVg0tD1yPA5hht837fB87F8pn15D8JfTqQOjhKTktwmLMiD7Kg==}
     engines: {node: '>=6'}
 
-  '@fortawesome/free-brands-svg-icons@6.5.2':
-    resolution: {integrity: sha512-zi5FNYdmKLnEc0jc0uuHH17kz/hfYTg4Uei0wMGzcoCL/4d3WM3u1VMc0iGGa31HuhV5i7ZK8ZlTCQrHqRHSGQ==}
+  '@fortawesome/free-brands-svg-icons@6.6.0':
+    resolution: {integrity: sha512-1MPD8lMNW/earme4OQi1IFHtmHUwAKgghXlNwWi9GO7QkTfD+IIaYpIai4m2YJEzqfEji3jFHX1DZI5pbY/biQ==}
     engines: {node: '>=6'}
 
-  '@fortawesome/free-regular-svg-icons@6.5.2':
-    resolution: {integrity: sha512-iabw/f5f8Uy2nTRtJ13XZTS1O5+t+anvlamJ3zJGLEVE2pKsAWhPv2lq01uQlfgCX7VaveT3EVs515cCN9jRbw==}
+  '@fortawesome/free-regular-svg-icons@6.6.0':
+    resolution: {integrity: sha512-Yv9hDzL4aI73BEwSEh20clrY8q/uLxawaQ98lekBx6t9dQKDHcDzzV1p2YtBGTtolYtNqcWdniOnhzB+JPnQEQ==}
     engines: {node: '>=6'}
 
-  '@fortawesome/free-solid-svg-icons@6.5.2':
-    resolution: {integrity: sha512-QWFZYXFE7O1Gr1dTIp+D6UcFUF0qElOnZptpi7PBUMylJh+vFmIedVe1Ir6RM1t2tEQLLSV1k7bR4o92M+uqlw==}
+  '@fortawesome/free-solid-svg-icons@6.6.0':
+    resolution: {integrity: sha512-IYv/2skhEDFc2WGUcqvFJkeK39Q+HyPf5GHUrT/l2pKbtgEIv1al1TKd6qStR5OIwQdN1GZP54ci3y4mroJWjA==}
     engines: {node: '>=6'}
 
   '@glimmer/compiler@0.92.0':
@@ -1242,8 +1248,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@inquirer/figures@1.0.3':
-    resolution: {integrity: sha512-ErXXzENMH5pJt5/ssXV0DfWUZqly8nGzf0UcBV9xTnP+KyffE2mqyxIMBrZ8ijQck2nU0TQm40EQB53YreyWHw==}
+  '@inquirer/figures@1.0.4':
+    resolution: {integrity: sha512-R7Gsg6elpuqdn55fBH2y9oYzrU/yKrSmIsDX4ROT51vohrECFzTf2zw9BfUbOW8xjfmM2QbVoVYdTwhrtEKWSQ==}
     engines: {node: '>=18'}
 
   '@isaacs/cliui@8.0.2':
@@ -1486,8 +1492,8 @@ packages:
   '@types/minimatch@5.1.2':
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
 
-  '@types/node@20.14.10':
-    resolution: {integrity: sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==}
+  '@types/node@20.14.11':
+    resolution: {integrity: sha512-kprQpL8MMeszbz6ojB5/tU8PLN4kesnN8Gjzw349rDlNgsSzg90lAVj3llK99Dh7JON+t9AuscPPFW6mPbTnSA==}
 
   '@types/node@9.6.61':
     resolution: {integrity: sha512-/aKAdg5c8n468cYLy2eQrcR5k6chlbNwZNGUj3TboyPa2hcO2QAJcfymlqPzMiRj8B6nYKXjzQz36minFE0RwQ==}
@@ -3152,9 +3158,6 @@ packages:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
     engines: {node: '>= 0.8'}
 
-  encoding@0.1.13:
-    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
-
   end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
 
@@ -3970,10 +3973,6 @@ packages:
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
-    engines: {node: '>=0.10.0'}
-
-  iconv-lite@0.6.3:
-    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
 
   icss-utils@5.1.0:
@@ -5963,8 +5962,8 @@ packages:
       uglify-js:
         optional: true
 
-  terser@5.31.2:
-    resolution: {integrity: sha512-LGyRZVFm/QElZHy/CPr/O4eNZOZIzsrQ92y4v9UJe/pFJjypje2yI3C2FmPtvUEnhadlSbmG2nXtdcjHOjCfxw==}
+  terser@5.31.3:
+    resolution: {integrity: sha512-pAfYn3NIZLyZpa83ZKigvj6Rn9c/vd5KfYGX7cN1mnzqgDcxWvrU5ZtAfIKhEXz9nRecw4z3LXkjaq96/qZqAA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -6109,11 +6108,6 @@ packages:
 
   typescript-memoize@1.1.1:
     resolution: {integrity: sha512-GQ90TcKpIH4XxYTI2F98yEQYZgjNMOGPpOgdjIBhaLaWji5HPWlRnZ4AeA1hfBxtY7bCGDJsqDDHk/KaHOl5bA==}
-
-  typescript@5.4.5:
-    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
-    engines: {node: '>=14.17'}
-    hasBin: true
 
   uc.micro@1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
@@ -7601,7 +7595,7 @@ snapshots:
     dependencies:
       tslib: 2.6.3
 
-  '@formatjs/intl@2.10.4(typescript@5.4.5)':
+  '@formatjs/intl@2.10.4':
     dependencies:
       '@formatjs/ecma402-abstract': 2.0.0
       '@formatjs/fast-memoize': 2.2.0
@@ -7610,12 +7604,10 @@ snapshots:
       '@formatjs/intl-listformat': 7.5.7
       intl-messageformat: 10.5.14
       tslib: 2.6.3
-    optionalDependencies:
-      typescript: 5.4.5
 
   '@fortawesome/ember-fontawesome@2.0.0(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))(rollup@2.79.1)(webpack@5.93.0)':
     dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.5.2
+      '@fortawesome/fontawesome-svg-core': 6.6.0
       '@rollup/plugin-node-resolve': 15.2.3(rollup@2.79.1)
       array-unique: 0.3.2
       broccoli-file-creator: 2.1.1
@@ -7638,23 +7630,23 @@ snapshots:
       - supports-color
       - webpack
 
-  '@fortawesome/fontawesome-common-types@6.5.2': {}
+  '@fortawesome/fontawesome-common-types@6.6.0': {}
 
-  '@fortawesome/fontawesome-svg-core@6.5.2':
+  '@fortawesome/fontawesome-svg-core@6.6.0':
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.5.2
+      '@fortawesome/fontawesome-common-types': 6.6.0
 
-  '@fortawesome/free-brands-svg-icons@6.5.2':
+  '@fortawesome/free-brands-svg-icons@6.6.0':
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.5.2
+      '@fortawesome/fontawesome-common-types': 6.6.0
 
-  '@fortawesome/free-regular-svg-icons@6.5.2':
+  '@fortawesome/free-regular-svg-icons@6.6.0':
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.5.2
+      '@fortawesome/fontawesome-common-types': 6.6.0
 
-  '@fortawesome/free-solid-svg-icons@6.5.2':
+  '@fortawesome/free-solid-svg-icons@6.6.0':
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.5.2
+      '@fortawesome/fontawesome-common-types': 6.6.0
 
   '@glimmer/compiler@0.92.0':
     dependencies:
@@ -7875,7 +7867,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@inquirer/figures@1.0.3': {}
+  '@inquirer/figures@1.0.4': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -7934,29 +7926,29 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@percy/cli-app@1.28.9(typescript@5.4.5)':
+  '@percy/cli-app@1.28.9':
     dependencies:
-      '@percy/cli-command': 1.28.9(typescript@5.4.5)
-      '@percy/cli-exec': 1.28.9(typescript@5.4.5)
+      '@percy/cli-command': 1.28.9
+      '@percy/cli-exec': 1.28.9
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-build@1.28.9(typescript@5.4.5)':
+  '@percy/cli-build@1.28.9':
     dependencies:
-      '@percy/cli-command': 1.28.9(typescript@5.4.5)
+      '@percy/cli-command': 1.28.9
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-command@1.28.9(typescript@5.4.5)':
+  '@percy/cli-command@1.28.9':
     dependencies:
-      '@percy/config': 1.28.9(typescript@5.4.5)
-      '@percy/core': 1.28.9(typescript@5.4.5)
+      '@percy/config': 1.28.9
+      '@percy/core': 1.28.9
       '@percy/logger': 1.28.9
     transitivePeerDependencies:
       - bufferutil
@@ -7964,18 +7956,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-config@1.28.9(typescript@5.4.5)':
+  '@percy/cli-config@1.28.9':
     dependencies:
-      '@percy/cli-command': 1.28.9(typescript@5.4.5)
+      '@percy/cli-command': 1.28.9
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - typescript
       - utf-8-validate
 
-  '@percy/cli-exec@1.28.9(typescript@5.4.5)':
+  '@percy/cli-exec@1.28.9':
     dependencies:
-      '@percy/cli-command': 1.28.9(typescript@5.4.5)
+      '@percy/cli-command': 1.28.9
       '@percy/logger': 1.28.9
       cross-spawn: 7.0.3
       which: 2.0.2
@@ -7985,9 +7977,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-snapshot@1.28.9(typescript@5.4.5)':
+  '@percy/cli-snapshot@1.28.9':
     dependencies:
-      '@percy/cli-command': 1.28.9(typescript@5.4.5)
+      '@percy/cli-command': 1.28.9
       yaml: 2.4.5
     transitivePeerDependencies:
       - bufferutil
@@ -7995,9 +7987,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli-upload@1.28.9(typescript@5.4.5)':
+  '@percy/cli-upload@1.28.9':
     dependencies:
-      '@percy/cli-command': 1.28.9(typescript@5.4.5)
+      '@percy/cli-command': 1.28.9
       fast-glob: 3.3.2
       image-size: 1.1.1
     transitivePeerDependencies:
@@ -8006,15 +7998,15 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@percy/cli@1.28.9(typescript@5.4.5)':
+  '@percy/cli@1.28.9':
     dependencies:
-      '@percy/cli-app': 1.28.9(typescript@5.4.5)
-      '@percy/cli-build': 1.28.9(typescript@5.4.5)
-      '@percy/cli-command': 1.28.9(typescript@5.4.5)
-      '@percy/cli-config': 1.28.9(typescript@5.4.5)
-      '@percy/cli-exec': 1.28.9(typescript@5.4.5)
-      '@percy/cli-snapshot': 1.28.9(typescript@5.4.5)
-      '@percy/cli-upload': 1.28.9(typescript@5.4.5)
+      '@percy/cli-app': 1.28.9
+      '@percy/cli-build': 1.28.9
+      '@percy/cli-command': 1.28.9
+      '@percy/cli-config': 1.28.9
+      '@percy/cli-exec': 1.28.9
+      '@percy/cli-snapshot': 1.28.9
+      '@percy/cli-upload': 1.28.9
       '@percy/client': 1.28.9
       '@percy/logger': 1.28.9
     transitivePeerDependencies:
@@ -8029,22 +8021,22 @@ snapshots:
       '@percy/logger': 1.28.9
       pako: 2.1.0
 
-  '@percy/config@1.28.9(typescript@5.4.5)':
+  '@percy/config@1.28.9':
     dependencies:
       '@percy/logger': 1.28.9
       ajv: 8.17.1
-      cosmiconfig: 8.3.6(typescript@5.4.5)
+      cosmiconfig: 8.3.6
       yaml: 2.4.5
     transitivePeerDependencies:
       - typescript
 
-  '@percy/core@1.28.9(typescript@5.4.5)':
+  '@percy/core@1.28.9':
     dependencies:
       '@percy/client': 1.28.9
-      '@percy/config': 1.28.9(typescript@5.4.5)
+      '@percy/config': 1.28.9
       '@percy/dom': 1.28.9
       '@percy/logger': 1.28.9
-      '@percy/webdriver-utils': 1.28.9(typescript@5.4.5)
+      '@percy/webdriver-utils': 1.28.9
       content-disposition: 0.5.4
       cross-spawn: 7.0.3
       extract-zip: 2.0.1
@@ -8079,9 +8071,9 @@ snapshots:
 
   '@percy/sdk-utils@1.28.9': {}
 
-  '@percy/webdriver-utils@1.28.9(typescript@5.4.5)':
+  '@percy/webdriver-utils@1.28.9':
     dependencies:
-      '@percy/config': 1.28.9(typescript@5.4.5)
+      '@percy/config': 1.28.9
       '@percy/sdk-utils': 1.28.9
     transitivePeerDependencies:
       - typescript
@@ -8147,7 +8139,7 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/broccoli-plugin@3.0.0':
     dependencies:
@@ -8163,13 +8155,13 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/cookie@0.4.1': {}
 
   '@types/cors@2.8.17':
     dependencies:
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -8185,7 +8177,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.5':
     dependencies:
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
       '@types/qs': 6.9.15
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -8199,25 +8191,25 @@ snapshots:
 
   '@types/fs-extra@5.1.0':
     dependencies:
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/fs-extra@8.1.5':
     dependencies:
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/fs-extra@9.0.13':
     dependencies:
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/glob@8.1.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/http-errors@2.0.4': {}
 
@@ -8233,7 +8225,7 @@ snapshots:
 
   '@types/minimatch@5.1.2': {}
 
-  '@types/node@20.14.10':
+  '@types/node@20.14.11':
     dependencies:
       undici-types: 5.26.5
 
@@ -8248,17 +8240,17 @@ snapshots:
   '@types/rimraf@2.0.5':
     dependencies:
       '@types/glob': 8.1.0
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
       '@types/send': 0.17.4
 
   '@types/sizzle@2.3.8': {}
@@ -8269,7 +8261,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
     optional: true
 
   '@ungap/structured-clone@1.2.0': {}
@@ -9196,7 +9188,7 @@ snapshots:
       lodash.defaultsdeep: 4.6.1
       matcher-collection: 2.0.1
       symlink-or-copy: 1.3.1
-      terser: 5.31.2
+      terser: 5.31.3
       walk-sync: 2.2.0
       workerpool: 6.5.1
     transitivePeerDependencies:
@@ -9565,23 +9557,19 @@ snapshots:
       object-assign: 4.1.1
       vary: 1.1.2
 
-  cosmiconfig@8.3.6(typescript@5.4.5):
+  cosmiconfig@8.3.6:
     dependencies:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
-    optionalDependencies:
-      typescript: 5.4.5
 
-  cosmiconfig@9.0.0(typescript@5.4.5):
+  cosmiconfig@9.0.0:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
-    optionalDependencies:
-      typescript: 5.4.5
 
   cross-spawn@6.0.5:
     dependencies:
@@ -10364,7 +10352,7 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-fetch@8.1.2(encoding@0.1.13):
+  ember-fetch@8.1.2:
     dependencies:
       abortcontroller-polyfill: 1.7.5
       broccoli-concat: 4.2.5
@@ -10378,7 +10366,7 @@ snapshots:
       ember-cli-babel: 7.26.11
       ember-cli-typescript: 4.2.1
       ember-cli-version-checker: 5.1.2
-      node-fetch: 2.7.0(encoding@0.1.13)
+      node-fetch: 2.7.0
       whatwg-fetch: 3.6.20
     transitivePeerDependencies:
       - encoding
@@ -10417,11 +10405,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-intl@6.5.5(typescript@5.4.5)(webpack@5.93.0):
+  ember-intl@6.5.5(webpack@5.93.0):
     dependencies:
       '@babel/core': 7.24.9
       '@formatjs/icu-messageformat-parser': 2.7.8
-      '@formatjs/intl': 2.10.4(typescript@5.4.5)
+      '@formatjs/intl': 2.10.4
       broccoli-caching-writer: 3.0.3
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 4.2.0
@@ -10439,8 +10427,6 @@ snapshots:
       js-yaml: 4.1.0
       json-stable-stringify: 1.1.1
       silent-error: 1.1.1
-    optionalDependencies:
-      typescript: 5.4.5
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
@@ -10651,11 +10637,6 @@ snapshots:
 
   encodeurl@1.0.2: {}
 
-  encoding@0.1.13:
-    dependencies:
-      iconv-lite: 0.6.3
-    optional: true
-
   end-of-stream@1.4.4:
     dependencies:
       once: 1.4.0
@@ -10666,7 +10647,7 @@ snapshots:
     dependencies:
       '@types/cookie': 0.4.1
       '@types/cors': 2.8.17
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
       accepts: 1.3.8
       base64id: 2.0.0
       cookie: 0.4.2
@@ -11772,11 +11753,6 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  iconv-lite@0.6.3:
-    dependencies:
-      safer-buffer: 2.1.2
-    optional: true
-
   icss-utils@5.1.0(postcss@8.4.39):
     dependencies:
       postcss: 8.4.39
@@ -11849,7 +11825,7 @@ snapshots:
 
   inquirer@9.3.5:
     dependencies:
-      '@inquirer/figures': 1.0.3
+      '@inquirer/figures': 1.0.4
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       external-editor: 3.1.0
@@ -12074,7 +12050,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 20.14.10
+      '@types/node': 20.14.11
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -12548,11 +12524,9 @@ snapshots:
 
   node-addon-api@6.1.0: {}
 
-  node-fetch@2.7.0(encoding@0.1.13):
+  node-fetch@2.7.0:
     dependencies:
       whatwg-url: 5.0.0
-    optionalDependencies:
-      encoding: 0.1.13
 
   node-int64@0.4.0: {}
 
@@ -13671,40 +13645,40 @@ snapshots:
 
   styled_string@0.0.1: {}
 
-  stylelint-config-recommended-scss@14.1.0(postcss@8.4.39)(stylelint@16.7.0(typescript@5.4.5)):
+  stylelint-config-recommended-scss@14.1.0(postcss@8.4.39)(stylelint@16.7.0):
     dependencies:
       postcss-scss: 4.0.9(postcss@8.4.39)
-      stylelint: 16.7.0(typescript@5.4.5)
-      stylelint-config-recommended: 14.0.1(stylelint@16.7.0(typescript@5.4.5))
-      stylelint-scss: 6.4.1(stylelint@16.7.0(typescript@5.4.5))
+      stylelint: 16.7.0
+      stylelint-config-recommended: 14.0.1(stylelint@16.7.0)
+      stylelint-scss: 6.4.1(stylelint@16.7.0)
     optionalDependencies:
       postcss: 8.4.39
 
-  stylelint-config-recommended@14.0.1(stylelint@16.7.0(typescript@5.4.5)):
+  stylelint-config-recommended@14.0.1(stylelint@16.7.0):
     dependencies:
-      stylelint: 16.7.0(typescript@5.4.5)
+      stylelint: 16.7.0
 
-  stylelint-config-standard@36.0.1(stylelint@16.7.0(typescript@5.4.5)):
+  stylelint-config-standard@36.0.1(stylelint@16.7.0):
     dependencies:
-      stylelint: 16.7.0(typescript@5.4.5)
-      stylelint-config-recommended: 14.0.1(stylelint@16.7.0(typescript@5.4.5))
+      stylelint: 16.7.0
+      stylelint-config-recommended: 14.0.1(stylelint@16.7.0)
 
-  stylelint-prettier@4.1.0(prettier@3.3.3)(stylelint@16.7.0(typescript@5.4.5)):
+  stylelint-prettier@4.1.0(prettier@3.3.3)(stylelint@16.7.0):
     dependencies:
       prettier: 3.3.3
       prettier-linter-helpers: 1.0.0
-      stylelint: 16.7.0(typescript@5.4.5)
+      stylelint: 16.7.0
 
-  stylelint-scss@6.4.1(stylelint@16.7.0(typescript@5.4.5)):
+  stylelint-scss@6.4.1(stylelint@16.7.0):
     dependencies:
       known-css-properties: 0.34.0
       postcss-media-query-parser: 0.2.3
       postcss-resolve-nested-selector: 0.1.1
       postcss-selector-parser: 6.1.1
       postcss-value-parser: 4.2.0
-      stylelint: 16.7.0(typescript@5.4.5)
+      stylelint: 16.7.0
 
-  stylelint@16.7.0(typescript@5.4.5):
+  stylelint@16.7.0:
     dependencies:
       '@csstools/css-parser-algorithms': 2.7.1(@csstools/css-tokenizer@2.4.1)
       '@csstools/css-tokenizer': 2.4.1
@@ -13713,7 +13687,7 @@ snapshots:
       '@dual-bundle/import-meta-resolve': 4.1.0
       balanced-match: 2.0.0
       colord: 2.9.3
-      cosmiconfig: 9.0.0(typescript@5.4.5)
+      cosmiconfig: 9.0.0
       css-functions-list: 3.2.2
       css-tree: 2.3.1
       debug: 4.3.5
@@ -13853,10 +13827,10 @@ snapshots:
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
-      terser: 5.31.2
+      terser: 5.31.3
       webpack: 5.93.0
 
-  terser@5.31.2:
+  terser@5.31.3:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.12.1
@@ -14116,9 +14090,6 @@ snapshots:
       is-typedarray: 1.0.0
 
   typescript-memoize@1.1.1: {}
-
-  typescript@5.4.5:
-    optional: true
 
   uc.micro@1.0.6: {}
 
