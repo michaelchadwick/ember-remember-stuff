@@ -15,7 +15,7 @@
     "lint:fix": "pnpm run --parallel lint:fix",
     "start": "pnpm --filter frontend exec ember serve",
     "test": "pnpm --filter frontend run test",
-    "test:percy": "npx percy exec -- ember test",
+    "test:percy": "pnpm --filter frontend exec percy exec -- ember test",
     "prepare": "husky"
   },
   "engines": {

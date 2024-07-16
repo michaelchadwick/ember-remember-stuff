@@ -13,19 +13,14 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "ember build --environment=production",
-    "lint": "concurrently -c \"auto\" \"npm:lint:*(!fix)\" --names \"lint:\"",
     "lint:css": "stylelint \"**/*.scss\"",
-    "lint:css:fix": "concurrently \"npm:lint:scss -- --fix\"",
-    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
+    "lint:css:fix": "stylelint \"**/*.scss\" --fix",
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "start": "ember serve",
-    "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
-    "test:ember": "ember test",
-    "test-percy": "npx percy exec -- ember test",
-    "prepare": "husky"
+    "lint:deps": "ember dependency-lint",
+    "deploy:production": "ember deploy production --activate"
   },
   "devDependencies": {
     "@babel/core": "^7.24.9",
