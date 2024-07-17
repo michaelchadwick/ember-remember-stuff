@@ -3,6 +3,8 @@
   box-shadow: 0 0 0 999px #ffb9a2;
   clip-path: inset(0 -100%);
   font-size: 0.75em;
+  font-weight: bold;
+  letter-spacing: 1px;
   padding: 0.5em;
   position: fixed;
 }
@@ -23,4 +25,16 @@
   inset: 0 0 auto auto; /* top and right equal to 0 */
   transform-origin: 0 0; /* OR top left */
   transform: translate(29.3%) rotate(45deg);
+}
+
+.ribbon.dev {
+  background: #1da826;
+  box-shadow: 0 0 0 999px #1da826;
+  color: #ffffff;
+}
+
+.ribbon.prod {
+  background: #cb0b38;
+  box-shadow: 0 0 0 999px #cb0b38;
+  color: #ffffff;
 }
