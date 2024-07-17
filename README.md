@@ -1,6 +1,6 @@
-# RemEmber Stuff Tutorial Site
+# RemEmber Stuff Test Site
 
-Tutorial app to learn about [Ember Core Concepts](https://guides.emberjs.com/release/components/).
+Test app to learn about [Ember Core Concepts](https://guides.emberjs.com/release/components/).
 
 ## Prerequisites
 
@@ -16,11 +16,11 @@ You will need the following things properly installed on your computer.
 
 - `git clone <repository-url>` this repository
 - `cd remember-stuff`
-- `npm install`
+- `pnpm install`
 
 ## Running / Development
 
-- `npm run start`
+- `pnpm run start`
 - Visit your app at [http://localhost:4200](http://localhost:4200).
 - Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
@@ -30,18 +30,21 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
-- `npm run test`
-- `npm run test:ember -- --server`
+- `pnpm run test`
+- `pnpm run test:ember -- --server`
 
 ### Linting
 
-- `npm run lint`
-- `npm run lint:fix`
+- `pnpm run lint`
+- `pnpm run lint:hbs`
+- `pnpm run lint:css`
+- `pnpm run lint:js`
+- `pnpm run lint:js --fix`
 
 ### Building
 
-- `npm exec ember build` (development)
-- `npm run build` (production)
+- `pnpm --filter frontend exec ember build` (development)
+- `pnpm --filter frontend exec ember build --environment production` (production)
 
 ### Deploying
 
