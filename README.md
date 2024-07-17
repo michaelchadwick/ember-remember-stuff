@@ -52,7 +52,6 @@ Currently being built on [Netlify](https://mc-emberjs-remember-stuff.netlify.app
 
 ### Notable Dependencies
 
-- [Ember CLI DotEnv](https://www.npmjs.com/package/ember-cli-dotenv)
 - [Ember CLI Head](https://www.npmjs.com/package/ember-cli-head)
 - [Ember CLI Sass](https://www.npmjs.com/package/ember-cli-sass)
 - [Ember CLI Truth Helpers](https://www.npmjs.com/package/ember-truth-helpers)
