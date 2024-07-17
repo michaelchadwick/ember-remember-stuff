@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { setupTest } from 'remember-stuff/tests/helpers';
+import { setupTest } from 'frontend/tests/helpers';
 
 module('Unit | Controller | application', function (hooks) {
   setupTest(hooks);

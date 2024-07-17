@@ -1,8 +1,8 @@
 import { module, test } from 'qunit';
 import { click, visit, currentURL } from '@ember/test-helpers';
-import { setupApplicationTest } from 'remember-stuff/tests/helpers';
+import { setupApplicationTest } from 'frontend/tests/helpers';
 import percySnapshot from '@percy/ember';
-import ENV from 'remember-stuff/config/environment';
+import ENV from 'frontend/config/environment';
 import { getUniqueName } from '../helpers/percy-snapshot-name';
 // import { triggerKeyEvent } from '@ember/test-helpers';
 // import { elementInView } from '../helpers/intersection-observing';

@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { setupRenderingTest } from 'remember-stuff/tests/helpers';
+import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, click } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 

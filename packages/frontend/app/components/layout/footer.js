@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-import ENV from 'remember-stuff/config/environment';
+import ENV from 'frontend/config/environment';
 import { service } from '@ember/service';
 
 export default class FooterComponent extends Component {

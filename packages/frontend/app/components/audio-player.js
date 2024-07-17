@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
-import ENV from 'remember-stuff/config/environment';
+import ENV from 'frontend/config/environment';
 
 export default class AudioPlayerComponent extends Component {
   @tracked isPlaying = false;

@@ -1,4 +1,4 @@
-import { substring } from 'remember-stuff/helpers/substring';
+import { substring } from 'frontend/helpers/substring';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | substring', function () {

@@ -1,5 +1,5 @@
 import Service from '@ember/service';
-import ENV from 'remember-stuff/config/environment';
+import ENV from 'frontend/config/environment';
 
 export default class LocalStorageService extends Service {
   settings = JSON.parse(localStorage.getItem(ENV.APP.LOCAL_STORAGE_KEY)) || {};

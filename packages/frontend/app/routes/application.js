@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-import ENV from 'remember-stuff/config/environment';
+import ENV from 'frontend/config/environment';
 
 export default class ApplicationRoute extends Route {
   @tracked env = ENV.environment;

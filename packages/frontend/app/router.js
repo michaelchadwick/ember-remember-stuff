@@ -1,5 +1,5 @@
 import EmberRouter from '@ember/routing/router';
-import config from 'remember-stuff/config/environment';
+import config from 'frontend/config/environment';
 
 export default class Router extends EmberRouter {
   location = config.locationType;
@@ -7,7 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  if (config.ENV.environment != 'production') {
+  if (config.environment != 'production') {
     this.route('tests', { path: '/tests?nocontainer' });
   }
 

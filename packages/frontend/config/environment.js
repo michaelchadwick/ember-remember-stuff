@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'remember-stuff',
+    modulePrefix: 'frontend',
     environment,
     rootURL: '/',
     locationType: 'history',

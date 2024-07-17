@@ -1,5 +1,5 @@
 import JSONAPIAdapter from '@ember-data/adapter/json-api';
-import ENV from 'remember-stuff/config/environment';
+import ENV from 'frontend/config/environment';
 
 export default class SongAdapter extends JSONAPIAdapter {
   host = ENV.APP.MUSIC_API_ROOT;
