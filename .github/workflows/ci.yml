@@ -33,10 +33,10 @@ jobs:
       - name: Lint
         run: pnpm run lint
 
-  tests:
-    name: ${{matrix.workspace}} QUnit Tests (${{ matrix.node-version }})
+  test:
+    name: ${{matrix.workspace}} QUnit Test (${{ matrix.node-version }})
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     needs: [lint]
 
     strategy:
@@ -58,3 +58,28 @@ jobs:
         run: pnpm install
       - name: Run Tests
         run: pnpm --filter ${{ matrix.workspace }} exec ember test
+
+  build:
+    name: ${{matrix.workspace}} Build (${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [20]
+        workspace:
+          - frontend
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+      - name: install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm run --filter ${{matrix.workspace}} build
