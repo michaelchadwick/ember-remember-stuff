@@ -11,9 +11,10 @@ module('Integration | Component | ribbon', function (hooks) {
 
     assert.dom('.ribbon').exists();
 
-    await render(hbs`<Layout::Ribbon @position="left" @content="Foobar" />`);
+    await render(hbs`<Layout::Ribbon @position="left" @content="development" />`);
 
+    assert.dom('.ribbon').hasClass('dev');
     assert.dom('.ribbon').hasClass('left');
-    assert.dom('.ribbon').hasText('Foobar');
+    assert.dom('.ribbon').hasText('dev');
   });
 });
