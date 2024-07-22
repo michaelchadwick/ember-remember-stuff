@@ -50,31 +50,19 @@
             "title": "Routing",
             "checked": true,
             "code": true,
-            "items": [
-              "About",
-              "Messages",
-              "Music",
-              "Links",
-              "Contact"
-            ]
+            "items": ["About", "Messages", "Music", "Links", "Contact"]
           },
           {
             "title": "Services",
             "checked": true,
             "code": true,
-            "items": [
-              "HeadData (vendor)",
-              "LocalStorage"
-            ]
+            "items": ["HeadData (vendor)", "LocalStorage"]
           },
           {
             "title": "EmberData",
             "checked": true,
             "code": true,
-            "items": [
-              "Github (fake local api)",
-              "Muzcom (real remote api)"
-            ]
+            "items": ["Github (fake local api)", "Muzcom (real remote api)"]
           }
         ]
       }
@@ -106,7 +94,7 @@
           },
           {
             "title": "Testing",
-            "checked": false,
+            "checked": true,
             "code": false,
             "items": []
           },
