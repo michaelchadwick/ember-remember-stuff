@@ -143,7 +143,6 @@ errors:
   url: "{description} must be a valid url"
   unknown: An unknown error occurred!
 components:
-  audioPlayer.head: AudioPlayer
   counter:
     count: Count
     countAdd: Count +1

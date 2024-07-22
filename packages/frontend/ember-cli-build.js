@@ -3,7 +3,7 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {
+  const config = {
     sassOptions: {
       extension: 'scss',
     },
@@ -30,7 +30,12 @@ module.exports = function (defaults) {
         },
       ],
     },
-  });
+    autoImport: {
+      watchDependencies: ['rs-common'],
+    },
+  };
+
+  const app = new EmberApp(defaults, config);
 
   return app.toTree();
 };
