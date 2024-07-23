@@ -82,4 +82,4 @@ jobs:
       - name: install dependencies
         run: pnpm install
       - name: Build
-        run: pnpm run --filter ${{matrix.workspace}} build
+        run: pnpm --filter ${{matrix.workspace}} run build
