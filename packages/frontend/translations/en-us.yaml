@@ -47,6 +47,10 @@ general:
   inactive: inactive
   include: Include
   info: Info
+  language:
+    en-us: English (en)
+    es: Español (es)
+    fr: Français (fr)
   last: Last
   lastUpdate: Last Update
   level: Level
@@ -67,12 +71,11 @@ general:
   no: No
   noneFound: "No {items} found."
   notes: Notes
-  notFoundMessage: "Rats! I couldn't find that. Please check your page address, and try again."
+  notFoundMessage: "Alack! The resource could not be found. Please check your page address, and try again."
   overview: Overview
   owner: Owner
   perPage: Per Page
   previous: Previous
-  publishSession: Publish Session
   remove: Remove
   removeAll: Remove All
   required: Required

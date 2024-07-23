@@ -1,0 +1,187 @@
+general:
+  actions: Acciones
+  add: Agregue
+  addNew: Agregue Nuevo
+  author: Autor
+  back: Volver
+  by: de
+  cancel: Cancelar
+  chooseFile: Seleccione Archivo
+  close: Cerrar
+  collapse: colapsar
+  complete: Completo
+  currentlySearchingPrompt: buscando...
+  date: Fecha
+  dateTime: Fecha/Hora
+  day: Día
+  description: Descripción
+  disabled: desactivado
+  displayName: Nombre de Mostrar
+  done: Acabado
+  download: Descargar
+  duration: Duración
+  durationHours: "{count, plural, =1 {un hora} other {# horas}}"
+  durationMinutes: "{count, plural, =1 {1 minudo} other {# minudos}}"
+  edit: Editar
+  email: Email
+  end: Termino
+  endDate: Fecha de Cumplir
+  ends: Termina
+  endTime: Hora de Cumplir
+  expand: expandir
+  expandDetail: Enseñar Detalles
+  file: Archivo
+  file-audio: Archivo de audio
+  file-pdf: Archivo PDF
+  file-powerpoint: Archivo de PowerPoint
+  file-video: Archivo de vídeo
+  fileSizeError: "Este archivo es demasiado grande.  El tamaño máximo es {maxSize}."
+  first: Primero
+  forward: Adelante
+  from: de
+  go: Vaya
+  greeting: "Hola, me llamo {name}"
+  helloWorld: ¡Hola Mundo!
+  hour: Hora
+  hours: Horas
+  inactive: inactivo
+  include: Incluir
+  info: Info
+  language:
+    en-us: English (en)
+    es: Español (es)
+    fr: Français (fr)
+  last: Último
+  lastUpdate: Última actualización
+  level: Nivel
+  link: Enlace de la Web
+  listen: Escuchar
+  localTime: Hora local
+  loading: Cargando...
+  location: Ubicación
+  login: Inicio
+  message: Mensaje
+  minute: Minudo
+  minutes: Minudos
+  monday: Lunes
+  month: Mes
+  name: Nombre
+  navigation: Navegación
+  next: Siguiente
+  no: No
+  noneFound: "No se encontraron {items}."
+  notes: Notas
+  notFoundMessage: "¡Ay no! No se pudo encontrar el recurso. Favor de verificar la dirección de la página, y trata otra vez."
+  overview: Descripción General
+  owner: Dueño
+  perPage: Per Page
+  previous: Anterior
+  remove: Remover
+  removeAll: Quitar Todos
+  required: Requerido
+  reset: Reiniciar
+  saturday: Sábado
+  save: Guardar
+  savedSuccessfully: Salvó con Éxito
+  search: Buscar
+  send: Enviar
+  sendMessage: Envia Mensaje
+  siteTitle: RemEmber Stuff
+  start: Inicio
+  startDate: Fecha de Iniciar
+  starts: Empieza
+  startTime: Hora de Iniciar
+  status: Estado
+  summary: Resumen
+  sunday: Domingo
+  teachingTomster: Tomster de Enseñanza
+  thursday: Jueves
+  time: Hora
+  timezone: Zona horaria
+  title: Titulo
+  to: a
+  today: Hoy
+  token: Token
+  total: Total
+  tuesday: Martes
+  type: Tipo
+  url: URL
+  userRole: Función de Usuario
+  view: Vista
+  wednesday: Miercoles
+  week: Semana
+  weekOf: "Semana de {date}"
+  weeks: Semanas
+  when: Cuando
+  x: x
+  year: Año
+  yes: Sí
+layout:
+  navAbout: Sobre
+  navContact: Contacto
+  navLinks: Enlaces
+  navMessages: Mensajes
+  navMusic: Música
+  headAbout: Sobre el sitio
+  headContact: Contacto
+  headLinks: Enlaces Relacionados
+  headMessages: Mensajes de Chat
+  headMusic: Música
+  footAuthor: Autor
+  footSource: Fuente
+  footDocs: Docs
+  footTests: Pruebas
+  footProd: Prod
+errors:
+  checkConsole: Verifique la consola de desarrollo en busca de errores.
+  email: "{description} debe ser una dirección válida de correo electrónico"
+  empty: "{description} no puede estar vacío"
+  equalTo: "{description} debe ser igual a {is}"
+  invalid: "{description} es inválido"
+  notSupported: "{description} no es compatible"
+  present: "{description} debe estar en blanco"
+  required: "{description} se requiere"
+  tooLong: "{description} es demasiado largo (el máximo es {max} caracteres)"
+  tooShort: "{description} es demasiado corto (el mínimo es {min} caracteres)"
+  url: "{description} debe ser una dirección URL válida"
+  unknown: ¡Un error desconocido ocurrió!
+components:
+  counter:
+    count: Cuenta
+    countAdd: Cuenta +1
+    countSubtract: Cuenta -1
+    head: Contador
+    multi: Multi
+    multiX2: Multi x2
+  debug.summary: Depuración de Componentes
+  ghCommits.head: GithubCommits
+  ghUser:
+    followers: Seguidores
+    following: Siguiendo
+    gists: Esencias Públicos
+    head: GithubUser
+    repos: Repos Públicos
+  mover:
+    alwaysMoving: ¡Esté siempre en movimiento!
+    clickMeOff: ¡Haz clic palanca para dejar de moverte!
+    clickMeOn: ¡Haz clic palanca para comenzar de moverte!
+    head: Mover
+  newMessageInput:
+    nothingSaved: "¡<em>Nota</em>: los mensajes nuevos no se guardarán (...todavía)!"
+    placeholder: Escribe el mensaje aquí y presiona enter
+sections:
+  about:
+    description: "<p><strong>RemEmber Stuff</strong> es una aplicación web que creé para aprender sobre EmberJS.</p>
+
+    <p>Comenzó como una aplicación de chat falsa, como <a href=https://guides.emberjs.com/v5.8.0/components/introducing-components/>eso</a>. Sin embargo, se ha convertido en una página de inicio más personal que incorpora lo que he aprendido sobre EmberJS hasta ahora. Utilizando mis propios intereses y aplicándolos a través de los conceptos de la documentación de EmberJS, he llegado a comprender mejor este marco.</p>
+
+    <p>La página de inicio se actualizará a medida que avance cada concepto y lo aplico a este sitio.</p>"
+  links:
+    noLinksFound: No se encontraron enlaces.
+  messages:
+    addNew: ¡Agregue uno abajo!
+  music:
+    description: ¡El autor de esta aplicación web también es músico! Aquí hay algunas canciones aleatorias que han hecho.
+    noSongsFound: No se econtraron canciones.
+  contact:
+    description: ¿Quieres saludar? ¿Tiene alguna sugerencia para esta aplicación. Escribirme una línea.

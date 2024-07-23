@@ -3,10 +3,13 @@ module.exports = function () {
     'free-solid-svg-icons': [
       'at',
       'book',
+      'caret-down',
+      'caret-right',
       'check',
       'circle-info',
       'ear-listen',
       'flask',
+      'globe',
       'pause',
       'play',
       'square-up-right',
