@@ -46,7 +46,7 @@
 
       &[aria-checked="true"],
       &.active {
-        background-color: #75ab66;
+        background-color: #87aa7e;
       }
 
       &:hover,
@@ -54,14 +54,14 @@
         background-color: var(--white);
         &[aria-checked="true"],
         &.active {
-          background-color: #75ab66;
+          background-color: #8fc480;
         }
       }
     }
   }
 
   .toggle {
-    background-color: var(--bg-color);
+    background-color: #ffedbb;
 
     span {
       display: none;
