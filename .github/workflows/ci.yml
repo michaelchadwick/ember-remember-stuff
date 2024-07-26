@@ -6,8 +6,6 @@ on:
       - main
       - master
   pull_request:
-  schedule:
-    - cron: '30 7 * * *' # weekly, at 7:30am
 
 concurrency:
   group: ci-${{ github.head_ref || github.ref }}
@@ -34,7 +32,7 @@ jobs:
         run: pnpm run lint
 
   test:
-    name: ${{matrix.workspace}} Test (${{ matrix.node-version }})
+    name: Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     needs: [lint]
@@ -60,7 +58,7 @@ jobs:
         run: pnpm --filter ${{ matrix.workspace }} exec ember test
 
   test-with-embroider:
-    name: ${{matrix.workspace}} Test With Embroider
+    name: Test With Embroider
     runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
@@ -85,7 +83,7 @@ jobs:
         run: pnpm --filter ${{matrix.workspace}} exec ember test
 
   build:
-    name: ${{matrix.workspace}} Build (${{ matrix.node-version }})
+    name: Build
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
@@ -110,7 +108,7 @@ jobs:
         run: pnpm --filter ${{matrix.workspace}} run build
 
   build-with-embroider:
-    name: ${{matrix.workspace}} Build With Embroider
+    name: Build With Embroider
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
