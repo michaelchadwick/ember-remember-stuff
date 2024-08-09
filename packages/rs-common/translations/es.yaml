@@ -112,21 +112,6 @@ general:
   x: x
   year: Año
   yes: Sí
-  navAbout: About
-  navContact: Contact
-  navLinks: Links
-  navMessages: Messages
-  navMusic: Music
-  headAbout: About the Site
-  headContact: Contact
-  headLinks: Related Links
-  headMessages: Chat Messages
-  headMusic: Music
-  footAuthor: Author
-  footSource: Source
-  footDocs: Docs
-  footTests: Tests
-  footProd: Prod
 errors:
   checkConsole: Verifique la consola de desarrollo en busca de errores.
   email: "{description} debe ser una dirección válida de correo electrónico"

@@ -72,7 +72,6 @@ general:
   owner: Owner
   perPage: Per Page
   previous: Previous
-  publishSession: Publish Session
   remove: Remove
   removeAll: Remove All
   required: Required
