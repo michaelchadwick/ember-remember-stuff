@@ -16,4 +16,6 @@ Router.map(function () {
   this.route('about');
   this.route('links');
   this.route('contact');
+  this.route('users', {});
+  this.route('user', { path: '/users/:user_id' });
 });

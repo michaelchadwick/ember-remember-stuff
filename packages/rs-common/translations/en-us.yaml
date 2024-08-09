@@ -118,6 +118,7 @@ errors:
   empty: "{description} can not be empty"
   equalTo: "{description} must be equal to {is}"
   invalid: "{description} is invalid"
+  noResultsFound: "No results found."
   notSupported: "{description} is not supported"
   present: "{description} must be blank"
   required: "{description} is required"

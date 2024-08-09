@@ -39,11 +39,14 @@ general:
   first: First
   forward: Forward
   from: from
+  fullName: Full Name
   go: Go
   greeting: "Hello, I'm {name}"
+  gt: ">"
   helloWorld: Hello World!
   hour: Hour
   hours: Hours
+  id: ID
   inactive: inactive
   include: Include
   info: Info
@@ -60,6 +63,7 @@ general:
   loading: Loading...
   location: Location
   login: Login
+  lt: "<"
   message: Message
   minute: Minute
   minutes: Minutes
@@ -106,6 +110,8 @@ general:
   tuesday: Tuesday
   type: Type
   url: URL
+  user: User
+  users: Users
   userRole: User Role
   view: View
   wednesday: Wednesday
@@ -127,6 +133,7 @@ layout:
   headLinks: Related Links
   headMessages: Chat Messages
   headMusic: Music
+  headUsers: Users
   footAuthor: Author
   footSource: Source
   footDocs: Docs
@@ -185,3 +192,5 @@ sections:
     noSongsFound: No songs found.
   contact:
     description: Want to say hello? Have a suggestion for this app? Drop me a line.
+  users:
+    description: List of users that exist on RemEmber Stuff
