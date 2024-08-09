@@ -1,0 +1,32 @@
+<div class="audio-player{{if this.isPlaying ' is-playing'}}">
+  <h3>{{t "components.audioPlayer.head"}}</h3>
+
+  {{#if @shouldLoop}}
+    <audio loop {{play-when this.isPlaying}} volume={{this.audioVolume}} data-test-audio-player>
+      <source src={{@srcURL}} />
+      <track kind="captions" />
+      {{t "errors.notSupported" description="<audio>"}}
+    </audio>
+  {{else}}
+    <audio {{play-when this.isPlaying}} data-test-audio-player>
+      <source src={{@srcURL}} />
+      <track kind="captions" />
+      {{t "errors.notSupported" description="<audio>"}}
+    </audio>
+  {{/if}}
+  <input type="range" min="0" max="100" step="1" value={{this.rangeVolume}} id="audio-volume" oninput={{this.setVolume}} />
+  {{!-- <div class="volume-tooltip">{{this.rangeVolume}}</div> --}}
+
+  {{#if (eq this.env "production")}}
+    <div class="audio-title">{{split @srcURL delimiter="/" index=5}}</div>
+  {{else}}
+    <div class="audio-title">{{split @srcURL delimiter="/" index=3}}</div>
+  {{/if}}
+
+  <button type="button" id="btn-audio-play" {{on "click" this.play}}>
+    <FaIcon @icon="play" />
+  </button>
+  <button type="button" id="btn-audio-pause" {{on "click" this.pause}}>
+    <FaIcon @icon="pause" />
+  </button>
+</div>

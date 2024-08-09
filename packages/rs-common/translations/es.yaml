@@ -1,0 +1,144 @@
+general:
+  actions: Acciones
+  add: Agregue
+  addNew: Agregue Nuevo
+  author: Autor
+  back: Volver
+  by: de
+  cancel: Cancelar
+  chooseFile: Seleccione Archivo
+  close: Cerrar
+  collapse: colapsar
+  complete: Completo
+  currentlySearchingPrompt: buscando...
+  date: Fecha
+  dateTime: Fecha/Hora
+  day: Día
+  description: Descripción
+  disabled: desactivado
+  displayName: Nombre de Mostrar
+  done: Acabado
+  download: Descargar
+  duration: Duración
+  durationHours: "{count, plural, =1 {un hora} other {# horas}}"
+  durationMinutes: "{count, plural, =1 {1 minudo} other {# minudos}}"
+  edit: Editar
+  email: Email
+  end: Termino
+  endDate: Fecha de Cumplir
+  ends: Termina
+  endTime: Hora de Cumplir
+  expand: expandir
+  expandDetail: Enseñar Detalles
+  file: Archivo
+  file-audio: Archivo de audio
+  file-pdf: Archivo PDF
+  file-powerpoint: Archivo de PowerPoint
+  file-video: Archivo de vídeo
+  fileSizeError: "Este archivo es demasiado grande.  El tamaño máximo es {maxSize}."
+  first: Primero
+  forward: Adelante
+  from: de
+  go: Vaya
+  greeting: "Hola, me llamo {name}"
+  helloWorld: ¡Hola Mundo!
+  hour: Hora
+  hours: Horas
+  inactive: inactivo
+  include: Incluir
+  info: Info
+  last: Último
+  lastUpdate: Última actualización
+  level: Nivel
+  link: Enlace de la Web
+  listen: Escuchar
+  localTime: Hora local
+  loading: Cargando...
+  location: Ubicación
+  login: Inicio
+  message: Mensaje
+  minute: Minudo
+  minutes: Minudos
+  monday: Lunes
+  month: Mes
+  name: Nombre
+  navigation: Navegación
+  next: Siguiente
+  no: No
+  noneFound: "No se encontraron {items}."
+  notes: Notas
+  notFoundMessage: "¡Ay no! No se pudo encontrar el recurso. Favor de verificar la dirección de la página, y trata otra vez."
+  overview: Descripción General
+  owner: Dueño
+  perPage: Per Page
+  previous: Anterior
+  remove: Remover
+  removeAll: Quitar Todos
+  required: Requerido
+  reset: Reiniciar
+  saturday: Sábado
+  save: Guardar
+  savedSuccessfully: Salvó con Éxito
+  search: Buscar
+  send: Enviar
+  sendMessage: Envia Mensaje
+  siteTitle: RemEmber Stuff
+  start: Inicio
+  startDate: Fecha de Iniciar
+  starts: Empieza
+  startTime: Hora de Iniciar
+  status: Estado
+  summary: Resumen
+  sunday: Domingo
+  teachingTomster: Tomster de Enseñanza
+  thursday: Jueves
+  time: Hora
+  timezone: Zona horaria
+  title: Titulo
+  to: a
+  today: Hoy
+  token: Token
+  total: Total
+  tuesday: Martes
+  type: Tipo
+  url: URL
+  userRole: Función de Usuario
+  view: Vista
+  wednesday: Miercoles
+  week: Semana
+  weekOf: "Semana de {date}"
+  weeks: Semanas
+  when: Cuando
+  x: x
+  year: Año
+  yes: Sí
+  navAbout: About
+  navContact: Contact
+  navLinks: Links
+  navMessages: Messages
+  navMusic: Music
+  headAbout: About the Site
+  headContact: Contact
+  headLinks: Related Links
+  headMessages: Chat Messages
+  headMusic: Music
+  footAuthor: Author
+  footSource: Source
+  footDocs: Docs
+  footTests: Tests
+  footProd: Prod
+errors:
+  checkConsole: Verifique la consola de desarrollo en busca de errores.
+  email: "{description} debe ser una dirección válida de correo electrónico"
+  empty: "{description} no puede estar vacío"
+  equalTo: "{description} debe ser igual a {is}"
+  invalid: "{description} es inválido"
+  notSupported: "{description} no es compatible"
+  present: "{description} debe estar en blanco"
+  required: "{description} se requiere"
+  tooLong: "{description} es demasiado largo (el máximo es {max} caracteres)"
+  tooShort: "{description} es demasiado corto (el mínimo es {min} caracteres)"
+  url: "{description} debe ser una dirección URL válida"
+  unknown: ¡Un error desconocido ocurrió!
+components:
+  audioPlayer.head: AudioPlayer
