@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "type": "user",
+      "id": "1",
+      "attributes": {
+        "firstName": "Michael",
+        "lastName": "Chadwick",
+        "displayName": "Mike C",
+        "email": "michael.chadwick@ucsf.edu",
+        "root": true
+      }
+    },
+    {
+      "type": "user",
+      "id": "2",
+      "attributes": {
+        "firstName": "David",
+        "lastName": "Danger",
+        "displayName": "Dave D",
+        "email": "danger.dave@rocket.to.the.moon.com",
+        "root": false
+      }
+    }
+  ]
+}

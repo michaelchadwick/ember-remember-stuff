@@ -118,6 +118,7 @@ errors:
   empty: "{description} no puede estar vacío"
   equalTo: "{description} debe ser igual a {is}"
   invalid: "{description} es inválido"
+  noResultsFound: "Ningún resultado encontrado."
   notSupported: "{description} no es compatible"
   present: "{description} debe estar en blanco"
   required: "{description} se requiere"

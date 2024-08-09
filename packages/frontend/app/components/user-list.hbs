@@ -1,0 +1,42 @@
+<div class="user-list" data-test-user-list ...attributes>
+  <table>
+    <thead>
+      <tr>
+        <th class="text-left" colspan="1">
+          {{t "general.id"}}
+        </th>
+        <th class="text-left" colspan="1">
+          {{t "general.fullName"}}
+        </th>
+        <th class="text-left" colspan="1">
+          {{t "general.email"}}
+        </th>
+        <th class="text-left" colspan="1">
+          <FaIcon @icon="shield" />
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each @users as |user|}}
+        <tr data-test-user>
+          <td class="text-left" colspan="1" data-test-id>
+            {{user.id}}
+          </td>
+          <td class="text-left" colspan="1" data-test-full-name>
+            <LinkTo @route="user" @model={{user}} data-test-user-link>
+              <UserNameInfo @user={{user}} />
+            </LinkTo>
+          </td>
+          <td class="text-left" colspan="1" data-test-email>
+            {{user.email}}
+          </td>
+          <td class="text-left" colspan="1" data-test-root>
+            {{#if user.root}}
+            <FaIcon @icon="shield" />
+            {{/if}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

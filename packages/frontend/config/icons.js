@@ -12,6 +12,7 @@ module.exports = function () {
       'globe',
       'pause',
       'play',
+      'shield',
       'square-up-right',
       'spinner',
       'toggle-off',

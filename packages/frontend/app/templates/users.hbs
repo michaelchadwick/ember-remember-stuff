@@ -1,0 +1,8 @@
+<h2>{{t "layout.headUsers"}}</h2>
+{{#if (gt @model.length 0)}}
+  <UserList @users={{@model}} />
+{{else}}
+  <span class="no-results">
+    {{t "errors.noResultsFound"}}
+  </span>
+{{/if}}

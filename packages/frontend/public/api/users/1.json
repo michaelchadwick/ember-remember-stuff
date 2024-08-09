@@ -1,0 +1,13 @@
+{
+  "data": {
+    "type": "user",
+    "id": "1",
+    "attributes": {
+      "firstName": "Michael",
+      "lastName": "Chadwick",
+      "displayName": "Mike C",
+      "email": "michael.chadwick@ucsf.edu",
+      "root": true
+    }
+  }
+}

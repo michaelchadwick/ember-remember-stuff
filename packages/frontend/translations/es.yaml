@@ -39,11 +39,14 @@ general:
   first: Primero
   forward: Adelante
   from: de
+  fullName: Nombre Completo
   go: Vaya
   greeting: "Hola, me llamo {name}"
+  gt: ">"
   helloWorld: ¡Hola Mundo!
   hour: Hora
   hours: Horas
+  id: ID
   inactive: inactivo
   include: Incluir
   info: Info
@@ -60,6 +63,7 @@ general:
   loading: Cargando...
   location: Ubicación
   login: Inicio
+  lt: "<"
   message: Mensaje
   minute: Minudo
   minutes: Minudos
@@ -106,6 +110,8 @@ general:
   tuesday: Martes
   type: Tipo
   url: URL
+  user: Usuario
+  users: Usuarios
   userRole: Función de Usuario
   view: Vista
   wednesday: Miercoles
@@ -127,6 +133,7 @@ layout:
   headLinks: Enlaces Relacionados
   headMessages: Mensajes de Chat
   headMusic: Música
+  headUsers: Usuarios
   footAuthor: Autor
   footSource: Fuente
   footDocs: Docs
@@ -185,3 +192,5 @@ sections:
     noSongsFound: No se econtraron canciones.
   contact:
     description: ¿Quieres saludar? ¿Tiene alguna sugerencia para esta aplicación. Escribirme una línea.
+  users:
+    description: List of users that exist on RemEmber Stuff

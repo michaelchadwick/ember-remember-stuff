@@ -109,6 +109,104 @@ svg.svg-inline--fa {
   margin-right: 0.25em;
 }
 
+table {
+  border-collapse: collapse;
+  margin: 0.7rem 0;
+  table-layout: fixed;
+  width: 100%;
+
+  th {
+    text-align: left;
+  }
+
+  td {
+    border: 0;
+  }
+
+  tr,
+  td,
+  th {
+    padding: 0.25rem 0.1rem;
+    vertical-align: middle;
+  }
+
+  th,
+  td {
+    overflow-wrap: break-word;
+
+    &.text-left,
+    &.align-left {
+      text-align: left;
+    }
+
+    &.text-center,
+    &.align-center {
+      text-align: center;
+    }
+
+    &.text-right,
+    &.align-right {
+      text-align: right;
+    }
+
+    &.text-top {
+      vertical-align: top;
+    }
+
+    &.text-middle {
+      vertical-align: middle;
+    }
+
+    &.text-bottom {
+      vertical-align: bottom;
+    }
+  }
+
+  &.condensed {
+    font-size: 0.85rem;
+
+    tr,
+    td,
+    th {
+      margin: 0;
+      padding: 0 0.1rem;
+    }
+  }
+
+  .hide-from-small-screen {
+    display: none;
+
+    @media (min-width: 992px) {
+      display: table-cell;
+    }
+  }
+
+  .hide-from-tablet-screen {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: table-cell;
+    }
+  }
+
+  .hide-from-large-screen {
+    display: none;
+
+    @media (max-width: 991px) {
+      display: table-cell;
+    }
+  }
+
+  &.sticky-header {
+    position: relative;
+
+    th {
+      position: sticky;
+      top: 0;
+    }
+  }
+}
+
 ul.code {
   font-family: monospace;
   font-size: 1rem;
