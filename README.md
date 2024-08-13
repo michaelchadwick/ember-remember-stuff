@@ -58,6 +58,10 @@ Currently being built on [Netlify](https://mc-emberjs-remember-stuff.netlify.app
 - [Fontawesome](https://www.npmjs.com/package/@fortawesome/ember-fontawesome)
 - [Husky](https://github.com/typicode/husky)
 
+### Credits
+
+- [SVG Backgrounds](https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/)
+
 ### Add Additional Fields to GhUser Component
 
 - Add new model fields to `app/models/gh-user.js`
