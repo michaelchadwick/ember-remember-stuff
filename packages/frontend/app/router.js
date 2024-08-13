@@ -18,4 +18,6 @@ Router.map(function () {
   this.route('contact');
   this.route('users', {});
   this.route('user', { path: '/users/:user_id' });
+
+  this.route('error', { path: '*path' });
 });

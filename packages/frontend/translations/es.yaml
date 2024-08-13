@@ -130,6 +130,7 @@ layout:
   navMusic: Música
   headAbout: Sobre el sitio
   headContact: Contacto
+  headError: Error
   headLinks: Enlaces Relacionados
   headMessages: Mensajes de Chat
   headMusic: Música
@@ -144,6 +145,7 @@ errors:
   email: "{description} debe ser una dirección válida de correo electrónico"
   empty: "{description} no puede estar vacío"
   equalTo: "{description} debe ser igual a {is}"
+  generic: "Intentaste acceder a algo que no existe o un error del servidor impidió el acceso. De cualquier modo, verifica la URL o vuelve a intentarlo más tarde."
   invalid: "{description} es inválido"
   notSupported: "{description} no es compatible"
   present: "{description} debe estar en blanco"

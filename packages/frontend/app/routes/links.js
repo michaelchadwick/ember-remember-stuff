@@ -4,12 +4,19 @@ import { service } from '@ember/service';
 export default class LinksRoute extends Route {
   @service store;
   @service headData;
+  @service router;
 
   beforeModel() {
     this.headData.routeTitle = 'Links';
   }
 
-  model() {
-    return this.store.findAll('link');
+  async model(params, transition) {
+    console.log('params', params);
+
+    try {
+      return await this.store.findAll('link');
+    } catch {
+      this.router.replaceWith('error', { transition, title: 'could not find any links' });
+    }
   }
 }
