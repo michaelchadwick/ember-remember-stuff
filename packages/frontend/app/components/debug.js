@@ -9,12 +9,12 @@ export default class DebugComponent extends Component {
   @tracked app = ENV.APP;
   @tracked isExpanded = this.args.isExpanded;
 
-  @service localStorage;
+  @service('local-storage') ls;
 
   @action
   saveDebugVisibility() {
     this.isExpanded = !this.isExpanded;
 
-    this.localStorage.set('debugExpanded', this.isExpanded);
+    this.ls.set('debugExpanded', this.isExpanded);
   }
 }
