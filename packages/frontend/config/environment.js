@@ -6,6 +6,12 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'history',
+    'ember-a11y-testing': {
+      componentOptions: {
+        turnAuditOff: process.env.SKIP_A11Y || false,
+        visualNoiseLevel: 1,
+      },
+    },
     EmberENV: {
       EXTEND_PROTOTYPES: false,
       FEATURES: {
