@@ -2,7 +2,6 @@ details.debug {
   background-color: #f9d8ff;
   border: 1px solid #e2b3e2;
   border-radius: 0.5em;
-  box-shadow: 0 0.25em 1.5em 0.25em rgba(0 0 0 / 10%);
   margin-top: 2em;
   max-width: 800px;
 }
@@ -15,16 +14,19 @@ details.debug:hover {
 details.debug .gallery {
   display: flex;
   gap: 1em;
+  height: 320px;
   justify-content: flex-start;
   margin: 1em;
+  overflow-x: auto;
 }
 
 details.debug .gallery > div {
   background-color: #fff;
   border-radius: 1em;
-  box-shadow: 0 0.25em 1em 0.25em rgba(0 0 0 / 20%);
-  max-width: 175px;
-  min-width: 150px;
+  box-shadow: 2px 2px 4px rgba(0 0 0 / 20%);
+  height: 280px;
+  max-width: 160px;
+  min-width: 160px;
   padding: 1em;
 }
 
