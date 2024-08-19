@@ -39,11 +39,20 @@
               "Counter",
               "Debug",
               "Footer",
+              "GhCommits",
               "GhUser",
-              "Messages -> Message",
+              "LoadingSpinner",
+              "LocaleChooser",
+              "Messages -> Avatar, Message, Username",
+              "Mover",
               "NavBar",
               "NewMessageInput",
-              "Ribbon"
+              "Ribbon",
+              "SongList",
+              "TomsterPopper",
+              "UserList",
+              "UserNameInfo",
+              "UserProfile"
             ]
           },
           {
@@ -76,7 +85,7 @@
         "lists": [
           {
             "title": "Application Concerns",
-            "checked": false,
+            "checked": true,
             "code": false,
             "items": []
           },
