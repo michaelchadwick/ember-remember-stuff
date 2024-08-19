@@ -91,7 +91,7 @@
           },
           {
             "title": "Accessibility",
-            "checked": false,
+            "checked": true,
             "code": false,
             "items": []
           },
@@ -109,7 +109,7 @@
           },
           {
             "title": "Addons and Dependencies",
-            "checked": false,
+            "checked": true,
             "code": false,
             "items": []
           },
