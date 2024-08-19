@@ -71,6 +71,7 @@ general:
   month: Month
   name: Name
   navigation: Navigation
+  navigationCompleteText: RemEmber Stuff page navigation is complete. You may now navigate the page content as you wish.
   next: Next
   no: No
   noneFound: "No {items} found."
@@ -91,6 +92,7 @@ general:
   send: Send
   sendMessage: Send Message
   siteTitle: RemEmber Stuff
+  skipToMainContent: Skip to main content
   start: Start
   startDate: Start Date
   starts: Starts

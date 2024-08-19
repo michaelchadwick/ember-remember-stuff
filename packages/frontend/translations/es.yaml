@@ -71,6 +71,7 @@ general:
   month: Mes
   name: Nombre
   navigation: Navegación
+  navigationCompleteText: La navegación de la página de RemEmber Stuff está completa. Ahora puede navegar por el contenido de la página como desee.
   next: Siguiente
   no: No
   noneFound: "No se encontraron {items}."
@@ -91,6 +92,7 @@ general:
   send: Enviar
   sendMessage: Envia Mensaje
   siteTitle: RemEmber Stuff
+  skipToMainContent: Saltar al contenido principal
   start: Inicio
   startDate: Fecha de Iniciar
   starts: Empieza

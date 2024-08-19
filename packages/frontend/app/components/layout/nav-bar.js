@@ -1,5 +1,6 @@
 import Component from '@glimmer/component';
 import { service } from '@ember/service';
+import { defaultValidator } from 'ember-a11y-refocus';
 export default class NavBarComponent extends Component {
   @service intl;
 
@@ -31,5 +32,12 @@ export default class NavBarComponent extends Component {
         target: '_self',
       },
     ];
+  }
+
+  checkRouteChange(transition) {
+    if (transition.from?.name === transition.to?.name) {
+      return false;
+    }
+    return defaultValidator(transition);
   }
 }
