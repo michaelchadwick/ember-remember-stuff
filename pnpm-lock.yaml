@@ -174,6 +174,9 @@ importers:
       ember-resolver:
         specifier: ^11.0.1
         version: 11.0.1(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))
+      ember-set-helper:
+        specifier: ^3.0.1
+        version: 3.0.1(@babel/core@7.24.9)
       ember-source:
         specifier: ~5.9.0
         version: 5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0)
@@ -397,6 +400,9 @@ importers:
       ember-resolver:
         specifier: ^11.0.1
         version: 11.0.1(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))
+      ember-set-helper:
+        specifier: ^3.0.1
+        version: 3.0.1(@babel/core@7.24.9)
       ember-source:
         specifier: ~5.9.0
         version: 5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0)
@@ -3418,6 +3424,9 @@ packages:
   ember-router-generator@2.0.0:
     resolution: {integrity: sha512-89oVHVJwmLDvGvAUWgS87KpBoRhy3aZ6U0Ql6HOmU4TrPkyaa8pM0W81wj9cIwjYprcQtN9EwzZMHnq46+oUyw==}
     engines: {node: 8.* || 10.* || >= 12}
+
+  ember-set-helper@3.0.1:
+    resolution: {integrity: sha512-Ord3CuttDiF88wiNpHNDjf4aFKPnHSkpeK7zFfH9nV7YdDFSJissDCZEg42A0ReWY1WuqWbc2hMl5XkgupdyZQ==}
 
   ember-simple-auth@6.0.0:
     resolution: {integrity: sha512-9SzSFApxZ74CD4UxIeTV+poIPeXcRLXWM60cMvC1SwTYjoc/p9DeQF0pVm6m1XV6uA3kPUzEsEn4/GeHc2YX1w==}
@@ -10911,6 +10920,14 @@ snapshots:
       '@babel/traverse': 7.24.8
       recast: 0.18.10
     transitivePeerDependencies:
+      - supports-color
+
+  ember-set-helper@3.0.1(@babel/core@7.24.9):
+    dependencies:
+      '@embroider/addon-shim': 1.8.9
+      decorator-transforms: 1.2.1(@babel/core@7.24.9)
+    transitivePeerDependencies:
+      - '@babel/core'
       - supports-color
 
   ember-simple-auth@6.0.0(@ember/test-helpers@3.3.0(ember-source@5.9.0(@babel/core@7.24.9)(@glimmer/component@1.1.2(@babel/core@7.24.9))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0)):
