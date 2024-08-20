@@ -7,6 +7,7 @@ module.exports = function (defaults) {
     sassOptions: {
       extension: 'scss',
     },
+    'ember-cli-babel': { enableTypeScriptTransform: true },
     '@embroider/macros': {
       setConfig: {
         'ember-qunit': {
