@@ -128,4 +128,6 @@ errors:
   unknown: ¡Un error desconocido ocurrió!
 components:
   audioPlayer.head: AudioPlayer
-  box.head: Box
+  box:
+    defaultHtml: "<p>Hola. Este es un componente Box. Este texto proviene dek bloque que pasa al componente Box. <b>No soporta</b> HTML.</p>"
+    head: Box
