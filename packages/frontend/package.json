@@ -105,7 +105,8 @@
     "webpack": "^5.93.0"
   },
   "dependencies": {
-    "ember-auto-import": "^2.7.4"
+    "ember-auto-import": "^2.7.4",
+    "scroll-into-view": "^1.16.2"
   },
   "engines": {
     "node": ">= 20",
