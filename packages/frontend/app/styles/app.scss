@@ -43,6 +43,16 @@ button {
   white-space: nowrap;
 }
 
+code {
+  background-color: #e7e7e7;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  color: #c11847;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 2px;
+}
+
 form {
   display: grid;
   gap: 0.5em;
