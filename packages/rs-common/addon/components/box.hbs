@@ -1,0 +1,10 @@
+{{#if (has-block)}}
+  <div class="box" data-test-box ...attributes>
+    {{yield this.text}}
+  </div>
+{{else}}
+  <div class="box" data-test-box ...attributes>
+    <h3>{{t "components.box.head"}}</h3>
+    <p>{{ this.text }}</p>
+  </div>
+{{/if}}

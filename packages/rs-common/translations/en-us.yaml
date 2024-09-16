@@ -128,3 +128,4 @@ errors:
   unknown: An unknown error occurred!
 components:
   audioPlayer.head: AudioPlayer
+  box.head: Box
