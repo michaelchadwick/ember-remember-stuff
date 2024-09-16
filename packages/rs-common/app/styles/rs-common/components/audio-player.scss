@@ -3,7 +3,7 @@
 }
 
 .audio-player #btn-audio-pause {
-  background-color: #ffc1cb;
+  background-color: #a1a1a1;
 }
 
 .audio-player #audio-volume {
@@ -39,4 +39,5 @@
 
 .audio-player.is-playing #btn-audio-play {
   background-color: lightgreen;
+  color: #000000;
 }
