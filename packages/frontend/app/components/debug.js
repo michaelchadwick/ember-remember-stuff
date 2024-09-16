@@ -6,7 +6,7 @@ import ENV from 'frontend/config/environment';
 
 export default class DebugComponent extends Component {
   @tracked env = ENV.environment;
-  @tracked app = ENV.APP;
+  @tracked envApp = ENV.APP;
   @tracked isExpanded = this.args.isExpanded;
 
   @service('local-storage') ls;

@@ -15,12 +15,12 @@
 
     {{#if (eq this.env "production")}}
       <AudioPlayer
-        @srcURL={{this.app.AUDIO_PLAYER_FILE_REMOTE}}
+        @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}}
         @shouldLoop={{true}}
       />
     {{else}}
       <AudioPlayer
-        @srcURL={{this.app.AUDIO_PLAYER_FILE_LOCAL}}
+        @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}}
         @shouldLoop={{true}}
       />
     {{/if}}
@@ -48,12 +48,12 @@
 
     {{#if (eq this.env "production")}}
       <AudioPlayer
-        @srcURL={{this.app.AUDIO_PLAYER_FILE_REMOTE}}
+        @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}}
         @shouldLoop={{true}}
       />
     {{else}}
       <AudioPlayer
-        @srcURL={{this.app.AUDIO_PLAYER_FILE_LOCAL}}
+        @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}}
         @shouldLoop={{true}}
       />
     {{/if}}
