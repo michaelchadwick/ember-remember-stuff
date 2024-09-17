@@ -24,6 +24,16 @@ module.exports = function (environment) {
       AUDIO_PLAYER_FILE_LOCAL: '/assets/audio/fezzish.mp3',
       AUDIO_PLAYER_FILE_REMOTE: 'https://neb.host/files/p/fezzish.mp3',
       LOCAL_STORAGE_KEY: 'remember-stuff',
+      LOREM_IPSUM_DEFAULT: `
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
+
+        Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+
+        Morbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.
+      `,
+      LOREM_MD_API_URL: 'https://jaspervdj.be/lorem-markdownum/markdown.txt',
+      LORIPSUM_API_URL: 'https://loripsum.net/api',
+      METAPHORPSUM_API_URL: 'http://metaphorpsum.com',
       GITHUB_API_URL: 'https://api.github.com',
       GITHUB_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',

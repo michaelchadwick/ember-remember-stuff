@@ -131,3 +131,5 @@ components:
   box:
     defaultHtml: "<p>Hello. This is a Box component. This text is coming from the block passed to the Box component. It does <b>not</b> support HTML.</p>"
     head: Box
+  randomText:
+    head: Random Text

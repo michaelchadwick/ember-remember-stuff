@@ -1,0 +1,8 @@
+<h2>{{t "components.randomText.head"}}</h2>
+<div class="random-text">
+  {{#if this.requestText.isRunning}}
+    <LoadingSpinner />
+  {{else}}
+    {{ this.text }}
+  {{/if}}
+</div>
