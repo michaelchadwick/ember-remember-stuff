@@ -11,13 +11,17 @@ module('Acceptance | remember stuff', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /', async function (assert) {
-    assert.expect(5);
+    assert.expect(8);
     await visit('/');
     await percySnapshot(getUniqueName(assert, 'homepage'));
 
     assert.strictEqual(currentURL(), '/');
     assert.dom('nav').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
+
+    assert.dom('.checklists').exists();
+    assert.dom('.debug').exists();
+    assert.dom('.random-text').exists();
 
     assert.dom('nav .links a:first-of-type').hasText('About');
     await click('nav .links a:first-of-type');
@@ -132,6 +136,7 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer a.menu-author').hasText('Author');
     assert.dom('footer a.menu-source').hasText('Source');
     assert.dom('footer a.menu-tutorial').hasText('Docs');
+
     if (ENV.environment != 'production') {
       assert.dom('footer a.menu-tests').hasText('[Tests]');
       assert.dom('footer a.menu-prod').hasText('[Prod]');
