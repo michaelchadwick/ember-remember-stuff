@@ -7,20 +7,20 @@ import { dropTask } from 'ember-concurrency';
 export default class RandomTextComponent extends Component {
   @service loremIpsum;
   @tracked text;
-  @tracked count;
-  @tracked size;
+  @tracked paragraphs;
+  @tracked sentences;
 
   constructor() {
     super(...arguments);
 
-    this.count = this.args.count ?? 1;
-    this.size = this.args.size ?? 'medium';
+    this.paragraphs = this.args.paragraphs ?? 3;
+    this.sentences = this.args.sentences ?? 3;
 
     this.requestText.perform();
   }
 
   requestText = dropTask(async () => {
-    const randomText = await this.loremIpsum.requestText(this.count, this.size);
+    const randomText = await this.loremIpsum.requestText(this.paragraphs, this.sentences);
     this.text = new htmlSafe(randomText);
   });
 }

@@ -5,8 +5,8 @@ import ENV from 'frontend/config/environment';
 export default class LoremIpsumService extends Service {
   @tracked envApp = ENV.APP;
 
-  async requestText(paragraphCount) {
-    let url = `${this.envApp.METAPHORPSUM_API_URL}/paragraphs/${paragraphCount}?p=true`;
+  async requestText(paragraphCount, sentenceCount) {
+    let url = `${this.envApp.METAPHORPSUM_API_URL}/paragraphs/${paragraphCount}/${sentenceCount}?p=true`;
 
     const result = await fetch(url, {
       method: 'GET',
