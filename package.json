@@ -15,6 +15,7 @@
     "lint:deps": "pnpm run --parallel lint:deps",
     "start": "pnpm --filter frontend exec ember serve",
     "test": "pnpm --filter frontend exec ember test",
+    "test:coverage": "COVERAGE=true pnpm --filter frontend exec ember test",
     "test:ember": "pnpm --filter frontend exec ember test",
     "test:percy": "pnpm --filter frontend exec percy exec -- ember test",
     "prepare": "husky",
