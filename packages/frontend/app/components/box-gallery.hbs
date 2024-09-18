@@ -1,0 +1,26 @@
+<div class="box-gallery">
+  <h2>{{t "components.boxGallery.head"}}</h2>
+
+  <div class="box-generator">
+    <button
+      type="button"
+      id="btn-generate-new"
+      {{on "click" this.generateNewBox}}
+    >
+      {{t "components.boxGallery.genNewButton"}}
+    </button>
+  </div>
+
+  <div class="boxes">
+    {{#each this.boxes as |box|}}
+      {{#if box.block}}
+        <Box>
+          <h3>{{t "components.box.head"}}</h3>
+          {{box.block}}
+        </Box>
+      {{else}}
+        <Box @text={{box.text}} />
+      {{/if}}
+    {{/each}}
+  </div>
+</div>

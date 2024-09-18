@@ -1,0 +1,15 @@
+.box-gallery {
+  display: flex;
+  flex-direction: column;
+
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 10px 0;
+
+    .box {
+      flex-basis: 100%;
+    }
+  }
+}
