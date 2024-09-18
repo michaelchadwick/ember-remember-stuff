@@ -33,6 +33,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 - `pnpm run test`
 - `pnpm run test:ember -- --server`
 
+#### Get Code Coverage For Tests
+
+- `COVERAGE=true pnpm run test`
+
 ### Linting
 
 - `pnpm run lint`
