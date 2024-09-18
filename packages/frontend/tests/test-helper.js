@@ -4,8 +4,24 @@ import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';
 import { start } from 'ember-qunit';
+import { forceModulesToBeLoaded, sendCoverage } from 'ember-cli-code-coverage/test-support';
 import './helpers/intersection-observing';
 import './helpers/percy-snapshot-name';
+
+if (config.APP.isRunningWithServerArgs) {
+  // until Testem is patched, this will fail to POST coverage in CI mode (running tests with -s or --server as an argument)
+  // Ref: https://github.com/testem/testem/issues/1577
+  QUnit.done(async function () {
+    forceModulesToBeLoaded();
+    await sendCoverage();
+  });
+} else {
+  //eslint-disable-next-line no-undef
+  Testem.afterTests(function (config, data, callback) {
+    forceModulesToBeLoaded();
+    sendCoverage(callback);
+  });
+}
 
 setApplication(Application.create(config.APP));
 

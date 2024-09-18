@@ -37,6 +37,7 @@ module.exports = function (environment) {
       GITHUB_API_URL: 'https://api.github.com',
       GITHUB_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',
+      isRunningWithServerArgs: process.argv.includes('--server') || process.argv.includes('-s'),
     },
   };
 
