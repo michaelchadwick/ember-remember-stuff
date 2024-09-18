@@ -9,11 +9,11 @@ module('Integration | Component | mover', function (hooks) {
   test('it renders', async function (assert) {
     await render(hbs`<Mover />`);
 
-    assert.dom().hasText('Mover Click toggle to start moving!');
+    assert.dom().hasText('Mover (CMN) Click toggle to start moving!');
 
     await click('#mover button.header');
 
-    assert.dom('#mover').hasText('Mover Click toggle to stop moving!');
+    assert.dom('#mover').hasText('Mover (CMN) Click toggle to stop moving!');
 
     await render(hbs`
       <Mover>
@@ -21,6 +21,6 @@ module('Integration | Component | mover', function (hooks) {
       </Mover>
     `);
 
-    assert.dom().hasText('Mover Click toggle to start moving! Hello World!');
+    assert.dom().hasText('Mover (CMN) Click toggle to start moving! Hello World!');
   });
 });

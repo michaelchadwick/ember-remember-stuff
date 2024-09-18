@@ -11,6 +11,6 @@ module('Integration | Component | gh-user', function (hooks) {
 
     assert
       .dom()
-      .hasText('GithubUser michaelchadwick Public Repos: Public Gists: Followers: Following:');
+      .hasText('GithubUser (FE) michaelchadwick Public Repos: Public Gists: Followers: Following:');
   });
 });

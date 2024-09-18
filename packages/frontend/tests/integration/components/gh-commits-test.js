@@ -11,7 +11,7 @@ module('Integration | Component | gh-commits', function (hooks) {
 
     assert
       .dom()
-      .hasText('GithubCommits No commits found. Check the development console for errors.');
+      .hasText('GithubCommits (FE) No commits found. Check the development console for errors.');
 
     await render(hbs`<GhCommits @title='Last 5 Commits' />`);
 
