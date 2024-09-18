@@ -1,3 +1,17 @@
 .box {
+  background-color: #eee;
   border: 1px solid #000;
+  border-bottom-color: #555;
+  border-bottom-width: 3px;
+  border-left-color: #888;
+  border-radius: 2px;
+  border-right-color: #888;
+  border-right-width: 2px;
+  border-top-width: 1px;
+  box-shadow: 1px 1px 3px #aaa;
+  padding: 1em;
+
+  &.tall {
+    background-color: #ff9f9f;
+  }
 }
