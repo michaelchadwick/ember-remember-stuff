@@ -6,11 +6,6 @@
 >
   <summary>{{t "components.debug.summary"}}</summary>
   <div class="gallery">
-    <Box @text="Hello. This is a Box component. This text is coming from the Box component <code>@text</code> argument, and supports HTML." />
-    <Box>
-      <h3>{{t "components.box.head"}}</h3>
-      <p>{{t "components.box.defaultHtml"}}</p>
-    </Box>
     <DoubleIt />
 
     {{#if (eq this.env "production")}}

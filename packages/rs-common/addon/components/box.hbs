@@ -1,9 +1,22 @@
 {{#if (has-block)}}
-  <div class="box" data-test-box ...attributes>
+  {{!-- template-lint-disable no-at-ember-render-modifiers --}}
+  <div
+    class="box has-block"
+    id={{unique-id}}
+    {{did-insert this.getElementAttrs}}
+    {{on-resize this.updateElementDims}}
+    data-test-box
+    ...attributes
+  >
     {{yield this.text}}
   </div>
 {{else}}
-  <div class="box" data-test-box ...attributes>
+  <div
+    class="box no-block"
+    id={{unique-id}}
+    data-test-box
+    ...attributes
+  >
     <h3>{{t "components.box.head"}}</h3>
     {{ this.text }}
   </div>

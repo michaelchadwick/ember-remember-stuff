@@ -6,8 +6,12 @@
       type="button"
       id="btn-generate-new"
       {{on "click" this.generateNewBox}}
+      disabled={{this.isGenerating}}
     >
       {{t "components.boxGallery.genNewButton"}}
+      {{#if this.isGenerating}}
+        <LoadingSpinner />
+      {{/if}}
     </button>
   </div>
 

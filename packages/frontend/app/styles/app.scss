@@ -1,4 +1,4 @@
-/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern, no-descending-specificity */
 @import "rs-common/styles";
 @import "components";
 
@@ -42,8 +42,14 @@ button {
   vertical-align: middle;
   white-space: nowrap;
 
+  &:disabled {
+    background-color: #aaa;
+    color: #888;
+    cursor: auto;
+  }
+
   @media (hover: hover) {
-    &:hover {
+    &:not(:disabled):hover {
       background-color: hsl(195, 56%, 41%);
     }
   }
@@ -88,7 +94,6 @@ form textarea {
 
 form button {
   border: 1px solid #ccc;
-  cursor: pointer;
   font-size: 1em;
   padding: 0.5em;
 }
