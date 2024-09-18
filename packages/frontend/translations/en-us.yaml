@@ -161,22 +161,19 @@ components:
     count: Count
     countAdd: Count +1
     countSubtract: Count -1
-    head: Counter
+    head: Counter (FE)
     multi: Multi
     multiX2: Multi x2
-  debug.summary: Component Debugging
-  ghCommits.head: GithubCommits
+  debug:
+    summary: Component Debugging
+  ghCommits:
+    head: GithubCommits (FE)
   ghUser:
     followers: Followers
     following: Following
     gists: Public Gists
-    head: GithubUser
+    head: GithubUser (FE)
     repos: Public Repos
-  mover:
-    alwaysMoving: Always be moving!
-    clickMeOff: Click toggle to stop moving!
-    clickMeOn: Click toggle to start moving!
-    head: Mover
   newMessageInput:
     nothingSaved: "<em>Note</em>: new messages will not be saved (...yet)!"
     placeholder: Type message here and hit enter

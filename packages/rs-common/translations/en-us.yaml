@@ -127,9 +127,15 @@ errors:
   url: "{description} must be a valid url"
   unknown: An unknown error occurred!
 components:
-  audioPlayer.head: AudioPlayer
+  audioPlayer:
+    head: AudioPlayer (CMN)
   box:
     defaultHtml: "<p>Hello. This is a Box component. This text is coming from the block passed to the Box component. It does <b>not</b> support HTML.</p>"
-    head: Box
+    head: Box (CMN)
+  mover:
+    alwaysMoving: Always be moving!
+    clickMeOff: Click toggle to stop moving!
+    clickMeOn: Click toggle to start moving!
+    head: Mover (CMN)
   randomText:
-    head: Random Text
+    head: RandomText (CMN)
