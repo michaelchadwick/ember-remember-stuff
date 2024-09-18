@@ -287,9 +287,6 @@ importers:
       class-validator:
         specifier: ^0.14.1
         version: 0.14.1
-      ember-async-data:
-        specifier: ^1.0.3
-        version: 1.0.3(ember-source@5.9.0(@babel/core@7.25.2)(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.94.0))
       ember-auto-import:
         specifier: ^2.7.3
         version: 2.7.4(webpack@5.94.0)
@@ -384,6 +381,9 @@ importers:
       broccoli-asset-rev:
         specifier: ^3.0.0
         version: 3.0.0
+      ember-async-data:
+        specifier: ^1.0.3
+        version: 1.0.3(ember-source@5.9.0(@babel/core@7.25.2)(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.94.0))
       ember-cli:
         specifier: ~5.9.0
         version: 5.9.0(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.7)
