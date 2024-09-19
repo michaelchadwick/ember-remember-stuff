@@ -1,31 +1,41 @@
 .box {
   background-color: #eee;
-  border: 1px solid #000;
+  border-color: #000;
+  border-style: solid;
+  border-width: 1px;
   border-bottom-color: #555;
-  border-bottom-width: 3px;
   border-left-color: #888;
-  border-radius: 2px;
-  border-right-color: #888;
-  border-right-width: 2px;
-  border-top-width: 1px;
-  box-shadow: 1px 1px 3px #aaa;
+  border-radius: 4px;
+  border-right-color: #555;
+  border-top-color: #888;
+  box-shadow: 1px 2px 3px #999;
+  min-width: 200px;
   padding: 1em;
 
-  &:focus {
+  &:active,
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
     background-color: #fff;
     border-style: dashed;
     border-bottom-color: #000;
     border-left-color: #000;
     border-right-color: #000;
-    box-shadow: 1px 1px 3px transparent;
+    box-shadow: inset 1px 1px 10px #9d9d9d;
     color: #111;
+    outline-style: dashed;
   }
 
   &.tall {
     background-color: #ffc3c3;
 
-    &:focus {
+    &:active,
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
       background-color: #ffcaca;
+      border-style: dashed;
+      box-shadow: inset 1px 1px 10px #695050;
     }
   }
 
