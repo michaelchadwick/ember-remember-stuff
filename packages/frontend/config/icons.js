@@ -1,6 +1,8 @@
 module.exports = function () {
   return {
     'free-solid-svg-icons': [
+      'angles-down',
+      'angles-up',
       'at',
       'book',
       'caret-down',
