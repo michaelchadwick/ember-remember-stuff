@@ -8,16 +8,26 @@
     data-test-box
     ...attributes
   >
-    {{yield this.text}}
+    <h3>{{t "components.box.head"}} ({{this.dimensionDisplay}})</h3>
+    <div class="box-id">{{this.id}}</div>
+
+    <div class="box-text">
+      {{yield this.text}}
+    </div>
   </div>
 {{else}}
   <div
     class="box no-block"
     id={{unique-id}}
+    {{did-insert this.getElementAttrs}}
+    {{on-resize this.updateElementDims}}
     data-test-box
     ...attributes
   >
-    <h3>{{t "components.box.head"}}</h3>
-    {{ this.text }}
+    <h3>{{t "components.box.head"}} ({{this.dimensionDisplay}})</h3>
+    <div class="box-id">{{this.id}}</div>
+    <div class="box-text">
+      {{ this.text }}
+    </div>
   </div>
 {{/if}}

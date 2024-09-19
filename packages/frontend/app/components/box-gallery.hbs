@@ -19,11 +19,10 @@
     {{#each this.boxes as |box|}}
       {{#if box.block}}
         <Box>
-          <h3>{{t "components.box.head"}}</h3>
           {{box.block}}
         </Box>
       {{else}}
-        <Box @text={{box.text}} />
+        <Box @text={{box.text}} contenteditable="true" />
       {{/if}}
     {{/each}}
   </div>

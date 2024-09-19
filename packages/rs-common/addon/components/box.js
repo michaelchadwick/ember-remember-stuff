@@ -19,6 +19,18 @@ export default class BoxComponent extends Component {
     }
   }
 
+  get widthRounded() {
+    return Math.floor(this.width);
+  }
+
+  get heightRounded() {
+    return Math.floor(this.height);
+  }
+
+  get dimensionDisplay() {
+    return `${this.widthRounded} W x ${this.heightRounded} H`;
+  }
+
   @action
   getElementAttrs(element) {
     if (element) {
