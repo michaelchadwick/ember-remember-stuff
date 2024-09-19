@@ -1,56 +1,94 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import { typeOf } from '@ember/utils';
 import { htmlSafe } from '@ember/template';
 import { action } from '@ember/object';
 
 export default class BoxComponent extends Component {
   @tracked id;
-  @tracked width;
-  @tracked height;
-  @tracked text;
+  @tracked textWidth;
+  @tracked textHeight;
+  @tracked expanded = false;
 
-  TALL_HEIGHT = 400;
+  MAX_HEIGHT = 200;
 
-  constructor() {
-    super(...arguments);
+  get isEditable() {
+    return this.args.isEditable;
+  }
 
-    if (this.args.text) {
-      this.text = new htmlSafe(this.args.text);
+  get displayExpandedState() {
+    return this.expanded ? 'expanded' : 'collapsed';
+  }
+
+  get text() {
+    if (!this.args.text) {
+      return '';
+    }
+    if (typeOf(this.args.text) !== 'string') {
+      return this.args.text.toString();
+    }
+
+    return this.args.text;
+  }
+
+  get displayText() {
+    return new htmlSafe(this.text);
+  }
+
+  get textWidthRounded() {
+    return Math.floor(this.textWidth);
+  }
+
+  get textHeightRounded() {
+    return Math.floor(this.textHeight);
+  }
+
+  get displayTextDims() {
+    return `${this.textWidthRounded} W x ${this.textHeightRounded} H`;
+  }
+
+  get isFaded() {
+    if (!this.expanded) {
+      return this.textHeightRounded >= this.MAX_HEIGHT;
+    } else {
+      return false;
     }
   }
 
-  get widthRounded() {
-    return Math.floor(this.width);
-  }
-
-  get heightRounded() {
-    return Math.floor(this.height);
-  }
-
-  get dimensionDisplay() {
-    return `${this.widthRounded} W x ${this.heightRounded} H`;
+  get shortId() {
+    return this.id ? `#${this.id.substr(0, 8)}` : '';
   }
 
   @action
   getElementAttrs(element) {
     if (element) {
-      this.height = element.offsetHeight;
-      this.width = element.offsetWidth;
-      this.id = element.id;
+      this.textHeight = element.getBoundingClientRect().height;
+      this.textWidth = element.getBoundingClientRect().width;
+      this.id = element.parentElement.parentElement.parentElement.id;
 
-      console.log(`BoxComponent #${this.id} loaded: ${this.width} W x ${this.height} H`);
+      console.log(
+        `[LOADED] BoxComponent ${this.shortId}; box-text: ${this.textWidth} W x ${this.textHeight} H`,
+      );
     }
   }
 
   @action
-  updateElementDims({ contentRect: { width, height }, target }) {
-    this.width = width;
-    this.height = height;
+  updateElementDims({ contentRect: { width, height } }) {
+    this.textWidth = width;
+    this.textHeight = height;
+  }
 
-    if (this.height > this.TALL_HEIGHT) {
-      target.classList.add('tall');
-    } else {
-      target.classList.remove('tall');
-    }
+  @action
+  expand(event) {
+    event.stopPropagation();
+    console.log('expanding box text');
+    this.expanded = true;
+  }
+
+  @action
+  collapse(event) {
+    event.stopPropagation();
+    console.log('collapsing box text');
+    this.expanded = false;
   }
 }

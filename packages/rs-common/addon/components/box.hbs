@@ -2,32 +2,72 @@
   {{!-- template-lint-disable no-at-ember-render-modifiers --}}
   <div
     class="box has-block"
+    contenteditable={{this.isEditable}}
     id={{unique-id}}
-    {{did-insert this.getElementAttrs}}
-    {{on-resize this.updateElementDims}}
     data-test-box
     ...attributes
   >
-    <h3>{{t "components.box.head"}} ({{this.dimensionDisplay}})</h3>
-    <div class="box-id">{{this.id}}</div>
+    <h3>{{t "components.box.head"}}</h3>
 
     <div class="box-text">
-      {{yield this.text}}
+      <div class="display-text-wrapper{{if this.isFaded ' is-faded'}}">
+        <div
+          class="display-text"
+          {{did-insert this.getElementAttrs}}
+          {{on-resize this.updateElementDims}}
+        >
+          {{yield this.displayText this.expand this.collapse this.isFaded this.expanded}}
+        </div>
+      </div>
     </div>
   </div>
 {{else}}
   <div
     class="box no-block"
     id={{unique-id}}
-    {{did-insert this.getElementAttrs}}
-    {{on-resize this.updateElementDims}}
     data-test-box
     ...attributes
   >
-    <h3>{{t "components.box.head"}} ({{this.dimensionDisplay}})</h3>
-    <div class="box-id">{{this.id}}</div>
+
+    <h3>{{t "components.box.head"}}</h3>
+
     <div class="box-text">
-      {{ this.text }}
+      <div class="display-text-wrapper{{if this.isFaded ' is-faded'}}">
+        <div
+          class="display-text"
+          {{did-insert this.getElementAttrs}}
+          {{on-resize this.updateElementDims}}
+        >
+          {{ this.displayText }}
+        </div>
+      </div>
     </div>
+    {{#if this.isFaded}}
+    <div class="box-text-control">
+      <button
+        class="expand-buttons"
+        aria-label={{t "general.expand"}}
+        title={{t "general.expand"}}
+        type="button"
+        data-test-expand
+        {{on "click" this.expand}}
+      >
+        <FaIcon @icon="angles-down" />
+      </button>
+    </div>
+    {{else}}
+      {{#if this.expanded}}
+        <button
+          class="expand-buttons"
+          aria-label={{t "general.collapse"}}
+          title={{t "general.collapse"}}
+          type="button"
+          data-test-collapse
+          {{on "click" this.collapse}}
+        >
+          <FaIcon @icon="angles-up" />
+        </button>
+      {{/if}}
+    {{/if}}
   </div>
 {{/if}}

@@ -12,8 +12,8 @@ export default class BoxGallery extends Component {
       block: null,
       text: `
         <p>Hello. This is a Box component. This text is coming from the Box component <code>@text</code> argument, and supports HTML.</p>
-        <p>Since the text was passed in via <code>@text</code>, it is also <b>editable</b>.</p>
         <p>It also has a lot of text in it and is probably too tall, so it should be truncated/faded somehow. Here is some more text, and some more text, and some more text, and some more text, and some more text, just in case it needs it to be super duper tall. If that was not enough text, then I will throw in a list.</p>
+        <p>Another paragraph to take up height? Don't mind if I put that into the template that gets rendered on the page.</p>
         <ul>
           <li>One</li>
           <li>Dos</li>
@@ -26,6 +26,7 @@ export default class BoxGallery extends Component {
           <li>Nove</li>
           <li>Binary 3</li>
         </ul>
+        <p>Cool list, eh?</p>
       `,
     },
     {
