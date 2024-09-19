@@ -5,7 +5,7 @@
 .awesome-icon {
   width: 1em;
   height: 1em;
-  vertical-align: -0.125em;
+  vertical-align: -0.15em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -13,6 +13,7 @@
   font-variant: normal;
   line-height: 1; /* stylelint-disable-line property-disallowed-list */
   text-rendering: auto;
+  margin-right: 3px;
 
   &.spin {
     animation-name: awesome-spin;
