@@ -11,11 +11,11 @@ module('Integration | Component | audio-player', function (hooks) {
 
     assert.dom('[data-test-audio-player]').exists();
     assert.dom('audio source').exists();
+  });
 
+  test('it sets loop attribute properly', async function (assert) {
     await render(hbs`<AudioPlayer @srcUrl="/assets/audio/audio.mp3" @shouldLoop={{true}}/>`);
 
-    assert.dom('[data-test-audio-player]').exists();
-    assert.dom('audio source').exists();
     assert.dom('audio').hasAttribute('loop');
   });
 });
