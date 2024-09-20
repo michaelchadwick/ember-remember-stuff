@@ -81,14 +81,12 @@ export default class BoxComponent extends Component {
   @action
   expand(event) {
     event.stopPropagation();
-    console.log('expanding box text');
     this.expanded = true;
   }
 
   @action
   collapse(event) {
     event.stopPropagation();
-    console.log('collapsing box text');
     this.expanded = false;
   }
 }
