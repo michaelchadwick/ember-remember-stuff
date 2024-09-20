@@ -4,14 +4,14 @@ import { tracked } from '@glimmer/tracking';
 import ENV from 'frontend/config/environment';
 
 export default class ApplicationRoute extends Route {
-  @tracked env = ENV.environment;
+  @tracked appEnv = ENV.environment;
   @tracked ghUsername = ENV.APP.GITHUB_USERNAME;
   @service headData;
   @service store;
   @service intl;
 
   setupController(controller) {
-    controller.set('env', ENV.environment);
+    controller.set('appEnv', ENV.environment);
   }
 
   beforeModel() {
@@ -27,7 +27,7 @@ export default class ApplicationRoute extends Route {
     this.headData.ogTitle = 'RemEmberStuff Tutorial';
     this.headData.routeTitle = null;
 
-    if (this.env === 'production') {
+    if (this.appEnv === 'production') {
       this.headData.faviconType = 'prod';
       this.headData.envTitle = 'prod';
     } else {
@@ -36,7 +36,7 @@ export default class ApplicationRoute extends Route {
     }
 
     // will output in browser dev console
-    switch (this.env) {
+    switch (this.appEnv) {
       case 'development': {
         console.log(
           '%cENV: App is in development! Go nuts!',

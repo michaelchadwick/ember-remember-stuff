@@ -1,4 +1,4 @@
-<div class="box-gallery">
+<div class="box-gallery" data-test-box-gallery>
   <h2>{{t "components.boxGallery.head"}}</h2>
 
   <div class="box-generator">
@@ -7,6 +7,7 @@
       id="btn-generate-new"
       {{on "click" this.generateNewBox}}
       disabled={{this.isGenerating}}
+      data-test-box-new
     >
       {{t "components.boxGallery.genNewButton"}}
       {{#if this.isGenerating}}
@@ -15,7 +16,7 @@
     </button>
   </div>
 
-  <div class="boxes">
+  <div class="boxes" data-test-boxes>
     {{#each this.boxes as |box|}}
       {{#if box.block}}
         <Box>

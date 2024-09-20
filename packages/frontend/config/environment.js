@@ -23,17 +23,38 @@ module.exports = function (environment) {
     APP: {
       AUDIO_PLAYER_FILE_LOCAL: '/assets/audio/fezzish.mp3',
       AUDIO_PLAYER_FILE_REMOTE: 'https://neb.host/files/p/fezzish.mp3',
+      BOX_GALLERY_DEFAULTS: [
+        {
+          block: null,
+          text: `
+            <p>Hello. This is a Box component. This text is coming from the Box component <code>@text</code> argument, and supports HTML.</p>
+            <p>It also has a lot of text in it and is probably too tall, so it should be truncated/faded somehow. Here is some more text, and some more text, and some more text, and some more text, and some more text, just in case it needs it to be super duper tall. If that was not enough text, then I will throw in a list.</p>
+            <p>Another paragraph to take up height? Don't mind if I put that into the template that gets rendered on the page.</p>
+            <p>Another paragraph to take up height? Don't mind if I put that into the template that gets rendered on the page.</p>
+            <p>Another paragraph to take up height? Don't mind if I put that into the template that gets rendered on the page.</p>
+            <ul>
+              <li>One</li>
+              <li>Dos</li>
+              <li>3</li>
+              <li>Quatre</li>
+              <li>Funf</li>
+              <li>667</li>
+              <li>Heaven</li>
+              <li>Ate</li>
+              <li>Nove</li>
+              <li>Binary 3</li>
+            </ul>
+            <p>Cool list, eh?</p>
+          `,
+        },
+        {
+          block: `
+            <p>Hey! This is a Box component. This text is coming from a block passed into the Box componenet. It <b>does not</b> support <code>HTML</code>.</p>
+          `,
+          text: null,
+        },
+      ],
       LOCAL_STORAGE_KEY: 'remember-stuff',
-      LOREM_IPSUM_DEFAULT: `
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
-
-        Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
-
-        Morbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.
-      `,
-      LOREM_MD_API_URL: 'https://jaspervdj.be/lorem-markdownum/markdown.txt',
-      LORIPSUM_API_URL: 'https://loripsum.net/api',
-      METAPHORPSUM_API_URL: 'http://metaphorpsum.com',
       GITHUB_API_URL: 'https://api.github.com',
       GITHUB_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',

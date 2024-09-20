@@ -62,7 +62,6 @@ Currently being built on [Netlify](https://mc-emberjs-remember-stuff.netlify.app
 - [Ember Concurrency](https://ember-concurrency.com)
 - [Fontawesome](https://www.npmjs.com/package/@fortawesome/ember-fontawesome)
 - [Husky](https://github.com/typicode/husky)
-- [Metaphorpsum](https://metaphorpsum.com)
 
 ### Credits
 

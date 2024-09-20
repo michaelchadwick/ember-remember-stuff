@@ -22,4 +22,6 @@
   {{/each}}
 </div>
 
+{{#if (eq this.appEnv 'development')}}
 <BoxGallery />
+{{/if}}
