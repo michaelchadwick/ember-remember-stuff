@@ -60,7 +60,7 @@ export default class BoxComponent extends Component {
   }
 
   @action
-  getElementAttrs(element) {
+  getTextDims(element) {
     if (element) {
       this.textHeight = element.getBoundingClientRect().height;
       this.textWidth = element.getBoundingClientRect().width;
@@ -73,7 +73,7 @@ export default class BoxComponent extends Component {
   }
 
   @action
-  updateElementDims({ contentRect: { width, height } }) {
+  updateTextDims({ contentRect: { width, height } }) {
     this.textWidth = width;
     this.textHeight = height;
   }

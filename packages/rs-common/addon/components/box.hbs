@@ -7,7 +7,7 @@
     data-test-box
     ...attributes
   >
-    {{yield this.displayText this.expand this.collapse this.isFaded this.expanded}}
+    {{yield this.displayText this.expand this.collapse this.getTextDims this.updateTextDims this.isFaded this.expanded}}
   </div>
 {{else}}
   <div
@@ -24,7 +24,7 @@
             {{did-insert this.getElementAttrs}}
             {{on-resize this.updateElementDims}}
           >
-            {{ this.displayText }}
+            {{this.displayText}}
           </div>
         </div>
       </div>
