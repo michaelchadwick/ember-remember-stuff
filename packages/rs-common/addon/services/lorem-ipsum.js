@@ -74,8 +74,6 @@ export default class LoremIpsumService extends Service {
       text[index] = `<p>${para.join(' ')}</p>`;
     });
 
-    console.log('text', text);
-
     return text.join('');
   }
 }
