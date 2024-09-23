@@ -14,17 +14,5 @@
     {{outlet}}
   </main>
 
-  <Debug
-    @ghUsername={{@model.ghUsername}}
-    @ghHtmlUrl={{@model.ghHtmlUrl}}
-    @ghPublicRepos={{@model.ghPublicRepos}}
-    @ghPublicGists={{@model.ghPublicGists}}
-    @ghFollowers={{@model.ghFollowers}}
-    @ghFollowing={{@model.ghFollowing}}
-    @isExpanded={{this.debugVisibility}}
-  />
-
-  <RandomText @paragraphs="5" @sentences="5" />
-
   <Layout::Footer />
 </div>
