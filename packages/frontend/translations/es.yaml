@@ -1,4 +1,6 @@
 components:
+  box:
+    defaultBlock1: "<p>Hola. Este es un componente Box. Este texto proviene del bloque que pasa al componente Box. <b>No soporta</b> HTML.</p>"
   boxGallery:
     genNewButton: Generar Nueva Caja
     head: Galería de Cajas (FE)

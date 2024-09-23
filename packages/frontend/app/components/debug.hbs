@@ -6,6 +6,11 @@
 >
   <summary>{{t "components.debug.summary"}}</summary>
   <div class="gallery">
+    <Box @text="Hello I'm a <code>Box</code> component in the <code>Debug</code> component." />
+    <Box>
+      {{t "components.box.defaultBlock1"}}
+    </Box>
+
     <DoubleIt />
 
     {{#if (eq this.env "production")}}
