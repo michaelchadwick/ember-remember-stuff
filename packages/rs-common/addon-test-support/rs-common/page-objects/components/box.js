@@ -1,7 +1,8 @@
-import { create } from 'ember-cli-page-object';
+import { create, text } from 'ember-cli-page-object';
 
 const definition = {
   scope: '[data-test-box]',
+  text: text('[data-test-box-text]'),
   expand: {
     scope: '[data-test-expand]',
   },

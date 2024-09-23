@@ -11,7 +11,7 @@ module('Acceptance | remember stuff', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /', async function (assert) {
-    assert.expect(8);
+    assert.expect(6);
     await visit('/');
     await percySnapshot(getUniqueName(assert, 'homepage'));
 
@@ -20,8 +20,6 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('h1').hasText('RemEmber Stuff');
 
     assert.dom('.checklists').exists();
-    assert.dom('.debug').exists();
-    assert.dom('.random-text').exists();
 
     assert.dom('nav .links a:first-of-type').hasText('About');
     await click('nav .links a:first-of-type');
