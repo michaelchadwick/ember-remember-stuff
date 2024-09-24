@@ -3,13 +3,22 @@
   @skipText={{t "general.skipToMainContent"}}
   @routeChangeValidator={{this.checkRouteChange}}
 />
-<nav class="menu">
+<nav class="nav-bar">
   <LinkTo @route="index" class="menu-index">
     <h1>{{t "general.siteTitle"}}</h1>
   </LinkTo>
 
   <div class="links">
     {{#each this.routes as |route|}}
+      {{#if (eq route.route 'users')}}
+      <LinkTo
+        @route={{route.route}}
+        class="menu-{{route.route}}"
+        target={{route.target}}
+      >
+        <FaIcon @icon="user" />
+      </LinkTo>
+      {{else}}
       <LinkTo
         @route={{route.route}}
         class="menu-{{route.route}}"
@@ -17,6 +26,7 @@
       >
         {{route.title}}
       </LinkTo>
+      {{/if}}
     {{/each}}
   </div>
 

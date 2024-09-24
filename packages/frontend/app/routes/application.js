@@ -18,10 +18,6 @@ export default class ApplicationRoute extends Route {
     this.intl.setLocale(['en-us']);
   }
 
-  model() {
-    return this.store.findRecord('gh-user', this.ghUsername);
-  }
-
   afterModel() {
     this.headData.title = 'RemEmberStuff';
     this.headData.ogTitle = 'RemEmberStuff Tutorial';

@@ -1,5 +1,5 @@
 <div class="checklists">
-  {{#each @model as |checklist|}}
+  {{#each @model.checklists as |checklist|}}
   <h2>{{checklist.title}}</h2>
 
   <details>
@@ -22,18 +22,16 @@
   {{/each}}
 </div>
 
-{{#if (eq this.appEnv 'development')}}
 <BoxGallery />
 
 <Debug
-  @ghUsername={{@model.ghUsername}}
-  @ghHtmlUrl={{@model.ghHtmlUrl}}
-  @ghPublicRepos={{@model.ghPublicRepos}}
-  @ghPublicGists={{@model.ghPublicGists}}
-  @ghFollowers={{@model.ghFollowers}}
-  @ghFollowing={{@model.ghFollowing}}
+  @ghUsername={{@model.ghUser.ghUsername}}
+  @ghHtmlUrl={{@model.ghUser.ghHtmlUrl}}
+  @ghPublicRepos={{@model.ghUser.ghPublicRepos}}
+  @ghPublicGists={{@model.ghUser.ghPublicGists}}
+  @ghFollowers={{@model.ghUser.ghFollowers}}
+  @ghFollowing={{@model.ghUser.ghFollowing}}
   @isExpanded={{this.debugVisibility}}
 />
 
 <RandomText @paragraphs="5" @sentences="5" />
-{{/if}}
