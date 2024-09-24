@@ -7,7 +7,7 @@
     data-test-box
     ...attributes
   >
-    {{yield this.displayText this.expand this.collapse this.getTextDims this.updateTextDims this.isFaded this.expanded}}
+    {{yield this.displayText this.expand this.collapse this.updateTextDims this.isFaded this.expanded}}
   </div>
 {{else}}
   <div
@@ -20,7 +20,6 @@
       <div class="display-text-wrapper{{if this.isFaded ' is-faded'}}">
         <div
           class="display-text"
-          {{did-insert this.getTextDims}}
           {{on-resize this.updateTextDims}}
         >
           {{this.displayText}}
