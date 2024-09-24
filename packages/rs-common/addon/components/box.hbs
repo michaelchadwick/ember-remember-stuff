@@ -41,18 +41,16 @@
     </div>
     {{else}}
       {{#if this.expanded}}
-        <div class="box-text-control">
-          <button
-            class="expand-buttons"
-            aria-label={{t "general.collapse"}}
-            title={{t "general.collapse"}}
-            type="button"
-            data-test-collapse
-            {{on "click" this.collapse}}
-          >
-            <FaIcon @icon="angles-up" />
-          </button>
-        </div>
+        <button
+          class="expand-buttons"
+          aria-label={{t "general.collapse"}}
+          title={{t "general.collapse"}}
+          type="button"
+          data-test-collapse
+          {{on "click" this.collapse}}
+        >
+          <FaIcon @icon="angles-up" />
+        </button>
       {{/if}}
     {{/if}}
   </div>
