@@ -3,12 +3,8 @@ footer {
     background-color: #ffedbb;
     border-radius: 0.5em;
     font-size: 1rem;
-    margin: 0;
+    margin: 1em 0;
     padding: 1em;
-
-    @media (min-width: 768px) {
-      margin: 2em 0;
-    }
 
     .links {
       padding: 0;
