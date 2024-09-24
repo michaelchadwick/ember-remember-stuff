@@ -2,8 +2,12 @@ footer.menu {
   background-color: #ffedbb;
   border-radius: 0.5em;
   font-size: 1rem;
-  margin: 2em 0;
+  margin: 0;
   padding: 1em;
+
+  @media (min-width: 768px) {
+    margin: 2em 0;
+  }
 }
 
 footer.menu .links {
@@ -11,7 +15,10 @@ footer.menu .links {
 }
 
 footer.menu .links a {
-  position: static;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0 0.75em 0 0;
 
   svg {
     margin-right: 3px;
