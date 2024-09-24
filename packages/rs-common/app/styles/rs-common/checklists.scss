@@ -4,29 +4,31 @@
   border-radius: 5px;
   box-shadow: 0 0.25em 1.5em 0.25em rgba(0 0 0 / 10%);
   padding: 1em;
-}
 
-.checklist {
-  margin-top: 0.5em;
-  padding-left: 2em;
-}
+  h2 {
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
 
-.checklists h2:first-of-type {
-  margin-top: 0;
-}
+  .checklist {
+    margin-top: 0.5em;
+    padding-left: 2em;
 
-.checklist li span {
-  font-weight: normal;
-}
+    li span {
+      font-weight: normal;
 
-.checklist li span.checked {
-  font-weight: bold;
-}
+      &.checked {
+        font-weight: bold;
 
-.checklist li span.checked::after {
-  content: "✓";
-}
+        &::after {
+          content: "✓";
+        }
+      }
+    }
 
-.checklist > li:first-of-type {
-  list-style-type: none;
+    & > li:first-of-type {
+      list-style-type: none;
+    }
+  }
 }

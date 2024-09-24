@@ -6,31 +6,35 @@
   left: 50%;
   position: fixed;
   z-index: 10;
-}
-#tomster-popper.show {
-  animation-duration: 500ms;
-  animation-name: slidein;
-  bottom: -70px;
-  display: flex;
-}
-#tomster-popper.hide {
-  animation-duration: 1s;
-  animation-name: slideout;
-  bottom: -100vw;
-  display: flex;
-}
-#tomster-popper #greeting {
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 5px;
-  bottom: 5px;
-  padding: 5px;
-  position: relative;
-  width: 140px;
-}
-#tomster-popper img {
-  height: 200px;
-  width: 200px;
+
+  &.show {
+    animation-duration: 500ms;
+    animation-name: slidein;
+    bottom: -70px;
+    display: flex;
+  }
+
+  &.hide {
+    animation-duration: 1s;
+    animation-name: slideout;
+    bottom: -100vw;
+    display: flex;
+  }
+
+  #greeting {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    bottom: 5px;
+    padding: 5px;
+    position: relative;
+    width: 140px;
+  }
+
+  img {
+    height: 200px;
+    width: 200px;
+  }
 }
 
 @keyframes slidein {

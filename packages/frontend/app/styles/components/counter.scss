@@ -1,41 +1,45 @@
-.counter > * {
-  padding: 0 5px;
-}
+.counter {
+  & > * {
+    padding: 0 5px;
+  }
 
-.counter .frame {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 0px;
-}
+  .frame {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
 
-.counter .frame > div {
-  padding: 0.1em;
-}
+    & > div {
+      padding: 0.1em;
+    }
 
-.counter .frame label:not(.blank) {
-  background-color: #ddd;
-  bottom: 5px;
-  display: inline-block;
-  font-size: 0.85em;
-  font-weight: 700;
-  margin: 0;
-  padding: 0.5em;
-  position: relative;
-  width: 100%;
-}
+    label {
+      &:not(.blank) {
+        background-color: #ddd;
+        bottom: 5px;
+        display: inline-block;
+        font-size: 0.85em;
+        font-weight: 700;
+        margin: 0;
+        padding: 0.5em;
+        position: relative;
+        width: 100%;
+      }
+    }
 
-.counter .count,
-.counter .total {
-  text-align: right;
-}
+    .count,
+    .total {
+      text-align: right;
+    }
 
-.counter .multiple {
-  display: flex;
-  justify-content: space-between;
-}
+    .multiple {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 
-.counter button {
-  margin-top: 1em;
+  button {
+    margin-top: 1em;
+  }
 }

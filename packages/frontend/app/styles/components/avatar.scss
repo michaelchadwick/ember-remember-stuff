@@ -1,27 +1,27 @@
 .avatar {
-  position: relative;
+  background-color: #ff907b;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
   color: white;
   font-weight: bold;
-  background-color: #ff907b;
-}
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  text-align: center;
+  width: 60px;
 
-.avatar.is-active::after {
-  content: " ";
-  height: 14px;
-  width: 14px;
-  border: solid 3px white;
-  border-radius: 50%;
-  background-color: #8bc34a;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
+  &.is-active::after {
+    background-color: #8bc34a;
+    border: solid 3px white;
+    border-radius: 50%;
+    bottom: 0;
+    content: " ";
+    height: 14px;
+    position: absolute;
+    right: 0;
+    width: 14px;
+  }
 
-.avatar.current-user {
-  background-color: #30aba5;
+  &.current-user {
+    background-color: #30aba5;
+  }
 }

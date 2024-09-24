@@ -1,35 +1,37 @@
-details.debug {
-  background-color: #f9d8ff;
-  border: 1px solid #e2b3e2;
-  border-radius: 0.5em;
-  margin-top: 2em;
-  max-width: 800px;
-}
+details {
+  &.debug {
+    background-color: #f9d8ff;
+    border: 1px solid #e2b3e2;
+    border-radius: 0.5em;
+    margin-top: 2em;
+    max-width: 800px;
 
-details.debug:hover {
-  background-color: #f7c7ff;
-  border-color: #210039;
-}
+    &:hover {
+      background-color: #f7c7ff;
+      border-color: #210039;
+    }
 
-details.debug .gallery {
-  display: flex;
-  gap: 1em;
-  height: 320px;
-  justify-content: flex-start;
-  margin: 1em;
-  overflow-x: auto;
-}
+    .gallery {
+      display: flex;
+      gap: 1em;
+      height: 320px;
+      justify-content: flex-start;
+      margin: 1em;
+      overflow-x: auto;
 
-details.debug .gallery > div {
-  background-color: #fff;
-  border-radius: 1em;
-  box-shadow: 2px 2px 4px rgba(0 0 0 / 20%);
-  height: 280px;
-  max-width: 160px;
-  min-width: 160px;
-  padding: 1em;
-}
+      & > div {
+        background-color: #fff;
+        border-radius: 1em;
+        box-shadow: 2px 2px 4px rgba(0 0 0 / 20%);
+        height: 280px;
+        max-width: 160px;
+        min-width: 160px;
+        padding: 1em;
 
-details.debug .gallery > div h3 {
-  margin-top: 0;
+        h3 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }

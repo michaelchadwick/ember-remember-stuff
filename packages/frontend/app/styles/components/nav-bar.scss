@@ -1,84 +1,74 @@
 .nav-bar {
   display: block;
-}
 
-@media (min-width: 768px) {
-  .nav-bar {
+  @media (min-width: 768px) {
     align-items: center;
     display: flex;
   }
-}
 
-.nav-bar h1 {
-  display: inline-block;
-  padding: 0 0.5em 0 0;
-  font-size: 2em;
-  color: #ff6338;
-  margin-block-end: 0.5em;
-  text-shadow: 2px 2px 2px #5d0202;
-  text-transform: small-caps;
-}
+  h1 {
+    display: inline-block;
+    padding: 0 0.5em 0 0;
+    font-size: 2em;
+    color: #ff6338;
+    margin-block-end: 0.5em;
+    text-shadow: 2px 2px 2px #5d0202;
+    text-transform: small-caps;
 
-@media (min-width: 768px) {
-  .nav-bar h1 {
-    font-size: 1.4em;
-    margin-block-end: 0;
-  }
-}
+    @media (min-width: 768px) {
+      font-size: 1.4em;
+      margin-block-end: 0;
+    }
 
-@media (min-width: 992px) {
-  .nav-bar h1 {
-    font-size: 1.8em;
-  }
-}
+    @media (min-width: 992px) {
+      font-size: 1.8em;
+    }
 
-@media (min-width: 1200px) {
-  .nav-bar h1 {
-    max-width: 150px;
-  }
-}
+    @media (min-width: 1200px) {
+      max-width: 150px;
+    }
 
-.nav-bar h1:hover {
-  color: #ff7752;
-}
-
-.nav-bar .links {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-
-  @media (min-width: 768px) {
-    margin-block-end: -1.25em;
-    padding: 0.25em 0.5em 0.25em 1em;
+    &:hover {
+      color: #ff7752;
+    }
   }
 
-  @media (min-width: 992px) {
-    margin-block-end: -1.75em;
+  .links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+
+    @media (min-width: 768px) {
+      margin-block-end: -1.25em;
+      padding: 0.25em 0.5em 0.25em 1em;
+    }
+
+    @media (min-width: 992px) {
+      margin-block-end: -1.75em;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 1em;
+      font-weight: bold;
+      padding: 0 0.75em 1em 0;
+      position: relative;
+      text-decoration: none;
+
+      @media (min-width: 768px) {
+        font-size: 1.1em;
+        padding-bottom: 0;
+      }
+
+      &:hover,
+      &.active {
+        opacity: 1;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-}
-
-.nav-bar .links a {
-  display: inline-block;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 0 0.75em 1em 0;
-  position: relative;
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  .nav-bar .links a {
-    font-size: 1.2em;
-    padding-bottom: 0;
-  }
-}
-
-.nav-bar .links a:hover,
-.nav-bar .links a.active {
-  opacity: 1;
-}
-
-.nav-bar .links a:hover {
-  text-decoration: underline;
 }

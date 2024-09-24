@@ -9,10 +9,8 @@
   position: fixed;
   text-transform: uppercase;
   z-index: 1;
-}
 
-@media (min-width: 768px) {
-  .ribbon {
+  @media (min-width: 768px) {
     font-size: 1em;
   }
 }

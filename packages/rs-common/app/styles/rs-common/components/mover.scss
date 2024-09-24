@@ -1,30 +1,38 @@
 #mover {
   transition: 100ms;
-}
 
-#mover button.header {
-  background-color: transparent;
-  border: none;
-  color: #3d463c;
-  cursor: pointer;
-  font-size: 1.3rem;
-  padding: 0 2px;
-}
+  &.moving {
+    background-color: #a0e68e;
 
-#mover.moving {
-  background-color: #a0e68e;
-}
-
-@media (hover: hover) {
-  #mover button.header:hover {
-    color: #228111;
+    button {
+      &.header {
+        @media (hover: hover) {
+          &:hover {
+            color: #811111;
+          }
+        }
+      }
+    }
   }
 
-  #mover.moving button.header:hover {
-    color: #811111;
-  }
-}
+  button {
+    &.header {
+      background-color: transparent;
+      border: none;
+      color: #3d463c;
+      cursor: pointer;
+      font-size: 1.3rem;
+      padding: 0 2px;
 
-#mover p {
-  font-size: 1.5rem;
+      @media (hover: hover) {
+        &:hover {
+          color: #228111;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
 }
