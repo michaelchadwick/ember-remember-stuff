@@ -2,6 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, click } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
+import { later } from '@ember/runloop';
 import { component } from 'rs-common/page-objects/components/box';
 
 module('Integration | Component | box', function (hooks) {
@@ -48,10 +49,32 @@ module('Integration | Component | box', function (hooks) {
 
     await render(hbs`<Box @text={{this.text}} />`);
 
+    // slight delay to allow for proper loading of component
+    await new Promise((resolve) => {
+      // eslint-disable-next-line ember/no-runloop
+      later(resolve, 10);
+    });
+
     assert.dom('.display-text-wrapper', this.element).hasClass(fadedClass);
+
     await click('[data-test-expand]');
+
+    // slight delay to allow for proper loading of component
+    await new Promise((resolve) => {
+      // eslint-disable-next-line ember/no-runloop
+      later(resolve, 10);
+    });
+
     assert.dom('.display-text-wrapper', this.element).doesNotHaveClass(fadedClass);
+
     await click('[data-test-collapse]');
+
+    // slight delay to allow for proper loading of component
+    await new Promise((resolve) => {
+      // eslint-disable-next-line ember/no-runloop
+      later(resolve, 10);
+    });
+
     assert.dom('.display-text-wrapper', this.element).hasClass(fadedClass);
   });
 
@@ -82,6 +105,12 @@ module('Integration | Component | box', function (hooks) {
     this.set('text', longHtml);
     await render(hbs`<Box @text={{this.text}} />`);
 
+    // slight delay to allow for proper loading of component
+    await new Promise((resolve) => {
+      // eslint-disable-next-line ember/no-runloop
+      later(resolve, 10);
+    });
+
     assert.dom('.display-text-wrapper', this.element).hasClass(fadedClass);
     assert.strictEqual(component.text, longText);
     assert.ok(component.expand.isVisible);
@@ -89,11 +118,23 @@ module('Integration | Component | box', function (hooks) {
 
     await component.expand.click();
 
+    // slight delay to allow for proper loading of component
+    await new Promise((resolve) => {
+      // eslint-disable-next-line ember/no-runloop
+      later(resolve, 10);
+    });
+
     assert.dom('.display-text-wrapper', this.element).doesNotHaveClass(fadedClass);
     assert.notOk(component.expand.isVisible);
     assert.ok(component.collapse.isVisible);
 
     await component.collapse.click();
+
+    // slight delay to allow for proper loading of component
+    await new Promise((resolve) => {
+      // eslint-disable-next-line ember/no-runloop
+      later(resolve, 10);
+    });
 
     assert.dom('.display-text-wrapper', this.element).hasClass(fadedClass);
     assert.ok(component.expand.isVisible);
