@@ -43,32 +43,27 @@ export default class MessagesComponent extends Component {
     },
   ];
 
+  defaultDateTimeFormat = {
+    month: '2-digit',
+    day: '2-digit',
+    year: 'numeric',
+    minute: '2-digit',
+    hour: '2-digit',
+    hour12: true,
+  };
+
   // Tomster: Los Angeles, CA, USA
   get tomsterLocalTime() {
-    const f = {
-      month: '2-digit',
-      day: '2-digit',
-      year: 'numeric',
-      minute: '2-digit',
-      hour: '2-digit',
-      hour12: true,
-      zone: 'America/Los_Angeles',
-    };
+    const f = this.defaultDateTimeFormat;
+    f.zone = 'America/Los_Angeles';
 
     return DateTime.fromObject({}, f).setLocale('en-US').toLocaleString(f).toUpperCase();
   }
 
   // Zoey: Berlin, Germany, Europe
   get zoeyLocalTime() {
-    const f = {
-      month: '2-digit',
-      day: '2-digit',
-      year: 'numeric',
-      minute: '2-digit',
-      hour: '2-digit',
-      hour12: true,
-      zone: 'Europe/Berlin',
-    };
+    const f = this.defaultDateTimeFormat;
+    f.zone = 'Europe/Berlin';
 
     return DateTime.fromObject({}, f).setLocale('en-DE').toLocaleString(f).toUpperCase();
   }
