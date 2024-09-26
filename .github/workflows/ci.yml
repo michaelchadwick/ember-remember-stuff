@@ -142,7 +142,8 @@ jobs:
       - name: Download Coverage Report
         uses: actions/download-artifact@v4
         with:
-          name: coverage-output
+          name: coverage-frontend
+          path: coverage
       - run: ls -lh coverage.xml
       - name: Upload to CodeClimate
         uses: paambaati/codeclimate-action@v6.0.0
