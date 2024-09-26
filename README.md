@@ -1,5 +1,10 @@
 # RemEmber Stuff Test Site
 
+![Continuous Integration](https://github.com/michaelchadwick/ember-remember-stuff/workflows/Continuous%20Integration/badge.svg)
+[![Code Climate](https://codeclimate.com/github/michaelchadwick/ember-remember-stuff/badges/gpa.svg)](https://codeclimate.com/github/michaelchadwick/ember-remember-stuff)
+[![Test Coverage](https://codeclimate.com/github/michaelchadwick/ember-remember-stuff/badges/coverage.svg)](https://codeclimate.com/github/michaelchadwick/ember-remember-stuff/coverage)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/57adfefa-0be0-4ab8-8958-13357cd524f6/deploy-status)](https://app.netlify.com/sites/mc-emberjs-remember-stuff/deploys)
+
 Test app to learn about [Ember Core Concepts](https://guides.emberjs.com/release/components/).
 
 ## Prerequisites
