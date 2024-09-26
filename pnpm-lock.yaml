@@ -191,6 +191,9 @@ importers:
       ember-template-lint:
         specifier: ^6.0.0
         version: 6.0.0
+      ember-template-lint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.0.0(ember-template-lint@6.0.0)(prettier@3.3.3)
       ember-truth-helpers:
         specifier: ^4.0.3
         version: 4.0.3(ember-source@5.11.1(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.95.0))
@@ -429,6 +432,9 @@ importers:
       ember-template-lint:
         specifier: ^6.0.0
         version: 6.0.0
+      ember-template-lint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.0.0(ember-template-lint@6.0.0)(prettier@3.3.3)
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
@@ -1691,6 +1697,11 @@ packages:
   '@pnpm/find-workspace-dir@6.0.3':
     resolution: {integrity: sha512-0iJnNkS4T8lJE4ldOhRERgER1o59iHA1nMlvpUI5lxNC9SUruH6peRUOlP4/rNcDg+UQ9u0rt5loYOnWKCojtw==}
     engines: {node: '>=16.14'}
+
+  '@prettier/sync@0.2.1':
+    resolution: {integrity: sha512-7ls1R6//+GPYD9vof1XaL5psViv83CwpdwlS8oUkWldYgbPhzZ3WgxIQMWqGyBmWPmoBfQg8C7jj7KI/ZuDHhQ==}
+    peerDependencies:
+      prettier: ^3.0.0
 
   '@ro0gr/ceibo@2.2.0':
     resolution: {integrity: sha512-4gSXPwwr99zUWxnTllN5L4QlfgFDloYKOsenoPvx46LE75x3wvLgGUhxUxhIMxJbqOZ0w9pzrugjQR7St0/PQg==}
@@ -3529,6 +3540,13 @@ packages:
   ember-template-imports@3.4.2:
     resolution: {integrity: sha512-OS8TUVG2kQYYwP3netunLVfeijPoOKIs1SvPQRTNOQX4Pu8xGGBEZmrv0U1YTnQn12Eg+p6w/0UdGbUnITjyzw==}
     engines: {node: 12.* || >= 14}
+
+  ember-template-lint-plugin-prettier@5.0.0:
+    resolution: {integrity: sha512-aXUYM4yuIdPZ80+AsAU8QBwGSJJ/aAkRsNcQ5vI5HmXiBjzHlDc/ZhmP6iVcYuCmoA/3iKcssMAYwIDbuby4pg==}
+    engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      ember-template-lint: '>= 4.0.0'
+      prettier: '>= 3.0.0'
 
   ember-template-lint@6.0.0:
     resolution: {integrity: sha512-TWWt/qCd4KoQ50T3We5nCoKcsrAT8Ip79Kmm9eyWjjyL+LAbRFu0z+GxcmW7MR+QCNW/1LQs3kwEdtIcaHEGiA==}
@@ -8704,6 +8722,10 @@ snapshots:
       '@pnpm/error': 5.0.3
       find-up: 5.0.0
 
+  '@prettier/sync@0.2.1(prettier@3.3.3)':
+    dependencies:
+      prettier: 3.3.3
+
   '@ro0gr/ceibo@2.2.0': {}
 
   '@rollup/plugin-node-resolve@15.3.0(rollup@2.79.1)':
@@ -11597,6 +11619,13 @@ snapshots:
       validate-peer-dependencies: 1.2.0
     transitivePeerDependencies:
       - supports-color
+
+  ember-template-lint-plugin-prettier@5.0.0(ember-template-lint@6.0.0)(prettier@3.3.3):
+    dependencies:
+      '@prettier/sync': 0.2.1(prettier@3.3.3)
+      ember-template-lint: 6.0.0
+      prettier: 3.3.3
+      prettier-linter-helpers: 1.0.0
 
   ember-template-lint@6.0.0:
     dependencies:

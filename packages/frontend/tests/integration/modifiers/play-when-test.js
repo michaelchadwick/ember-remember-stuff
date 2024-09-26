@@ -11,13 +11,11 @@ module('Integration | Modifier | play-when', function (hooks) {
   test('it renders', async function (assert) {
     this.set('isPlaying', false);
 
-    await render(hbs`
-      <audio {{play-when this.isPlaying}}>
-        <source src={{@srcURL}} />
-        <track kind="captions" />
-        {{t "errors.audio"}}
-      </audio>
-    `);
+    await render(hbs`<audio {{play-when this.isPlaying}}>
+  <source src={{@srcURL}} />
+  <track kind='captions' />
+  {{t 'errors.audio'}}
+</audio>`);
 
     assert.ok(true);
   });

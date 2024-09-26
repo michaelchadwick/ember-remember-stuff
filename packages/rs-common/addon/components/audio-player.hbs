@@ -14,7 +14,15 @@
       {{t "errors.notSupported" description="<audio>"}}
     </audio>
   {{/if}}
-  <input type="range" min="0" max="100" step="1" value={{this.rangeVolume}} id="audio-volume" oninput={{this.setVolume}} />
+  <input
+    type="range"
+    min="0"
+    max="100"
+    step="1"
+    value={{this.rangeVolume}}
+    id="audio-volume"
+    oninput={{this.setVolume}}
+  />
   {{!-- <div class="volume-tooltip">{{this.rangeVolume}}</div> --}}
 
   {{#if (eq this.env "production")}}

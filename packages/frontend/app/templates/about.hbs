@@ -4,8 +4,5 @@
 {{#if this.isLoading}}
   <GhCommits::Loading />
 {{else}}
-  <GhCommits
-    @title="Last 5 Commits" 
-    @commits={{@model}} 
-  />
+  <GhCommits @title="Last 5 Commits" @commits={{@model}} />
 {{/if}}

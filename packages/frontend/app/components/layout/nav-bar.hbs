@@ -10,22 +10,14 @@
 
   <div class="links">
     {{#each this.routes as |route|}}
-      {{#if (eq route.route 'users')}}
-      <LinkTo
-        @route={{route.route}}
-        class="menu-{{route.route}}"
-        target={{route.target}}
-      >
-        <FaIcon @icon="user" />
-      </LinkTo>
+      {{#if (eq route.route "users")}}
+        <LinkTo @route={{route.route}} class="menu-{{route.route}}" target={{route.target}}>
+          <FaIcon @icon="user" />
+        </LinkTo>
       {{else}}
-      <LinkTo
-        @route={{route.route}}
-        class="menu-{{route.route}}"
-        target={{route.target}}
-      >
-        {{route.title}}
-      </LinkTo>
+        <LinkTo @route={{route.route}} class="menu-{{route.route}}" target={{route.target}}>
+          {{route.title}}
+        </LinkTo>
       {{/if}}
     {{/each}}
   </div>

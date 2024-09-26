@@ -8,17 +8,15 @@ module('Integration | Component | message', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`
-      <Message
-        @id='message-0'
-        @username='Tomster'
-        @userIsActive={{true}}
-        @userIsCurrent={{false}}
-        @userLocalTime='5:15 PM'
-      >
-        <p>{{t 'general.hello' name='Tomster'}}</p>
-      </Message>
-    `);
+    await render(hbs`<Message
+  @id='message-0'
+  @username='Tomster'
+  @userIsActive={{true}}
+  @userIsCurrent={{false}}
+  @userLocalTime='5:15 PM'
+>
+  <p>{{t 'general.hello' name='Tomster'}}</p>
+</Message>`);
 
     assert.dom('.message').exists();
     assert.dom('.message aside').exists();

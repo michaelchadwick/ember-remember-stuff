@@ -7,14 +7,14 @@ module('Integration | Component | audio-player', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`<AudioPlayer @srcUrl="/assets/audio/audio.mp3" />`);
+    await render(hbs`<AudioPlayer @srcUrl='/assets/audio/audio.mp3' />`);
 
     assert.dom('[data-test-audio-player]').exists();
     assert.dom('audio source').exists();
   });
 
   test('it sets loop attribute properly', async function (assert) {
-    await render(hbs`<AudioPlayer @srcUrl="/assets/audio/audio.mp3" @shouldLoop={{true}}/>`);
+    await render(hbs`<AudioPlayer @srcUrl='/assets/audio/audio.mp3' @shouldLoop={{true}} />`);
 
     assert.dom('audio').hasAttribute('loop');
   });

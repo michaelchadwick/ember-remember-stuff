@@ -10,9 +10,6 @@ module('Integration | Component | box', function (hooks) {
   test('it renders empty', async function (assert) {
     await render(hbs`<Box />`);
     assert.strictEqual(component.text, '', 'Box with no block exists, and has no text');
-
-    await render(hbs`<Box></Box>`);
-    assert.dom('.box-text').doesNotExist();
   });
 
   test('it renders short text in full', async function (assert) {

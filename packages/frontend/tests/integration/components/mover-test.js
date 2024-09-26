@@ -15,11 +15,9 @@ module('Integration | Component | mover', function (hooks) {
 
     assert.dom('#mover').hasText('Mover (CMN) Click toggle to stop moving!');
 
-    await render(hbs`
-      <Mover>
-        {{t 'general.helloWorld'}}
-      </Mover>
-    `);
+    await render(hbs`<Mover>
+  {{t 'general.helloWorld'}}
+</Mover>`);
 
     assert.dom().hasText('Mover (CMN) Click toggle to start moving! Hello World!');
   });

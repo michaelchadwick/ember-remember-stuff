@@ -10,7 +10,8 @@
       {{sanitize message.content}}
     </Message>
   {{else}}
-    <p>{{t "general.noneFound" items="messages"}}</p> {{t "sections.messages.addNew"}}
+    <p>{{t "general.noneFound" items="messages"}}</p>
+    {{t "sections.messages.addNew"}}
   {{/each}}
 
   <Forms::NewMessageInput @onCreate={{this.addMessage}} />

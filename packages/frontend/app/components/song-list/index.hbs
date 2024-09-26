@@ -5,17 +5,19 @@
     <ul class="song-list">
       {{#each @songs as |song|}}
         <li>
-          <a href={{song.detailUrl}} 
-            target="_blank" 
+          <a
+            href={{song.detailUrl}}
+            target="_blank"
             rel="noopener noreferrer"
             title={{t "general.info"}}
           >
             <FaIcon @icon="circle-info" />
           </a>
-          <a href={{song.fileUrl}}
-            target="_blank" 
+          <a
+            href={{song.fileUrl}}
+            target="_blank"
             rel="noopener noreferrer"
-            title={{t "general.listen"}} 
+            title={{t "general.listen"}}
           >
             <FaIcon @icon="ear-listen" />
           </a>

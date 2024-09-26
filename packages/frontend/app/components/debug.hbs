@@ -1,67 +1,45 @@
 {{#if @isExpanded}}
-<details
-  class="debug"
-  {{on "click" this.saveDebugVisibility}}
-  open
->
-  <summary>{{t "components.debug.summary"}}</summary>
-  <div class="gallery">
-    <Box @text="Hello I'm a <code>Box</code> component in the <code>Debug</code> component." />
-    <Box>
-      {{t "components.box.defaultBlock1"}}
-    </Box>
+  <details class="debug" {{on "click" this.saveDebugVisibility}} open>
+    <summary>{{t "components.debug.summary"}}</summary>
+    <div class="gallery">
+      <Box @text="Hello I'm a <code>Box</code> component in the <code>Debug</code> component." />
+      <Box>
+        {{t "components.box.defaultBlock1"}}
+      </Box>
 
-    <DoubleIt />
+      <DoubleIt />
 
-    {{#if (eq this.env "production")}}
-      <AudioPlayer
-        @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}}
-        @shouldLoop={{true}}
+      {{#if (eq this.env "production")}}
+        <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}} @shouldLoop={{true}} />
+      {{else}}
+        <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}} @shouldLoop={{true}} />
+      {{/if}}
+
+      <GhUser
+        @username={{@ghUsername}}
+        @htmlUrl={{@ghHtmlUrl}}
+        @publicRepos={{@ghPublicRepos}}
+        @publicGists={{@ghPublicGists}}
+        @followers={{@ghFollowers}}
+        @following={{@ghFollowing}}
       />
-    {{else}}
-      <AudioPlayer
-        @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}}
-        @shouldLoop={{true}}
-      />
-    {{/if}}
 
-    <GhUser
-      @username={{@ghUsername}}
-      @htmlUrl={{@ghHtmlUrl}}
-      @publicRepos={{@ghPublicRepos}}
-      @publicGists={{@ghPublicGists}}
-      @followers={{@ghFollowers}}
-      @following={{@ghFollowing}}
-    />
-
-    <Mover />
-  </div>
-</details>
+      <Mover />
+    </div>
+  </details>
 {{else}}
-<details
-  class="debug"
-  {{on "click" this.saveDebugVisibility}}
->
-  <summary>{{t "components.debug.summary"}}</summary>
-  <div class="gallery">
-    <DoubleIt />
+  <details class="debug" {{on "click" this.saveDebugVisibility}}>
+    <summary>{{t "components.debug.summary"}}</summary>
+    <div class="gallery">
+      <DoubleIt />
 
-    {{#if (eq this.env "production")}}
-      <AudioPlayer
-        @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}}
-        @shouldLoop={{true}}
-      />
-    {{else}}
-      <AudioPlayer
-        @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}}
-        @shouldLoop={{true}}
-      />
-    {{/if}}
+      {{#if (eq this.env "production")}}
+        <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}} @shouldLoop={{true}} />
+      {{else}}
+        <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}} @shouldLoop={{true}} />
+      {{/if}}
 
-    <GhUser
-      @username={{@ghUsername}}
-      @publicRepos={{@ghPublicRepos}}
-    />
-  </div>
-</details>
+      <GhUser @username={{@ghUsername}} @publicRepos={{@ghPublicRepos}} />
+    </div>
+  </details>
 {{/if}}

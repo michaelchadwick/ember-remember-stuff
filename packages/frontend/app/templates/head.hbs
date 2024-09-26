@@ -1,7 +1,9 @@
 <title>
   ({{this.model.envTitle}})
-  {{#if this.model.routeTitle }}
-    {{this.model.routeTitle}} | {{this.model.title}}
+  {{#if this.model.routeTitle}}
+    {{this.model.routeTitle}}
+    |
+    {{this.model.title}}
   {{else}}
     {{this.model.title}}
   {{/if}}
@@ -10,11 +12,5 @@
 {{! template-lint-disable no-forbidden-elements }}
 <meta property="og:title" content={{this.model.ogTitle}} />
 
-<link
-  rel="shortcut icon"
-  href="/assets/icons/favicon-{{this.model.faviconType}}32.png"
-/>
-<link
-  rel="icon"
-  href="/assets/icons/favicon-{{this.model.faviconType}}32.png"
-/>
+<link rel="shortcut icon" href="/assets/icons/favicon-{{this.model.faviconType}}32.png" />
+<link rel="icon" href="/assets/icons/favicon-{{this.model.faviconType}}32.png" />

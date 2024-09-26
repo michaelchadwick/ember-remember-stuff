@@ -9,11 +9,11 @@ module('Integration | Component | message-username', function (hooks) {
   setupIntl(hooks, 'en-us');
 
   test('it renders', async function (assert) {
-    await render(hbs`<Message::Username @name="Tomster" />`);
+    await render(hbs`<Message::Username @name='Tomster' />`);
 
     assert.dom().hasText('Tomster');
 
-    await render(hbs`<Message::Username @name="Tomster" @localTime='5:15 PM' />`);
+    await render(hbs`<Message::Username @name='Tomster' @localTime='5:15 PM' />`);
 
     assert.dom().hasText('Tomster Local time: 5:15 PM');
   });
