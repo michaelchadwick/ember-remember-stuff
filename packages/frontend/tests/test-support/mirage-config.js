@@ -1,7 +1,7 @@
-import commonRoutes from './mirage/routes';
-import commonModels from './mirage/models';
-import commonFactories from './mirage/factories';
-import applicationSerializer from './mirage/serializers/application';
+// import commonRoutes from './mirage/routes';
+// import commonModels from './mirage/models';
+// import commonFactories from './mirage/factories';
+// import applicationSerializer from './mirage/serializers/application';
 import ENV from 'frontend/config/environment';
 import { createServer, Response } from 'miragejs';
 import { DateTime } from 'luxon';
@@ -12,11 +12,11 @@ const { apiVersion } = ENV;
 export default function (config) {
   let finalConfig = {
     ...config,
-    models: commonModels,
-    factories: commonFactories,
-    serializers: {
-      application: applicationSerializer,
-    },
+    // models: commonModels,
+    // factories: commonFactories,
+    // serializers: {
+    //   application: applicationSerializer,
+    // },
     inflector: {
       pluralize,
       singularize,
@@ -25,7 +25,7 @@ export default function (config) {
       this.timing = 100;
       this.namespace = '/';
       this.passthrough('/write-coverage');
-      commonRoutes(this);
+      // commonRoutes(this);
       this.post('auth/login', function (schema, request) {
         const errors = [];
         var attrs = JSON.parse(request.requestBody);
