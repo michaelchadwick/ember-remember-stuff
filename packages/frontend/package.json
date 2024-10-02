@@ -52,6 +52,7 @@
     "@percy/cli": "^1.28.9",
     "@percy/ember": "^4.2.0",
     "broccoli-asset-rev": "^3.0.0",
+    "broccoli-merge-trees": "^4.2.0",
     "class-validator": "^0.14.1",
     "ember-a11y-refocus": "4.1.3",
     "ember-a11y-testing": "^6.1.1",

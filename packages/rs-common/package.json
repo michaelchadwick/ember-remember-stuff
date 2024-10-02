@@ -26,6 +26,8 @@
     "@embroider/util": "^1.13.0",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
+    "broccoli-funnel": "^3.0.0",
+    "broccoli-merge-trees": "^4.0.0",
     "class-validator": "^0.14.1",
     "ember-auto-import": "^2.7.3",
     "ember-cli-babel": "^8.2.0",
