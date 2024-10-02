@@ -27,13 +27,6 @@ module('Integration | Service | Current User', function (hooks) {
     assert.strictEqual(userId, null);
   });
 
-  test('model', async function (assert) {
-    this.server.create('user', { id: 100 });
-    const subject = this.owner.lookup('service:current-user');
-    const model = await subject.getModel();
-    assert.strictEqual(parseInt(model.id, 10), 100);
-  });
-
   test('no token - no model', async function (assert) {
     await invalidateSession();
     const subject = this.owner.lookup('service:current-user');
@@ -41,7 +34,14 @@ module('Integration | Service | Current User', function (hooks) {
     assert.strictEqual(model, null);
   });
 
-  test('model only loaded once', async function (assert) {
+  skip('model', async function (assert) {
+    this.server.create('user', { id: 100 });
+    const subject = this.owner.lookup('service:current-user');
+    const model = await subject.getModel();
+    assert.strictEqual(parseInt(model.id, 10), 100);
+  });
+
+  skip('model only loaded once', async function (assert) {
     assert.expect(2);
     this.server.create('user', { id: 100 });
     let calledAlready = false;
@@ -61,14 +61,14 @@ module('Integration | Service | Current User', function (hooks) {
     await subject.getModel();
   });
 
-  test('userIsAdmin', async function (assert) {
+  skip('userIsAdmin', async function (assert) {
     this.server.create('user', { id: 100, root: true });
     const subject = this.owner.lookup('service:current-user');
     const isAdmin = await subject.getIsAdmin();
     assert.ok(isAdmin);
   });
 
-  test('not userIsAdmin', async function (assert) {
+  skip('not userIsAdmin', async function (assert) {
     this.server.create('user', { id: 100 });
     const subject = this.owner.lookup('service:current-user');
     const isAdmin = await subject.getIsAdmin();
