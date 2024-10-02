@@ -16,6 +16,13 @@ module.exports = {
     },
   },
 
+  included: function () {
+    this._super.included.apply(this, arguments);
+
+    // _findHost is private API but it's been stable in ember-cli for two years.
+    this._env = this._findHost().env;
+  },
+
   treeForApp(appTree) {
     const trees = [appTree];
     if (['test', 'development'].includes(this._env)) {
@@ -34,5 +41,14 @@ module.exports = {
     return this.preprocessJs(tree, '/', this.name, {
       registry: this.registry,
     });
+  },
+
+  treeForPublic(publicTree) {
+    const trees = [];
+    if (publicTree) {
+      trees.push(publicTree);
+    }
+
+    return MergeTrees(trees);
   },
 };
