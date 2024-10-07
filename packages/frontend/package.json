@@ -81,6 +81,7 @@
     "ember-modifier": "^4.2.0",
     "ember-on-resize-modifier": "^2.0.2",
     "ember-qunit": "^8.1.0",
+    "ember-qunit-nice-errors": "^1.2.1",
     "ember-resolver": "^11.0.1",
     "ember-set-helper": "^3.0.1",
     "ember-source": "~5.11.0",
