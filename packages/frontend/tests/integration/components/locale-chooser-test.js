@@ -78,26 +78,35 @@ module('Integration | Component | locale-chooser', function (hooks) {
   test('keyboard navigation', async function (assert) {
     await render(hbs`<LocaleChooser />`);
     await component.toggle.click();
-    assert.strictEqual(component.locales.length, languageCount);
-    assert.ok(component.locales[0].hasFocus);
-    assert.notOk(component.locales[1].hasFocus);
+    assert.strictEqual(component.locales.length, languageCount, `has ${languageCount} languages`);
+    assert.ok(component.locales[0].hasFocus, 'first lang has focus');
+    assert.notOk(component.locales[1].hasFocus, 'second lang does NOT have focus');
 
     // regular down/up navigation
     await component.locales[0].down();
-    assert.notOk(component.locales[0].hasFocus);
-    assert.ok(component.locales[1].hasFocus);
+    assert.notOk(
+      component.locales[0].hasFocus,
+      'after moving down, first lang does NOT have focus',
+    );
+    assert.ok(component.locales[1].hasFocus, 'second lang has focus');
     await component.locales[1].up();
-    assert.ok(component.locales[0].hasFocus);
-    assert.notOk(component.locales[1].hasFocus);
+    assert.ok(component.locales[0].hasFocus, 'after moving up, second lang does NOT have focus');
+    assert.notOk(component.locales[1].hasFocus, 'first lang has focus');
 
     // wrap-around navigation from first to last menu item
     await component.locales[0].up();
-    assert.notOk(component.locales[0].hasFocus);
-    assert.ok(component.locales[1].hasFocus);
+    assert.notOk(
+      component.locales[0].hasFocus,
+      'after moving up from first lang, it does NOT have focus',
+    );
+    assert.ok(component.locales[1].hasFocus, 'second lang has focus');
     // wrap-around navigation from last to first menu item
     await component.locales[1].down();
-    assert.ok(component.locales[0].hasFocus);
-    assert.notOk(component.locales[1].hasFocus);
+    assert.ok(
+      component.locales[0].hasFocus,
+      'after moving down from second lang, first lang now has focus',
+    );
+    assert.notOk(component.locales[1].hasFocus, 'second lang does NOT have focus');
 
     // close menu on escape, left, right, and tab keys.
     await component.locales[0].esc();
