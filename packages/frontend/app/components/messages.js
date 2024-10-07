@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { DateTime } from 'luxon';
+import ENV from 'frontend/config/environment';
 
 export default class MessagesComponent extends Component {
   @tracked username = 'anonymous';
@@ -42,6 +43,7 @@ export default class MessagesComponent extends Component {
       `,
     },
   ];
+  @tracked messagesContainer;
 
   defaultDateTimeFormat = {
     month: '2-digit',
@@ -66,6 +68,13 @@ export default class MessagesComponent extends Component {
     f.zone = 'Europe/Berlin';
 
     return DateTime.fromObject({}, f).setLocale('en-DE').toLocaleString(f).toUpperCase();
+  }
+
+  @action
+  displayDebugMessage() {
+    if (ENV.environment != 'production') {
+      console.log('Hello local developer! You clicked on the messages container!');
+    }
   }
 
   @action

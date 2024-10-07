@@ -1,4 +1,10 @@
-<div class="messages" data-test-messages>
+<div
+  {{did-insert (set this "messagesContainer")}}
+  class="messages"
+  {{! template-lint-disable no-invalid-interactive }}
+  {{on "click" this.displayDebugMessage}}
+  data-test-messages
+>
   {{#each this.messages as |message index|}}
     <Message
       @id="message-{{index}}"
