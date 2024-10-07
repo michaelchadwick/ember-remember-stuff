@@ -4,11 +4,11 @@ import { setupApplicationTest } from 'frontend/tests/helpers';
 module('Acceptance | sanity check', function (hooks) {
   setupApplicationTest(hooks);
 
-  test('will always(?) be true', async function (assert) {
-    assert.true(true);
-  });
-
-  test('will always(?) be false', async function (assert) {
-    assert.strictEqual(2 + 2, 5);
+  test('will always(?) be true', function (assert) {
+    assert.false(false, 'false is false');
+    assert.true(true, 'true is true');
+    assert.notStrictEqual(2 + 2, 5);
+    // eslint-disable-next-line qunit/no-ok-equality
+    assert.ok(2 !== 3);
   });
 });
