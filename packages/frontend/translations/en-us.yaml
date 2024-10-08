@@ -12,7 +12,8 @@ components:
     multi: Multi
     multiX2: Multi x2
   detailsGallery:
-    summary: Component Debugging
+    head: DetailsGallery (CMN)
+    summary: Details Gallery
   ghCommits:
     head: GithubCommits (FE)
   ghUser:
