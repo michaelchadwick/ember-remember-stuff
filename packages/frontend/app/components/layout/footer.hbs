@@ -2,11 +2,11 @@
   <div class="links">
     {{#each this.links as |link|}}
       {{#if link.route}}
-        <LinkTo @route={{link.route}} target={{link.target}}>
+        <LinkTo @route={{link.route}} class="menu-{{link.class}}" target={{link.target}}>
           <FaIcon @icon={{link.icon}} @prefix={{link.iconType}} />{{link.title}}
         </LinkTo>
       {{else}}
-        <a href={{link.url}} class="menu-{{link.title}}" target={{link.target}}>
+        <a href={{link.url}} class="menu-{{link.class}}" target={{link.target}}>
           <FaIcon @icon={{link.icon}} @prefix={{link.iconType}} />{{link.title}}
         </a>
       {{/if}}

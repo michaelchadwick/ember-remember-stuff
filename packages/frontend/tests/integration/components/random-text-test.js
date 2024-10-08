@@ -10,7 +10,7 @@ module('Integration | Component | random-text', function (hooks) {
     await render(hbs`<RandomText />`);
 
     assert.dom('.random-text').exists();
-    assert.dom('.random-text h2').exists();
+    assert.dom('.random-text h3').exists();
 
     // TODO
     // assert.dom('.random-text > p').exists({ count: 3 });
