@@ -11,7 +11,7 @@ components:
     head: Contador (FE)
     multi: Multi
     multiX2: Multi x2
-  debug:
+  detailsGallery:
     summary: Depuración de Componentes
   ghCommits:
     head: GithubCommits (FE)

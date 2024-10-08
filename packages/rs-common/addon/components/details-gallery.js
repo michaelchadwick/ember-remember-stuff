@@ -5,7 +5,7 @@ import { action } from '@ember/object';
 import scrollIntoView from 'scroll-into-view';
 import ENV from 'frontend/config/environment';
 
-export default class DebugComponent extends Component {
+export default class DetailsGalleryComponent extends Component {
   @service('local-storage') ls;
   @tracked env = ENV.environment;
   @tracked envApp = ENV.APP;

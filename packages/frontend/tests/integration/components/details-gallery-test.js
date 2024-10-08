@@ -3,12 +3,12 @@ import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | debug', function (hooks) {
+module('Integration | Component | details-gallery', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`<Debug />`);
+    await render(hbs`<DetailsGallery />`);
 
-    assert.dom('details').hasClass('debug');
+    assert.dom('details').hasClass('details-gallery');
   });
 });

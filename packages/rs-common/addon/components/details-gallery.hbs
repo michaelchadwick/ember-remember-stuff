@@ -1,6 +1,6 @@
 {{#if @isExpanded}}
-  <details class="debug" {{on "click" this.saveDebugVisibility}} open>
-    <summary>{{t "components.debug.summary"}}</summary>
+  <details class="details-gallery" {{on "click" this.saveDebugVisibility}} open>
+    <summary>{{t "components.detailsGallery.summary"}}</summary>
     <div class="gallery">
       <Box @text="Hello I'm a <code>Box</code> component in the <code>Debug</code> component." />
       <Box>
@@ -28,8 +28,8 @@
     </div>
   </details>
 {{else}}
-  <details class="debug" {{on "click" this.saveDebugVisibility}}>
-    <summary>{{t "components.debug.summary"}}</summary>
+  <details class="details-gallery" {{on "click" this.saveDebugVisibility}}>
+    <summary>{{t "components.detailsGallery.summary"}}</summary>
     <div class="gallery">
       <Box @text="Hello I'm a <code>Box</code> component in the <code>Debug</code> component." />
       <Box>

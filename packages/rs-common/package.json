@@ -42,6 +42,7 @@
     "ember-simple-auth": "^6.0.0",
     "ember-truth-helpers": "^4.0.3",
     "luxon": ">= 3.0.0",
+    "scroll-into-view": "^1.16.2",
     "validator": "^13.12.0"
   },
   "peerDependencies": {

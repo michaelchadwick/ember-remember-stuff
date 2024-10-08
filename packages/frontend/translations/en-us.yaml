@@ -11,7 +11,7 @@ components:
     head: Counter (FE)
     multi: Multi
     multiX2: Multi x2
-  debug:
+  detailsGallery:
     summary: Component Debugging
   ghCommits:
     head: GithubCommits (FE)
