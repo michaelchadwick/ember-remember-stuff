@@ -9,6 +9,7 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   if (config.environment != 'production') {
     this.route('tests', { path: '/tests?nocontainer' });
+    this.route('debuggery');
   }
 
   this.route('messages');

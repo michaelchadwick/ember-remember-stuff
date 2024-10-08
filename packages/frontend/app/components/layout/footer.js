@@ -16,7 +16,6 @@ export default class FooterComponent extends Component {
     links.push({
       ...this.defaultLink,
       url: 'https://michaelchadwick.info',
-      route: 'author',
       icon: 'at',
       title: this.intl.t('layout.footAuthor'),
     });
@@ -24,7 +23,6 @@ export default class FooterComponent extends Component {
     links.push({
       ...this.defaultLink,
       url: 'https://github.com/michaelchadwick/ember-remember-stuff',
-      route: 'source',
       icon: 'github',
       iconType: 'fab',
       title: this.intl.t('layout.footSource'),
@@ -33,7 +31,6 @@ export default class FooterComponent extends Component {
     links.push({
       ...this.defaultLink,
       url: 'https://guides.emberjs.com/release/components/',
-      route: 'tutorial',
       icon: 'book',
       title: this.intl.t('layout.footDocs'),
     });
@@ -41,7 +38,15 @@ export default class FooterComponent extends Component {
     if (ENV.environment != 'production') {
       links.push({
         ...this.defaultLink,
-        url: '/tests?nocontainer',
+        route: 'debuggery',
+        icon: 'bug',
+        target: '_self',
+        title: `{${this.intl.t('layout.footDebuggery')}}`,
+      });
+
+      links.push({
+        ...this.defaultLink,
+        query: 'nocontainer',
         route: 'tests',
         icon: 'flask',
         title: `[${this.intl.t('layout.footTests')}]`,
@@ -50,7 +55,6 @@ export default class FooterComponent extends Component {
       links.push({
         ...this.defaultLink,
         url: 'https://mc-emberjs-remember-stuff.netlify.app',
-        route: 'prod',
         icon: 'square-up-right',
         title: `[${this.intl.t('layout.footProd')}]`,
       });

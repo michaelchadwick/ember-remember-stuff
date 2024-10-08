@@ -5,6 +5,7 @@ module.exports = function () {
       'angles-up',
       'at',
       'book',
+      'bug',
       'caret-down',
       'caret-right',
       'check',

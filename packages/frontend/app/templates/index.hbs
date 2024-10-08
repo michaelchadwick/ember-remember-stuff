@@ -21,17 +21,3 @@
     </details>
   {{/each}}
 </div>
-
-<BoxGallery />
-
-<Debug
-  @ghUsername={{@model.ghUser.ghUsername}}
-  @ghHtmlUrl={{@model.ghUser.ghHtmlUrl}}
-  @ghPublicRepos={{@model.ghUser.ghPublicRepos}}
-  @ghPublicGists={{@model.ghUser.ghPublicGists}}
-  @ghFollowers={{@model.ghUser.ghFollowers}}
-  @ghFollowing={{@model.ghUser.ghFollowing}}
-  @isExpanded={{this.debugVisibility}}
-/>
-
-<RandomText @paragraphs="5" @sentences="5" />

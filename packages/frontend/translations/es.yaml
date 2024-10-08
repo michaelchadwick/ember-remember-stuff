@@ -182,9 +182,11 @@ layout:
   headMessages: Mensajes de Chat
   headMusic: Música
   headUsers: Usuarios
+  headDebuggery: Debuggery
   footAuthor: Autor
   footSource: Fuente
   footDocs: Docs
+  footDebuggery: Debuggery
   footTests: Pruebas
   footProd: Prod
 errors:
