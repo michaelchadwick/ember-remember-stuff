@@ -158,6 +158,9 @@ importers:
       ember-cli-terser:
         specifier: ^4.0.2
         version: 4.0.2
+      ember-concurrency:
+        specifier: ^4.0.2
+        version: 4.0.2(@babel/core@7.25.2)(@glimmer/tracking@1.1.2)(ember-source@5.11.1(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.95.0))
       ember-data:
         specifier: ~5.3.8
         version: 5.3.8(@ember/string@3.1.1)(@ember/test-helpers@3.3.1(@babel/core@7.25.2)(ember-source@5.11.1(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.95.0))(webpack@5.95.0))(@ember/test-waiters@3.1.0)(ember-source@5.11.1(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.95.0))(qunit@2.22.0)
@@ -11529,6 +11532,18 @@ snapshots:
       find-up: 5.0.0
       fs-extra: 9.1.0
       semver: 5.7.2
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+
+  ember-concurrency@4.0.2(@babel/core@7.25.2)(@glimmer/tracking@1.1.2)(ember-source@5.11.1(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.95.0)):
+    dependencies:
+      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/types': 7.25.6
+      '@embroider/addon-shim': 1.8.9
+      '@glimmer/tracking': 1.1.2
+      decorator-transforms: 1.2.1(@babel/core@7.25.2)
+      ember-source: 5.11.1(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.95.0)
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
