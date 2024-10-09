@@ -114,6 +114,7 @@ general:
   yes: Sí
 errors:
   checkConsole: Verifique la consola de desarrollo en busca de errores.
+  description: Este campo
   email: "{description} debe ser una dirección válida de correo electrónico"
   empty: "{description} no puede estar vacío"
   equalTo: "{description} debe ser igual a {is}"
