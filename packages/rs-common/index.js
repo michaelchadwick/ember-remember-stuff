@@ -3,6 +3,7 @@
 const Funnel = require('broccoli-funnel');
 const MergeTrees = require('broccoli-merge-trees');
 const path = require('path');
+const GetErrorsForTransform = require('./lib/get-errors-for-transform');
 
 module.exports = {
   name: require('./package').name,
@@ -21,6 +22,10 @@ module.exports = {
 
     // _findHost is private API but it's been stable in ember-cli for two years.
     this._env = this._findHost().env;
+  },
+
+  setupPreprocessorRegistry: function (type, registry) {
+    registry.add('htmlbars-ast-plugin', GetErrorsForTransform.instantiate());
   },
 
   treeForApp(appTree) {

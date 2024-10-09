@@ -12,9 +12,6 @@ export default class GetErrorsFor extends Resource {
     const caller = this.args.positional[0];
     const prop = this.args.positional[1];
 
-    console.log('caller', caller);
-    console.log('prop', prop);
-
     this.data = await caller.getErrorsFor(prop);
   }
 }
