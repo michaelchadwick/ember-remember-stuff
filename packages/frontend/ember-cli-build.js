@@ -9,6 +9,7 @@ module.exports = function (defaults) {
     },
     sassOptions: {
       extension: 'scss',
+      silenceDeprecations: ['mixed-decls'],
     },
     '@embroider/macros': {
       setConfig: {
