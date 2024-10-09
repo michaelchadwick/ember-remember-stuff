@@ -1,14 +1,4 @@
 components:
-  boxGallery:
-    genNewButton: Generate New Box
-    head: Box Gallery (FE)
-  counter:
-    count: Count
-    countAdd: Count +1
-    countSubtract: Count -1
-    head: Counter (FE)
-    multi: Multi
-    multiX2: Multi x2
   ghCommits:
     head: GithubCommits (FE)
   ghUser:
