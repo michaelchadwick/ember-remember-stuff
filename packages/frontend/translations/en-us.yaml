@@ -1,6 +1,4 @@
 components:
-  box:
-    defaultBlock1: "<p>Hey! This is a Box component. This text is coming from a block passed into the Box component. It <b>does not</b> support <code>HTML</code>.</p>"
   boxGallery:
     genNewButton: Generate New Box
     head: Box Gallery (FE)
@@ -11,9 +9,6 @@ components:
     head: Counter (FE)
     multi: Multi
     multiX2: Multi x2
-  detailsGallery:
-    head: DetailsGallery (CMN)
-    summary: Details Gallery
   ghCommits:
     head: GithubCommits (FE)
   ghUser:

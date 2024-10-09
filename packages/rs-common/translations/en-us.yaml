@@ -1,3 +1,23 @@
+components:
+  audioPlayer:
+    head: AudioPlayer (CMN)
+  box:
+    defaultBlock1: "<p>Hey! This is a Box component. This text is coming from a block passed into the Box component. It <b>does not</b> support <code>HTML</code>.</p>"
+    defaultHtml: "<p>Hello. This is a Box component. This text is coming from the block passed to the Box component. It does <b>not</b> support HTML.</p>"
+    head: Box (CMN)
+  detailsGallery:
+    head: DetailsGallery (CMN)
+    summary: Details Gallery
+  mover:
+    alwaysMoving: Always be moving!
+    clickMeOff: Click toggle to stop moving!
+    clickMeOn: Click toggle to start moving!
+    head: Mover (CMN)
+  passwordValidator:
+    head: PasswordValidator (CMN)
+    validate: Validate
+  randomText:
+    head: RandomText (CMN)
 general:
   actions: Actions
   add: Add
@@ -113,6 +133,7 @@ general:
   year: Year
   yes: Yes
 errors:
+  blank: "{description} can not be blank"
   checkConsole: Check the development console for errors.
   description: This field
   email: "{description} must be a valid email address"
@@ -127,16 +148,3 @@ errors:
   tooShort: "{description} is too short (minimum is {min} characters)"
   url: "{description} must be a valid url"
   unknown: An unknown error occurred!
-components:
-  audioPlayer:
-    head: AudioPlayer (CMN)
-  box:
-    defaultHtml: "<p>Hello. This is a Box component. This text is coming from the block passed to the Box component. It does <b>not</b> support HTML.</p>"
-    head: Box (CMN)
-  mover:
-    alwaysMoving: Always be moving!
-    clickMeOff: Click toggle to stop moving!
-    clickMeOn: Click toggle to start moving!
-    head: Mover (CMN)
-  randomText:
-    head: RandomText (CMN)

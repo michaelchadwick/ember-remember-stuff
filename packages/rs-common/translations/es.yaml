@@ -113,6 +113,7 @@ general:
   year: Año
   yes: Sí
 errors:
+  blank: "{description} no puede estar en blanco"
   checkConsole: Verifique la consola de desarrollo en busca de errores.
   description: Este campo
   email: "{description} debe ser una dirección válida de correo electrónico"
@@ -129,7 +130,7 @@ errors:
   unknown: ¡Un error desconocido ocurrió!
 components:
   audioPlayer:
-    head: AudioPlayer (CMN)
+    head: AudioPlayer
   box:
     defaultHtml: "<p>Hola. Este es un componente Box. Este texto proviene del bloque que pasa al componente Box. <b>No soporta</b> HTML.</p>"
     head: Box
@@ -137,6 +138,9 @@ components:
     alwaysMoving: ¡Esté siempre en movimiento!
     clickMeOff: ¡Haz clic palanca para dejar de moverte!
     clickMeOn: ¡Haz clic palanca para comenzar de moverte!
-    head: Mover (FE)
+    head: Mover
+  passwordValidator:
+    head: PasswordValidator
+    validate: Valide
   randomText:
-    head: Random Text
+    head: RandomText
