@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
-import { dropTask } from 'ember-concurrency';
+import { dropTask, timeout } from 'ember-concurrency';
 import { validatable, Length, NotBlank } from 'rs-common/decorators/validation';
 
 @validatable
@@ -17,6 +17,7 @@ export default class PasswordValidatorComponent extends Component {
     if (!isValid) {
       return false;
     }
+    await timeout(250); // artificial "validation processing"
     this.clearErrorDisplay();
     console.log('saved password');
   });
@@ -24,12 +25,10 @@ export default class PasswordValidatorComponent extends Component {
   saveOrCancel = dropTask(async (event) => {
     const keyCode = event.keyCode;
     const enterKey = 13;
-    const escKey = 27;
 
     if (enterKey === keyCode) {
+      console.log('PasswordValidator enter key pressed');
       await this.save.perform();
-    } else if (escKey === keyCode) {
-      this.args.close();
     }
   });
 }
