@@ -5,7 +5,10 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function (defaults) {
   const config = {
     babel: {
-      plugins: [...require('ember-cli-code-coverage').buildBabelPlugin()],
+      plugins: [
+        require.resolve('ember-concurrency/async-arrow-task-transform'),
+        ...require('ember-cli-code-coverage').buildBabelPlugin(),
+      ],
     },
     sassOptions: {
       extension: 'scss',

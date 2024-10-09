@@ -8,6 +8,7 @@ const GetErrorsForTransform = require('./lib/get-errors-for-transform');
 
 module.exports = {
   name: require('./package').name,
+  _env: null,
 
   options: {
     babel: {

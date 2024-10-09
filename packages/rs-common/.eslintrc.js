@@ -16,7 +16,10 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: {},
+  rules: {
+    'ember/no-get': 0,
+    'no-duplicate-imports': 'error',
+  },
   overrides: [
     // node files
     {
