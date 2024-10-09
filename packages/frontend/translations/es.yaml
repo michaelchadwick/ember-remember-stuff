@@ -124,6 +124,7 @@ general:
   notFoundMessage: "¡Ay no! No se pudo encontrar el recurso. Favor de verificar la dirección de la página, y trata otra vez."
   overview: Descripción General
   owner: Dueño
+  password: Contraseña
   perPage: Per Page
   previous: Anterior
   remove: Remover

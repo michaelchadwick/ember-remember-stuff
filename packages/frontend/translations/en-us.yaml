@@ -124,6 +124,7 @@ general:
   notFoundMessage: "Alack! The resource could not be found. Please check your page address, and try again."
   overview: Overview
   owner: Owner
+  password: Password
   perPage: Per Page
   previous: Previous
   remove: Remove
