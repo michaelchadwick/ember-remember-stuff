@@ -4,7 +4,9 @@
   <details class="details-gallery" {{on "click" this.saveDebugVisibility}} open>
     <summary>{{t "components.detailsGallery.summary"}}</summary>
     <div class="gallery">
-      <Box @text="Hello I'm a <code>Box</code> component in the <code>Debug</code> component." />
+      <Box
+        @text="Hello I'm a <code>Box</code> component in the <code>DetailsGallery</code> component."
+      />
       <Box>
         {{t "components.box.defaultBlock1"}}
       </Box>
@@ -33,7 +35,9 @@
   <details class="details-gallery" {{on "click" this.saveDebugVisibility}}>
     <summary>{{t "components.detailsGallery.summary"}}</summary>
     <div class="gallery">
-      <Box @text="Hello I'm a <code>Box</code> component in the <code>Debug</code> component." />
+      <Box
+        @text="Hello I'm a <code>Box</code> component in the <code>DetailsGallery</code> component."
+      />
       <Box>
         {{t "components.box.defaultBlock1"}}
       </Box>

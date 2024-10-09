@@ -1,6 +1,6 @@
 components:
   box:
-    defaultBlock1: "<p>Hey! This is a Box component. This text is coming from a block passed into the Box componenet. It <b>does not</b> support <code>HTML</code>.</p>"
+    defaultBlock1: "<p>Hey! This is a Box component. This text is coming from a block passed into the Box component. It <b>does not</b> support <code>HTML</code>.</p>"
   boxGallery:
     genNewButton: Generate New Box
     head: Box Gallery (FE)
