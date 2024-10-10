@@ -22,6 +22,7 @@ module.exports = {
     'ember/no-mixins': 0,
     'ember/no-new-mixins': 0,
     'no-duplicate-imports': 'error',
+    'no-unused-vars': 'error',
   },
   overrides: [
     // node files
