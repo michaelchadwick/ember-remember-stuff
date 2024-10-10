@@ -18,4 +18,8 @@ export default class DebuggeryRoute extends Route {
       ghUser: this.store.findRecord('gh-user', this.ghUsername),
     });
   }
+
+  async afterModel() {
+    // await import('zxcvbn');
+  }
 }
