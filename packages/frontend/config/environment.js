@@ -12,11 +12,36 @@ module.exports = function (environment) {
         visualNoiseLevel: 1,
       },
     },
+    i18n: {
+      defaultLocale: 'en',
+    },
+    serverVariables: {
+      tagPrefix: 'rsconfig',
+      vars: ['api-host', 'api-name-space', 'error-capture-enabled'],
+      defaults: {
+        'api-name-space': process.env.RS_FRONTEND_API_NAMESPACE || 'api/v3',
+        'api-host': process.env.RS_FRONTEND_API_HOST || null,
+        'error-capture-enabled':
+          process.env.RS_FRONTEND_ERROR_CAPTURE_ENABLED || environment === 'production',
+        'error-capture-environment':
+          process.env.RS_FRONTEND_ERROR_CAPTURE_ENVIRONMENT || environment,
+      },
+    },
+    'ember-qunit-nice-errors': {
+      completeExistingMessages: true,
+      showFileInfo: true,
+    },
+    fontawesome: {
+      enableExperimentalBuildTimeTransform: false,
+      defaultPrefix: 'fas',
+    },
     EmberENV: {
-      EXTEND_PROTOTYPES: false,
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
+      },
+      EXTEND_PROTOTYPES: {
+        Array: false,
       },
     },
 
@@ -68,6 +93,9 @@ module.exports = function (environment) {
     ENV.APP.LOG_TRANSITIONS = !!process.env.LOG_TRANSITIONS;
     ENV.APP.LOG_TRANSITIONS_INTERNAL = !!process.env.LOG_TRANSITIONS_INTERNAL;
     ENV.APP.LOG_VIEW_LOOKUPS = !!process.env.LOG_VIEW_LOOKUPS;
+
+    //put ember concurrency tasks into debug mode to make errors much easier to spot
+    ENV.EmberENV.DEBUG_TASKS = true;
   }
 
   if (environment === 'test') {

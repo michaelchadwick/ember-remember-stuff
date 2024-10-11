@@ -3,8 +3,8 @@ import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
 export default class MusicRoute extends Route {
-  @service store;
   @service headData;
+  @service store;
   @tracked isLoading = true;
 
   beforeModel() {

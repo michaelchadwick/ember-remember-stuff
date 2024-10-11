@@ -4,11 +4,13 @@ import { tracked } from '@glimmer/tracking';
 import ENV from 'frontend/config/environment';
 
 export default class ApplicationRoute extends Route {
-  @tracked appEnv = ENV.environment;
-  @tracked ghUsername = ENV.APP.GITHUB_USERNAME;
+  @service currentUser;
   @service headData;
-  @service store;
   @service intl;
+  @service session;
+  @service router;
+
+  @tracked appEnv = ENV.environment;
 
   setupController(controller) {
     controller.set('appEnv', ENV.environment);
@@ -16,6 +18,8 @@ export default class ApplicationRoute extends Route {
 
   beforeModel() {
     this.intl.setLocale(['en-us']);
+    const locale = this.intl.primaryLocale;
+    window.document.querySelector('html').setAttribute('lang', locale);
   }
 
   afterModel() {
@@ -58,6 +62,12 @@ export default class ApplicationRoute extends Route {
         console.log('ENV: App is in an unknown environment...');
         break;
       }
+    }
+  }
+
+  async activate() {
+    if (this.currentUser.currentUserId) {
+      console.log('activate(currentUserId)', this.currentUser.currentUserId);
     }
   }
 }

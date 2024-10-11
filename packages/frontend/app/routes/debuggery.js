@@ -7,6 +7,7 @@ import ENV from 'frontend/config/environment';
 export default class DebuggeryRoute extends Route {
   @service headData;
   @service store;
+
   @tracked ghUsername = ENV.APP.GITHUB_USERNAME;
 
   beforeModel() {

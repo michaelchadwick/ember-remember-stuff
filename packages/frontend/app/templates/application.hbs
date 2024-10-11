@@ -11,7 +11,11 @@
   </header>
 
   <main>
-    {{outlet}}
+    {{#if this.showErrorDisplay}}
+      <ErrorDisplay @errors={{this.errors}} @clearErrors={{this.clearErrors}} />
+    {{else}}
+      {{outlet}}
+    {{/if}}
   </main>
 
   <Layout::Footer />

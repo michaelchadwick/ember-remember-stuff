@@ -1,21 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>RemEmber Stuff</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/frontend.css" />
-
-    {{content-for "head-footer"}}
+    <!-- RemEmber Stuff variables set by the web server -->
+    {{content-for 'server-variables'}} {{content-for "head-footer"}}
   </head>
   <body>
     {{content-for "body"}}
 
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/frontend.css" />
     <script src="{{rootURL}}assets/vendor.js"></script>
+    <auto-import-scripts defer entrypoint="app"> </auto-import-scripts>
     <script src="{{rootURL}}assets/frontend.js"></script>
 
     {{content-for "body-footer"}}

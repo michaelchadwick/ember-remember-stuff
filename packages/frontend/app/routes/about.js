@@ -4,8 +4,8 @@ import { tracked } from '@glimmer/tracking';
 import ENV from 'frontend/config/environment';
 
 export default class AboutRoute extends Route {
-  @service store;
   @service headData;
+
   @tracked isLoading = true;
 
   beforeModel() {
