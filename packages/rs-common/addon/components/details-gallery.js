@@ -9,7 +9,12 @@ export default class DetailsGalleryComponent extends Component {
   @service('local-storage') ls;
   @tracked env = ENV.environment;
   @tracked envApp = ENV.APP;
-  @tracked isExpanded = this.args.isExpanded;
+  @tracked isExpanded = false;
+
+  constructor() {
+    super(...arguments);
+    this.isExpanded = this.args.isExpanded;
+  }
 
   @action
   saveDebugVisibility(element) {
