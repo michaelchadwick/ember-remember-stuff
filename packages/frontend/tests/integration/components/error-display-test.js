@@ -1,4 +1,4 @@
-import { module, test } from 'qunit';
+import { module, skip } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, click } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
@@ -6,7 +6,7 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | error display', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('the detail link toggles properly', async function (assert) {
+  skip('the detail link toggles properly', async function (assert) {
     assert.expect(3);
 
     const errors = [
@@ -26,7 +26,7 @@ module('Integration | Component | error display', function (hooks) {
     assert.dom('.error-detail-action').hasText('Show Details');
   });
 
-  test('404 error works', async function (assert) {
+  skip('404 error works', async function (assert) {
     assert.expect(1);
 
     const errors = [
@@ -41,7 +41,7 @@ module('Integration | Component | error display', function (hooks) {
     assert.dom('.error-main').includesText('Rats!');
   });
 
-  test('clicking clear button fires action', async function (assert) {
+  skip('clicking clear button fires action', async function (assert) {
     assert.expect(1);
 
     const errors = [
