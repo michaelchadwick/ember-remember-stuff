@@ -18,8 +18,8 @@
     "test:coverage": "COVERAGE=true pnpm --filter frontend exec ember test",
     "test:ember": "pnpm --filter frontend exec ember test",
     "test:percy": "pnpm --filter frontend exec percy exec -- ember test",
-    "prepare": "husky",
-    "update:deps": "rm pnpm-lock.yaml; pnpm install --fix-lockfile; pnpm dedupe"
+    "update:deps": "rm pnpm-lock.yaml; pnpm install --fix-lockfile; pnpm dedupe",
+    "prepare": "husky"
   },
   "engines": {
     "node": ">= 20",
