@@ -46,7 +46,6 @@ module.exports = async function (defaults) {
       ],
     },
     autoImport: {
-      insertScriptsAt: 'auto-import-scripts',
       watchDependencies: ['rs-common'],
     },
   };
@@ -94,5 +93,5 @@ module.exports = async function (defaults) {
     },
   };
 
-  return require('@embroider/compat').compatBuild(app, Webpack, embroiderOptions);
+  return require('@embroider/compat').compatBuild(app, Webpack);
 };
