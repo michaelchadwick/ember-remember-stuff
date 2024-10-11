@@ -52,9 +52,11 @@ general:
   by: de
   cancel: Cancelar
   chooseFile: Seleccione Archivo
+  clearErrors: Borrar los Errores y Volver a Ilios
   close: Cerrar
   collapse: colapsar
   complete: Completo
+  connectionLost: Conexión Perdida.
   currentlySearchingPrompt: buscando...
   date: Fecha
   dateTime: Fecha/Hora
@@ -73,6 +75,9 @@ general:
   endDate: Fecha de Cumplir
   ends: Termina
   endTime: Hora de Cumplir
+  error: Error
+  errors: Errores
+  errorSavingAuthentication: "Las cuentas fueron creadas para estos usuarios, pero no podrán iniciar sesión.  Esto generalmente sucede cuando el nombre de usuario ya existe, pero pertenece a otro usuario.  Por favor seleccione cada usuario y crear un nombre de usuario y contraseña."
   expand: expandir
   expandDetail: Enseñar Detalles
   file: Archivo
@@ -127,6 +132,7 @@ general:
   password: Contraseña
   perPage: Per Page
   previous: Anterior
+  reconnectNow: Volver a conectar ahora
   remove: Remover
   removeAll: Quitar Todos
   required: Requerido
@@ -155,6 +161,7 @@ general:
   today: Hoy
   token: Token
   total: Total
+  totalErrors: "{count, plural, =1 {Hay un error} other {Hay # errores}}"
   tryHarder: Esforzarse Más
   tuesday: Martes
   type: Tipo

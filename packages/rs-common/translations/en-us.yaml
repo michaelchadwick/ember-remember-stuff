@@ -34,11 +34,13 @@ general:
   addNew: Add New
   author: Author
   back: Back
+  backToHome: Back to Home
   by: by
   cancel: Cancel
   chooseFile: Choose File
   close: Close
   collapse: collapse
+  collapseDetail: Hide Details
   complete: Complete
   currentlySearchingPrompt: searching...
   date: Date

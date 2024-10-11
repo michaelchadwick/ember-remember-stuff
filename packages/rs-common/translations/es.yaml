@@ -4,11 +4,13 @@ general:
   addNew: Agregue Nuevo
   author: Autor
   back: Volver
+  backToHome: Volver a Casa
   by: de
   cancel: Cancelar
   chooseFile: Seleccione Archivo
   close: Cerrar
   collapse: colapsar
+  collapseDetail: Esconder Detalles
   complete: Completo
   currentlySearchingPrompt: buscando...
   date: Fecha

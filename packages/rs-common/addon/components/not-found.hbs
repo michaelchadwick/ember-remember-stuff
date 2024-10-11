@@ -1,0 +1,9 @@
+<p data-test-not-found>
+  {{t "general.notFoundMessage"}}
+  <br />
+  {{#if this.showLink}}
+    <LinkTo @route="index" data-test-back-to-index>
+      {{t "general.backToHome"}}
+    </LinkTo>
+  {{/if}}
+</p>

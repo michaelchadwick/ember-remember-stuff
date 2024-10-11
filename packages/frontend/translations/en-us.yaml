@@ -37,9 +37,11 @@ general:
   by: by
   cancel: Cancel
   chooseFile: Choose File
+  clearErrors: Clear Errors and Return to Ilios
   close: Close
   collapse: collapse
   complete: Complete
+  connectionLost: Connection Lost.
   currentlySearchingPrompt: searching...
   date: Date
   dateTime: Date/Time
@@ -58,6 +60,9 @@ general:
   endDate: End Date
   ends: Ends
   endTime: End Time
+  errorDisplayMessage: Sorry! Something went wrong with your request. Please try refreshing or check back later.
+  error: Error
+  errors: Errors
   expand: expand
   expandDetail: Show Details
   file: File
@@ -112,6 +117,7 @@ general:
   password: Password
   perPage: Per Page
   previous: Previous
+  reconnectNow: Reconnect Now
   remove: Remove
   removeAll: Remove All
   required: Required
@@ -140,6 +146,7 @@ general:
   today: Today
   token: Token
   total: Total
+  totalErrors: "{count, plural, =1 {There is an error} other {There are # errors}}"
   tryHarder: Try Harder
   tuesday: Tuesday
   type: Type
