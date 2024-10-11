@@ -3,8 +3,8 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const { Webpack } = require('@embroider/webpack');
-const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+// const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
+// const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = async function (defaults) {
   const env = EmberApp.env() || 'development';
@@ -57,41 +57,41 @@ module.exports = async function (defaults) {
     ___legacy_support: true,
   });
 
-  const embroiderOptions = {
-    staticAddonTestSupportTrees: true,
-    staticAddonTrees: true,
-    staticHelpers: true,
-    staticComponents: true,
-    splitAtRoutes: [
-      /about/,
-      /contact/,
-      /debuggery/,
-      // 'error', don't ever split the error route, it will break error handling
-      /links/,
-      /messages/,
-      /music/,
-    ],
-    packagerOptions: {
-      webpackConfig: {
-        plugins: [new RetryChunkLoadPlugin() /*, new BundleAnalyzerPlugin()*/],
-        devtool: env === 'production' ? 'source-map' : 'eval',
-        optimization: {
-          minimize: true,
-          minimizer: [
-            new TerserPlugin({
-              terserOptions: {
-                compress: {
-                  passes: 6, // slow, but worth it
-                  inline: 5,
-                  reduce_funcs: false,
-                },
-              },
-            }),
-          ],
-        },
-      },
-    },
-  };
+  // const embroiderOptions = {
+  //   staticAddonTestSupportTrees: true,
+  //   staticAddonTrees: true,
+  //   staticHelpers: true,
+  //   staticComponents: true,
+  //   splitAtRoutes: [
+  //     /about/,
+  //     /contact/,
+  //     /debuggery/,
+  //     // 'error', don't ever split the error route, it will break error handling
+  //     /links/,
+  //     /messages/,
+  //     /music/,
+  //   ],
+  //   packagerOptions: {
+  //     webpackConfig: {
+  //       plugins: [new RetryChunkLoadPlugin() /*, new BundleAnalyzerPlugin()*/],
+  //       devtool: env === 'production' ? 'source-map' : 'eval',
+  //       optimization: {
+  //         minimize: true,
+  //         minimizer: [
+  //           new TerserPlugin({
+  //             terserOptions: {
+  //               compress: {
+  //                 passes: 6, // slow, but worth it
+  //                 inline: 5,
+  //                 reduce_funcs: false,
+  //               },
+  //             },
+  //           }),
+  //         ],
+  //       },
+  //     },
+  //   },
+  // };
 
   return require('@embroider/compat').compatBuild(app, Webpack);
 };
