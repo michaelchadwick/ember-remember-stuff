@@ -1,1 +1,1 @@
-export { default } from 'rs-common/authenticators/ilios-jwt';
+export { default } from 'rs-common/authenticators/rs-jwt';
