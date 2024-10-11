@@ -2,7 +2,7 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
-// import { isEmpty } from '@ember/utils';
+import { isEmpty } from '@ember/utils';
 import { dropTask, timeout } from 'ember-concurrency';
 import { validatable, Length, NotBlank } from 'rs-common/decorators/validation';
 
@@ -21,10 +21,10 @@ export default class PasswordValidatorComponent extends Component {
   }
 
   async calculatePasswordStrengthScore() {
-    // const { default: zxcvbn } = await import('zxcvbn');
-    // const password = isEmpty(this.password) ? '' : this.password;
-    // const obj = zxcvbn(password);
-    // this.passwordStrengthScore = obj.score;
+    const { default: zxcvbn } = await import('zxcvbn');
+    const password = isEmpty(this.password) ? '' : this.password;
+    const obj = zxcvbn(password);
+    this.passwordStrengthScore = obj.score;
   }
 
   save = dropTask(async () => {
