@@ -10,8 +10,6 @@ module('Integration | Component | password-validator', function (hooks) {
   test('it renders', async function (assert) {
     await render(hbs`<PasswordValidator />`);
 
-    console.log('component', component);
-
     assert.ok(component);
     assert.strictEqual(component.label, 'Password:');
   });
@@ -21,8 +19,6 @@ module('Integration | Component | password-validator', function (hooks) {
 
     assert.false(component.hasError);
     await component.submit();
-
-    console.log('component.hasError', component.hasError);
 
     assert.true(component.hasError);
   });
