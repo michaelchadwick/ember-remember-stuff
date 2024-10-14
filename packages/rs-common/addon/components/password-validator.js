@@ -1,6 +1,8 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 import { service } from '@ember/service';
+import { isEmpty } from '@ember/utils';
 import { dropTask, timeout } from 'ember-concurrency';
 import { validatable, Length, NotBlank } from 'rs-common/decorators/validation';
 
@@ -10,6 +12,20 @@ export default class PasswordValidatorComponent extends Component {
 
   @tracked @Length(5) @NotBlank() password = null;
   @tracked isSaving = false;
+  @tracked passwordStrengthScore = 0;
+
+  @action
+  async setPassword(password) {
+    this.password = password;
+    await this.calculatePasswordStrengthScore();
+  }
+
+  async calculatePasswordStrengthScore() {
+    const { default: zxcvbn } = await import('zxcvbn');
+    const password = isEmpty(this.password) ? '' : this.password;
+    const obj = zxcvbn(password);
+    this.passwordStrengthScore = obj.score;
+  }
 
   save = dropTask(async () => {
     this.addErrorDisplaysFor(['password']);
@@ -27,7 +43,6 @@ export default class PasswordValidatorComponent extends Component {
     const enterKey = 13;
 
     if (enterKey === keyCode) {
-      console.log('PasswordValidator enter key pressed');
       await this.save.perform();
     }
   });

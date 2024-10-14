@@ -413,6 +413,9 @@ importers:
       validator:
         specifier: '>= 13.12.0'
         version: 13.12.0
+      zxcvbn:
+        specifier: ^4.4.2
+        version: 4.4.2
     devDependencies:
       '@babel/eslint-parser':
         specifier: ^7.24.7
@@ -8781,10 +8784,10 @@ snapshots:
 
   '@glimmer/compiler@0.92.0':
     dependencies:
-      '@glimmer/interfaces': 0.92.0
-      '@glimmer/syntax': 0.92.0
-      '@glimmer/util': 0.92.0
-      '@glimmer/vm': 0.92.0
+      '@glimmer/interfaces': 0.92.3
+      '@glimmer/syntax': 0.92.3
+      '@glimmer/util': 0.92.3
+      '@glimmer/vm': 0.92.3
       '@glimmer/wire-format': 0.92.3
 
   '@glimmer/component@1.1.2(@babel/core@7.25.8)':
@@ -8817,8 +8820,8 @@ snapshots:
     dependencies:
       '@glimmer/env': 0.1.7
       '@glimmer/global-context': 0.92.0
-      '@glimmer/interfaces': 0.92.0
-      '@glimmer/util': 0.92.0
+      '@glimmer/interfaces': 0.92.3
+      '@glimmer/util': 0.92.3
 
   '@glimmer/di@0.1.11': {}
 
@@ -8853,17 +8856,17 @@ snapshots:
       '@glimmer/destroyable': 0.92.0
       '@glimmer/env': 0.1.7
       '@glimmer/global-context': 0.92.0
-      '@glimmer/interfaces': 0.92.0
+      '@glimmer/interfaces': 0.92.3
       '@glimmer/reference': 0.92.0
-      '@glimmer/util': 0.92.0
+      '@glimmer/util': 0.92.3
       '@glimmer/validator': 0.92.0
-      '@glimmer/vm': 0.92.0
+      '@glimmer/vm': 0.92.3
 
   '@glimmer/node@0.92.0':
     dependencies:
-      '@glimmer/interfaces': 0.92.0
+      '@glimmer/interfaces': 0.92.3
       '@glimmer/runtime': 0.92.0
-      '@glimmer/util': 0.92.0
+      '@glimmer/util': 0.92.3
       '@simple-dom/document': 1.4.0
 
   '@glimmer/opcode-compiler@0.92.0':
@@ -8872,26 +8875,26 @@ snapshots:
       '@glimmer/encoder': 0.92.3
       '@glimmer/env': 0.1.7
       '@glimmer/global-context': 0.92.0
-      '@glimmer/interfaces': 0.92.0
+      '@glimmer/interfaces': 0.92.3
       '@glimmer/manager': 0.92.0
       '@glimmer/reference': 0.92.0
-      '@glimmer/util': 0.92.0
-      '@glimmer/vm': 0.92.0
+      '@glimmer/util': 0.92.3
+      '@glimmer/vm': 0.92.3
       '@glimmer/wire-format': 0.92.3
 
   '@glimmer/owner@0.92.0':
     dependencies:
-      '@glimmer/util': 0.92.0
+      '@glimmer/util': 0.92.3
 
   '@glimmer/program@0.92.0':
     dependencies:
       '@glimmer/encoder': 0.92.3
       '@glimmer/env': 0.1.7
-      '@glimmer/interfaces': 0.92.0
+      '@glimmer/interfaces': 0.92.3
       '@glimmer/manager': 0.92.0
       '@glimmer/opcode-compiler': 0.92.0
-      '@glimmer/util': 0.92.0
-      '@glimmer/vm': 0.92.0
+      '@glimmer/util': 0.92.3
+      '@glimmer/vm': 0.92.3
       '@glimmer/wire-format': 0.92.3
 
   '@glimmer/reference@0.84.3':
@@ -8906,8 +8909,8 @@ snapshots:
     dependencies:
       '@glimmer/env': 0.1.7
       '@glimmer/global-context': 0.92.0
-      '@glimmer/interfaces': 0.92.0
-      '@glimmer/util': 0.92.0
+      '@glimmer/interfaces': 0.92.3
+      '@glimmer/util': 0.92.3
       '@glimmer/validator': 0.92.0
 
   '@glimmer/runtime@0.92.0':
@@ -8915,14 +8918,14 @@ snapshots:
       '@glimmer/destroyable': 0.92.0
       '@glimmer/env': 0.1.7
       '@glimmer/global-context': 0.92.0
-      '@glimmer/interfaces': 0.92.0
+      '@glimmer/interfaces': 0.92.3
       '@glimmer/manager': 0.92.0
       '@glimmer/owner': 0.92.0
       '@glimmer/program': 0.92.0
       '@glimmer/reference': 0.92.0
-      '@glimmer/util': 0.92.0
+      '@glimmer/util': 0.92.3
       '@glimmer/validator': 0.92.0
-      '@glimmer/vm': 0.92.0
+      '@glimmer/vm': 0.92.3
       '@glimmer/wire-format': 0.92.3
 
   '@glimmer/syntax@0.84.3':
@@ -8934,8 +8937,8 @@ snapshots:
 
   '@glimmer/syntax@0.92.0':
     dependencies:
-      '@glimmer/interfaces': 0.92.0
-      '@glimmer/util': 0.92.0
+      '@glimmer/interfaces': 0.92.3
+      '@glimmer/util': 0.92.3
       '@glimmer/wire-format': 0.92.3
       '@handlebars/parser': 2.0.0
       simple-html-tokenizer: 0.5.11
@@ -8964,7 +8967,7 @@ snapshots:
   '@glimmer/util@0.92.0':
     dependencies:
       '@glimmer/env': 0.1.7
-      '@glimmer/interfaces': 0.92.0
+      '@glimmer/interfaces': 0.92.3
 
   '@glimmer/util@0.92.3':
     dependencies:
@@ -8982,8 +8985,8 @@ snapshots:
     dependencies:
       '@glimmer/env': 0.1.7
       '@glimmer/global-context': 0.92.0
-      '@glimmer/interfaces': 0.92.0
-      '@glimmer/util': 0.92.0
+      '@glimmer/interfaces': 0.92.3
+      '@glimmer/util': 0.92.3
 
   '@glimmer/vm-babel-plugins@0.92.0(@babel/core@7.25.8)':
     dependencies:
@@ -8993,8 +8996,8 @@ snapshots:
 
   '@glimmer/vm@0.92.0':
     dependencies:
-      '@glimmer/interfaces': 0.92.0
-      '@glimmer/util': 0.92.0
+      '@glimmer/interfaces': 0.92.3
+      '@glimmer/util': 0.92.3
 
   '@glimmer/vm@0.92.3':
     dependencies:

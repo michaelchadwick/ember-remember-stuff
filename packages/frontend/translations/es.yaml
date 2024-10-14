@@ -49,6 +49,7 @@ general:
   addNew: Agregue Nuevo
   author: Autor
   back: Volver
+  bad: Malo
   by: de
   cancel: Cancelar
   chooseFile: Seleccione Archivo
@@ -91,6 +92,7 @@ general:
   from: de
   fullName: Nombre Completo
   go: Vaya
+  good: Bueno
   greeting: "Hola, me llamo {name}"
   gt: ">"
   helloWorld: ¡Hola Mundo!
@@ -150,6 +152,7 @@ general:
   starts: Empieza
   startTime: Hora de Iniciar
   status: Estado
+  strong: Fuerte
   summary: Resumen
   sunday: Domingo
   teachingTomster: Tomster de Enseñanza
@@ -170,6 +173,7 @@ general:
   users: Usuarios
   userRole: Función de Usuario
   view: Vista
+  weak: Débil
   wednesday: Miercoles
   week: Semana
   weekOf: "Semana de {date}"
