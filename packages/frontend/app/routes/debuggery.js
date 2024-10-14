@@ -21,6 +21,6 @@ export default class DebuggeryRoute extends Route {
   }
 
   async afterModel() {
-    await import('zxcvbn');
+    // await import('zxcvbn');
   }
 }
