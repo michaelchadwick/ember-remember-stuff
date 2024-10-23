@@ -29,7 +29,11 @@
     </thead>
     <tbody>
       {{#each @users as |user|}}
-        <UserListItem @user={{user}} @onSelectUser={{this.selectUser}} />
+        <UserListItem
+          @user={{user}}
+          @selectedUser={{this.selectedUser}}
+          @onSelectUser={{this.selectUser}}
+        />
       {{/each}}
     </tbody>
   </table>
