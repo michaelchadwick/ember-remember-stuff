@@ -1,4 +1,24 @@
-.user-list table {
-  table-layout: fixed;
-  width: 100%;
+.user-list {
+  table {
+    table-layout: fixed;
+    width: 100%;
+
+    thead {
+      tr {
+        background-color: rgba(255, 255, 255, 0.5);
+
+        th {
+          border-left: 1px solid #555;
+          padding: 0.2em 0.2em 0;
+          text-align: left;
+
+          &.user-checked,
+          &.user-id,
+          &.user-root {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
 }

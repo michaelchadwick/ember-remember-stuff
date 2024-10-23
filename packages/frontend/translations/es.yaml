@@ -127,6 +127,7 @@ general:
   next: Siguiente
   no: No
   noneFound: "No se encontraron {items}."
+  noSelectedUser: "Ningún usuario seleccionado."
   notes: Notas
   notFoundMessage: "¡Ay no! No se pudo encontrar el recurso. Favor de verificar la dirección de la página, y trata otra vez."
   overview: Descripción General

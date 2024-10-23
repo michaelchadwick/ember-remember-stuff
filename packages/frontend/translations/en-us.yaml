@@ -112,6 +112,7 @@ general:
   next: Next
   no: No
   noneFound: "No {items} found."
+  noSelectedUser: "No selected user."
   notes: Notes
   notFoundMessage: "Alack! The resource could not be found. Please check your page address, and try again."
   overview: Overview
