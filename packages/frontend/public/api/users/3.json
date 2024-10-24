@@ -1,0 +1,13 @@
+{
+  "data": {
+    "type": "user",
+    "id": "3",
+    "attributes": {
+      "firstName": "Jonny",
+      "lastName": "Five",
+      "displayName": "J5",
+      "email": "jonnyfive@more-input.org",
+      "root": true
+    }
+  }
+}

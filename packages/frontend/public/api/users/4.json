@@ -1,0 +1,13 @@
+{
+  "data": {
+    "type": "user",
+    "id": "4",
+    "attributes": {
+      "firstName": "Jayson",
+      "lastName": "Toolman",
+      "displayName": "Jayson T",
+      "email": "soberfan@theworkshop.com",
+      "root": false
+    }
+  }
+}

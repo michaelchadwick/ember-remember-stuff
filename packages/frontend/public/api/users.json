@@ -21,6 +21,28 @@
         "email": "danger.dave@rocket.to.the.moon.com",
         "root": false
       }
+    },
+    {
+      "type": "user",
+      "id": "3",
+      "attributes": {
+        "firstName": "Jonny",
+        "lastName": "Five",
+        "displayName": "J5",
+        "email": "jonnyfive@more-input.org",
+        "root": true
+      }
+    },
+    {
+      "type": "user",
+      "id": "4",
+      "attributes": {
+        "firstName": "Jayson",
+        "lastName": "Toolman",
+        "displayName": "Jayson T",
+        "email": "soberfan@theworkshop.com",
+        "root": false
+      }
     }
   ]
 }
