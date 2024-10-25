@@ -9,7 +9,7 @@ export default class UserListComponent extends Component {
 
   constructor() {
     super(...arguments);
-    console.log('this.selectedUsers', this.selectedUsers, this.selectedUsers.length);
+    // console.log('this.selectedUsers', this.selectedUsers, this.selectedUsers.length);
   }
 
   get selectedUsersNamesDisplay() {
