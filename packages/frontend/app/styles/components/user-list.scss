@@ -1,5 +1,11 @@
 .user-list {
+  button {
+    padding: 0.2em 0.5em;
+  }
+
   table {
+    border: 1px solid transparent;
+    border-collapse: collapse;
     table-layout: fixed;
     width: 100%;
 
@@ -12,9 +18,9 @@
           padding: 0.2em 0.2em;
           text-align: left;
 
-          &.user-checked,
-          &.user-id,
-          &.user-root {
+          &.user-checked-header,
+          &.user-id-header,
+          &.user-root-header {
             width: 20px;
           }
         }

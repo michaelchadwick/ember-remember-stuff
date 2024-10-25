@@ -39,14 +39,15 @@ button {
   vertical-align: middle;
   white-space: nowrap;
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     background-color: #aaa;
     color: #888;
     cursor: auto;
   }
 
   @media (hover: hover) {
-    &:not(:disabled):hover {
+    &:not(:disabled):not(.disabled):hover {
       background-color: hsl(195, 56%, 41%);
     }
   }

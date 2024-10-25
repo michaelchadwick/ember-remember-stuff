@@ -4,23 +4,23 @@
   {{on "click" this.handleClick}}
   data-test-user-list-item
 >
-  <td class="text-left" colspan="1" data-test-user-selected>
+  <td class="user-checked-value" colspan="1" data-test-user-selected>
     {{#if this.selected}}
       <FaIcon @icon="check" />
     {{/if}}
   </td>
-  <td class="text-left" colspan="1" data-test-user-id>
+  <td class="user-id-value" colspan="1" data-test-user-id>
     {{@user.id}}
   </td>
-  <td class="text-left" colspan="1" data-test-user-full-name>
+  <td class="user-fullname-value" colspan="1" data-test-user-full-name>
     <LinkTo @route="user" @model={{@user}} data-test-user-link>
       <UserNameInfo @user={{@user}} />
     </LinkTo>
   </td>
-  <td class="text-left" colspan="1" data-test-user-email>
+  <td class="user-email-value" colspan="1" data-test-user-email>
     {{@user.email}}
   </td>
-  <td class="text-left" colspan="1" data-test-user-root>
+  <td class="user-root-value" colspan="1" data-test-user-root>
     {{#if @user.root}}
       <FaIcon @icon="shield" />
     {{/if}}

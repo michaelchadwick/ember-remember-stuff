@@ -1,28 +1,32 @@
 <div class="user-list" data-test-user-list ...attributes>
-  <div class="user-list-selected-user">
-    {{#if this.selectedUser}}
-      <span>{{this.selectedUser.fullName}}</span>
-    {{else}}
-      <span>{{t "general.noSelectedUser"}}</span>
-    {{/if}}
+  <div class="user-list-selected-users">
+    <button
+      type="button"
+      class={{if (eq this.selectedUsers.length 0) "disabled"}}
+      {{on "click" this.deselectAllUsers}}
+    >
+      <FaIcon @icon="square-xmark" />
+    </button>
+    ({{this.selectedUsers.length}})
+    {{this.selectedUsersNamesDisplay}}
   </div>
 
   <table>
     <thead>
       <tr>
-        <th class="user-checked" colspan="1">
+        <th class="user-checked-header" colspan="1">
           <FaIcon @icon="check" />
         </th>
-        <th class="user-id" colspan="1">
+        <th class="user-id-header" colspan="1">
           {{t "general.id"}}
         </th>
-        <th class="user-fullname" colspan="1">
+        <th class="user-fullname-header" colspan="1">
           {{t "general.fullName"}}
         </th>
-        <th class="user-email" colspan="1">
+        <th class="user-email-header" colspan="1">
           {{t "general.email"}}
         </th>
-        <th class="user-root" colspan="1">
+        <th class="user-root-header" colspan="1">
           <FaIcon @icon="shield" />
         </th>
       </tr>
@@ -31,7 +35,7 @@
       {{#each @users as |user|}}
         <UserListItem
           @user={{user}}
-          @selectedUser={{this.selectedUser}}
+          @selectedUsers={{this.selectedUsers}}
           @onSelectUser={{this.selectUser}}
         />
       {{/each}}

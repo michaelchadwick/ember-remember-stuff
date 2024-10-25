@@ -16,6 +16,7 @@ module.exports = function () {
       'pause',
       'play',
       'shield',
+      'square-xmark',
       'square-up-right',
       'spinner',
       'toggle-off',

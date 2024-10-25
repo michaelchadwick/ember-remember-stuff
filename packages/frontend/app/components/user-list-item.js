@@ -7,6 +7,8 @@ export default class UserListItemComponent extends Component {
 
   @action
   handleClick() {
+    // console.log('UserListItem::handleClick()', this.args.user.displayName);
+
     this.args.onSelectUser(this.args.user);
     this.selected = !this.selected;
   }
