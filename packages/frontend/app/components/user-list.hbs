@@ -35,7 +35,7 @@
       {{#each @users as |user|}}
         <UserListItem
           @user={{user}}
-          @selectedUsers={{this.selectedUsers}}
+          @selected={{this.isSelected user}}
           @onSelectUser={{this.selectUser}}
         />
       {{/each}}

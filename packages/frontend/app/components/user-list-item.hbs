@@ -1,11 +1,11 @@
 {{! template-lint-disable no-invalid-interactive }}
 <tr
-  class="user-list-item{{if this.selected ' selected'}}"
+  class="user-list-item{{if this.isSelected ' selected'}}"
   {{on "click" this.handleClick}}
   data-test-user-list-item
 >
   <td class="user-checked-value" colspan="1" data-test-user-selected>
-    {{#if this.selected}}
+    {{#if this.isSelected}}
       <FaIcon @icon="check" />
     {{/if}}
   </td>

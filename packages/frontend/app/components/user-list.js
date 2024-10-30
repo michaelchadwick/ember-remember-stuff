@@ -7,11 +7,6 @@ export default class UserListComponent extends Component {
   @service intl;
   @tracked selectedUsers = [];
 
-  constructor() {
-    super(...arguments);
-    // console.log('this.selectedUsers', this.selectedUsers, this.selectedUsers.length);
-  }
-
   get selectedUsersNamesDisplay() {
     return this.hasSelectedUsers
       ? this.selectedUsersNames.join(', ')
@@ -23,9 +18,11 @@ export default class UserListComponent extends Component {
   }
 
   get hasSelectedUsers() {
-    const count = this.selectedUsers.length;
-    // console.log('count', count);
-    return count > 0;
+    return this.selectedUsers.length > 0;
+  }
+
+  get isSelected() {
+    return (user) => this.selectedUsers.includes(user);
   }
 
   @action
@@ -35,12 +32,10 @@ export default class UserListComponent extends Component {
 
   @action
   selectUser(user) {
-    // console.log('UserList::selectUser(user)', user);
-
-    if (!this.selectedUsers.map((u) => u.displayName).includes(user.displayName)) {
-      this.selectedUsers.push(user);
-    } else {
+    if (this.selectedUsers.map((u) => u.displayName).includes(user.displayName)) {
       this.selectedUsers = this.selectedUsers.filter((u) => u.displayName != user.displayName);
+    } else {
+      this.selectedUsers = [...this.selectedUsers, user];
     }
   }
 }
