@@ -1,6 +1,11 @@
 .user-list {
   button {
-    padding: 0.2em 0.5em;
+    padding: 0;
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
   }
 
   table {
