@@ -1,4 +1,4 @@
-<footer class="menu">
+<footer class="menu" role="menu" aria-label={{t "layout.footMenu"}}>
   <div class="links">
     {{#each this.links as |link|}}
       {{#if link.route}}
@@ -11,5 +11,12 @@
         </a>
       {{/if}}
     {{/each}}
+  </div>
+</footer>
+<footer class="version" aria-label={{t "layout.footVersions"}}>
+  <div class="versions">
+    {{@rsVersionTag}}
+    {{@apiVersionTag}}
+    {{@frontendVersionTag}}
   </div>
 </footer>

@@ -183,12 +183,14 @@ layout:
   headMusic: Music
   headUsers: Users
   headDebuggery: Debuggery
+  footMenu: "external links"
   footAuthor: Author
   footSource: Source
   footDocs: Docs
   footDebuggery: Debuggery
   footTests: Tests
   footProd: Prod
+  footVersions: "app versions"
 errors:
   checkConsole: Check the development console for errors.
   email: "{description} must be a valid email address"

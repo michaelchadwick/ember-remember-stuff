@@ -198,12 +198,14 @@ layout:
   headMusic: Música
   headUsers: Usuarios
   headDebuggery: Debuggery
+  footMenu: "enlaces externos"
   footAuthor: Autor
   footSource: Fuente
   footDocs: Docs
   footDebuggery: Debuggery
   footTests: Pruebas
   footProd: Prod
+  footVersions: "versiones de la aplicación"
 errors:
   checkConsole: Verifique la consola de desarrollo en busca de errores.
   email: "{description} debe ser una dirección válida de correo electrónico"

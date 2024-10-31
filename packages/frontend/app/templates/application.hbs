@@ -11,8 +11,16 @@
   </header>
 
   <main>
-    {{outlet}}
+    {{#if this.showErrorDisplay}}
+      <ErrorDisplay @errors={{this.errors}} @clearErrors={{this.clearErrors}} />
+    {{else}}
+      {{outlet}}
+    {{/if}}
   </main>
 </div>
 
-<Layout::Footer />
+<Layout::Footer
+  @rsVersionTag={{this.rsVersionTag}}
+  @apiVersionTag={{this.apiVersionTag}}
+  @frontendVersionTag={{this.frontendVersionTag}}
+/>
