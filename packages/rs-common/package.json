@@ -41,6 +41,7 @@
     "ember-could-get-used-to-this": "^1.0.1",
     "ember-inflector": "^5.0.1",
     "ember-intl": "^7.0.4",
+    "ember-local-storage": "^2.0.7",
     "ember-math-helpers": "^4.0.0",
     "ember-modifier": "^4.2.0",
     "ember-on-resize-modifier": "^2.0.2",
