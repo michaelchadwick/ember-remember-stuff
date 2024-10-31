@@ -7,3 +7,5 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
     return `${super.buildURL(...args)}.json`;
   }
 }
+
+// export { default } from 'rs-common/adapters/rs';

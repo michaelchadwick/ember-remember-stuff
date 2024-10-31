@@ -31,7 +31,10 @@ module('Integration | Component | user-list', function (hooks) {
       root: false,
     });
 
+    console.log('user1', user1);
+
     const userModel1 = await this.owner.lookup('service:store').findRecord('user', user1.id);
+    console.log('userModel1', userModel1);
     const userModel2 = await this.owner.lookup('service:store').findRecord('user', user2.id);
     this.set('users', [userModel1, userModel2]);
 

@@ -3,12 +3,12 @@ import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import ENV from 'frontend/config/environment';
 
-export default class ApplicationRoute extends Route {
+export default class AuthenticatedRoute extends Route {
   @service currentUser;
   @service headData;
   @service intl;
-  @service session;
   @service router;
+  @service session;
 
   @tracked appEnv = ENV.environment;
 

@@ -2,10 +2,10 @@ import Model, { attr } from '@ember-data/model';
 
 export default class User extends Model {
   @attr('string')
-  lastName;
+  firstName;
 
   @attr('string')
-  firstName;
+  lastName;
 
   @attr('string')
   displayName;
