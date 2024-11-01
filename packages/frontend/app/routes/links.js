@@ -11,8 +11,6 @@ export default class LinksRoute extends Route {
   }
 
   async model(params, transition) {
-    console.log('params', params);
-
     try {
       return await this.store.findAll('link');
     } catch {
