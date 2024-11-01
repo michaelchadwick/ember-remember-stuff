@@ -6,11 +6,17 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'history',
-    'ember-a11y-testing': {
-      componentOptions: {
-        turnAuditOff: process.env.SKIP_A11Y || false,
-        visualNoiseLevel: 1,
-      },
+    flashMessageDefaults: {
+      timeout: 3000,
+      extendedTimeout: 1000,
+      types: ['success', 'warning', 'info', 'alert'],
+      injectionFactories: [],
+    },
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: '/auth/login',
+      tokenPropertyName: 'jwt',
+      refreshAccessTokens: false,
+      authorizationPrefix: 'Token ',
     },
     i18n: {
       defaultLocale: 'en',
@@ -30,6 +36,17 @@ module.exports = function (environment) {
     'ember-qunit-nice-errors': {
       completeExistingMessages: true,
       showFileInfo: true,
+    },
+    'ember-a11y-testing': {
+      componentOptions: {
+        turnAuditOff: process.env.SKIP_A11Y || false,
+        visualNoiseLevel: 1,
+      },
+    },
+    'ember-local-storage': {
+      namespace: true,
+      keyDelimiter: '/',
+      includeEmberDataSupport: false,
     },
     fontawesome: {
       enableExperimentalBuildTimeTransform: false,
