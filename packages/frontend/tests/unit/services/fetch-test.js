@@ -1,7 +1,7 @@
 import Service from '@ember/service';
 import { module, skip } from 'qunit';
 import { setupTest } from 'ember-qunit';
-import { setupMirage } from 'test-app/tests/test-support/mirage';
+import { setupMirage } from 'frontend/tests/test-support/mirage';
 import { authenticateSession } from 'ember-simple-auth/test-support';
 
 module('Unit | Service | fetch', function (hooks) {
