@@ -1,7 +1,7 @@
 {{! template-lint-disable no-invalid-interactive }}
 <tr
   class="user-list-item{{if this.isSelected ' selected'}}"
-  {{on "click" this.handleClick}}
+  {{on "click" this.toggleSelected}}
   data-test-user-list-item
 >
   <td class="user-checked-value" colspan="1" data-test-user-selected>

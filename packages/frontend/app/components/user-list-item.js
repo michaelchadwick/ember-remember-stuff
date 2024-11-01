@@ -7,7 +7,7 @@ export default class UserListItemComponent extends Component {
   }
 
   @action
-  handleClick() {
+  toggleSelected() {
     this.args.onSelectUser(this.args.user);
   }
 }
