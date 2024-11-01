@@ -1,19 +1,7 @@
 components:
-  box:
-    defaultBlock1: "<p>Hola. Este es un componente Box. Este texto proviene del bloque que pasa al componente Box. <b>No soporta</b> HTML.</p>"
-  boxGallery:
-    genNewButton: Generar Nueva Caja
-    head: Galería de Cajas (FE)
-  counter:
-    count: Cuenta
-    countAdd: Cuenta +1
-    countSubtract: Cuenta -1
-    head: Contador (FE)
-    multi: Multi
-    multiX2: Multi x2
-  detailsGallery:
-    head: DetailsGallery
-    summary: Galería de Detalles
+  debuggery:
+    daveApi:
+      head: DaveApiData
   ghCommits:
     head: GithubCommits (FE)
   ghUser:

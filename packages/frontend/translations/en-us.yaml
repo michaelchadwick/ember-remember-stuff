@@ -1,4 +1,7 @@
 components:
+  debuggery:
+    daveApi:
+      head: DaveApiData
   ghCommits:
     head: GithubCommits (FE)
   ghUser:

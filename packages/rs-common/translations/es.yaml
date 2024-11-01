@@ -1,3 +1,33 @@
+components:
+  audioPlayer:
+    head: AudioPlayer
+  box:
+    defaultBlock1: "<p>Hola. Este es un componente Box. Este texto proviene del bloque que pasa al componente Box. No soporta HTML. <b>No soporta</b> <code>HTML</code>.</p>"
+    defaultHtml: "<p>Hola. Este es un componente Box. Este texto proviene del bloque que pasa al componente Box. <b>No soporta</b> <code>HTML</code>.</p>"
+    head: Box
+  boxGallery:
+    genNewButton: Generar Nueva Caja
+    head: Galería de Cajas (CMN)
+  counter:
+    count: Cuenta
+    countAdd: Cuenta +1
+    countSubtract: Cuenta -1
+    head: Contador (CMN)
+    multi: Multi
+    multiX2: Multi x2
+  detailsGallery:
+    head: DetailsGallery
+    summary: Galería de Detalles
+  mover:
+    alwaysMoving: ¡Esté siempre en movimiento!
+    clickMeOff: ¡Haz clic palanca para dejar de moverte!
+    clickMeOn: ¡Haz clic palanca para comenzar de moverte!
+    head: Mover
+  passwordValidator:
+    head: PasswordValidator
+    validate: Valide
+  randomText:
+    head: RandomText
 general:
   actions: Acciones
   add: Agregue
@@ -130,19 +160,3 @@ errors:
   tooShort: "{description} es demasiado corto (el mínimo es {min} caracteres)"
   url: "{description} debe ser una dirección URL válida"
   unknown: ¡Un error desconocido ocurrió!
-components:
-  audioPlayer:
-    head: AudioPlayer
-  box:
-    defaultHtml: "<p>Hola. Este es un componente Box. Este texto proviene del bloque que pasa al componente Box. <b>No soporta</b> HTML.</p>"
-    head: Box
-  mover:
-    alwaysMoving: ¡Esté siempre en movimiento!
-    clickMeOff: ¡Haz clic palanca para dejar de moverte!
-    clickMeOn: ¡Haz clic palanca para comenzar de moverte!
-    head: Mover
-  passwordValidator:
-    head: PasswordValidator
-    validate: Valide
-  randomText:
-    head: RandomText
