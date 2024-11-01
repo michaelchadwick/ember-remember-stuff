@@ -91,7 +91,7 @@ module.exports = function (environment) {
         },
         {
           block: `
-            <p>Hey! This is a Box component. This text is coming from a block passed into the Box componenet. It <b>does not</b> support <code>HTML</code>.</p>
+            <p>Hey! This is a Box component. This text is coming from a block passed into the Box component. It <b>does not</b> support <code>HTML</code>.</p>
           `,
           text: null,
         },
