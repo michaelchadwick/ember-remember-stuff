@@ -9,7 +9,6 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   if (config.environment != 'production') {
     this.route('tests', { path: '/tests?nocontainer' });
-    this.route('debuggery');
   }
 
   this.route('messages');
@@ -19,6 +18,7 @@ Router.map(function () {
   this.route('contact');
   this.route('users', {});
   this.route('user', { path: '/users/:user_id' });
+  this.route('debuggery');
 
   this.route('error', { path: '*path' });
 });
