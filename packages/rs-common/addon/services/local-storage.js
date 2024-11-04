@@ -11,19 +11,24 @@ export default class LocalStorageService extends Service {
       if (item) {
         const keyVal = settings[item];
 
-        if (keyVal) {
+        if (keyVal !== undefined) {
           return settings[item];
         } else {
-          return this.intl.t('errors.lsGetItemFail', {
-            keyName: ENV.APP.LOCAL_STORAGE_KEY,
-            itemName: item,
-          });
+          console.error(
+            this.intl.t('errors.lsGetItemFail', {
+              keyName: ENV.APP.LOCAL_STORAGE_KEY,
+              itemName: item,
+            }),
+          );
+
+          return null;
         }
       } else {
         return settings;
       }
     } else {
-      // return this.intl.t('errors.lsGetFail', { keyName: ENV.APP.LOCAL_STORAGE_KEY });
+      // console.log(this.intl.t('errors.lsGetCreate'));
+
       return localStorage.setItem(
         ENV.APP.LOCAL_STORAGE_KEY,
         JSON.stringify({
@@ -33,18 +38,28 @@ export default class LocalStorageService extends Service {
     }
   }
 
-  set(item, val) {
+  set(item, value) {
     const settings = JSON.parse(localStorage.getItem(ENV.APP.LOCAL_STORAGE_KEY));
 
     if (settings) {
-      settings[item] = val;
-      localStorage.setItem(ENV.APP.LOCAL_STORAGE_KEY, JSON.stringify(settings));
+      if (settings[item] !== undefined) {
+        settings[item] = value;
+        localStorage.setItem(ENV.APP.LOCAL_STORAGE_KEY, JSON.stringify(settings));
+      } else {
+        console.error(
+          this.intl.t('errors.lsSetItemFail', {
+            keyName: ENV.APP.LOCAL_STORAGE_KEY,
+            itemName: item,
+            value: value,
+          }),
+        );
+
+        return null;
+      }
     } else {
-      return this.intl.t('errors.lsSetItemFail', {
-        keyName: ENV.APP.LOCAL_STORAGE_KEY,
-        itemName: item,
-        val: val,
-      });
+      const obj = {};
+      obj[item] = value;
+      return localStorage.setItem(ENV.APP.LOCAL_STORAGE_KEY, JSON.stringify(obj));
     }
   }
 }

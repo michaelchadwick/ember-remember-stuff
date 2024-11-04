@@ -1,9 +1,18 @@
 <h3>{{t "components.detailsGallery.head"}}</h3>
 
-{{#if @isExpanded}}
-  <details class="details-gallery" {{on "click" this.saveDebugVisibility}} open>
+{{#if @detailsGalleryExpanded}}
+  <details class="details-gallery" {{on "click" this.saveVisibility}} open>
     <summary>{{t "components.detailsGallery.summary"}}</summary>
     <div class="gallery">
+      <GhUser
+        @username={{@ghUserData.ghUsername}}
+        @htmlUrl={{@ghUserData.ghHtmlUrl}}
+        @publicRepos={{@ghUserData.ghPublicRepos}}
+        @publicGists={{@ghUserData.ghPublicGists}}
+        @followers={{@ghUserData.ghFollowers}}
+        @following={{@ghUserData.ghFollowing}}
+      />
+
       <Box
         @text="Hello I'm a <code>Box</code> component in the <code>DetailsGallery</code> component."
       />
@@ -18,23 +27,23 @@
       {{else}}
         <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}} @shouldLoop={{true}} />
       {{/if}}
-
-      <GhUser
-        @username={{@ghUsername}}
-        @htmlUrl={{@ghHtmlUrl}}
-        @publicRepos={{@ghPublicRepos}}
-        @publicGists={{@ghPublicGists}}
-        @followers={{@ghFollowers}}
-        @following={{@ghFollowing}}
-      />
 
       <Mover />
     </div>
   </details>
 {{else}}
-  <details class="details-gallery" {{on "click" this.saveDebugVisibility}}>
+  <details class="details-gallery" {{on "click" this.saveVisibility}}>
     <summary>{{t "components.detailsGallery.summary"}}</summary>
     <div class="gallery">
+      <GhUser
+        @username={{@ghUserData.ghUsername}}
+        @htmlUrl={{@ghUserData.ghHtmlUrl}}
+        @publicRepos={{@ghUserData.ghPublicRepos}}
+        @publicGists={{@ghUserData.ghPublicGists}}
+        @followers={{@ghUserData.ghFollowers}}
+        @following={{@ghUserData.ghFollowing}}
+      />
+
       <Box
         @text="Hello I'm a <code>Box</code> component in the <code>DetailsGallery</code> component."
       />
@@ -49,8 +58,6 @@
       {{else}}
         <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}} @shouldLoop={{true}} />
       {{/if}}
-
-      <GhUser @username={{@ghUsername}} @publicRepos={{@ghPublicRepos}} />
 
       <Mover />
     </div>

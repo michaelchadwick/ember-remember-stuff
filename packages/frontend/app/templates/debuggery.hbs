@@ -1,17 +1,22 @@
 <h2>{{t "layout.headDebuggery"}}</h2>
 
+<DetailsGallery
+  @ghUserData={{@model.ghUser}}
+  @detailsGalleryExpanded={{@model.detailsGalleryExpanded}}
+  @onDetailsGalleryToggle={{this.detailsGalleryToggle}}
+/>
+
+{{#if @model.dave}}
+  <h3>{{t "components.debuggery.daveApi.head"}}</h3>
+  <ul>
+    {{#each-in @model.dave.config as |key val|}}
+      <li>{{key}}: {{val}}</li>
+    {{/each-in}}
+  </ul>
+{{/if}}
+
 <PasswordValidator />
 
 <BoxGallery />
-
-<DetailsGallery
-  @ghUsername={{@model.ghUser.ghUsername}}
-  @ghHtmlUrl={{@model.ghUser.ghHtmlUrl}}
-  @ghPublicRepos={{@model.ghUser.ghPublicRepos}}
-  @ghPublicGists={{@model.ghUser.ghPublicGists}}
-  @ghFollowers={{@model.ghUser.ghFollowers}}
-  @ghFollowing={{@model.ghUser.ghFollowing}}
-  @isExpanded={{this.debugVisibility}}
-/>
 
 <RandomText @paragraphs="5" @sentences="5" />

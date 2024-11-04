@@ -5,6 +5,11 @@ details {
     border-radius: 0.5em;
     max-width: 800px;
 
+    &[open] summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
     &:hover {
       background-color: #f7c7ff;
       border-color: #210039;
