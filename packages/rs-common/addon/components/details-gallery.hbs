@@ -1,65 +1,36 @@
 <h3>{{t "components.detailsGallery.head"}}</h3>
 
-{{#if @detailsGalleryExpanded}}
-  <details class="details-gallery" {{on "click" this.saveVisibility}} open>
-    <summary>{{t "components.detailsGallery.summary"}}</summary>
-    <div class="gallery">
-      <GhUser
-        @username={{@ghUserData.ghUsername}}
-        @htmlUrl={{@ghUserData.ghHtmlUrl}}
-        @publicRepos={{@ghUserData.ghPublicRepos}}
-        @publicGists={{@ghUserData.ghPublicGists}}
-        @followers={{@ghUserData.ghFollowers}}
-        @following={{@ghUserData.ghFollowing}}
-      />
+<details
+  class="details-gallery"
+  {{on "click" this.saveVisibility}}
+  open={{@detailsGalleryExpanded}}
+>
+  <summary>{{t "components.detailsGallery.summary"}}</summary>
+  <div class="gallery">
+    <GhUser
+      @username={{@ghUserData.ghUsername}}
+      @htmlUrl={{@ghUserData.ghHtmlUrl}}
+      @publicRepos={{@ghUserData.ghPublicRepos}}
+      @publicGists={{@ghUserData.ghPublicGists}}
+      @followers={{@ghUserData.ghFollowers}}
+      @following={{@ghUserData.ghFollowing}}
+    />
 
-      <Box
-        @text="Hello I'm a <code>Box</code> component in the <code>DetailsGallery</code> component."
-      />
-      <Box>
-        {{t "components.box.defaultBlock1"}}
-      </Box>
+    <Box
+      @text="Hello I'm a <code>Box</code> component in the <code>DetailsGallery</code> component."
+    />
+    <Box>
+      {{t "components.box.defaultBlock1"}}
+    </Box>
 
-      <DoubleIt />
+    <DoubleIt />
 
-      {{#if (eq this.env "production")}}
-        <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}} @shouldLoop={{true}} />
-      {{else}}
-        <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}} @shouldLoop={{true}} />
-      {{/if}}
+    {{#if (eq this.env "production")}}
+      <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}} @shouldLoop={{true}} />
+    {{else}}
+      <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}} @shouldLoop={{true}} />
+    {{/if}}
 
-      <Mover />
-    </div>
-  </details>
-{{else}}
-  <details class="details-gallery" {{on "click" this.saveVisibility}}>
-    <summary>{{t "components.detailsGallery.summary"}}</summary>
-    <div class="gallery">
-      <GhUser
-        @username={{@ghUserData.ghUsername}}
-        @htmlUrl={{@ghUserData.ghHtmlUrl}}
-        @publicRepos={{@ghUserData.ghPublicRepos}}
-        @publicGists={{@ghUserData.ghPublicGists}}
-        @followers={{@ghUserData.ghFollowers}}
-        @following={{@ghUserData.ghFollowing}}
-      />
-
-      <Box
-        @text="Hello I'm a <code>Box</code> component in the <code>DetailsGallery</code> component."
-      />
-      <Box>
-        {{t "components.box.defaultBlock1"}}
-      </Box>
-
-      <DoubleIt />
-
-      {{#if (eq this.env "production")}}
-        <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}} @shouldLoop={{true}} />
-      {{else}}
-        <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}} @shouldLoop={{true}} />
-      {{/if}}
-
-      <Mover />
-    </div>
-  </details>
-{{/if}}
+    <Mover />
+  </div>
+</details>
