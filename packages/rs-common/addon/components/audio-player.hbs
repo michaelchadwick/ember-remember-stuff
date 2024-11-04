@@ -1,19 +1,17 @@
 <div class="audio-player{{if this.isPlaying ' is-playing'}}">
   <h3>{{t "components.audioPlayer.head"}}</h3>
 
-  {{#if @shouldLoop}}
-    <audio loop {{play-when this.isPlaying}} volume={{this.audioVolume}} data-test-audio-player>
-      <source src={{@srcURL}} />
-      <track kind="captions" />
-      {{t "errors.notSupported" description="<audio>"}}
-    </audio>
-  {{else}}
-    <audio {{play-when this.isPlaying}} data-test-audio-player>
-      <source src={{@srcURL}} />
-      <track kind="captions" />
-      {{t "errors.notSupported" description="<audio>"}}
-    </audio>
-  {{/if}}
+  <audio
+    loop={{@shouldLoop}}
+    {{play-when this.isPlaying}}
+    volume={{this.audioVolume}}
+    data-test-audio-player
+  >
+    <source src={{@srcURL}} />
+    <track kind="captions" />
+    {{t "errors.notSupported" description="<audio>"}}
+  </audio>
+
   <input
     type="range"
     min="0"
