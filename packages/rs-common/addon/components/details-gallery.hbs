@@ -25,11 +25,7 @@
 
     <DoubleIt />
 
-    {{#if (eq this.env "production")}}
-      <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_REMOTE}} @shouldLoop={{true}} />
-    {{else}}
-      <AudioPlayer @srcURL={{this.envApp.AUDIO_PLAYER_FILE_LOCAL}} @shouldLoop={{true}} />
-    {{/if}}
+    <AudioPlayer @srcURL={{this.audioPath}} @shouldLoop={{true}} />
 
     <Mover />
   </div>
