@@ -7,8 +7,8 @@ export default class RsConfigService extends Service {
 
   async getConfig() {
     if (!this._configPromise) {
-      console.log('RsConfigService getConfig(), !this._configPromise');
-      this._configPromise = this.fetch.getJsonFromApiHost('/application/config');
+      // this._configPromise = this.fetch.getJsonFromApiHost('/application/config');
+      this._configPromise = this.fetch.getJsonFromApiHost('?config');
     }
 
     let config;
@@ -24,7 +24,7 @@ export default class RsConfigService extends Service {
 
   async itemFromConfig(key) {
     const config = await this.getConfig();
-    const obj = config.config;
+    const obj = config.body.config;
     return key in obj ? obj[key] : null;
   }
 
@@ -81,6 +81,7 @@ export default class RsConfigService extends Service {
 
   get apiHost() {
     const apiHost = this.serverVariables.get('apiHost');
+
     if (apiHost) {
       //remove trailing slashes
       return apiHost.replace(/\/+$/, '');
