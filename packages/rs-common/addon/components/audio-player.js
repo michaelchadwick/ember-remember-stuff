@@ -6,10 +6,13 @@ import ENV from 'frontend/config/environment';
 export default class AudioPlayerComponent extends Component {
   @tracked isPlaying = false;
   @tracked rangeVolume = 30;
-  @tracked env = ENV.environment;
 
   maxVolume = 100;
   decreaseVolume = null;
+
+  get pathIndexLength() {
+    return ENV.environment == 'production' ? 5 : 3;
+  }
 
   @action
   setVolume(event) {

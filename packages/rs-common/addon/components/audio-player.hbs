@@ -23,11 +23,7 @@
   />
   {{!-- <div class="volume-tooltip">{{this.rangeVolume}}</div> --}}
 
-  {{#if (eq this.env "production")}}
-    <div class="audio-title">{{split @srcURL delimiter="/" index=5}}</div>
-  {{else}}
-    <div class="audio-title">{{split @srcURL delimiter="/" index=3}}</div>
-  {{/if}}
+  <div class="audio-title">{{split @srcURL delimiter="/" index=this.pathIndexLength}}</div>
 
   <button type="button" id="btn-audio-play" {{on "click" this.play}}>
     <FaIcon @icon="play" />
