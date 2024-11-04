@@ -41,15 +41,6 @@ export default class FooterComponent extends Component {
     if (ENV.environment != 'production') {
       links.push({
         ...this.defaultLink,
-        route: 'debuggery',
-        icon: 'bug',
-        target: '_self',
-        title: `{${this.intl.t('layout.footDebuggery')}}`,
-        class: this.intl.t('layout.footDebuggery').toLowerCase(),
-      });
-
-      links.push({
-        ...this.defaultLink,
         query: 'nocontainer',
         route: 'tests',
         icon: 'flask',

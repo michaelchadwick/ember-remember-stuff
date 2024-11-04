@@ -41,6 +41,11 @@ export default class NavBarComponent extends Component {
         title: this.intl.t('layout.navContact'),
         target: '_self',
       },
+      {
+        route: 'debuggery',
+        target: '_self',
+        title: `{${this.intl.t('layout.footDebuggery')}}`,
+      },
     ];
 
     if (this.appEnv == 'development') {
