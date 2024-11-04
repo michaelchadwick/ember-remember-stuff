@@ -1,3 +1,4 @@
+// './mirage' -> '/packages/rs-common/
 import commonRoutes from './mirage/routes';
 import commonModels from './mirage/models';
 import commonFactories from './mirage/factories';
@@ -23,10 +24,38 @@ export default function (config) {
     },
     routes() {
       this.timing = 100;
+      this.urlPrefix = 'https://dave.neb.host';
+      this.namespace = '';
+      this.get('/', function (schema, request) {
+        if (request.queryParams.config) {
+          return {
+            body: {
+              config: {
+                type: 'config_type-foo',
+                apiVersion: '1',
+                appVersion: '1.2.3',
+                userSearchType: 'config_userSearchType-foo',
+                random: 'config_random-foo',
+                maxUploadSize: 'config_maxUploadSize-foo',
+                trackingEnabled: 'config_trackingEnabled-foo',
+                trackingCode: 'config_trackingCode-foo',
+                loginUrl: 'config_loginUrl-foo',
+                casLoginUrl: 'config_casLoginUrl-foo',
+                awesomeLevel: 10,
+                lameLevel: 4,
+              },
+            },
+          };
+        }
+        return {};
+      });
+
+      this.urlPrefix = '';
       this.namespace = '/';
-      this.passthrough('/write-coverage');
+      this.passthrough();
       commonRoutes(this);
-      this.post('auth/login', function (schema, request) {
+
+      this.post('auth/login', (schema, request) => {
         const errors = [];
         var attrs = JSON.parse(request.requestBody);
         if (!('username' in attrs) || !attrs.username) {
@@ -42,7 +71,6 @@ export default function (config) {
             const nextWeek = now.plus({ weeks: 1 });
             const header = '{"alg":"none"}';
             const body = `{"iss": "rs","aud": "rs","iat": "${now.toUnixInteger()}","exp": "${nextWeek.toUnixInteger()}","user_id": 4136}`;
-
             const encodedData = window.btoa(header) + '.' + window.btoa(body) + '.';
             return {
               jwt: encodedData,
@@ -53,34 +81,10 @@ export default function (config) {
         }
         return new Response(400, {}, { errors: errors });
       });
-
-      this.get('auth/logout', function () {
+      this.get('auth/logout', () => {
         return new Response(200);
       });
-
-      this.get('auth/whoami', function () {
-        return {
-          userId: 4136,
-        };
-      });
-
-      this.get('application/config', function () {
-        return {
-          config: {
-            type: 'form',
-            apiVersion,
-            appVersion: '1.2.3',
-            materialStatusEnabled: true,
-            showCampusNameOfRecord: true,
-          },
-        };
-        // return { config: {
-        //   type: 'shibboleth',
-        //   shibbolethLoginUrl: '/fakeshiblogin'
-        // }};
-      });
-
-      this.get('auth/token', function () {
+      this.get('auth/token', () => {
         //un comment to send unauthenticated user data
         // return {
         //   jwt: null
@@ -89,18 +93,37 @@ export default function (config) {
         const nextWeek = now.plus({ weeks: 1 });
         const header = '{"alg":"none"}';
         const body = `{"iss": "rs","aud": "rs","iat": "${now.toUnixInteger()}","exp": "${nextWeek.toUnixInteger()}","user_id": 4136}`;
-
         const encodedData = window.btoa(header) + '.' + window.btoa(body) + '.';
         return {
           jwt: encodedData,
         };
       });
-
-      this.post('errors', function () {
+      this.get('auth/whoami', () => {
+        return {
+          userId: 4136,
+        };
+      });
+      this.get('application/config', () => {
+        // this.get('?config', () => {
+        return {
+          body: {
+            config: {
+              type: 'form',
+              apiVersion,
+              appVersion: '1.2.3',
+              materialStatusEnabled: true,
+              showCampusNameOfRecord: true,
+            },
+          },
+        };
+      });
+      this.post('errors', () => {
         //doesn't do anything, just swallows errors
       });
     },
   };
+
+  // console.log('finalConfig', finalConfig);
 
   return createServer(finalConfig);
 }
