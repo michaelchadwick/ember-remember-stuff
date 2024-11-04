@@ -1,5 +1,11 @@
 <footer class="menu" role="menu" aria-label={{t "layout.footMenu"}}>
   <div class="links">
+    <AudioPlayer
+      @srcURL={{@audioPath}}
+      @shouldLoop={{@audioShouldLoop}}
+      @showTitle={{false}}
+      @compact={{true}}
+    />
     {{#each this.links as |link|}}
       {{#if link.route}}
         <LinkTo @route={{link.route}} class="menu-{{link.class}}" target={{link.target}}>

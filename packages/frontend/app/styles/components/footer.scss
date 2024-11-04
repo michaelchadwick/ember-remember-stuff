@@ -1,16 +1,23 @@
 footer {
   &.menu {
     background-color: #ffedbb;
+    display: flex;
     font-size: 1rem;
     margin: 1em 0 0;
-    padding: 1em 0;
+    padding: 0.5em 0;
     width: 100%;
 
     .links {
+      align-items: center;
+      display: flex;
       margin: 0 auto;
       max-width: 800px;
       padding: 0;
       width: 100%;
+
+      .audio-player {
+        margin-right: 1em;
+      }
 
       a {
         display: inline-block;

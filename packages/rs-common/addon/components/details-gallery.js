@@ -1,13 +1,13 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import { service } from '@ember/service';
 import scrollIntoView from 'scroll-into-view';
-import ENV from 'frontend/config/environment';
 
 export default class DetailsGalleryComponent extends Component {
-  get audioPath() {
-    return ENV.environment == 'production'
-      ? ENV.APP.AUDIO_PLAYER_FILE_REMOTE
-      : ENV.APP.AUDIO_PLAYER_FILE_LOCAL;
+  @service intl;
+
+  get title() {
+    return this.args.title ?? this.intl.t('components.detailsGallery.summary');
   }
 
   get isExpanded() {

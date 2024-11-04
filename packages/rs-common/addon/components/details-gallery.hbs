@@ -5,7 +5,7 @@
   {{on "click" this.saveVisibility}}
   open={{@detailsGalleryExpanded}}
 >
-  <summary>{{t "components.detailsGallery.summary"}}</summary>
+  <summary>{{this.title}}</summary>
   <div class="gallery">
     <GhUser
       @username={{@ghUserData.ghUsername}}
@@ -24,8 +24,6 @@
     </Box>
 
     <DoubleIt />
-
-    <AudioPlayer @srcURL={{this.audioPath}} @shouldLoop={{true}} />
 
     <Mover />
   </div>

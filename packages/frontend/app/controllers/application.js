@@ -4,6 +4,7 @@ import { service } from '@ember/service';
 import { cached, tracked } from '@glimmer/tracking';
 import { TrackedAsyncData } from 'ember-async-data';
 import { appVersion } from 'frontend/helpers/app-version';
+import ENV from 'frontend/config/environment';
 
 export default class ApplicationController extends Controller {
   @service apiVersion;
@@ -17,6 +18,16 @@ export default class ApplicationController extends Controller {
   @tracked showErrorDisplay = false;
 
   appVersion = new TrackedAsyncData(this.rsConfig.getAppVersion());
+
+  get audioPath() {
+    return ENV.environment == 'production'
+      ? ENV.APP.AUDIO_PLAYER_FILE_REMOTE
+      : ENV.APP.AUDIO_PLAYER_FILE_LOCAL;
+  }
+
+  get audioShouldLoop() {
+    return true;
+  }
 
   @cached
   get rsVersionTag() {

@@ -1,5 +1,7 @@
-<div class="audio-player{{if this.isPlaying ' is-playing'}}">
-  <h3>{{t "components.audioPlayer.head"}}</h3>
+<div class="audio-player{{if @compact ' compact'}}{{if this.isPlaying ' is-playing'}}">
+  {{#if @showTitle}}
+    <h3>{{t "components.audioPlayer.head"}}</h3>
+  {{/if}}
 
   <audio
     loop={{@shouldLoop}}

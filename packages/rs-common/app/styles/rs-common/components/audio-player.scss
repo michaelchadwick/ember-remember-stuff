@@ -1,12 +1,11 @@
 .audio-player {
-  background-color: #ffdddd !important;
-
   #btn-audio-pause {
     background-color: #a1a1a1;
   }
 
   #audio-volume {
     position: relative;
+    width: 80px;
 
     & + .volume-tooltip {
       background-color: #ffffff;
@@ -36,6 +35,26 @@
     #btn-audio-play {
       background-color: lightgreen;
       color: #000000;
+    }
+  }
+
+  &.compact {
+    display: flex;
+
+    #audio-volume {
+      width: 40px;
+    }
+    .audio-title {
+      display: none;
+    }
+
+    button {
+      padding: 0.3em 0.65em;
+
+      svg {
+        height: 12px;
+        width: 12px;
+      }
     }
   }
 }
