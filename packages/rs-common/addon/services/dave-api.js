@@ -5,8 +5,16 @@ export default class DaveApiService extends Service {
   @tracked data = null;
 
   async fetchData(query) {
-    const response = await fetch(`https://dave.neb.host/${query}`);
-    this.data = await response.json();
-    return this.data;
+    let response;
+
+    try {
+      response = await fetch(`https://dave.neb.host/${query}`);
+
+      this.data = await response.json();
+
+      return this.data;
+    } catch (e) {
+      throw Error('Error getting data from DaveApi');
+    }
   }
 }
