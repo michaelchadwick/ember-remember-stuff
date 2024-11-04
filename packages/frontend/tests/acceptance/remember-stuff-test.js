@@ -97,6 +97,19 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.strictEqual(currentURL(), '/');
   });
 
+  test('visiting /debuggery', async function (assert) {
+    await visit('/debuggery');
+
+    assert.strictEqual(currentURL(), '/debuggery');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h2').hasText('Debuggery');
+
+    await click('nav a h1');
+
+    assert.strictEqual(currentURL(), '/');
+  });
+
   test('navigating using the nav-bar', async function (assert) {
     await visit('/');
 
@@ -125,6 +138,9 @@ module('Acceptance | remember stuff', function (hooks) {
 
     await click('nav a.menu-contact');
     assert.strictEqual(currentURL(), '/contact');
+
+    await click('nav a.menu-debuggery');
+    assert.strictEqual(currentURL(), '/debuggery');
   });
 
   test('navigating using the footer', async function (assert) {
@@ -136,7 +152,6 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer a.menu-docs').hasText('Docs');
 
     if (ENV.environment != 'production') {
-      assert.dom('footer a.menu-debuggery').hasText('{Debuggery}');
       assert.dom('footer a.menu-tests').hasText('[Tests]');
       assert.dom('footer a.menu-prod').hasText('[Prod]');
     }
