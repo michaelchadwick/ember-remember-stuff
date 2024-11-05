@@ -63,6 +63,7 @@ module.exports = function (environment) {
     },
 
     APP: {
+      AUTHOR_URL: 'https://michaelchadwick.info',
       AUDIO_PLAYER_FILE_LOCAL: '/assets/audio/fezzish.mp3',
       AUDIO_PLAYER_FILE_REMOTE: 'https://neb.host/files/p/fezzish.mp3',
       BOX_GALLERY_DEFAULTS: [
@@ -98,8 +99,10 @@ module.exports = function (environment) {
       ],
       LOCAL_STORAGE_KEY: 'remember-stuff',
       GITHUB_API_URL: 'https://api.github.com',
+      GITHUB_SRC_URL: 'https://github.com/michaelchadwick/ember-remember-stuff',
       GITHUB_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',
+      NETLIFY_URL: 'https://mc-emberjs-remember-stuff.netlify.app',
       isRunningWithServerArgs: process.argv.includes('--server') || process.argv.includes('-s'),
     },
   };

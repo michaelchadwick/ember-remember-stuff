@@ -15,7 +15,7 @@ export default class FooterComponent extends Component {
 
     links.push({
       ...this.defaultLink,
-      url: 'https://michaelchadwick.info',
+      url: ENV.APP.AUTHOR_URL,
       icon: 'at',
       title: this.intl.t('layout.footAuthor'),
       class: this.intl.t('layout.footAuthor').toLowerCase(),
@@ -23,7 +23,7 @@ export default class FooterComponent extends Component {
 
     links.push({
       ...this.defaultLink,
-      url: 'https://github.com/michaelchadwick/ember-remember-stuff',
+      url: ENV.APP.GITHUB_SRC_URL,
       icon: 'github',
       iconType: 'fab',
       title: this.intl.t('layout.footSource'),
@@ -50,7 +50,7 @@ export default class FooterComponent extends Component {
 
       links.push({
         ...this.defaultLink,
-        url: 'https://mc-emberjs-remember-stuff.netlify.app',
+        url: ENV.APP.NETLIFY_URL,
         icon: 'square-up-right',
         title: `[${this.intl.t('layout.footProd')}]`,
         class: this.intl.t('layout.footProd').toLowerCase(),
