@@ -15,6 +15,6 @@ module('Integration | Component | ribbon', function (hooks) {
 
     assert.dom('.ribbon').hasClass('dev');
     assert.dom('.ribbon').hasClass('left');
-    assert.dom('.ribbon').hasText('dev');
+    assert.dom('.ribbon').hasAttribute('data-title', 'dev');
   });
 });
