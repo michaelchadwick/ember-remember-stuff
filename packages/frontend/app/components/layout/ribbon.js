@@ -1,7 +1,9 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import ENV from 'frontend/config/environment';
 
 export default class RibbonComponent extends Component {
+  @tracked env = ENV;
   @tracked title = this.name;
 
   get name() {

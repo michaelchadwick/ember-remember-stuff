@@ -7,7 +7,9 @@
   letter-spacing: 1px;
   padding: 0.5em 0.5em 0.25em;
   position: fixed;
+  text-align: center;
   text-transform: uppercase;
+  width: 50px;
   z-index: 1;
 
   @media (min-width: 768px) {
@@ -30,6 +32,22 @@
     background: #1da826;
     box-shadow: 0 0 0 999px #1da826;
     color: #ffffff;
+
+    &:after {
+      content: attr(data-title);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: #cb0b38;
+        box-shadow: 0 0 0 999px #cb0b38;
+        cursor: pointer;
+
+        &:after {
+          content: "PROD";
+        }
+      }
+    }
   }
 
   &.prod {

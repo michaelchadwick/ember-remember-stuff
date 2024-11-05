@@ -13,6 +13,8 @@ components:
   newMessageInput:
     nothingSaved: "<em>Note</em>: new messages will not be saved (...yet)!"
     placeholder: Type message here and hit enter
+  ribbon:
+    goToProd: Go to Production
 sections:
   about:
     description: "<p><strong>RemEmber Stuff</strong> is a web application I built to learn about EmberJS.</p>
