@@ -31,8 +31,8 @@ export default class UserNameInfoComponent extends Component {
 
   @action
   buffKloutAndRowLevel() {
-    this.args.buffKlout(Math.floor(Math.random() * 100));
-    this.args.buffRow(2);
+    this.args.onBuffKlout(Math.floor(Math.random() * 100));
+    this.args.onBuffRow(2);
   }
 
   @action
