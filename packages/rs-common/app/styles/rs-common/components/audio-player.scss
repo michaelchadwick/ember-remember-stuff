@@ -1,6 +1,6 @@
 .audio-player {
   #btn-audio-pause {
-    background-color: #a1a1a1;
+    cursor: default;
   }
 
   #audio-volume {
@@ -28,8 +28,7 @@
 
   &.is-playing {
     #btn-audio-pause {
-      background-color: #fdfdfd;
-      color: #000000;
+      cursor: pointer;
     }
 
     #btn-audio-play {

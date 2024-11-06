@@ -27,10 +27,14 @@
 
   <div class="audio-title">{{split @srcURL delimiter="/" index=this.pathIndexLength}}</div>
 
-  <button type="button" id="btn-audio-play" {{on "click" this.play}}>
-    <FaIcon @icon="play" />
-  </button>
-  <button type="button" id="btn-audio-pause" {{on "click" this.pause}}>
-    <FaIcon @icon="pause" />
-  </button>
+  {{#unless this.isPlaying}}
+    <button type="button" id="btn-audio-play" {{on "click" this.play}}>
+      <FaIcon @icon="play" />
+    </button>
+  {{/unless}}
+  {{#if this.isPlaying}}
+    <button type="button" id="btn-audio-pause" {{on "click" this.pause}}>
+      <FaIcon @icon="pause" />
+    </button>
+  {{/if}}
 </div>
