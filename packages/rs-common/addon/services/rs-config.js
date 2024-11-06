@@ -25,7 +25,6 @@ export default class RsConfigService extends Service {
   async itemFromConfig(key) {
     const config = await this.getConfig();
     const obj = config.body.config;
-    console.log('itemFromConfig key', key, key in obj);
     return key in obj ? obj[key] : null;
   }
 
