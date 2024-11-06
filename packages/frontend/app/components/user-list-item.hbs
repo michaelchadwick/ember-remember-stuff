@@ -13,9 +13,13 @@
     {{@user.id}}
   </td>
   <td class="user-fullname-value" colspan="1" data-test-user-full-name>
-    <LinkTo @route="user" @model={{@user}} data-test-user-link>
-      <UserNameInfo @user={{@user}} />
-    </LinkTo>
+    <UserNameInfo
+      @user={{@user}}
+      @kloutLevel={{@kloutLevel}}
+      @onBuffKlout={{@onBuffKlout}}
+      @rowLevel={{this.rowLevel}}
+      @onBuffRow={{this.buffRow}}
+    />
   </td>
   <td class="user-email-value" colspan="1" data-test-user-email>
     {{@user.email}}

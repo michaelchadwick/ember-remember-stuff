@@ -1,0 +1,9 @@
+.user-name-info {
+  span {
+    svg {
+      &:hover {
+        fill: red;
+      }
+    }
+  }
+}

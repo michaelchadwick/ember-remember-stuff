@@ -1,3 +1,11 @@
-<span class="user-name-info" data-test-user-name-info ...attributes>
-  <span data-test-fullname>{{@user.fullName}}</span>
-</span>
+<div class="user-name-info">
+  <LinkTo @route="user" @model={{@user}} data-test-user-link>
+    <span class="user-name-info" data-test-user-name-info ...attributes>
+      <span data-test-fullname>{{@user.fullName}}</span>
+    </span>
+  </LinkTo>
+  <span>({{this.kloutLevel}}, {{@rowLevel}})</span>
+  <span>
+    <FaIcon @icon="heart" {{on "click" this.buffKloutAndRowLevel}} />
+  </span>
+</div>

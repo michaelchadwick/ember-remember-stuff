@@ -3,10 +3,9 @@ import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
-export default class UserListComponent extends Component {
+export default class UserNameInfoComponent extends Component {
   @service intl;
   @tracked selectedUsers = [];
-  @tracked kloutLevel = 0;
 
   get selectedUsersNamesDisplay() {
     return this.hasSelectedUsers
@@ -26,14 +25,19 @@ export default class UserListComponent extends Component {
     return (user) => this.selectedUsers.includes(user);
   }
 
-  @action
-  deselectAllUsers() {
-    this.selectedUsers = [];
+  get kloutLevel() {
+    return this.args.kloutLevel;
   }
 
   @action
-  buffKlout(amount) {
-    this.kloutLevel += amount;
+  buffKloutAndRowLevel() {
+    this.args.buffKlout(Math.floor(Math.random() * 100));
+    this.args.buffRow(2);
+  }
+
+  @action
+  deselectAllUsers() {
+    this.selectedUsers = [];
   }
 
   @action
