@@ -34,14 +34,14 @@ module('Integration | Component | user-list', function (hooks) {
     const user1 = this.server.create('user');
     const user2 = this.server.create('user');
 
-    console.log('user1/user2', user1, user2);
+    // console.log('user1/user2', user1, user2);
 
     const userModel1 = await this.owner.lookup('service:store').findRecord('user', user1.id);
     const userModel2 = await this.owner.lookup('service:store').findRecord('user', user2.id);
     this.set('users', [userModel1, userModel2]);
 
-    console.log('users', this.users);
-    console.log(component.users);
+    // console.log('users', this.users);
+    // console.log(component.users);
 
     await render(hbs`<UserList @users={{this.users}} />`);
 
