@@ -3,8 +3,9 @@ import { postAll } from './post-all';
 
 export default function (server) {
   const models = [
-    { route: 'music/', name: 'song' },
-    { route: 'users/', name: 'user' },
+    // { route: 'links/', name: 'link' },
+    // { route: 'music/', name: 'song' },
+    // { route: 'users/', name: 'user' },
   ];
 
   models.forEach((obj) => {

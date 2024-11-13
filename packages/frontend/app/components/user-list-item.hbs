@@ -15,10 +15,12 @@
   <td class="user-fullname-value" colspan="1" data-test-user-full-name>
     <UserNameInfo
       @user={{@user}}
-      @kloutLevel={{@kloutLevel}}
+      @kloutLevel={{this.kloutLevel}}
       @onBuffKlout={{@onBuffKlout}}
       @rowLevel={{this.rowLevel}}
       @onBuffRow={{this.buffRow}}
+      @linkToUser={{this.linkToUser}}
+      @showLevels={{this.showLevels}}
     />
   </td>
   <td class="user-email-value" colspan="1" data-test-user-email>

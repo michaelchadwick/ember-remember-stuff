@@ -1,16 +1,29 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 export default class UserListItemComponent extends Component {
-  @tracked rowLevel = 0;
+  get kloutLevel() {
+    return this.args.kloutLevel ?? 0;
+  }
+
+  get rowLevel() {
+    return this.args.rowLevel ?? 0;
+  }
 
   get isSelected() {
     return this.args.selected;
   }
 
+  get linkToUser() {
+    return this.args.linkToUser ?? false;
+  }
+
+  get showLevels() {
+    return this.args.showLevels ?? false;
+  }
+
   @action
-  buffRow(amount) {
+  buffRow(amount = 1) {
     this.rowLevel += amount;
   }
 

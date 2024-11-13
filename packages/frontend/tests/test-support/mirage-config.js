@@ -24,9 +24,22 @@ export default function (config) {
     },
     routes() {
       this.timing = 100;
-      this.urlPrefix = 'https://dave.neb.host';
       this.namespace = '';
-      this.get('/', function (schema, request) {
+
+      this.urlPrefix = 'https://api.github.com/';
+      this.get('repos/michaelchadwick/ember-remember-stuff/commits', (schema, request) => {
+        console.log('"api.github.com/commits" miragejs request', request);
+        return {};
+      });
+
+      this.urlPrefix = 'https://music.nebyoolae.com/';
+      this.get('*', (schema, request) => {
+        console.log('"music.nebyoolae.com" miragejs request', request);
+        return null;
+      });
+
+      this.urlPrefix = 'https://dave.neb.host';
+      this.get('/', (schema, request) => {
         if (request.queryParams.config) {
           return {
             body: {
@@ -54,6 +67,23 @@ export default function (config) {
       this.namespace = '/';
       this.passthrough();
       commonRoutes(this);
+
+      // this.get('api/users/*', (schema, request) => {
+      //   console.log('"api/users/*" miragejs request', request);
+      //   return {
+      //     data: {
+      //       type: 'user',
+      //       id: '1',
+      //       attributes: {
+      //         firstName: 'Mirage',
+      //         lastName: 'Jayess',
+      //         displayName: 'Mir J',
+      //         email: 'miragejs@theoasis.net',
+      //         root: true,
+      //       },
+      //     },
+      //   };
+      // });
 
       this.post('auth/login', (schema, request) => {
         const errors = [];

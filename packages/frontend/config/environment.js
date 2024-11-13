@@ -99,6 +99,7 @@ module.exports = function (environment) {
       ],
       LOCAL_STORAGE_KEY: 'remember-stuff',
       GITHUB_API_URL: 'https://api.github.com',
+      GITHUB_SRC_NAME: 'ember-remember-stuff',
       GITHUB_SRC_URL: 'https://github.com/michaelchadwick/ember-remember-stuff',
       GITHUB_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',

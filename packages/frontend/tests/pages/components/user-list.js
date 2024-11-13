@@ -3,7 +3,7 @@ import userNameInfo from 'rs-common/page-objects/components/user-name-info';
 
 const definition = {
   scope: '[data-test-user-list]',
-  users: collection('[data-test-user]', {
+  users: collection('[data-test-user-list-item]', {
     viewUserDetails: clickable('[data-test-user-link]'),
     userNameInfo,
     email: {

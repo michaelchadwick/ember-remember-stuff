@@ -15,99 +15,107 @@ module('Acceptance | remember stuff', function (hooks) {
     await visit('/');
     await percySnapshot(getUniqueName(assert, 'homepage'));
 
-    assert.strictEqual(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/', 'url should be /');
     assert.dom('nav').exists();
+    assert.dom('footer.menu').exists();
+    assert.dom('footer.version').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
 
     assert.dom('.checklists').exists();
-
-    assert.dom('nav .links a:first-of-type').hasText('About');
-    await click('nav .links a:first-of-type');
-
-    assert.strictEqual(currentURL(), '/about');
   });
 
   test('visiting /about', async function (assert) {
     await visit('/about');
 
-    assert.strictEqual(currentURL(), '/about');
+    assert.strictEqual(currentURL(), '/about', 'url should be /about');
     assert.dom('nav').exists();
+    assert.dom('footer.menu').exists();
+    assert.dom('footer.version').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('About the Site');
     assert.dom('p').hasText('RemEmber Stuff is a web application I built to learn about EmberJS.');
 
     await click('nav a h1');
 
-    assert.strictEqual(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
   });
 
   test('visiting /messages', async function (assert) {
     await visit('/messages');
 
-    assert.strictEqual(currentURL(), '/messages');
+    assert.strictEqual(currentURL(), '/messages', 'url should be /messages');
     assert.dom('nav').exists();
+    assert.dom('footer.menu').exists();
+    assert.dom('footer.version').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Chat Messages');
     assert.dom('div.messages').exists();
 
     await click('nav a h1');
 
-    assert.strictEqual(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
   });
 
   test('visiting /music', async function (assert) {
     await visit('/music');
 
-    assert.strictEqual(currentURL(), '/music');
+    assert.strictEqual(currentURL(), '/music', 'url should be /music');
     assert.dom('nav').exists();
+    assert.dom('footer.menu').exists();
+    assert.dom('footer.version').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Music');
-    assert.dom('ul.song-list').exists();
 
     await click('nav a h1');
 
-    assert.strictEqual(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
   });
 
   test('visiting /links', async function (assert) {
     await visit('/links');
 
-    assert.strictEqual(currentURL(), '/links');
+    assert.strictEqual(currentURL(), '/links', 'url should be /links');
     assert.dom('nav').exists();
+    assert.dom('footer.menu').exists();
+    assert.dom('footer.version').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Related Links');
     assert.dom('ul li').exists();
 
     await click('nav a h1');
 
-    assert.strictEqual(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
   });
 
   test('visiting /contact', async function (assert) {
     await visit('/contact');
 
-    assert.strictEqual(currentURL(), '/contact');
+    assert.strictEqual(currentURL(), '/contact', 'url should be /contact');
     assert.dom('nav').exists();
+    assert.dom('footer.menu').exists();
+    assert.dom('footer.version').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Contact');
     assert.dom('.contact-form form').exists();
 
     await click('nav a h1');
 
-    assert.strictEqual(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
   });
 
   test('visiting /debuggery', async function (assert) {
     await visit('/debuggery');
 
-    assert.strictEqual(currentURL(), '/debuggery');
+    assert.strictEqual(currentURL(), '/debuggery', 'url should be /debuggery');
     assert.dom('nav').exists();
+    assert.dom('footer.menu').exists();
+    assert.dom('footer.version').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Debuggery');
 
     await click('nav a h1');
 
-    assert.strictEqual(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
   });
 
   test('navigating using the nav-bar', async function (assert) {
@@ -120,27 +128,36 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('nav a.menu-music').hasText('Music');
     assert.dom('nav a.menu-links').hasText('Links');
     assert.dom('nav a.menu-contact').hasText('Contact');
+    assert.dom('nav a.menu-debuggery svg').hasClass('fa-bug');
 
     await click('nav a.menu-index');
-    assert.strictEqual(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/', 'clicking nav index link for homepage goes to /');
 
     await click('nav a.menu-about');
-    assert.strictEqual(currentURL(), '/about');
+    assert.strictEqual(currentURL(), '/about', 'clicking nav link for About goes to /about');
 
     await click('nav a.menu-messages');
-    assert.strictEqual(currentURL(), '/messages');
+    assert.strictEqual(
+      currentURL(),
+      '/messages',
+      'clicking nav link for Messages goes to /messages',
+    );
 
     await click('nav a.menu-music');
-    assert.strictEqual(currentURL(), '/music');
+    assert.strictEqual(currentURL(), '/music', 'clicking nav link for Music goes to /music');
 
     await click('nav a.menu-links');
-    assert.strictEqual(currentURL(), '/links');
+    assert.strictEqual(currentURL(), '/links', 'clicking nav link for Links goes to /links');
 
     await click('nav a.menu-contact');
-    assert.strictEqual(currentURL(), '/contact');
+    assert.strictEqual(currentURL(), '/contact', 'clicking nav link for Contact goes to /contact');
 
     await click('nav a.menu-debuggery');
-    assert.strictEqual(currentURL(), '/debuggery');
+    assert.strictEqual(
+      currentURL(),
+      '/debuggery',
+      'clicking nav icon link for Debuggery goes to /debuggery',
+    );
   });
 
   test('navigating using the footer', async function (assert) {
