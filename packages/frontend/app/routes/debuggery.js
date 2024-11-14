@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
+// import { typeOf } from '@ember/utils';
 import { hash } from 'rsvp';
 import ENV from 'frontend/config/environment';
 
@@ -11,6 +12,16 @@ export default class DebuggeryRoute extends Route {
 
   beforeModel() {
     this.headData.routeTitle = 'Debuggery';
+
+    // const num = 1;
+    // const foo = 'foo';
+    // const bar = [];
+    // const baz = {};
+
+    // console.log('num', typeOf(num));
+    // console.log('foo', typeOf(foo));
+    // console.log('bar', typeOf(bar));
+    // console.log('baz', typeOf(baz));
   }
 
   async model() {
