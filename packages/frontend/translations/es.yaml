@@ -2,18 +2,22 @@ components:
   concurrency:
     cancelAll: Cancelar Todo
     cancelMostRecent: Cancelar Más Reciente
+    cancelTask: Cancelar Tarea
     countTask1Count: Task1 Recuento
     countTask1NumRunning: Task1 Tareas en Ejecución
     head: Ember-Concurrency (FE)
+    performTask: Realizar Tarea
     performCountTask1: Realizar Tarea de Conteo 1
     performWaitTask1: Realizar Tarea de Espera 1 (Task - Local)
-    performWaitTask2: Realizar Tarea de Espera 2 (Task - Remota)
-    performWaitTask3: Realizar Tarea de Espera 3 (RestartableTask - Local)
-    performWaitTask4: Realizar Tarea de Espera 4 (RestartableTask - Remota)
-    performWaitTask5: Realizar Tarea de Espera 5 (RestartableTask - Remota - Con Bóton de Cancelar)
+    performWaitTask2: Realizar Tarea de Espera 2 (ReTask - Local)
+    performWaitTask3: Tarea de Espera 3 (Task)
+    performWaitTask4: Tarea de Espera 4 (ReTask)
+    performWaitTask5: Tarea de Espera 5 (ReTask)
     cancelWaitTask5: Cancelar Tarea de Espera 5
-    performWaitTask6: Realizer Tarea de Espera 6 (RestartableTask - Remota - Autocancelación)
-    performWaitTask7: Realizer Tarea de Espera 7 (Task - Remota - Autocancelación - No @action)
+    performWaitTask6: Tarea de Espera 6 (ReTask - Autocancel)
+    performWaitTask7: Tarea de Espera 7 (Task - Autocancel - No @action)
+    localWaitTasks: Tareas Locales de Espera
+    remoteWaitTasks: Tareas Remotas de Espera
   debuggery:
     daveApi:
       head: DaveApiData

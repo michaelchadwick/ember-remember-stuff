@@ -8,12 +8,15 @@ export default class ConcurrencyComponent extends Component {
   @tracked countTask1MostRecentInstance = null;
   @tracked waitTask1Status = null;
   @tracked waitTask2Status = null;
-  @tracked waitTask3Status = null;
-  @tracked waitTask4Status = null;
-  @tracked waitTask5Status = null;
-  @tracked waitTask6Status = null;
+  @tracked waitTask3Status = 'Ready to request';
+  @tracked waitTask3Json = null;
+  @tracked waitTask4Status = 'Ready to request';
+  @tracked waitTask4Json = null;
+  @tracked waitTask5Status = 'Ready to request';
+  @tracked waitTask5Json = null;
+  @tracked waitTask6Status = 'Ready to request';
   @tracked waitTask6Json = null;
-  @tracked waitTask7Status = null;
+  @tracked waitTask7Status = 'Ready to request';
   @tracked waitTask7Json = null;
 
   remoteApi = 'https://dave.neb.host?json&size=100';
@@ -81,44 +84,48 @@ export default class ConcurrencyComponent extends Component {
     console.log('performWaitTask1(local) taskInstance', taskInstance);
   }
 
-  waitTask2 = task(async () => {
-    this.waitTask2Status = 'Requesting from API...';
-
-    const result = await fetch(this.remoteApi);
-    console.log('waitTask2(remote) result', result);
-
+  waitTask2 = restartableTask(async () => {
+    this.waitTask2Status = 'Gimme one second...';
+    await timeout(1000);
+    this.waitTask2Status = 'Gimme one more second...';
+    await timeout(1000);
     this.waitTask2Status = "OK, I'm done.";
-    console.log('waitTask2(remote) completed');
+    console.log('waitTask2(local) completed');
   });
 
   @action
   performWaitTask2() {
     let task = this.waitTask2;
-    task.perform();
+    let taskInstance = task.perform();
+    console.log('performWaitTask2(local) taskInstance', taskInstance);
   }
 
-  waitTask3 = restartableTask(async () => {
-    this.waitTask3Status = 'Gimme one second...';
-    await timeout(1000);
-    this.waitTask3Status = 'Gimme one more second...';
-    await timeout(1000);
+  waitTask3 = task(async () => {
+    this.waitTask3Status = 'Requesting from API...';
+    this.waitTask3Json = null;
+
+    const result = await fetch(this.remoteApi);
+    console.log('waitTask3(remote) result', result);
+    const json = await result.json();
+    this.waitTask3Json = JSON.stringify(json.items, undefined, 2);
     this.waitTask3Status = "OK, I'm done.";
-    console.log('waitTask3(local) completed');
+    console.log('waitTask3(remote) completed');
   });
 
   @action
   performWaitTask3() {
     let task = this.waitTask3;
-    let taskInstance = task.perform();
-    console.log('performWaitTask3(local) taskInstance', taskInstance);
+    task.perform();
   }
 
   waitTask4 = restartableTask(async () => {
     this.waitTask4Status = 'Requesting from API...';
+    this.waitTask4Json = null;
 
     const result = await fetch(this.remoteApi);
     console.log('waitTask4(remote) result', result);
-
+    const json = await result.json();
+    this.waitTask4Json = JSON.stringify(json.items, undefined, 2);
     this.waitTask4Status = "OK, I'm done.";
     console.log('waitTask4(remote) completed');
   });
@@ -131,13 +138,16 @@ export default class ConcurrencyComponent extends Component {
 
   waitTask5 = restartableTask(async () => {
     this.waitTask5Status = 'Requesting from API...';
+    this.waitTask5Json = null;
 
     try {
       const result = await fetch(this.remoteApi, {
         method: 'get',
         signal: this.signal,
       });
-      console.log('waitTask5 succeeded', result);
+      console.log('waitTask5(remote) succeeded', result);
+      const json = await result.json();
+      this.waitTask5Json = JSON.stringify(json.items, undefined, 2);
       this.waitTask5Status = 'OK, I succeeded!';
     } catch (e) {
       if (this.signal.aborted) {
@@ -179,7 +189,6 @@ export default class ConcurrencyComponent extends Component {
       });
       console.log('waitTask6 succeeded, result:', result);
       const json = await result.json();
-      console.log('json', json);
       this.waitTask6Json = JSON.stringify(json.items, undefined, 2);
       this.waitTask6Status = 'OK, I succeeded!';
     } catch (e) {
