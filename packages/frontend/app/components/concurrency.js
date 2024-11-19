@@ -152,15 +152,15 @@ export default class ConcurrencyComponent extends Component {
     } catch (e) {
       if (this.signal.aborted) {
         if (this.signal.reason) {
-          console.log(`waitTask5(remote) aborted with reason: ${this.signal.reason}`);
-          this.waitTask5Status = `I was aborted (${this.signal.reason}), so no payload.`;
+          console.log(`waitTask5(remote) canceled with reason: ${this.signal.reason}`);
+          this.waitTask5Status = `I was canceled (${this.signal.reason}), so no payload.`;
         } else {
-          console.warn('waitTask5(remote) aborted but no reason was given.');
-          this.waitTask5Status = 'I was aborted with no reason, so no payload.';
+          console.warn('waitTask5(remote) canceled but no reason was given.');
+          this.waitTask5Status = 'I was canceled with no reason, so no payload.';
         }
       } else {
         console.error('waitTask5(remote) failed due to unknown error', e);
-        this.waitTask5Status = "I was aborted, but I don't know why.";
+        this.waitTask5Status = "I was canceled, but I don't know why.";
       }
     } finally {
       console.log('waitTask5(remote) completed');
@@ -194,15 +194,15 @@ export default class ConcurrencyComponent extends Component {
     } catch (e) {
       if (this.signal.aborted) {
         if (this.signal.reason) {
-          console.log(`waitTask6(remote) aborted with reason: ${this.signal.reason}`);
-          this.waitTask6Status = 'I was aborted (${this.signal.reason}), so no payload.';
+          console.log(`waitTask6(remote) canceled with reason: ${this.signal.reason}`);
+          this.waitTask6Status = 'I was canceled (${this.signal.reason}), so no payload.';
         } else {
-          console.warn('waitTask6(remote) aborted but no reason was given.');
-          this.waitTask6Status = 'I was aborted with no reason, so no payload.';
+          console.warn('waitTask6(remote) canceled but no reason was given.');
+          this.waitTask6Status = 'I was canceled with no reason, so no payload.';
         }
       } else {
         console.error('waitTask6(remote) failed due to unknown error', e);
-        this.waitTask6Status = "I was aborted, but I don't know why.";
+        this.waitTask6Status = "I was canceled, but I don't know why.";
       }
     } finally {
       console.log('waitTask6(remote) completed');
@@ -239,15 +239,15 @@ export default class ConcurrencyComponent extends Component {
     } catch (e) {
       if (this.signal.aborted) {
         if (this.signal.reason) {
-          console.log(`waitTask7(remote) aborted with reason: ${this.signal.reason}`);
-          this.waitTask7Status = 'I was aborted (${this.signal.reason}), so no payload.';
+          console.log(`waitTask7(remote) canceled with reason: ${this.signal.reason}`);
+          this.waitTask7Status = 'I was canceled (${this.signal.reason}), so no payload.';
         } else {
-          console.warn('waitTask7(remote) aborted but no reason was given.');
-          this.waitTask7Status = 'I was aborted with no reason, so no payload.';
+          console.warn('waitTask7(remote) canceled but no reason was given.');
+          this.waitTask7Status = 'I was canceled with no reason, so no payload.';
         }
       } else {
         console.error('waitTask7(remote) failed due to unknown error', e);
-        this.waitTask7Status = "I was aborted, but I don't know why.";
+        this.waitTask7Status = "I was canceled, but I don't know why.";
       }
     } finally {
       console.log('waitTask7(remote) completed');
