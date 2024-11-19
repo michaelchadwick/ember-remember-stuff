@@ -1,0 +1,80 @@
+<div class="concurrency">
+  <h3>{{t "components.concurrency.head"}}</h3>
+
+  <div class="concurrency-type concurrency-count">
+    <h5>{{t "components.concurrency.countTask1NumRunning"}}: {{this.countTask1.numRunning}}</h5>
+    <h5>{{t "components.concurrency.countTask1Count"}}: {{this.countTask1Count}}</h5>
+
+    <button type="button" {{on "click" this.performCountTask1}}>{{t
+        "components.concurrency.performCountTask1"
+      }}</button>
+    {{#if this.countTask1.numRunning}}
+      <button type="button" {{on "click" this.cancelAllCountTask1Instances}}>{{t
+          "components.concurrency.cancelAll"
+        }}</button>
+    {{/if}}
+    {{#if this.countTask1MostRecentInstance.isRunning}}
+      <button type="button" {{on "click" this.cancelCountTask1MostRecentInstance}}>{{t
+          "components.concurrency.cancelMostRecent"
+        }}</button>
+    {{/if}}
+  </div>
+
+  <div class="concurrency-type concurrency-wait">
+    <button type="button" {{on "click" this.performWaitTask1}}>{{t
+        "components.concurrency.performWaitTask1"
+      }}</button>
+    <span>{{this.waitTask1Status}}</span>
+  </div>
+
+  <div class="concurrency-type concurrency-wait">
+    <button type="button" {{on "click" this.performWaitTask2}}>{{t
+        "components.concurrency.performWaitTask2"
+      }}</button>
+    <span>{{this.waitTask2Status}}</span>
+  </div>
+
+  <div class="concurrency-type concurrency-wait">
+    <button type="button" {{on "click" this.performWaitTask3}}>{{t
+        "components.concurrency.performWaitTask3"
+      }}</button>
+    <span>{{this.waitTask3Status}}</span>
+  </div>
+
+  <div class="concurrency-type concurrency-wait">
+    <button type="button" {{on "click" this.performWaitTask4}}>{{t
+        "components.concurrency.performWaitTask4"
+      }}</button>
+    <span>{{this.waitTask4Status}}</span>
+  </div>
+
+  <div class="concurrency-type concurrency-wait">
+    <button type="button" {{on "click" this.performWaitTask5}}>{{t
+        "components.concurrency.performWaitTask5"
+      }}</button>
+    <button type="button" {{on "click" this.cancelWaitTask5}}>{{t
+        "components.concurrency.cancelWaitTask5"
+      }}</button>
+    <span>{{this.waitTask5Status}}</span>
+  </div>
+
+  <div class="concurrency-type concurrency-wait">
+    <button type="button" {{on "click" this.performWaitTask6}}>{{t
+        "components.concurrency.performWaitTask6"
+      }}</button>
+    <span>{{this.waitTask6Status}}</span>
+    <div class="short-box">
+      <pre>{{this.waitTask6Json}}</pre>
+    </div>
+  </div>
+
+  <div class="concurrency-type concurrency-wait">
+    <button type="button" {{on "click" (perform this.performWaitTask7)}}>{{t
+        "components.concurrency.performWaitTask7"
+      }}</button>
+    <span>{{this.waitTask7Status}}</span>
+    <div class="short-box">
+      <pre>{{this.waitTask7Json}}</pre>
+    </div>
+  </div>
+</div>
