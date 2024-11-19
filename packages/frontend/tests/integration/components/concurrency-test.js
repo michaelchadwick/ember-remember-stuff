@@ -15,7 +15,7 @@ module('Integration | Component | concurrency', function (hooks) {
     assert
       .dom()
       .hasText(
-        'Ember-Concurrency (FE) Task1 Running Instances: 0 Task1 Count: 0 Perform Count Task 1 Perform Wait Task 1 (Task - Local) Perform Wait Task 2 (Task - Remote) Perform Wait Task 3 (RestartableTask - Local) Perform Wait Task 4 (RestartableTask - Remote) Perform Wait Task 5 (RestartableTask - Remote - With Cancel Button) Cancel Wait Task 5 Perform Wait Task 6 (RestartableTask - Remote - Self-Canceling) Perform Wait Task 7 (Task - Remote - Self-Canceling - No @action)',
+        'Ember-Concurrency (FE) Task1 Running Instances: 0 Task1 Count: 0 Perform Count Task 1 Local Wait Tasks WaitTask1 (Task) WaitTask2 (ReTask) Remote Wait Tasks WaitTask3 (Task) Perform Task Ready to request WaitTask4 (ReTask) Perform Task Ready to request WaitTask5 (ReTask) Perform Task Cancel Task Ready to request WaitTask6 (ReTask - Self-Cancel) Perform Task Ready to request WaitTask7 (Task - No @action) Perform Task Ready to request',
       );
   });
 });
