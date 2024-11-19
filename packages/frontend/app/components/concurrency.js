@@ -195,7 +195,7 @@ export default class ConcurrencyComponent extends Component {
       if (this.signal.aborted) {
         if (this.signal.reason) {
           console.log(`waitTask6(remote) canceled with reason: ${this.signal.reason}`);
-          this.waitTask6Status = 'I was canceled (${this.signal.reason}), so no payload.';
+          this.waitTask6Status = `I was canceled (${this.signal.reason}), so no payload.`;
         } else {
           console.warn('waitTask6(remote) canceled but no reason was given.');
           this.waitTask6Status = 'I was canceled with no reason, so no payload.';
@@ -240,7 +240,7 @@ export default class ConcurrencyComponent extends Component {
       if (this.signal.aborted) {
         if (this.signal.reason) {
           console.log(`waitTask7(remote) canceled with reason: ${this.signal.reason}`);
-          this.waitTask7Status = 'I was canceled (${this.signal.reason}), so no payload.';
+          this.waitTask7Status = `I was canceled (${this.signal.reason}), so no payload.`;
         } else {
           console.warn('waitTask7(remote) canceled but no reason was given.');
           this.waitTask7Status = 'I was canceled with no reason, so no payload.';
