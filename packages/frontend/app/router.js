@@ -21,4 +21,5 @@ Router.map(function () {
   this.route('debuggery');
 
   this.route('error', { path: '*path' });
+  this.route('upload');
 });

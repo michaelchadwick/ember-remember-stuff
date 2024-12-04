@@ -178,10 +178,14 @@ general:
   tryHarder: Esforzarse Más
   tuesday: Martes
   type: Tipo
+  uploadedFilename: Archivo subido
+  uploading: Subiendo...
+  uploadYourFile: Sube tu archivo
   url: URL
   user: Usuario
   users: Usuarios
   userRole: Función de Usuario
+  validFileTypes: .jpg, .jpeg, .png, .txt
   view: Vista
   weak: Débil
   wednesday: Miercoles
@@ -212,6 +216,7 @@ layout:
   footSource: Fuente
   footDocs: Docs
   footDebuggery: Debuggery
+  headFileUpload: Archivo Sube Prueba
   footTests: Pruebas
   footProd: Prod
   footVersions: "versiones de la aplicación"

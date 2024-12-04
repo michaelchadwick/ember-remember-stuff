@@ -178,10 +178,14 @@ general:
   tryHarder: Try Harder
   tuesday: Tuesday
   type: Type
+  uploadedFilename: Uploaded File
+  uploading: Uploading...
+  uploadYourFile: Upload your file
   url: URL
   user: User
   users: Users
   userRole: User Role
+  validFileTypes: .jpg, .jpeg, .png, .txt
   view: View
   weak: Weak
   wednesday: Wednesday
@@ -207,6 +211,7 @@ layout:
   headMusic: Music
   headUsers: Users
   headDebuggery: Debuggery
+  headFileUpload: File Upload Test
   footMenu: "external links"
   footAuthor: Author
   footSource: Source
