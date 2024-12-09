@@ -287,3 +287,10 @@ main {
     margin-top: 0;
   }
 }
+
+.simple-chart {
+  & > .icon {
+    height: 24px;
+    width: 24px;
+  }
+}
