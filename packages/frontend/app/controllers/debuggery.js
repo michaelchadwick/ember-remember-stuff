@@ -7,6 +7,21 @@ export default class DebuggeryController extends Controller {
   @tracked detailsGalleryExpanded = false;
   @service('local-storage') ls;
 
+  get donutData() {
+    return [
+      {
+        label: 'Super Cool',
+        data: 100,
+        description: 'Lorem Ipsum',
+      },
+      {
+        label: 'Very Cool',
+        data: 200,
+        description: 'Long text description here.',
+      },
+    ];
+  }
+
   @action
   detailsGalleryToggle() {
     if (this.ls.get('detailsGalleryExpanded')) {

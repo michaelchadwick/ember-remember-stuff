@@ -18,6 +18,8 @@ components:
   detailsGallery:
     head: DetailsGallery
     summary: Galería de Detalles
+  emberSimpleCharts:
+    head: EmberSimpleCharts (CMN)
   mover:
     alwaysMoving: ¡Esté siempre en movimiento!
     clickMeOff: ¡Haz clic palanca para dejar de moverte!

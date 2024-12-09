@@ -1,27 +1,45 @@
 <h2>{{t "layout.headDebuggery"}}</h2>
 
-<Concurrency />
+<div class="component-display">
+  <h3>{{t "components.emberSimpleCharts.head"}}</h3>
+  <SimpleChart @name="donut" @isIcon={{false}} @data={{this.donutData}} />
+  {{!-- {{simple-chart name="donut" data=this.donutData}} --}}
+</div>
 
-<DetailsGallery
-  @title="Various Test Components"
-  @ghUserData={{@model.ghUser}}
-  @detailsGalleryExpanded={{@model.detailsGalleryExpanded}}
-  @onDetailsGalleryToggle={{this.detailsGalleryToggle}}
-/>
+<div class="component-display">
+  <Concurrency />
+</div>
+
+<div class="component-display">
+  <DetailsGallery
+    @title="Various Test Components"
+    @ghUserData={{@model.ghUser}}
+    @detailsGalleryExpanded={{@model.detailsGalleryExpanded}}
+    @onDetailsGalleryToggle={{this.detailsGalleryToggle}}
+  />
+</div>
 
 {{#if @model.dave}}
-  <h3>{{t "components.debuggery.daveApi.head"}}</h3>
-  <ul>
-    {{#each-in @model.dave.config as |key val|}}
-      <li>{{key}}: {{val}}</li>
-    {{/each-in}}
-  </ul>
+  <div class="component-display">
+    <h3>{{t "components.debuggery.daveApi.head"}}</h3>
+    <ul>
+      {{#each-in @model.dave.config as |key val|}}
+        <li>{{key}}: {{val}}</li>
+      {{/each-in}}
+    </ul>
+  </div>
 {{/if}}
 
-<PasswordValidator />
+<div class="component-display">
+  <PasswordValidator />
+</div>
 
-<BoxGallery />
+<div class="component-display">
+  <BoxGallery />
+</div>
 
-<RandomText @paragraphs="5" @sentences="5" />
+<div class="component-display">
+  <RandomText @paragraphs="5" @sentences="5" />
+</div>
 
 <LinkTo @route="upload">{{t "layout.headFileUpload"}}</LinkTo>

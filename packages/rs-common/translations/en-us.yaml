@@ -18,6 +18,8 @@ components:
   detailsGallery:
     head: DetailsGallery (CMN)
     summary: Details Gallery
+  emberSimpleCharts:
+    head: EmberSimpleCharts (CMN)
   mover:
     alwaysMoving: Always be moving!
     clickMeOff: Click toggle to stop moving!

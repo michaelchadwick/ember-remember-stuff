@@ -395,6 +395,9 @@ importers:
       ember-simple-auth:
         specifier: ^6.0.0
         version: 6.1.0(@babel/core@7.26.0)(@ember/test-helpers@3.3.1(@babel/core@7.26.0)(ember-source@5.9.0(@babel/core@7.26.0)(@glimmer/component@1.1.2(@babel/core@7.26.0))(rsvp@4.8.5)(webpack@5.97.1))(webpack@5.97.1))(eslint@8.57.1)
+      ember-simple-charts:
+        specifier: ^12.0.0
+        version: 12.0.0(@babel/core@7.26.0)(@glimmer/tracking@1.1.2)(ember-source@5.9.0(@babel/core@7.26.0)(@glimmer/component@1.1.2(@babel/core@7.26.0))(rsvp@4.8.5)(webpack@5.97.1))(webpack@5.97.1)
       ember-test-selectors:
         specifier: ^7.0.0
         version: 7.0.0
@@ -498,9 +501,6 @@ importers:
       ember-resolver:
         specifier: ^11.0.1
         version: 11.0.1(ember-source@5.9.0(@babel/core@7.26.0)(@glimmer/component@1.1.2(@babel/core@7.26.0))(rsvp@4.8.5)(webpack@5.97.1))
-      ember-simple-charts:
-        specifier: ^12.0.0
-        version: 12.0.0(@babel/core@7.26.0)(@glimmer/tracking@1.1.2)(ember-source@5.9.0(@babel/core@7.26.0)(@glimmer/component@1.1.2(@babel/core@7.26.0))(rsvp@4.8.5)(webpack@5.97.1))(webpack@5.97.1)
       ember-source:
         specifier: ~5.9.0
         version: 5.9.0(@babel/core@7.26.0)(@glimmer/component@1.1.2(@babel/core@7.26.0))(rsvp@4.8.5)(webpack@5.97.1)
