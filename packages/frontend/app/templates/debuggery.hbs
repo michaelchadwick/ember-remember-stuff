@@ -1,5 +1,11 @@
 <h2>{{t "layout.headDebuggery"}}</h2>
 
+<ul>
+  <li>
+    <LinkTo @route="upload">{{t "layout.headFileUpload"}}</LinkTo>
+  </li>
+</ul>
+
 <div class="component-display">
   <h3>{{t "components.emberSimpleCharts.head"}}</h3>
   <SimpleChart @name="donut" @isIcon={{false}} @data={{this.donutData}} />
@@ -41,5 +47,3 @@
 <div class="component-display">
   <RandomText @paragraphs="5" @sentences="5" />
 </div>
-
-<LinkTo @route="upload">{{t "layout.headFileUpload"}}</LinkTo>
