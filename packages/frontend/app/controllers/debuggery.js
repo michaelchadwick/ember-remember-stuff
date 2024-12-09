@@ -15,8 +15,18 @@ export default class DebuggeryController extends Controller {
         description: 'Lorem Ipsum',
       },
       {
-        label: 'Very Cool',
+        label: 'Very Awesome',
         data: 200,
+        description: 'Long text description here.',
+      },
+      {
+        label: 'Moderately Fine',
+        data: 350,
+        description: 'Long text description here.',
+      },
+      {
+        label: 'Kinda Neat',
+        data: 10,
         description: 'Long text description here.',
       },
     ];
