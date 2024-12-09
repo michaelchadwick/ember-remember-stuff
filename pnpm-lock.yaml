@@ -14600,7 +14600,7 @@ snapshots:
       graceful-fs: 4.2.11
       iferr: 0.1.5
       imurmurhash: 0.1.4
-      readable-stream: 1.0.34
+      readable-stream: 2.3.8
 
   fs.realpath@1.0.0: {}
 
