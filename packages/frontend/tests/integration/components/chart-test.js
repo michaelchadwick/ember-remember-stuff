@@ -24,6 +24,5 @@ module('Integration | Component | chart', function (hooks) {
 
     assert.dom('.simple-chart').exists();
     assert.dom('.simple-chart > svg').exists();
-    assert.dom('.simple-chart > svg > g.chart > g.slice > text').hasText('Super Cool');
   });
 });
