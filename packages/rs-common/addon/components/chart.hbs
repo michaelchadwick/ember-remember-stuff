@@ -1,0 +1,16 @@
+<div class="chart{{unless @isIcon ' not-icon'}}" data-test-chart ...attributes>
+  <SimpleChart
+    @name={{@name}}
+    @isIcon={{@isIcon}}
+    @data={{this.donutData}}
+    @hover={{perform this.donutHover}}
+    @leave={{perform this.donutHover}}
+    as |chart|
+  >
+    {{#if this.tooltipContent}}
+      <chart.tooltip @title={{this.tooltipTitle}}>
+        {{this.tooltipContent}}
+      </chart.tooltip>
+    {{/if}}
+  </SimpleChart>
+</div>

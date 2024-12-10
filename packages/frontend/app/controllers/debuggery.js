@@ -4,31 +4,9 @@ import { action } from '@ember/object';
 import { service } from '@ember/service';
 
 export default class DebuggeryController extends Controller {
-  @tracked detailsGalleryExpanded = false;
   @service('local-storage') ls;
 
-  donutData = [
-    {
-      label: 'Super Cool',
-      data: 100,
-      description: 'Lorem Ipsum',
-    },
-    {
-      label: 'Very Awesome',
-      data: 200,
-      description: 'Long text description here.',
-    },
-    {
-      label: 'Moderately Fine',
-      data: 350,
-      description: 'Long text description here.',
-    },
-    {
-      label: 'Kinda Neat',
-      data: 10,
-      description: 'Long text description here.',
-    },
-  ];
+  @tracked detailsGalleryExpanded = false;
 
   @action
   detailsGalleryToggle() {
