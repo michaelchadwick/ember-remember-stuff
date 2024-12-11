@@ -7,10 +7,31 @@ export default class RsConfigService extends Service {
   _configPromise = null;
 
   async getConfig() {
-    let config;
+    let config = {
+      body: {
+        config: {
+          type: 'form',
+          locale: 'en',
+          apiVersion: 'v0.00',
+          appVersion: '0.0.1',
+          maxUploadSize: 10,
+          searchEnabled: false,
+          trackingEnabled: false,
+          userSearchType: 'prod',
+          awesomeLevel: 10,
+          lameLevel: 10,
+        },
+      },
+      contentType: null,
+      customType: 'server',
+      error: false,
+      message: '',
+      status: 200,
+      statusText: 'OK',
+    };
 
-    if (!this._configPromise) {
-      if (ENV.environment != 'prod') {
+    if (ENV.environment != 'prod') {
+      if (!this._configPromise) {
         this._configPromise = this.fetch.getJsonFromApiHost('?config');
 
         try {
@@ -18,29 +39,6 @@ export default class RsConfigService extends Service {
         } catch (e) {
           console.error('config not received', e);
         }
-      } else {
-        config = {
-          body: {
-            config: {
-              type: 'form',
-              locale: 'en',
-              apiVersion: 'v0.00',
-              appVersion: '0.0.1',
-              maxUploadSize: 10,
-              searchEnabled: false,
-              trackingEnabled: false,
-              userSearchType: 'prod',
-              awesomeLevel: 10,
-              lameLevel: 10,
-            },
-          },
-          contentType: null,
-          customType: 'server',
-          error: false,
-          message: '',
-          status: 200,
-          statusText: 'OK',
-        };
       }
     }
 
