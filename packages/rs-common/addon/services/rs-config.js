@@ -1,4 +1,5 @@
 import Service, { service } from '@ember/service';
+import ENV from 'frontend/config/environment';
 
 export default class RsConfigService extends Service {
   @service fetch;
@@ -6,17 +7,41 @@ export default class RsConfigService extends Service {
   _configPromise = null;
 
   async getConfig() {
-    if (!this._configPromise) {
-      // this._configPromise = this.fetch.getJsonFromApiHost('/application/config');
-      this._configPromise = this.fetch.getJsonFromApiHost('?config');
-    }
-
     let config;
 
-    try {
-      config = await this._configPromise;
-    } catch (e) {
-      console.error('config not received', e);
+    if (!this._configPromise) {
+      if (ENV.environment != 'prod') {
+        this._configPromise = this.fetch.getJsonFromApiHost('?config');
+
+        try {
+          config = await this._configPromise;
+        } catch (e) {
+          console.error('config not received', e);
+        }
+      } else {
+        config = {
+          body: {
+            config: {
+              type: 'form',
+              locale: 'en',
+              apiVersion: 'v0.00',
+              appVersion: '0.0.1',
+              maxUploadSize: 10,
+              searchEnabled: false,
+              trackingEnabled: false,
+              userSearchType: 'prod',
+              awesomeLevel: 10,
+              lameLevel: 10,
+            },
+          },
+          contentType: null,
+          customType: 'server',
+          error: false,
+          message: '',
+          status: 200,
+          statusText: 'OK',
+        };
+      }
     }
 
     return config;
