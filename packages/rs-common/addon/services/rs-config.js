@@ -30,9 +30,7 @@ export default class RsConfigService extends Service {
       statusText: 'OK',
     };
 
-    console.log('ENV.environment', ENV.environment);
-
-    if (ENV.environment != 'prod') {
+    if (ENV.environment != 'production') {
       if (!this._configPromise) {
         this._configPromise = this.fetch.getJsonFromApiHost('?config');
 
