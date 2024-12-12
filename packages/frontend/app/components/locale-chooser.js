@@ -61,6 +61,16 @@ export default class LocaleChooserComponent extends Component {
   }
 
   @action
+  async toggleMenu() {
+    this.isOpen = !this.isOpen;
+
+    if (this.isOpen) {
+      await this.focusFirstLink.perform();
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }
+  @action
   keyUp(event) {
     const { key, target } = event;
     event.preventDefault();
@@ -77,16 +87,6 @@ export default class LocaleChooserComponent extends Component {
       case 'ArrowLeft':
         this.close();
         break;
-    }
-  }
-  @action
-  async toggleMenu() {
-    this.isOpen = !this.isOpen;
-
-    if (this.isOpen) {
-      await this.focusFirstLink.perform();
-    } else {
-      document.body.classList.remove('no-scroll');
     }
   }
   @action
