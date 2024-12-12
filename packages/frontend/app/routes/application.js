@@ -63,6 +63,9 @@ export default class AuthenticatedRoute extends Route {
         break;
       }
     }
+
+    window.addEventListener('click', () => console.log(document.activeElement));
+    window.addEventListener('keyup', () => console.log(document.activeElement));
   }
 
   async activate() {
