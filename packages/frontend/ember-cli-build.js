@@ -5,29 +5,26 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const { Webpack } = require('@embroider/webpack');
 // const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
 // const TerserPlugin = require('terser-webpack-plugin');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = async function (defaults) {
   const env = EmberApp.env() || 'development';
   const isTestBuild = env === 'test';
 
   const config = {
+    // fingerprint: {
+    //   extensions: broccoliAssetRevDefaults.extensions.concat(['webmanifest', 'svg']),
+    // },
+    // emberData: {
+    //   compatWith: '5.2',
+    // },
+
     hinting: isTestBuild,
     babel: {
       plugins: [
         require.resolve('ember-concurrency/async-arrow-task-transform'),
         ...require('ember-cli-code-coverage').buildBabelPlugin(),
       ],
-    },
-    sassOptions: {
-      extension: 'scss',
-      silenceDeprecations: ['mixed-decls'],
-    },
-    '@embroider/macros': {
-      setConfig: {
-        'ember-qunit': {
-          theme: 'ember',
-        },
-      },
     },
     'ember-cli-image-transformer': {
       images: [
@@ -45,8 +42,32 @@ module.exports = async function (defaults) {
         },
       ],
     },
+    'ember-cli-qunit': {
+      useLintTree: false,
+    },
     autoImport: {
+      // insertScriptsAt: 'auto-import-scripts',
       watchDependencies: ['rs-common'],
+    },
+    // 'ember-fetch': {
+    //   preferNative: true,
+    // },
+    // 'ember-simple-auth': {
+    //   useSessionSetupMethod: true, //can be removed in ESA v5.x
+    // },
+    // minifyCSS: {
+    //   enabled: false,
+    // },
+    sassOptions: {
+      extension: 'scss',
+      silenceDeprecations: ['mixed-decls'],
+    },
+    '@embroider/macros': {
+      setConfig: {
+        'ember-qunit': {
+          theme: 'ember',
+        },
+      },
     },
   };
 
