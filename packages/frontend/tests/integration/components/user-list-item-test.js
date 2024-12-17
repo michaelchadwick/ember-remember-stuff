@@ -25,25 +25,13 @@ module('Integration | Component | user-list-item', function (hooks) {
     this.kloutLevel = 3;
     this.rowLevel = 2;
 
-    await render(
-      hbs`
-      <UserListItem
-        @user={{this.user}}
-        @showLevels={{false}}
-      />`,
-    );
+    await render(hbs`<UserListItem @user={{this.user}} @showLevels={{false}} />`);
 
     assert
       .dom()
       .hasText('1 Mike M mmadness@chaosville.net', 'shows id, name, email, and no levels');
 
-    await render(
-      hbs`
-      <UserListItem
-        @user={{this.user}}
-        @showLevels={{true}}
-      />`,
-    );
+    await render(hbs`<UserListItem @user={{this.user}} @showLevels={{true}} />`);
 
     assert
       .dom()
@@ -53,13 +41,12 @@ module('Integration | Component | user-list-item', function (hooks) {
       );
 
     await render(
-      hbs`
-      <UserListItem
-        @user={{this.user}}
-        @kloutLevel={{this.kloutLevel}}
-        @rowLevel={{this.rowLevel}}
-        @showLevels={{true}}
-      />`,
+      hbs`<UserListItem
+  @user={{this.user}}
+  @kloutLevel={{this.kloutLevel}}
+  @rowLevel={{this.rowLevel}}
+  @showLevels={{true}}
+/>`,
     );
 
     assert
