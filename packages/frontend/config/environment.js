@@ -157,7 +157,9 @@ module.exports = function (environment) {
       break;
     }
     default: {
-      console.log('ENV: App built for unknown environment...');
+      // this seems to run before it does
+      // the actual build env, so ignore
+      // console.log('ENV: App built for unknown environment...');
       break;
     }
   }
