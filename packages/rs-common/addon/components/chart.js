@@ -1,5 +1,6 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 import { restartableTask, timeout } from 'ember-concurrency';
 
@@ -74,4 +75,9 @@ export default class ChartComponent extends Component {
     this.tooltipTitle = htmlSafe(obj.title);
     this.tooltipContent = htmlSafe(obj.description);
   });
+
+  @action
+  logRootElement(element) {
+    console.log('ChartComponent root element', element);
+  }
 }

@@ -1,4 +1,9 @@
-<div class="chart{{unless @isIcon ' not-icon'}}" data-test-chart ...attributes>
+<div
+  class="chart{{unless @isIcon ' not-icon'}}"
+  {{get-element this.logRootElement}}
+  data-test-chart
+  ...attributes
+>
   <SimpleChart
     @name={{@name}}
     @isIcon={{@isIcon}}

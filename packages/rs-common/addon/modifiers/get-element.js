@@ -4,6 +4,8 @@ export default modifier(function getElement(element, [callback]) {
   if (typeof callback === 'function') {
     callback(element);
   } else {
-    throw new Error('get-element modifier expects a callback as the first positional argument');
+    throw new Error(
+      `get-element modifier expects a callback as the first positional argument, but got: ${typeof callback}`,
+    );
   }
 });
