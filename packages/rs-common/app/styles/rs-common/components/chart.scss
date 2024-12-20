@@ -1,0 +1,10 @@
+.chart {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+
+  &.not-icon {
+    height: 25vh;
+    width: 25vw;
+  }
+}
