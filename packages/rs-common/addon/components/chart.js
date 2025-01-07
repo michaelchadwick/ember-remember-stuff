@@ -19,6 +19,8 @@ export default class ChartComponent extends Component {
             id: 10,
           },
           percentage: '18',
+          textBackground: 'rgb(195, 238, 255)',
+          textForeground: 'rgb(6, 91, 125)',
           title: 'Super Cool Things',
         },
         {
@@ -29,6 +31,8 @@ export default class ChartComponent extends Component {
             id: 20,
           },
           percentage: '28',
+          textBackground: 'rgb(195, 255, 200)',
+          textForeground: 'rgb(6, 125, 16)',
           title: 'Moderately Fine Things',
         },
         {
@@ -39,6 +43,8 @@ export default class ChartComponent extends Component {
             id: 30,
           },
           percentage: '22',
+          textBackground: 'rgb(255, 231, 195)',
+          textForeground: 'rgb(125, 79, 6)',
           title: 'Very Awesome Things',
         },
         {
@@ -49,6 +55,8 @@ export default class ChartComponent extends Component {
             id: 40,
           },
           percentage: '20',
+          textBackground: 'rgb(255, 195, 195)',
+          textForeground: 'rgb(125, 6, 6)',
           title: 'Sufficient Things',
         },
         {
@@ -59,6 +67,8 @@ export default class ChartComponent extends Component {
             id: 50,
           },
           percentage: '12',
+          textBackground: 'rgb(247, 195, 255)',
+          textForeground: 'rgb(117, 6, 125)',
           title: 'Kinda Neat Things',
         },
       ]
