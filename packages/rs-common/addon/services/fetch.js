@@ -3,17 +3,18 @@ import queryString from 'query-string';
 import { waitForPromise } from '@ember/test-waiters';
 
 export default class Fetch extends Service {
-  @service session;
+  // @service session;
   @service rsConfig;
 
   get authHeaders() {
     const headers = {};
-    if (this.session && this.session.isAuthenticated) {
-      const { jwt } = this.session.data.authenticated;
-      if (jwt) {
-        headers['X-JWT-Authorization'] = `Token ${jwt}`;
-      }
-    }
+
+    // if (this.session && this.session.isAuthenticated) {
+    //   const { jwt } = this.session.data.authenticated;
+    //   if (jwt) {
+    //     headers['X-JWT-Authorization'] = `Token ${jwt}`;
+    //   }
+    // }
 
     return headers;
   }

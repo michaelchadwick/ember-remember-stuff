@@ -8,10 +8,10 @@ import ENV from 'frontend/config/environment';
 
 export default class ApplicationController extends Controller {
   @service apiVersion;
-  @service currentUser;
   @service intl;
-  @service session;
   @service rsConfig;
+  // @service session;
+  // @service currentUser;
 
   @tracked currentlyLoading = false;
   @tracked errors = [];

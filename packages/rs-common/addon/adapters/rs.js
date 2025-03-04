@@ -5,18 +5,20 @@ import { camelize } from '@ember/string';
 
 export default class RsAdapter extends JSONAPIAdapter {
   @service rsConfig;
-  @service session;
+  // @service session;
+
   coalesceFindRequests = true;
   sortQueryParams = false;
 
   get headers() {
     const headers = {};
-    if (this.session?.isAuthenticated) {
-      const { jwt } = this.session.data.authenticated;
-      if (jwt) {
-        headers['X-JWT-Authorization'] = `Token ${jwt}`;
-      }
-    }
+
+    // if (this.session?.isAuthenticated) {
+    //   const { jwt } = this.session.data.authenticated;
+    //   if (jwt) {
+    //     headers['X-JWT-Authorization'] = `Token ${jwt}`;
+    //   }
+    // }
 
     return headers;
   }
