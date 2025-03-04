@@ -15,11 +15,6 @@ module.exports = async function (defaults) {
     // fingerprint: {
     //   extensions: broccoliAssetRevDefaults.extensions.concat(['webmanifest', 'svg']),
     // },
-    emberData: {
-      deprecations: {
-        DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
-      },
-    },
 
     hinting: isTestBuild,
     babel: {
@@ -48,6 +43,7 @@ module.exports = async function (defaults) {
       useLintTree: false,
     },
     autoImport: {
+      // adding insertScriptsAt breaks things for this app -_-
       // insertScriptsAt: 'auto-import-scripts',
       watchDependencies: ['rs-common'],
     },
@@ -77,7 +73,10 @@ module.exports = async function (defaults) {
 
   const { setConfig } = await import('@warp-drive/build-config');
   setConfig(app, __dirname, {
-    ___legacy_support: true,
+    compatWith: '5.2',
+    deprecations: {
+      DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
+    },
   });
 
   // const embroiderOptions = {
