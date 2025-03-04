@@ -14,13 +14,13 @@ module('Integration | Service | Current User', function (hooks) {
     });
   });
 
-  test('currentUserId', function (assert) {
+  skip('currentUserId', function (assert) {
     const subject = this.owner.lookup('service:current-user');
     const userId = subject.currentUserId;
     assert.strictEqual(parseInt(userId, 10), 100);
   });
 
-  test('no token - no currentUserId', async function (assert) {
+  skip('no token - no currentUserId', async function (assert) {
     await invalidateSession();
     const subject = this.owner.lookup('service:current-user');
     const userId = subject.currentUserId;

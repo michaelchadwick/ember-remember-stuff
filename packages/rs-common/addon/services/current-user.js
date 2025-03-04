@@ -5,22 +5,23 @@ import jwtDecode from 'rs-common/utils/jwt-decode';
 
 export default class CurrentUserService extends Service {
   @service store;
-  @service session;
+  // @service session;
+
   _userPromise = null;
 
-  get currentUserId() {
-    if (
-      !this.session ||
-      !this.session.data ||
-      !this.session.data.authenticated ||
-      !this.session.data.authenticated.jwt
-    ) {
-      return null;
-    }
-    const obj = jwtDecode(this.session.data.authenticated.jwt);
+  // get currentUserId() {
+  //   if (
+  //     !this.session ||
+  //     !this.session.data ||
+  //     !this.session.data.authenticated ||
+  //     !this.session.data.authenticated.jwt
+  //   ) {
+  //     return null;
+  //   }
+  //   const obj = jwtDecode(this.session.data.authenticated.jwt);
 
-    return obj.user_id;
-  }
+  //   return obj.user_id;
+  // }
 
   async getModel() {
     const currentUserId = this.currentUserId;

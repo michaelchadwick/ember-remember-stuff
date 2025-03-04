@@ -4,11 +4,11 @@ import { tracked } from '@glimmer/tracking';
 import ENV from 'frontend/config/environment';
 
 export default class AuthenticatedRoute extends Route {
-  @service currentUser;
   @service headData;
   @service intl;
   @service router;
-  @service session;
+  // @service currentUser;
+  // @service session;
 
   @tracked appEnv = ENV.environment;
 
@@ -66,8 +66,10 @@ export default class AuthenticatedRoute extends Route {
   }
 
   async activate() {
-    if (this.currentUser.currentUserId) {
-      console.log('activate(currentUserId)', this.currentUser.currentUserId);
-    }
+    console.log('AuthenticatedRoute activate()');
+
+    // if (this.currentUser.currentUserId) {
+    //   console.log('activate(currentUserId)', this.currentUser.currentUserId);
+    // }
   }
 }
