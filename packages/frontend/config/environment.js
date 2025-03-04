@@ -128,6 +128,11 @@ module.exports = function (environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.flashMessageDefaults.timeout = 100;
+    ENV.flashMessageDefaults.extendedTimeout = 100;
+    ENV.serverVariables.defaults['api-name-space'] = 'api';
+    ENV.serverVariables.defaults['api-host'] = '';
+
     ENV.APP.autoboot = false;
   }
 
