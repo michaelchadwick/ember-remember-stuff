@@ -16,6 +16,11 @@ module.exports = async function (defaults) {
     //   extensions: broccoliAssetRevDefaults.extensions.concat(['webmanifest', 'svg']),
     // },
 
+    emberData: {
+      deprecations: {
+        DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
+      },
+    },
     hinting: isTestBuild,
     babel: {
       plugins: [
@@ -73,10 +78,11 @@ module.exports = async function (defaults) {
 
   const { setConfig } = await import('@warp-drive/build-config');
   setConfig(app, __dirname, {
-    compatWith: '5.2',
-    deprecations: {
-      DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
-    },
+    // compatWith: '5.2',
+    // deprecations: {
+    //   DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
+    // },
+    ___legacy_support: true,
   });
 
   const embroiderOptions = {
