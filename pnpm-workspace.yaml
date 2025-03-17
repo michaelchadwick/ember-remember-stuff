@@ -1,3 +1,9 @@
 packages:
-  - 'packages/frontend'
-  - 'packages/rs-common'
+  - packages/frontend
+  - packages/rs-common
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@percy/core'
+  - core-js
+  - fsevents
+  - sharp
