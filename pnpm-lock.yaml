@@ -317,9 +317,6 @@ importers:
       '@babel/core':
         specifier: ^7.26.0
         version: 7.26.10(supports-color@8.1.1)
-      '@ember/render-modifiers':
-        specifier: ^3.0.0
-        version: 3.0.0(ember-source@6.0.1(@glimmer/component@1.1.2(@babel/core@7.26.10))(rsvp@4.8.5)(webpack@5.98.0))
       '@ember/string':
         specifier: ^4.0.0
         version: 4.0.1
@@ -1324,16 +1321,6 @@ packages:
   '@ember/optional-features@2.2.0':
     resolution: {integrity: sha512-a1OQ+w9vDvMXd9BNA9r779yr8MAPguGaMGbIeTMPWACeWBdD6bACBB5iKE3gNyrJAYKMq2wab6BKmRFS3Qw3hw==}
     engines: {node: 10.* || 12.* || >= 14}
-
-  '@ember/render-modifiers@3.0.0':
-    resolution: {integrity: sha512-gJztS8dI7Jt8ohFQptEDJAgpl9DG84IpqwQoR1JDpVIBy2uLbf8KFD6S3h3LfyMsgJce6G38cOvyQv6BDgcnsA==}
-    engines: {node: '>= 18'}
-    peerDependencies:
-      '@glint/template': ^1.0.2
-      ember-source: '>= 4.0.0'
-    peerDependenciesMeta:
-      '@glint/template':
-        optional: true
 
   '@ember/string@4.0.1':
     resolution: {integrity: sha512-VWeng8BSWrIsdPfffOQt/bKwNKJL7+37gPFh/6iZZ9bke+S83kKqkS30poo4bTGfRcMnvAE0ie7txom+iDu81Q==}
@@ -9177,16 +9164,6 @@ snapshots:
       inquirer: 7.3.3
       mkdirp: 1.0.4
       silent-error: 1.1.1
-    transitivePeerDependencies:
-      - supports-color
-
-  '@ember/render-modifiers@3.0.0(ember-source@6.0.1(@glimmer/component@1.1.2(@babel/core@7.26.10))(rsvp@4.8.5)(webpack@5.98.0))':
-    dependencies:
-      '@babel/core': 7.26.10(supports-color@8.1.1)
-      '@embroider/macros': 1.16.11
-      ember-cli-babel: 8.2.0(@babel/core@7.26.10)
-      ember-modifier-manager-polyfill: 1.2.0(@babel/core@7.26.10)
-      ember-source: 6.0.1(@glimmer/component@1.1.2(@babel/core@7.26.10))(rsvp@4.8.5)(webpack@5.98.0)
     transitivePeerDependencies:
       - supports-color
 
