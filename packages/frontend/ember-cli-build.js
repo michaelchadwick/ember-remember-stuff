@@ -52,9 +52,6 @@ module.exports = async function (defaults) {
       // insertScriptsAt: 'auto-import-scripts',
       watchDependencies: ['rs-common'],
     },
-    // 'ember-fetch': {
-    //   preferNative: true,
-    // },
     // 'ember-simple-auth': {
     //   useSessionSetupMethod: true, //can be removed in ESA v5.x
     // },

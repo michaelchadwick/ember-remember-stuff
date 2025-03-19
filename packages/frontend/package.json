@@ -81,7 +81,6 @@
     "ember-concurrency": "^4.0.2",
     "ember-data": "5.3.11",
     "ember-error-route": "^0.2.0",
-    "ember-fetch": "^8.1.2",
     "ember-keyboard": "^9.0.1",
     "ember-load-initializers": "^2.1.2",
     "ember-mirage": "^0.3.1",
