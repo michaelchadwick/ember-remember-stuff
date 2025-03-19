@@ -73,7 +73,10 @@ export default class MessagesComponent extends Component {
   @action
   displayDebugMessage() {
     if (ENV.environment != 'production') {
-      console.log('Hello local developer! You clicked on the messages container!');
+      console.log(
+        'Hello local developer! You clicked on the messages container!',
+        this.messagesContainer,
+      );
     }
   }
 
