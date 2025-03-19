@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { DateTime } from 'luxon';
+import { modifier } from 'ember-modifier';
 import ENV from 'frontend/config/environment';
 
 export default class MessagesComponent extends Component {
@@ -45,6 +46,10 @@ export default class MessagesComponent extends Component {
   ];
   @tracked messagesContainer;
 
+  getMessagesContainer = modifier((element) => {
+    this.messagesContainer = element;
+  });
+
   defaultDateTimeFormat = {
     month: '2-digit',
     day: '2-digit',
@@ -73,7 +78,10 @@ export default class MessagesComponent extends Component {
   @action
   displayDebugMessage() {
     if (ENV.environment != 'production') {
-      console.log('Hello local developer! You clicked on the messages container!');
+      console.log(
+        'Hello local developer! You clicked on the messages container!',
+        this.messagesContainer,
+      );
     }
   }
 
