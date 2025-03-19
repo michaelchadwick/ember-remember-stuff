@@ -1,9 +1,8 @@
 <div
-  {{! template-lint-disable no-at-ember-render-modifiers }}
-  {{did-insert (set this "messagesContainer")}}
   class="messages"
   {{! template-lint-disable no-invalid-interactive }}
   {{on "click" this.displayDebugMessage}}
+  {{this.getMessagesContainer this}}
   data-test-messages
 >
   {{#each this.messages as |message index|}}
