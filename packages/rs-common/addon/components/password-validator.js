@@ -1,10 +1,11 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
+import { cached, tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 import { isEmpty } from '@ember/utils';
 import { dropTask, timeout } from 'ember-concurrency';
 import { validatable, Length, NotBlank } from 'rs-common/decorators/validation';
+import { TrackedAsyncData } from 'ember-async-data';
 
 @validatable
 export default class PasswordValidatorComponent extends Component {
@@ -25,6 +26,15 @@ export default class PasswordValidatorComponent extends Component {
     const password = isEmpty(this.password) ? '' : this.password;
     const obj = zxcvbn(password);
     this.passwordStrengthScore = obj.score;
+  }
+
+  @cached
+  get hasErrorForPasswordData() {
+    return new TrackedAsyncData(this.hasErrorFor('password'));
+  }
+
+  get hasErrorForPassword() {
+    return this.hasErrorForPasswordData.isResolved ? this.hasErrorForPasswordData.value : false;
   }
 
   save = dropTask(async () => {
