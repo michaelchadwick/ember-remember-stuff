@@ -31,7 +31,7 @@ if (typeof Testem !== 'undefined') {
   });
 } else if (typeof QUnit !== 'undefined') {
   QUnit.done(async function (details) {
-    console.log(
+    console.info(
       'Total: ' +
         details.total +
         ' Failed: ' +

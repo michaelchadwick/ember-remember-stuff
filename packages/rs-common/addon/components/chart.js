@@ -88,6 +88,6 @@ export default class ChartComponent extends Component {
 
   @action
   logRootElement(element) {
-    console.log('ChartComponent root element', element);
+    console.info('ChartComponent root element', element);
   }
 }

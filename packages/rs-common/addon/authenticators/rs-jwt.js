@@ -10,7 +10,6 @@ export default class RsJWT extends Base {
   #tokenExpirationTimeout = null;
 
   async authenticate(credentials, headers) {
-    console.log('RsJWT authentication', credentials, headers);
     let jwt;
     if ('jwt' in credentials) {
       jwt = credentials.jwt;
@@ -65,7 +64,6 @@ export default class RsJWT extends Base {
   }
 
   async loginWithCredentials(data, loginHeaders) {
-    console.log('RsJWT::loginWithCredentials', data, loginHeaders);
     const host = '';
     const response = await fetch(`${host}/auth/login`, {
       method: 'POST',

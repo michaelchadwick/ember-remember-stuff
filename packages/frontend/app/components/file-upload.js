@@ -28,8 +28,9 @@ export default class FileUploadComponent extends Component {
       try {
         await this.simulateFileSave(file);
         this.fileName = file.name;
-        console.log('File fake saved:', file);
+        console.info('File fake saved:', file);
       } catch (err) {
+        console.error('File upload error', err);
         this.error = 'An error occurred while uploading the file.';
       } finally {
         this.isLoading = false; // Hide loading spinner after processing
@@ -42,7 +43,7 @@ export default class FileUploadComponent extends Component {
 
   async simulateFileSave(file) {
     // Simulates a delay for file saving (e.g., upload to server or temporary storage)
-    console.log(`fake saving '${file.name}' for 2 seconds...`);
+    console.info(`fake saving '${file.name}' for 2 seconds...`);
     return new Promise((resolve) => setTimeout(resolve, 2000));
   }
 }

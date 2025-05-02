@@ -19,7 +19,7 @@ const percentInView = (div) => {
 };
 
 export function elementInView(elemId) {
-  console.log(
+  console.info(
     'elementInView?',
     percentInView(document.getElementById(elemId)),
     percentInView(document.getElementById(elemId)) > 0,

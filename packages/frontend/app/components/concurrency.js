@@ -24,7 +24,7 @@ export default class ConcurrencyComponent extends Component {
   signal = this.controller.signal;
 
   countTask1 = task(async () => {
-    // console.log('countTask1.perform()');
+    // console.info('countTask1.perform()');
     try {
       this.countTask1Count += 1;
       await forever;
@@ -33,13 +33,12 @@ export default class ConcurrencyComponent extends Component {
         // re-throw the non-cancelation error
         throw e;
       } else {
-        console.log('countTask1 didCancel');
+        console.info('countTask1 didCancel');
       }
     } finally {
-      console.log('FINALLY countTask1');
+      console.info('FINALLY countTask1');
       // finally blocks always get called,
       // even when the task is being canceled
-      this.decrementProperty('countTask1Count');
       this.countTask1Count -= 1;
     }
   });
@@ -48,23 +47,23 @@ export default class ConcurrencyComponent extends Component {
   performCountTask1() {
     let task = this.countTask1;
     let taskInstance = task.perform();
-    console.log('performCountTask1() taskInstance', taskInstance);
+    console.info('performCountTask1() taskInstance', taskInstance);
     this.countTask1MostRecentInstance = taskInstance;
   }
 
   @action
   async cancelAllCountTask1Instances() {
     const myTask = this.countTask1;
-    console.log('cancelAllTask1Instances() myTask', myTask);
+    console.info('cancelAllTask1Instances() myTask', myTask);
     const myTaskCancelled = await myTask.cancelAll();
     // this.task1Count = 0;
-    console.log('cancelAllTask1Instances() myTaskCancelled', myTaskCancelled);
+    console.info('cancelAllTask1Instances() myTaskCancelled', myTaskCancelled);
   }
 
   @action
   cancelCountTask1MostRecentInstance() {
     const mostRecent = this.countTask1MostRecentInstance;
-    console.log('cancelMostRecentCountTask1Instance()', mostRecent);
+    console.info('cancelMostRecentCountTask1Instance()', mostRecent);
     mostRecent.cancel();
   }
 
@@ -74,14 +73,14 @@ export default class ConcurrencyComponent extends Component {
     this.waitTask1Status = 'Gimme one more second...';
     await timeout(1000);
     this.waitTask1Status = "OK, I'm done.";
-    console.log('waitTask1(local) completed');
+    console.info('waitTask1(local) completed');
   });
 
   @action
   performWaitTask1() {
     let task = this.waitTask1;
     let taskInstance = task.perform();
-    console.log('performWaitTask1(local) taskInstance', taskInstance);
+    console.info('performWaitTask1(local) taskInstance', taskInstance);
   }
 
   waitTask2 = restartableTask(async () => {
@@ -90,14 +89,14 @@ export default class ConcurrencyComponent extends Component {
     this.waitTask2Status = 'Gimme one more second...';
     await timeout(1000);
     this.waitTask2Status = "OK, I'm done.";
-    console.log('waitTask2(local) completed');
+    console.info('waitTask2(local) completed');
   });
 
   @action
   performWaitTask2() {
     let task = this.waitTask2;
     let taskInstance = task.perform();
-    console.log('performWaitTask2(local) taskInstance', taskInstance);
+    console.info('performWaitTask2(local) taskInstance', taskInstance);
   }
 
   waitTask3 = task(async () => {
@@ -105,11 +104,11 @@ export default class ConcurrencyComponent extends Component {
     this.waitTask3Json = null;
 
     const result = await fetch(this.remoteApi);
-    console.log('waitTask3(remote) result', result);
+    console.info('waitTask3(remote) result', result);
     const json = await result.json();
     this.waitTask3Json = JSON.stringify(json.items, undefined, 2);
     this.waitTask3Status = "OK, I'm done.";
-    console.log('waitTask3(remote) completed');
+    console.info('waitTask3(remote) completed');
   });
 
   @action
@@ -123,11 +122,11 @@ export default class ConcurrencyComponent extends Component {
     this.waitTask4Json = null;
 
     const result = await fetch(this.remoteApi);
-    console.log('waitTask4(remote) result', result);
+    console.info('waitTask4(remote) result', result);
     const json = await result.json();
     this.waitTask4Json = JSON.stringify(json.items, undefined, 2);
     this.waitTask4Status = "OK, I'm done.";
-    console.log('waitTask4(remote) completed');
+    console.info('waitTask4(remote) completed');
   });
 
   @action
@@ -145,14 +144,14 @@ export default class ConcurrencyComponent extends Component {
         method: 'get',
         signal: this.signal,
       });
-      console.log('waitTask5(remote) succeeded', result);
+      console.info('waitTask5(remote) succeeded', result);
       const json = await result.json();
       this.waitTask5Json = JSON.stringify(json.items, undefined, 2);
       this.waitTask5Status = 'OK, I succeeded!';
     } catch (e) {
       if (this.signal.aborted) {
         if (this.signal.reason) {
-          console.log(`waitTask5(remote) canceled with reason: ${this.signal.reason}`);
+          console.info(`waitTask5(remote) canceled with reason: ${this.signal.reason}`);
           this.waitTask5Status = `I was canceled (${this.signal.reason}), so no payload.`;
         } else {
           console.warn('waitTask5(remote) canceled but no reason was given.');
@@ -163,7 +162,7 @@ export default class ConcurrencyComponent extends Component {
         this.waitTask5Status = "I was canceled, but I don't know why.";
       }
     } finally {
-      console.log('waitTask5(remote) completed');
+      console.info('waitTask5(remote) completed');
     }
   });
 
@@ -187,14 +186,14 @@ export default class ConcurrencyComponent extends Component {
         method: 'get',
         signal: this.signal,
       });
-      console.log('waitTask6 succeeded, result:', result);
+      console.info('waitTask6 succeeded, result:', result);
       const json = await result.json();
       this.waitTask6Json = JSON.stringify(json.items, undefined, 2);
       this.waitTask6Status = 'OK, I succeeded!';
     } catch (e) {
       if (this.signal.aborted) {
         if (this.signal.reason) {
-          console.log(`waitTask6(remote) canceled with reason: ${this.signal.reason}`);
+          console.info(`waitTask6(remote) canceled with reason: ${this.signal.reason}`);
           this.waitTask6Status = `I was canceled (${this.signal.reason}), so no payload.`;
         } else {
           console.warn('waitTask6(remote) canceled but no reason was given.');
@@ -205,13 +204,13 @@ export default class ConcurrencyComponent extends Component {
         this.waitTask6Status = "I was canceled, but I don't know why.";
       }
     } finally {
-      console.log('waitTask6(remote) completed');
+      console.info('waitTask6(remote) completed');
     }
   });
 
   @action
   performWaitTask6() {
-    console.log('performWaitTask6');
+    console.info('performWaitTask6');
     if (this.waitTask6.isRunning) {
       this.controller.abort('running query canceled so new one could run');
     }
@@ -231,15 +230,15 @@ export default class ConcurrencyComponent extends Component {
         method: 'get',
         signal: this.signal,
       });
-      console.log('waitTask7 succeeded, result:', result);
+      console.info('waitTask7 succeeded, result:', result);
       const json = await result.json();
-      console.log('json', json);
+      console.info('json', json);
       this.waitTask7Json = JSON.stringify(json.items, undefined, 2);
       this.waitTask7Status = 'OK, I succeeded!';
     } catch (e) {
       if (this.signal.aborted) {
         if (this.signal.reason) {
-          console.log(`waitTask7(remote) canceled with reason: ${this.signal.reason}`);
+          console.info(`waitTask7(remote) canceled with reason: ${this.signal.reason}`);
           this.waitTask7Status = `I was canceled (${this.signal.reason}), so no payload.`;
         } else {
           console.warn('waitTask7(remote) canceled but no reason was given.');
@@ -250,12 +249,12 @@ export default class ConcurrencyComponent extends Component {
         this.waitTask7Status = "I was canceled, but I don't know why.";
       }
     } finally {
-      console.log('waitTask7(remote) completed');
+      console.info('waitTask7(remote) completed');
     }
   });
 
   performWaitTask7 = task(async () => {
-    console.log('performWaitTask7');
+    console.info('performWaitTask7');
     if (this.waitTask7.isRunning) {
       this.controller.abort('running query canceled so new one could run');
     }

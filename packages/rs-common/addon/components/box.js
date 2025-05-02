@@ -65,10 +65,6 @@ export default class BoxComponent extends Component {
       this.textHeight = element.getBoundingClientRect().height;
       this.textWidth = element.getBoundingClientRect().width;
       this.id = element.parentElement.parentElement.parentElement.id;
-
-      console.log(
-        `[LOADED] BoxComponent ${this.shortId}; box-text: ${this.textWidth} W x ${this.textHeight} H`,
-      );
     }
   }
 

@@ -38,35 +38,35 @@ export default class AuthenticatedRoute extends Route {
     // will output in browser dev console
     switch (this.appEnv) {
       case 'development': {
-        console.log(
+        console.info(
           '%cENV: App is in development! Go nuts!',
           'background: transparent; color: #1da826',
         );
         break;
       }
       case 'test': {
-        console.log(
+        console.info(
           '%cENV: App is in test! Hope it all passes.',
           'background: transparent; color: #b58a24',
         );
         break;
       }
       case 'production': {
-        console.log(
+        console.info(
           '%cENV: App is in production! Be careful.',
           'background: transparent; color: #cb0b38',
         );
         break;
       }
       default: {
-        console.log('ENV: App is in an unknown environment...');
+        console.info('ENV: App is in an unknown environment...');
         break;
       }
     }
   }
 
   async activate() {
-    console.log('AuthenticatedRoute activate()');
+    console.info('AuthenticatedRoute activate()');
 
     // if (this.currentUser.currentUserId) {
     //   console.log('activate(currentUserId)', this.currentUser.currentUserId);

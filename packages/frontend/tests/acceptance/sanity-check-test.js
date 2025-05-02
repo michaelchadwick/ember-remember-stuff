@@ -8,7 +8,6 @@ module('Acceptance | sanity check', function (hooks) {
     assert.false(false, 'false is false');
     assert.true(true, 'true is true');
     assert.notStrictEqual(2 + 2, 5);
-    // eslint-disable-next-line qunit/no-ok-equality
     assert.ok(2 !== 3);
   });
 });

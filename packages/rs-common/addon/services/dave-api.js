@@ -13,7 +13,7 @@ export default class DaveApiService extends Service {
       this.data = await response.json();
 
       return this.data;
-    } catch (e) {
+    } catch {
       throw Error('Error getting data from DaveApi');
     }
   }

@@ -9,10 +9,10 @@ module('Unit | Service | fetch', function (hooks) {
   setupMirage(hooks);
 
   hooks.beforeEach(function () {
-    const rsConfigMock = Service.extend({
-      apiHost: '',
-    });
-    this.owner.register('service:rsConfig', rsConfigMock);
+    class RSConfigMock extends Service {
+      apiHost = '';
+    }
+    this.owner.register('service:rsConfig', RSConfigMock);
   });
 
   skip('getJsonFromApiHost works', async function (assert) {

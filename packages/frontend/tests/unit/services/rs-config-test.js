@@ -24,9 +24,9 @@ module('Unit | Service | rs config', function (hooks) {
       // console.log('rs-config-test.js: https://dave.neb.host', request);
 
       if (request.queryParams.config) {
-        console.log('https://dave.neb.host/?config intercepted');
+        console.info('https://dave.neb.host/?config intercepted');
       } else {
-        console.log('https://dave.neb.host/ intercepted');
+        console.info('https://dave.neb.host/ intercepted');
       }
 
       return {

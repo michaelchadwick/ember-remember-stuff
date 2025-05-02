@@ -73,7 +73,7 @@ export default class ContactFormComponent extends Component {
     if (this.isFormValid) {
       this.sendMessage();
     } else {
-      console.log('Form has validation errors', this.errors);
+      console.error('Form has validation errors', this.errors);
     }
   }
 

@@ -14,24 +14,24 @@ module('Unit | Service | api-version', function (hooks) {
   test('returns false when versions match', async function (assert) {
     const { apiVersion } = this.owner.resolveRegistration('config:environment');
     assert.ok(apiVersion);
-    const rsConfigMock = Service.extend({
+    class RSConfigMock extends Service {
       async getApiVersion() {
         return apiVersion;
-      },
-    });
-    this.owner.register('service:rsConfig', rsConfigMock);
+      }
+    }
+    this.owner.register('service:rsConfig', RSConfigMock);
     const service = this.owner.lookup('service:api-version');
     const versionMismatch = await service.getIsMismatched();
     assert.notOk(versionMismatch);
   });
 
   test('returns true on version mismatch', async function (assert) {
-    const iliosConfigMock = Service.extend({
+    class RSConfigMock extends Service {
       async getApiVersion() {
         return '1.0.0';
-      },
-    });
-    this.owner.register('service:rsConfig', iliosConfigMock);
+      }
+    }
+    this.owner.register('service:rsConfig', RSConfigMock);
     const service = this.owner.lookup('service:api-version');
     const versionMismatch = await service.getIsMismatched();
     assert.ok(versionMismatch);

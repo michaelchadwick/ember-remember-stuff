@@ -7,7 +7,7 @@ export default class NotFoundComponent extends Component {
   get showLink() {
     try {
       return Boolean(this.router.urlFor('index'));
-    } catch (error) {
+    } catch {
       return false;
     }
   }

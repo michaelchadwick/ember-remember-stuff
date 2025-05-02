@@ -9,6 +9,6 @@ export default class TomsterPopperComponent extends Component {
   popToggle() {
     this.isVisible = !this.isVisible;
 
-    console.log(`tomster says...${this.isVisible ? 'hello' : 'goodbye'}`);
+    console.info(`tomster says...${this.isVisible ? 'hello' : 'goodbye'}`);
   }
 }

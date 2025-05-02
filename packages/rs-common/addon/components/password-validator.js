@@ -35,7 +35,6 @@ export default class PasswordValidatorComponent extends Component {
     }
     await timeout(250); // artificial "validation processing"
     this.clearErrorDisplay();
-    console.log('saved password');
   });
 
   saveOrCancel = dropTask(async (event) => {

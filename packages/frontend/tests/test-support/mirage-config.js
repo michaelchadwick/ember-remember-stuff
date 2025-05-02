@@ -28,13 +28,13 @@ export default function (config) {
 
       this.urlPrefix = 'https://api.github.com/';
       this.get('repos/michaelchadwick/ember-remember-stuff/commits', (schema, request) => {
-        console.log('"api.github.com/commits" miragejs request', request);
+        console.info('"api.github.com/commits" miragejs request', request);
         return {};
       });
 
       this.urlPrefix = 'https://music.nebyoolae.com/';
       this.get('*', (schema, request) => {
-        console.log('"music.nebyoolae.com" miragejs request', request);
+        console.info('"music.nebyoolae.com" miragejs request', request);
         return null;
       });
 
