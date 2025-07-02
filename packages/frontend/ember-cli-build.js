@@ -85,6 +85,7 @@ module.exports = async function (defaults) {
   const embroiderOptions = {
     staticAddonTestSupportTrees: true,
     staticAddonTrees: true,
+    staticEmberSource: true,
     staticInvokables: true,
     // splitAtRoutes: [
     //   /about/,
