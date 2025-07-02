@@ -143,7 +143,7 @@ module.exports = function (environment) {
   // will output in stdout at build
   switch (environment) {
     case 'development': {
-      console.info('ENV: App built for development!');
+      console.info('\nENV: App built for development!');
       console.info('Log Flags', [
         `LOG_RESOLVER: ${ENV.APP.LOG_RESOLVER}`,
         `LOG_ACTIVE_GENERATION: ${ENV.APP.LOG_ACTIVE_GENERATION}`,
@@ -154,11 +154,11 @@ module.exports = function (environment) {
       break;
     }
     case 'test': {
-      console.info('ENV: App built for test!');
+      console.info('\nENV: App built for test!');
       break;
     }
     case 'production': {
-      console.info('ENV: App built for production!');
+      console.info('\nENV: App built for production!');
       break;
     }
     default: {
