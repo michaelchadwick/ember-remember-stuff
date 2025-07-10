@@ -59,25 +59,29 @@ const notify = () => {
 //Needed for: https://github.com/testem/testem/issues/1577
 //See: https://github.com/ember-cli-code-coverage/ember-cli-code-coverage/issues/420
 if (config.APP.isRunningWithServerArgs) {
-  // until Testem is patched, this will fail to POST coverage in CI mode (running tests with -s or --server as an argument)
-  // Ref: https://github.com/testem/testem/issues/1577
-  QUnit.done(async function (details) {
-    forceModulesToBeLoaded();
-    await sendCoverage();
+  if (typeof QUnit !== 'undefined') {
+    // until Testem is patched, this will fail to POST coverage in CI mode (running tests with -s or --server as an argument)
+    // Ref: https://github.com/testem/testem/issues/1577
+    QUnit.done(async function (details) {
+      forceModulesToBeLoaded();
+      await sendCoverage();
 
-    displayTestStats(details);
-    notify();
+      displayTestStats(details);
+      notify();
 
-    console.info('config.APP.isRunningWithServerArgs: TRUE');
-  });
+      console.info('config.APP.isRunningWithServerArgs: TRUE');
+    });
+  }
 } else {
-  //eslint-disable-next-line no-undef
-  Testem.afterTests(function (config, data, callback) {
-    forceModulesToBeLoaded();
-    sendCoverage(callback);
+  if (typeof Testem !== 'undefined') {
+    //eslint-disable-next-line no-undef
+    Testem.afterTests(function (config, data, callback) {
+      forceModulesToBeLoaded();
+      sendCoverage(callback);
 
-    console.info('config.APP.isRunningWithServerArgs: FALSE');
-  });
+      console.info('config.APP.isRunningWithServerArgs: FALSE');
+    });
+  }
 }
 
 setAdapter(new DefaultAdapter());
