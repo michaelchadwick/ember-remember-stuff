@@ -2,3 +2,6 @@
 #qunit-toolbar-filters label {
   font-weight: 600;
 }
+#qunit-modulefilter-dropdown-list input[type="checkbox"] {
+  min-width: auto;
+}
