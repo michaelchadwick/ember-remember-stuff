@@ -2,6 +2,12 @@ import Component from '@glimmer/component';
 import { service } from '@ember/service';
 import { defaultValidator } from 'ember-a11y-refocus';
 import ENV from 'frontend/config/environment';
+import NavigationNarrator from "ember-a11y-refocus/components/navigation-narrator";
+import t from "ember-intl/helpers/t";
+import { LinkTo } from "@ember/routing";
+import eq from "ember-truth-helpers/helpers/eq";
+import FaIcon from "rs-common/components/fa-icon";
+import LocaleChooser from "frontend/components/locale-chooser";
 
 export default class NavBarComponent extends Component {
   @service intl;
@@ -57,4 +63,29 @@ export default class NavBarComponent extends Component {
     }
     return defaultValidator(transition);
   }
-}
+<template><NavigationNarrator @navigationText={{t "general.navigationCompleteText"}} @skipText={{t "general.skipToMainContent"}} @routeChangeValidator={{this.checkRouteChange}} />
+<nav class="nav-bar">
+  <LinkTo @route="index" class="menu-index">
+    <h1>{{t "general.siteTitle"}}</h1>
+  </LinkTo>
+
+  <div class="links">
+    {{#each this.routes as |route|}}
+      {{#if (eq route.route "debuggery")}}
+        <LinkTo @route={{route.route}} class="menu-{{route.route}}" target={{route.target}}>
+          <FaIcon @icon="bug" />
+        </LinkTo>
+      {{else if (eq route.route "users")}}
+        <LinkTo @route={{route.route}} class="menu-{{route.route}}" target={{route.target}}>
+          <FaIcon @icon="user" />
+        </LinkTo>
+      {{else}}
+        <LinkTo @route={{route.route}} class="menu-{{route.route}}" target={{route.target}}>
+          {{route.title}}
+        </LinkTo>
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <LocaleChooser />
+</nav></template>}

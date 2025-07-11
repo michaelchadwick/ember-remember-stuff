@@ -1,6 +1,10 @@
 import Component from '@glimmer/component';
 import ENV from 'frontend/config/environment';
 import { service } from '@ember/service';
+import t from "ember-intl/helpers/t";
+import AudioPlayer from "rs-common/components/audio-player";
+import { LinkTo } from "@ember/routing";
+import FaIcon from "rs-common/components/fa-icon";
 
 export default class FooterComponent extends Component {
   @service intl;
@@ -59,4 +63,26 @@ export default class FooterComponent extends Component {
 
     return links;
   }
-}
+<template><footer class="menu" role="menu" aria-label={{t "layout.footMenu"}}>
+  <div class="links">
+    <AudioPlayer @srcURL={{@audioPath}} @shouldLoop={{@audioShouldLoop}} @showTitle={{false}} @compact={{true}} />
+    {{#each this.links as |link|}}
+      {{#if link.route}}
+        <LinkTo @route={{link.route}} class="menu-{{link.class}}" target={{link.target}}>
+          <FaIcon @icon={{link.icon}} @prefix={{link.iconType}} />{{link.title}}
+        </LinkTo>
+      {{else}}
+        <a href={{link.url}} class="menu-{{link.class}}" target={{link.target}}>
+          <FaIcon @icon={{link.icon}} @prefix={{link.iconType}} />{{link.title}}
+        </a>
+      {{/if}}
+    {{/each}}
+  </div>
+</footer>
+<footer class="version" aria-label={{t "layout.footVersions"}}>
+  <div class="versions">
+    {{@rsVersionTag}}
+    {{@apiVersionTag}}
+    {{@frontendVersionTag}}
+  </div>
+</footer></template>}

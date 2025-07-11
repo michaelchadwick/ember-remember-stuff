@@ -1,4 +1,5 @@
-<div class="gh-user" data-test-gh-user>
+import t from "ember-intl/helpers/t";
+<template><div class="gh-user" data-test-gh-user>
   <h3>{{t "components.ghUser.head"}}</h3>
 
   <strong><a href={{@htmlUrl}}>{{@username}}</a></strong><br />
@@ -10,4 +11,4 @@
   {{@followers}}<br />
   {{t "components.ghUser.following"}}:
   {{@following}}<br />
-</div>
+</div></template>
