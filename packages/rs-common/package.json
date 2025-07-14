@@ -88,7 +88,7 @@
     "@ember-data/store": "5.3.11",
     "@ember-data/tracking": "5.3.11",
     "@ember/optional-features": "^2.2.0",
-    "@ember/test-helpers": "^4.0.4",
+    "@ember/test-helpers": "^5.2.2",
     "@embroider/macros": "^1.16.12",
     "@embroider/test-setup": "^4.0.0",
     "@eslint/eslintrc": "^3.3.1",
@@ -105,7 +105,7 @@
     "ember-load-initializers": "^3.0.1",
     "ember-page-title": "^8.2.3",
     "ember-resolver": "^13.1.1",
-    "ember-source": "~6.4.0",
+    "ember-source": "~6.5.0",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-imports": "^4.3.0",
     "ember-template-lint": "^6.0.0",
@@ -138,9 +138,5 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  },
-  "exports": {
-    "./tests/*": "./tests/*",
-    "./*": "./app/*"
   }
 }
