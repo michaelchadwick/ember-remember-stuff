@@ -1,5 +1,6 @@
 import Component from '@glimmer/component';
 import { guidFor } from '@ember/object/internals';
+import eq from 'ember-truth-helpers/helpers/eq';
 
 export default class FaIconComponent extends Component {
   get uniqueId() {
@@ -59,4 +60,29 @@ export default class FaIconComponent extends Component {
 
     return classes.length ? ` ${classes.join(' ')}` : '';
   }
+  <template>
+    {{! template-lint-disable eol-last }}
+    <svg
+      class="awesome-icon fa-{{@icon}}{{this.extraClasses}}"
+      data-icon={{@icon}}
+      aria-hidden={{this.ariaHidden}}
+      focusable={{this.focusable}}
+      role="img"
+      fill="currentColor"
+      aria-labelledby={{this.titleId}}
+      ...attributes
+    >
+      {{#if @title}}
+        <title id={{this.titleId}}>{{@title}}</title>
+      {{/if}}
+
+      {{#if (eq @prefix "fab")}}
+        <use xlink:href="/assets/fontawesome/brands.svg#{{@icon}}"></use>
+      {{else if (eq @prefix "regular")}}
+        <use xlink:href="/assets/fontawesome/regular.svg#{{@icon}}"></use>
+      {{else}}
+        <use xlink:href="/assets/fontawesome/solid.svg#{{@icon}}"></use>
+      {{/if}}
+    </svg>
+  </template>
 }

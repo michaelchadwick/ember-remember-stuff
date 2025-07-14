@@ -3,6 +3,9 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 import { restartableTask, timeout } from 'ember-concurrency';
+import perform from 'ember-concurrency/helpers/perform';
+import SimpleChart from 'ember-simple-charts/components/simple-chart';
+import getElement from 'rs-common/modifiers/get-element';
 
 export default class ChartComponent extends Component {
   @tracked tooltipContent = null;
@@ -90,4 +93,27 @@ export default class ChartComponent extends Component {
   logRootElement(element) {
     console.info('ChartComponent root element', element);
   }
+  <template>
+    <div
+      class="chart{{unless @isIcon ' not-icon'}}"
+      {{getElement this.logRootElement}}
+      data-test-chart
+      ...attributes
+    >
+      <SimpleChart
+        @name={{@name}}
+        @isIcon={{@isIcon}}
+        @data={{this.donutData}}
+        @hover={{perform this.donutHover}}
+        @leave={{perform this.donutHover}}
+        as |chart|
+      >
+        {{#if this.tooltipContent}}
+          <chart.tooltip @title={{this.tooltipTitle}}>
+            {{this.tooltipContent}}
+          </chart.tooltip>
+        {{/if}}
+      </SimpleChart>
+    </div>
+  </template>
 }
