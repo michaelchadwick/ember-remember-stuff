@@ -14,6 +14,7 @@ module.exports = {
         require.resolve('ember-auto-import/babel-plugin'),
         require.resolve('ember-concurrency/async-arrow-task-transform'),
       ],
+      extensions: ['.js', '.ts', '.gjs'],
     },
   },
 
