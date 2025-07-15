@@ -4,15 +4,15 @@ import t from 'ember-intl/helpers/t';
 import FaIcon from 'frontend/components/fa-icon';
 
 export default class SongListComponent extends Component {
-  @tracked isLoading = false;
+  @tracked currentlyLoading = false;
   <template>
     {{#if this.currentlyLoading}}
       {{t "general.loading" items="songs"}}
     {{else}}
       {{#if @songs}}
-        <ul class="song-list">
+        <ul class="song-list" data-test-song-list>
           {{#each @songs as |song|}}
-            <li>
+            <li data-list-song-list-item>
               <a
                 href={{song.detailUrl}}
                 target="_blank"

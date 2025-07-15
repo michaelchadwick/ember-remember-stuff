@@ -6,11 +6,13 @@ import SongList from 'frontend/components/song-list/index';
 import Loading from 'frontend/components/song-list/loading';
 <template>
   {{pageTitle (t "layout.navMusic")}}
-  <h2>{{t "layout.headMusic"}}</h2>
-  <p>{{t "sections.music.description"}}</p>
-  {{#if (or @model (eq @controller.env "test"))}}
-    <SongList @songs={{@model}} />
-  {{else}}
-    <Loading />
-  {{/if}}
+  <div data-test-music>
+    <h2>{{t "layout.headMusic"}}</h2>
+    <p>{{t "sections.music.description"}}</p>
+    {{#if (or @model (eq @controller.env "test"))}}
+      <SongList @songs={{@model}} />
+    {{else}}
+      <Loading />
+    {{/if}}
+  </div>
 </template>
