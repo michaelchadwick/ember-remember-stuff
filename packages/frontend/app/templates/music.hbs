@@ -1,7 +1,0 @@
-<h2>{{t "layout.headMusic"}}</h2>
-<p>{{t "sections.music.description"}}</p>
-{{#if (or @model (eq this.env "test"))}}
-  <SongList @songs={{@model}} />
-{{else}}
-  <SongList::Loading />
-{{/if}}

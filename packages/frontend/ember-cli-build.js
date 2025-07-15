@@ -2,6 +2,7 @@
 /* eslint camelcase: 0 */
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const broccoliAssetRevDefaults = require('broccoli-asset-rev/lib/default-options');
 const { Webpack } = require('@embroider/webpack');
 const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -12,21 +13,17 @@ module.exports = async function (defaults) {
   const isTestBuild = env === 'test';
 
   const config = {
-    // fingerprint: {
-    //   extensions: broccoliAssetRevDefaults.extensions.concat(['webmanifest', 'svg']),
-    // },
-
-    emberData: {
-      deprecations: {
-        DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
-      },
+    fingerprint: {
+      extensions: broccoliAssetRevDefaults.extensions.concat(['webmanifest', 'svg']),
     },
+
     hinting: isTestBuild,
     babel: {
       plugins: [
         require.resolve('ember-concurrency/async-arrow-task-transform'),
-        ...require('ember-cli-code-coverage').buildBabelPlugin(),
+        ...require('ember-cli-code-coverage').buildBabelPlugin({ embroider: true }),
       ],
+      extensions: ['.js', '.ts', '.gjs'], // ← this makes it work
     },
     'ember-cli-image-transformer': {
       images: [
@@ -52,15 +49,15 @@ module.exports = async function (defaults) {
       // insertScriptsAt: 'auto-import-scripts',
       watchDependencies: ['rs-common'],
     },
-    // 'ember-simple-auth': {
-    //   useSessionSetupMethod: true, //can be removed in ESA v5.x
-    // },
-    // minifyCSS: {
-    //   enabled: false,
-    // },
     sassOptions: {
       extension: 'scss',
       silenceDeprecations: ['mixed-decls'],
+      includePaths: ['node_modules/ember-a11y-refocus/dist/styles'],
+    },
+    emberData: {
+      deprecations: {
+        DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
+      },
     },
     '@embroider/macros': {
       setConfig: {
@@ -75,14 +72,18 @@ module.exports = async function (defaults) {
 
   const { setConfig } = await import('@warp-drive/build-config');
   setConfig(app, __dirname, {
-    // compatWith: '5.2',
-    // deprecations: {
-    //   DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
-    // },
-    ___legacy_support: true,
+    compatWith: '5.2',
+    deprecations: {
+      // New projects can safely leave this deprecation disabled.
+      // If upgrading, to opt-into the deprecated behavior, set this to true and then follow:
+      // https://deprecations.emberjs.com/id/ember-data-deprecate-store-extends-ember-object
+      // before upgrading to Ember Data 6.0
+      DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
+    },
+    // ___legacy_support: true,
   });
 
-  const embroiderOptions = {
+  return require('@embroider/compat').compatBuild(app, Webpack, {
     staticAddonTestSupportTrees: true,
     staticAddonTrees: true,
     staticEmberSource: true,
@@ -116,7 +117,5 @@ module.exports = async function (defaults) {
         },
       },
     },
-  };
-
-  return require('@embroider/compat').compatBuild(app, Webpack, embroiderOptions);
+  });
 };

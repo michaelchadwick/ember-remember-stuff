@@ -20,6 +20,5 @@ Router.map(function () {
   this.route('user', { path: '/users/:user_id' });
   this.route('debuggery');
 
-  this.route('error', { path: '*path' });
   this.route('upload');
 });

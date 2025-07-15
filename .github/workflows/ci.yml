@@ -54,7 +54,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Run Tests
-        run: pnpm --filter ${{ matrix.workspace }} exec ember test
+        run: pnpm --filter ${{matrix.workspace}} exec ember exam --parallel=3 --load-balance
         env:
           COVERAGE: true
       - name: Store Code Coverage

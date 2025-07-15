@@ -14,7 +14,7 @@
     "lint:fix": "pnpm run --parallel lint:fix",
     "lint:deps": "pnpm run --parallel lint:deps",
     "start": "pnpm --filter frontend exec ember serve",
-    "test": "pnpm --filter frontend exec ember test",
+    "test:frontend": "pnpm --filter frontend exec ember exam --parallel=8 --load-balance",
     "test:coverage": "COVERAGE=true pnpm --filter frontend exec ember test",
     "test:ember": "pnpm --filter frontend exec ember test",
     "test:percy": "pnpm --filter frontend exec percy exec -- ember test",
@@ -28,7 +28,6 @@
     "npm": "use pnpm"
   },
   "devDependencies": {
-    "ember-template-lint-plugin-prettier": "^5.0.0",
     "husky": "^9.1.7"
   },
   "packageManager": "pnpm@10.12.3"

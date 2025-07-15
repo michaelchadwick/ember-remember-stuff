@@ -6,6 +6,7 @@ module.exports = {
   launch_in_ci: ['Firefox'],
   launch_in_dev: ['Firefox'],
   browser_start_timeout: 120,
+  parallel: process.env.EMBER_EXAM_SPLIT_COUNT || -1,
   browser_args: {
     Chrome: {
       ci: [
