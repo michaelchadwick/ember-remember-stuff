@@ -5,19 +5,15 @@ import { hash } from 'rsvp';
 import ENV from 'frontend/config/environment';
 
 export default class DebuggeryRoute extends Route {
-  @service headData;
   @service store;
   @service daveApi;
   @service('local-storage') ls;
 
   beforeModel() {
-    this.headData.routeTitle = 'Debuggery';
-
     // const num = 1;
     // const foo = 'foo';
     // const bar = [];
     // const baz = {};
-
     // console.log('num', typeOf(num));
     // console.log('foo', typeOf(foo));
     // console.log('bar', typeOf(bar));
