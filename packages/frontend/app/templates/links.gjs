@@ -1,5 +1,7 @@
 import t from 'ember-intl/helpers/t';
+import { pageTitle } from 'ember-page-title';
 <template>
+  {{pageTitle (t "layout.navLinks")}}
   <h2>{{t "layout.headLinks"}}</h2>
   {{#if @model}}
     <ul>

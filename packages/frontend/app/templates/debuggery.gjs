@@ -1,4 +1,5 @@
 import t from 'ember-intl/helpers/t';
+import { pageTitle } from 'ember-page-title';
 import { LinkTo } from '@ember/routing';
 import BoxGallery from 'frontend/components/box-gallery';
 import Chart from 'frontend/components/chart';
@@ -7,6 +8,7 @@ import DetailsGallery from 'frontend/components/details-gallery';
 import PasswordValidator from 'frontend/components/password-validator';
 import RandomText from 'frontend/components/random-text';
 <template>
+  {{pageTitle (t "layout.headDebuggery")}}
   <h2>{{t "layout.headDebuggery"}}</h2>
 
   <ul>
