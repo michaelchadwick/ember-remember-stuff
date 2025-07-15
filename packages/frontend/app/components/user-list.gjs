@@ -5,7 +5,7 @@ import { action } from '@ember/object';
 import eq from 'ember-truth-helpers/helpers/eq';
 import { on } from '@ember/modifier';
 import t from 'ember-intl/helpers/t';
-import FaIcon from 'rs-common/components/fa-icon';
+import FaIcon from 'frontend/components/fa-icon';
 import UserListItem from 'frontend/components/user-list-item';
 
 export default class UserListComponent extends Component {
