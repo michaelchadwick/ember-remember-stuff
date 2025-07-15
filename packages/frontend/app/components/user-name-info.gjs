@@ -3,7 +3,7 @@ import { service } from '@ember/service';
 import { action } from '@ember/object';
 import { on } from '@ember/modifier';
 import { LinkTo } from '@ember/routing';
-import FaIcon from 'rs-common/components/fa-icon';
+import FaIcon from 'frontend/components/fa-icon';
 
 export default class UserNameInfoComponent extends Component {
   @service intl;

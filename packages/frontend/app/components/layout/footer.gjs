@@ -2,9 +2,9 @@ import Component from '@glimmer/component';
 import ENV from 'frontend/config/environment';
 import { service } from '@ember/service';
 import t from 'ember-intl/helpers/t';
-import AudioPlayer from 'rs-common/components/audio-player';
 import { LinkTo } from '@ember/routing';
-import FaIcon from 'rs-common/components/fa-icon';
+import AudioPlayer from 'frontend/components/audio-player';
+import FaIcon from 'frontend/components/fa-icon';
 
 export default class FooterComponent extends Component {
   @service intl;

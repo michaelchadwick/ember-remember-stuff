@@ -1,10 +1,10 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
-import { uniqueId } from "@ember/helper";
-import t from "ember-intl/helpers/t";
-import { on } from "@ember/modifier";
-import LoadingSpinner from "rs-common/components/loading-spinner";
+import { uniqueId } from '@ember/helper';
+import t from 'ember-intl/helpers/t';
+import { on } from '@ember/modifier';
+import LoadingSpinner from 'frontend/components/loading-spinner';
 
 export default class FileUploadComponent extends Component {
   @tracked fileName = null;
@@ -50,18 +50,26 @@ export default class FileUploadComponent extends Component {
     console.info(`fake saving '${file.name}' for 2 seconds...`);
     return new Promise((resolve) => setTimeout(resolve, 2000));
   }
-<template>{{#let (uniqueId) as |templateId|}}
-  <div class="file-upload" ...attributes>
-    <label for="file-input" class="upload-label">{{t "general.uploadYourFile"}}
-      (<code>{{t "general.validFileTypes"}}</code>):</label>
-    <input id="file-input-{{templateId}}" type="file" accept=".txt, .jpg, .jpeg, .png" {{on "change" this.handleFileUpload}} />
+  <template>
+    {{#let (uniqueId) as |templateId|}}
+      <div class="file-upload" ...attributes>
+        <label for="file-input" class="upload-label">{{t "general.uploadYourFile"}}
+          (<code>{{t "general.validFileTypes"}}</code>):</label>
+        <input
+          id="file-input-{{templateId}}"
+          type="file"
+          accept=".txt, .jpg, .jpeg, .png"
+          {{on "change" this.handleFileUpload}}
+        />
 
-    {{#if this.isLoading}}
-      <div class="spinner"><LoadingSpinner />{{t "general.uploading"}}</div>
-    {{else if this.error}}
-      <p class="error-message">{{this.error}}</p>
-    {{else if this.fileName}}
-      <p class="file-details">{{t "general.uploadedFilename"}}: {{this.fileName}}</p>
-    {{/if}}
-  </div>
-{{/let}}</template>}
+        {{#if this.isLoading}}
+          <div class="spinner"><LoadingSpinner />{{t "general.uploading"}}</div>
+        {{else if this.error}}
+          <p class="error-message">{{this.error}}</p>
+        {{else if this.fileName}}
+          <p class="file-details">{{t "general.uploadedFilename"}}: {{this.fileName}}</p>
+        {{/if}}
+      </div>
+    {{/let}}
+  </template>
+}

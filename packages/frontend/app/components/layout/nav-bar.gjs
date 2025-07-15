@@ -6,7 +6,7 @@ import NavigationNarrator from 'ember-a11y-refocus/components/navigation-narrato
 import t from 'ember-intl/helpers/t';
 import { LinkTo } from '@ember/routing';
 import eq from 'ember-truth-helpers/helpers/eq';
-import FaIcon from 'rs-common/components/fa-icon';
+import FaIcon from 'frontend/components/fa-icon';
 import LocaleChooser from 'frontend/components/locale-chooser';
 
 export default class NavBarComponent extends Component {

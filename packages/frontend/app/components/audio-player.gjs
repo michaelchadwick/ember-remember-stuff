@@ -4,7 +4,7 @@ import { action } from '@ember/object';
 import ENV from 'frontend/config/environment';
 import t from 'ember-intl/helpers/t';
 import { on } from '@ember/modifier';
-import FaIcon from 'rs-common/components/fa-icon';
+import FaIcon from 'frontend/components/fa-icon';
 import split from 'frontend/helpers/split';
 import playWhen from 'frontend/modifiers/play-when';
 

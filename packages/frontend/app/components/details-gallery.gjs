@@ -4,9 +4,9 @@ import { service } from '@ember/service';
 import scrollIntoView from 'scroll-into-view';
 import { on } from '@ember/modifier';
 import t from 'ember-intl/helpers/t';
-import Box from 'rs-common/components/box';
-import DoubleIt from 'rs-common/components/double-it';
-import Mover from 'rs-common/components/mover';
+import Box from 'frontend/components/box';
+import DoubleIt from 'frontend/components/double-it';
+import Mover from 'frontend/components/mover';
 import GhUser from 'frontend/components/gh-user';
 
 export default class DetailsGalleryComponent extends Component {

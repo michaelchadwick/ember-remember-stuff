@@ -2,9 +2,9 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { on } from '@ember/modifier';
-import FaIcon from 'rs-common/components/fa-icon';
 import t from 'ember-intl/helpers/t';
 import moveRandomlySwitch from 'frontend/modifiers/move-randomly-switch';
+import FaIcon from 'frontend/components/fa-icon';
 
 export default class MoverComponent extends Component {
   @tracked isEnabled = false;

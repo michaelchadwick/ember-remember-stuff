@@ -1,4 +1,4 @@
-import FaIcon from 'rs-common/components/fa-icon';
+import FaIcon from 'frontend/components/fa-icon';
 <template>
   <span class="loading-spinner">
     <FaIcon @icon="spinner" @spin={{true}} />

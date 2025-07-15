@@ -4,7 +4,7 @@ import { service } from '@ember/service';
 import { htmlSafe } from '@ember/template';
 import { dropTask } from 'ember-concurrency';
 import t from 'ember-intl/helpers/t';
-import LoadingSpinner from 'rs-common/components/loading-spinner';
+import LoadingSpinner from 'frontend/components/loading-spinner';
 
 export default class RandomTextComponent extends Component {
   @service loremIpsum;

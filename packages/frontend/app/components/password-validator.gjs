@@ -14,8 +14,8 @@ import { gt } from 'ember-truth-helpers';
 import pick from 'rs-common/helpers/pick';
 import queue from 'rs-common/helpers/queue';
 import perform from 'ember-concurrency/helpers/perform';
-import LoadingSpinner from 'rs-common/components/loading-spinner';
-import ValidationError from 'rs-common/components/validation-error';
+import LoadingSpinner from 'frontend/components/loading-spinner';
+import ValidationError from 'frontend/components/validation-error';
 
 @validatable
 export default class PasswordValidatorComponent extends Component {

@@ -5,8 +5,8 @@ import { service } from '@ember/service';
 import ENV from 'frontend/config/environment';
 import t from 'ember-intl/helpers/t';
 import { on } from '@ember/modifier';
-import LoadingSpinner from 'rs-common/components/loading-spinner';
-import Box from 'rs-common/components/box';
+import Box from 'frontend/components/box';
+import LoadingSpinner from 'frontend/components/loading-spinner';
 
 export default class BoxGallery extends Component {
   @service intl;

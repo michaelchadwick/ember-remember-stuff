@@ -4,11 +4,11 @@ import { action } from '@ember/object';
 import { DateTime } from 'luxon';
 import { modifier } from 'ember-modifier';
 import ENV from 'frontend/config/environment';
-import { on } from "@ember/modifier";
-import Message from "frontend/components/message";
-import sanitize from "frontend/helpers/sanitize";
-import t from "ember-intl/helpers/t";
-import NewMessageInput from "frontend/components/forms/new-message-input";
+import { on } from '@ember/modifier';
+import t from 'ember-intl/helpers/t';
+import Message from 'frontend/components/message';
+import sanitize from 'frontend/helpers/sanitize';
+import NewMessageInput from 'frontend/components/forms/new-message-input';
 
 export default class MessagesComponent extends Component {
   @tracked username = 'anonymous';
@@ -109,15 +109,30 @@ export default class MessagesComponent extends Component {
       },
     ];
   }
-<template><div class="messages" {{!-- template-lint-disable no-invalid-interactive --}} {{on "click" this.displayDebugMessage}} {{this.getMessagesContainer this}} data-test-messages>
-  {{#each this.messages as |message index|}}
-    <Message @id="message-{{index}}" @username={{message.username}} @userIsActive={{message.active}} @userIsCurrent={{message.current}} @userLocalTime={{message.localTime}}>
-      {{sanitize message.content}}
-    </Message>
-  {{else}}
-    <p>{{t "general.noneFound" items="messages"}}</p>
-    {{t "sections.messages.addNew"}}
-  {{/each}}
+  <template>
+    <div
+      class="messages"
+      {{! template-lint-disable no-invalid-interactive }}
+      {{on "click" this.displayDebugMessage}}
+      {{this.getMessagesContainer this}}
+      data-test-messages
+    >
+      {{#each this.messages as |message index|}}
+        <Message
+          @id="message-{{index}}"
+          @username={{message.username}}
+          @userIsActive={{message.active}}
+          @userIsCurrent={{message.current}}
+          @userLocalTime={{message.localTime}}
+        >
+          {{sanitize message.content}}
+        </Message>
+      {{else}}
+        <p>{{t "general.noneFound" items="messages"}}</p>
+        {{t "sections.messages.addNew"}}
+      {{/each}}
 
-  <NewMessageInput @onCreate={{this.addMessage}} />
-</div></template>}
+      <NewMessageInput @onCreate={{this.addMessage}} />
+    </div>
+  </template>
+}

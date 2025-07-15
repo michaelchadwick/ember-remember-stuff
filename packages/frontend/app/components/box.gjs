@@ -6,7 +6,7 @@ import { action } from '@ember/object';
 import { uniqueId } from '@ember/helper';
 import t from 'ember-intl/helpers/t';
 import { on } from '@ember/modifier';
-import FaIcon from 'rs-common/components/fa-icon';
+import FaIcon from 'frontend/components/fa-icon';
 import onResize from 'ember-on-resize-modifier/modifiers/on-resize';
 
 export default class BoxComponent extends Component {
