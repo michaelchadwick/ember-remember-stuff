@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
-import SongList from 'frontend/components/song-list/index';
+import SongList from 'frontend/components/song-list';
 
 module('Integration | Component | song-list', function (hooks) {
   setupRenderingTest(hooks);
