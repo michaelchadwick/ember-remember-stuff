@@ -3,17 +3,27 @@ import config from 'frontend/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';
-import { start } from 'ember-qunit';
+import { setupEmberOnerrorValidation } from 'ember-qunit';
+import { forceModulesToBeLoaded, sendCoverage } from 'ember-cli-code-coverage/test-support';
 import DefaultAdapter from 'ember-cli-page-object/adapters/rfc268';
 import { setAdapter } from 'ember-cli-page-object/adapters';
-import { setRunOptions } from 'ember-a11y-testing/test-support';
-import './helpers/intersection-observing';
-import './helpers/percy-snapshot-name';
-import { forceModulesToBeLoaded, sendCoverage } from 'ember-cli-code-coverage/test-support';
+import {
+  setRunOptions,
+  setupGlobalA11yHooks,
+  setupQUnitA11yAuditToggle,
+  setupConsoleLogger,
+} from 'ember-a11y-testing/test-support';
 
+import start from 'ember-exam/test-support/start';
+// import './helpers/intersection-observing';
+import './helpers/percy-snapshot-name';
+
+setupConsoleLogger();
 setRunOptions({
   preload: false,
 });
+setupGlobalA11yHooks(() => true);
+setupQUnitA11yAuditToggle(QUnit);
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   if (Notification.permission !== 'granted') {
@@ -35,7 +45,7 @@ const displayTestStats = (details) => {
       's',
   );
 };
-const notify = () => {
+const displayCustomNotification = () => {
   console.info('notify() TODO');
   //   if (Notification.permission === 'granted') {
   //     new Notification('Test Suite Finished');
@@ -67,9 +77,7 @@ if (config.APP.isRunningWithServerArgs) {
       await sendCoverage();
 
       displayTestStats(details);
-      notify();
-
-      console.info('config.APP.isRunningWithServerArgs: TRUE');
+      displayCustomNotification();
     });
   }
 } else {
@@ -78,8 +86,6 @@ if (config.APP.isRunningWithServerArgs) {
     Testem.afterTests(function (config, data, callback) {
       forceModulesToBeLoaded();
       sendCoverage(callback);
-
-      console.info('config.APP.isRunningWithServerArgs: FALSE');
     });
   }
 }
@@ -88,7 +94,7 @@ setAdapter(new DefaultAdapter());
 setApplication(Application.create(config.APP));
 
 setup(QUnit.assert);
+setupEmberOnerrorValidation();
+start();
 
 console.info('INFO: starting QUnit...');
-
-start();
