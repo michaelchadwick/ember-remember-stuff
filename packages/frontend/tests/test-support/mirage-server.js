@@ -1,4 +1,3 @@
-// './mirage' -> '/packages/rs-common/
 import commonRoutes from './mirage/routes';
 import commonModels from './mirage/models';
 import commonFactories from './mirage/factories';
@@ -12,6 +11,7 @@ const { apiVersion } = ENV;
 
 export default function (config) {
   let finalConfig = {
+    environment: 'test',
     ...config,
     models: commonModels,
     factories: commonFactories,
