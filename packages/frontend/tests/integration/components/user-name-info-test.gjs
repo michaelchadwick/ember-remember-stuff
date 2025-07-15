@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { component } from 'rs-common/page-objects/components/user-name-info';
 import { setupMirage } from 'frontend/tests/test-support/mirage';
-import UserNameInfo from "rs-common/components/user-name-info";
+import UserNameInfo from 'frontend/components/user-name-info';
 
 module('Integration | Component | user-name-info', function (hooks) {
   setupRenderingTest(hooks);

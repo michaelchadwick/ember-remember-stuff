@@ -1,8 +1,8 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, click } from '@ember/test-helpers';
-import Mover from 'rs-common/components/mover';
 import t from 'ember-intl/helpers/t';
+import Mover from 'frontend/components/mover';
 
 module('Integration | Component | mover', function (hooks) {
   setupRenderingTest(hooks);

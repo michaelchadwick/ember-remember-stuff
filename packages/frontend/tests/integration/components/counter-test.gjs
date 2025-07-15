@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
-import Counter from "rs-common/components/counter";
+import Counter from 'frontend/components/counter';
 
 module('Integration | Component | counter', function (hooks) {
   setupRenderingTest(hooks);

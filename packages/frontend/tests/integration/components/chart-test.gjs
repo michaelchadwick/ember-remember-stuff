@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
-import Chart from 'rs-common/components/chart';
+import Chart from 'frontend/components/chart';
 
 module('Integration | Component | chart', function (hooks) {
   setupRenderingTest(hooks);

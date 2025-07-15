@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
-import AudioPlayer from 'rs-common/components/audio-player';
+import AudioPlayer from 'frontend/components/audio-player';
 
 module('Integration | Component | audio-player', function (hooks) {
   setupRenderingTest(hooks);

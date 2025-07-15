@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
-import ValidationError from "rs-common/components/validation-error";
+import ValidationError from 'frontend/components/validation-error';
 
 module('Integration | Component | validation-error', function (hooks) {
   setupRenderingTest(hooks);
@@ -20,7 +20,9 @@ module('Integration | Component | validation-error', function (hooks) {
     this.set('propertyName', propertyName);
 
     await render(
-      <template><ValidationError @validatable={{this.validatable}} @property={{this.propertyName}} /></template>,
+      <template>
+        <ValidationError @validatable={{this.validatable}} @property={{this.propertyName}} />
+      </template>,
     );
 
     assert.dom(this.element).hasText('');
@@ -41,7 +43,9 @@ module('Integration | Component | validation-error', function (hooks) {
     this.set('propertyName', propertyName);
 
     await render(
-      <template><ValidationError @validatable={{this.validatable}} @property={{this.propertyName}} /></template>,
+      <template>
+        <ValidationError @validatable={{this.validatable}} @property={{this.propertyName}} />
+      </template>,
     );
 
     assert.dom(this.element).hasText(errors.join(' '));

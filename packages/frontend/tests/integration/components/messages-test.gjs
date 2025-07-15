@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
-import Messages from "frontend/components/messages";
+import Messages from 'frontend/components/messages';
 
 module('Integration | Component | messages', function (hooks) {
   setupRenderingTest(hooks);

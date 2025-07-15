@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
-import DoubleIt from "rs-common/components/double-it";
+import DoubleIt from 'frontend/components/double-it';
 
 module('Integration | Component | double-it', function (hooks) {
   setupRenderingTest(hooks);

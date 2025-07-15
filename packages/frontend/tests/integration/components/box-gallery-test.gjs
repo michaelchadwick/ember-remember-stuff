@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { component } from 'rs-common/page-objects/components/box-gallery';
-import BoxGallery from "rs-common/components/box-gallery";
+import BoxGallery from 'frontend/components/box-gallery';
 
 module('Integration | Component | box-gallery', function (hooks) {
   setupRenderingTest(hooks);

@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
 // import { elementInView } from '../../helpers/intersection-observing';
-import TomsterPopper from "rs-common/components/tomster-popper";
+import TomsterPopper from 'frontend/components/tomster-popper';
 
 module('Integration | Component | tomster-popper', function (hooks) {
   setupRenderingTest(hooks);

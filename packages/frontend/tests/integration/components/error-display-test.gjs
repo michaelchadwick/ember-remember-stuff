@@ -1,8 +1,8 @@
 import { module, skip } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, click } from '@ember/test-helpers';
-import ErrorDisplay from "frontend/components/error-display";
-import noop from "rs-common/helpers/noop";
+import ErrorDisplay from 'frontend/components/error-display';
+import noop from 'rs-common/helpers/noop';
 
 module('Integration | Component | error display', function (hooks) {
   setupRenderingTest(hooks);
@@ -17,7 +17,9 @@ module('Integration | Component | error display', function (hooks) {
     ];
 
     this.set('errors', errors);
-    await render(<template><ErrorDisplay @errors={{this.errors}} @clearErrors={{(noop)}} /></template>);
+    await render(
+      <template><ErrorDisplay @errors={{this.errors}} @clearErrors={{(noop)}} /></template>,
+    );
 
     assert.dom('.error-detail-action').hasText('Hide Details');
     assert.dom('.timestamp').includesText(new Intl.DateTimeFormat('en-US').format(new Date()));
@@ -37,7 +39,9 @@ module('Integration | Component | error display', function (hooks) {
     ];
 
     this.set('errors', errors);
-    await render(<template><ErrorDisplay @errors={{this.errors}} @clearErrors={{(noop)}} /></template>);
+    await render(
+      <template><ErrorDisplay @errors={{this.errors}} @clearErrors={{(noop)}} /></template>,
+    );
 
     assert.dom('.error-main').includesText('Rats!');
   });
@@ -55,7 +59,11 @@ module('Integration | Component | error display', function (hooks) {
     this.set('clearErrors', () => {
       assert.ok(true, 'action was fired');
     });
-    await render(<template><ErrorDisplay @errors={{this.errors}} @clearErrors={{this.clearErrors}} /></template>);
+    await render(
+      <template>
+        <ErrorDisplay @errors={{this.errors}} @clearErrors={{this.clearErrors}} />
+      </template>,
+    );
     await click('.clear-errors button');
   });
 });
