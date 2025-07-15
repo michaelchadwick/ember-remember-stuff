@@ -161,9 +161,6 @@ importers:
       ember-cli-dependency-lint:
         specifier: 2.0.1
         version: 2.0.1
-      ember-cli-head:
-        specifier: ^2.0.0
-        version: 2.0.0
       ember-cli-htmlbars:
         specifier: ^6.3.0
         version: 6.3.0
@@ -395,9 +392,6 @@ importers:
       ember-modifier:
         specifier: ^4.2.0
         version: 4.2.2(@babel/core@7.28.0)
-      ember-on-resize-modifier:
-        specifier: ^2.0.2
-        version: 2.0.2(@babel/core@7.28.0)(webpack@5.100.1)
       ember-set-helper:
         specifier: ^3.0.1
         version: 3.0.1(@babel/core@7.28.0)
@@ -3978,10 +3972,6 @@ packages:
 
   ember-cli-get-component-path-option@1.0.0:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
-
-  ember-cli-head@2.0.0:
-    resolution: {integrity: sha512-i9qwljBlpzU/ei0xN+FiCHUvU1ZdjVXk0OzRKoeMZJK3m4p29CvB095klT0q+PigvYFYHIyTaeSWmbgjP8CZiw==}
-    engines: {node: 12.* || >= 14}
 
   ember-cli-htmlbars@4.5.0:
     resolution: {integrity: sha512-bYJpK1pqFu9AadDAGTw05g2LMNzY8xTCIqQm7dMJmKEoUpLRFbPf4SfHXrktzDh7Q5iggl6Skzf1M0bPlIxARw==}
@@ -12816,14 +12806,6 @@ snapshots:
       semver: 5.7.2
 
   ember-cli-get-component-path-option@1.0.0: {}
-
-  ember-cli-head@2.0.0:
-    dependencies:
-      ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 5.7.2
-      ember-in-element-polyfill: 1.0.1
-    transitivePeerDependencies:
-      - supports-color
 
   ember-cli-htmlbars@4.5.0:
     dependencies:
