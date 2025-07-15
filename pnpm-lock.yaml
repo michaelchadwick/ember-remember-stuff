@@ -191,9 +191,6 @@ importers:
       ember-data:
         specifier: 5.3.11
         version: 5.3.11(@ember/string@4.0.1)(@ember/test-helpers@5.2.2(@babel/core@7.28.0))(@ember/test-waiters@4.1.1)(ember-inflector@5.0.2(@babel/core@7.28.0))(ember-source@6.5.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(qunit@2.24.1)
-      ember-error-route:
-        specifier: ^0.2.0
-        version: 0.2.0
       ember-keyboard:
         specifier: ^9.0.1
         version: 9.0.2(@babel/core@7.28.0)(@ember/test-helpers@5.2.2(@babel/core@7.28.0))
@@ -4148,10 +4145,6 @@ packages:
   ember-destroyable-polyfill@2.0.3:
     resolution: {integrity: sha512-TovtNqCumzyAiW0/OisSkkVK93xnVF4NRU6+FN0ubpfwEOpRrmM2RqDwXI6YAChCgSHON1cz0DfQStpA1Gjuuw==}
     engines: {node: 10.* || >= 12}
-
-  ember-error-route@0.2.0:
-    resolution: {integrity: sha512-bBqOvfbf68uWD2Pspnbw/3hJRC7JgXGwLTWGd58q/4EH7mcaeDRXaG7+0Ru38YEm1ueNDMVfh+Pa7igi0/ZJDA==}
-    engines: {node: 12.* || 14.* || >= 16}
 
   ember-eslint-parser@0.5.9:
     resolution: {integrity: sha512-IW4/3cEiFp49M2LiKyzi7VcT1egogOe8UxQ9eUKTooenC7Q4qNhzTD6rOZ8j51m8iJC+8hCzjbNCa3K4CN0Hhg==}
@@ -13299,12 +13292,6 @@ snapshots:
       ember-compatibility-helpers: 1.2.7(@babel/core@7.28.0)
     transitivePeerDependencies:
       - '@babel/core'
-      - supports-color
-
-  ember-error-route@0.2.0:
-    dependencies:
-      ember-cli-babel: 7.26.11
-    transitivePeerDependencies:
       - supports-color
 
   ember-eslint-parser@0.5.9(@babel/core@7.28.0)(eslint@9.31.0):
