@@ -3,6 +3,7 @@ module.exports = function () {
     'free-solid-svg-icons': [
       'angles-down',
       'angles-up',
+      'arrows-rotate',
       'at',
       'book',
       'bug',
