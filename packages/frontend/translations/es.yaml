@@ -172,6 +172,8 @@ general:
   title: Titulo
   to: a
   today: Hoy
+  toggleOff: Desactivar
+  toggleOn: Activar
   token: Token
   total: Total
   totalErrors: "{count, plural, =1 {Hay un error} other {Hay # errores}}"

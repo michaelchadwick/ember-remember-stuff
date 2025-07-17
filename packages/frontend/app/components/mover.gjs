@@ -18,7 +18,12 @@ export default class MoverComponent extends Component {
       <div id="mover" class="moving" {{moveRandomlySwitch}}>
         <h3>
           {{t "components.mover.head"}}
-          <button type="button" class="header" {{on "click" this.toggleMovement}}>
+          <button
+            type="button"
+            class="header"
+            aria-label={{t "general.toggleOn"}}
+            {{on "click" this.toggleMovement}}
+          >
             <FaIcon @icon="toggle-on" />
           </button>
         </h3>
@@ -29,7 +34,12 @@ export default class MoverComponent extends Component {
       <div id="mover">
         <h3>
           {{t "components.mover.head"}}
-          <button type="button" class="header" {{on "click" this.toggleMovement}}>
+          <button
+            type="button"
+            class="header"
+            aria-label={{t "general.toggleOff"}}
+            {{on "click" this.toggleMovement}}
+          >
             <FaIcon @icon="toggle-off" />
           </button>
         </h3>
