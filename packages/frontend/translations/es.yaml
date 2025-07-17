@@ -142,9 +142,12 @@ general:
   overview: Descripción General
   owner: Dueño
   password: Contraseña
+  pause: Pausar
+  play: Reproducir
   perPage: Per Page
   previous: Anterior
   reconnectNow: Volver a conectar ahora
+  refresh: Refrescar
   remove: Remover
   removeAll: Quitar Todos
   required: Requerido
@@ -189,6 +192,7 @@ general:
   userRole: Función de Usuario
   validFileTypes: .jpg, .jpeg, .png, .txt
   view: Vista
+  volume: Volumen
   weak: Débil
   wednesday: Miercoles
   week: Semana

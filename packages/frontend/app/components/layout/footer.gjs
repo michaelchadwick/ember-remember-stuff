@@ -64,7 +64,7 @@ export default class FooterComponent extends Component {
     return links;
   }
   <template>
-    <footer class="menu" role="menu" aria-label={{t "layout.footMenu"}}>
+    <footer class="menu" aria-label={{t "layout.footMenu"}}>
       <div class="links">
         <AudioPlayer
           @srcURL={{@audioPath}}
@@ -84,8 +84,6 @@ export default class FooterComponent extends Component {
           {{/if}}
         {{/each}}
       </div>
-    </footer>
-    <footer class="version" aria-label={{t "layout.footVersions"}}>
       <div class="versions">
         {{@rsVersionTag}}
         {{@apiVersionTag}}

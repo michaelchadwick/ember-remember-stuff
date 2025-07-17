@@ -63,17 +63,28 @@ export default class AudioPlayerComponent extends Component {
         id="audio-volume"
         oninput={{this.setVolume}}
       />
+      <label class="sr-only" for="audio-volume">{{t "general.volume"}}</label>
       {{!-- <div class="volume-tooltip">{{this.rangeVolume}}</div> --}}
 
       <div class="audio-title">{{split @srcURL delimiter="/" index=this.pathIndexLength}}</div>
 
       {{#unless this.isPlaying}}
-        <button type="button" id="btn-audio-play" {{on "click" this.play}}>
+        <button
+          type="button"
+          id="btn-audio-play"
+          aria-label={{t "components.audioPlayer.play"}}
+          {{on "click" this.play}}
+        >
           <FaIcon @icon="play" />
         </button>
       {{/unless}}
       {{#if this.isPlaying}}
-        <button type="button" id="btn-audio-pause" {{on "click" this.pause}}>
+        <button
+          type="button"
+          id="btn-audio-pause"
+          aria-label={{t "components.audioPlayer.pause"}}
+          {{on "click" this.pause}}
+        >
           <FaIcon @icon="pause" />
         </button>
       {{/if}}

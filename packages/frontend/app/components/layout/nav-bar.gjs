@@ -77,11 +77,21 @@ export default class NavBarComponent extends Component {
       <div class="links">
         {{#each this.routes as |route|}}
           {{#if (eq route.route "debuggery")}}
-            <LinkTo @route={{route.route}} class="menu-{{route.route}}" target={{route.target}}>
+            <LinkTo
+              @route={{route.route}}
+              class="menu-{{route.route}}"
+              aria-label={{t "general.headDebuggery"}}
+              target={{route.target}}
+            >
               <FaIcon @icon="bug" />
             </LinkTo>
           {{else if (eq route.route "users")}}
-            <LinkTo @route={{route.route}} class="menu-{{route.route}}" target={{route.target}}>
+            <LinkTo
+              @route={{route.route}}
+              class="menu-{{route.route}}"
+              aria-label={{t "general.users"}}
+              target={{route.target}}
+            >
               <FaIcon @icon="user" />
             </LinkTo>
           {{else}}

@@ -11,14 +11,14 @@ module('Acceptance | remember stuff', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /', async function (assert) {
-    assert.expect(6);
     await visit('/');
     await percySnapshot(getUniqueName(assert, 'homepage'));
 
     assert.strictEqual(currentURL(), '/', 'url should be /');
     assert.dom('nav').exists();
     assert.dom('footer.menu').exists();
-    assert.dom('footer.version').exists();
+    assert.dom('footer .links').exists();
+    assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
 
     assert.dom('.checklists').exists();
@@ -29,8 +29,9 @@ module('Acceptance | remember stuff', function (hooks) {
 
     assert.strictEqual(currentURL(), '/about', 'url should be /about');
     assert.dom('nav').exists();
-    assert.dom('footer.menu').exists();
-    assert.dom('footer.version').exists();
+    assert.dom('footer').exists();
+    assert.dom('footer .links').exists();
+    assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('About the Site');
     assert.dom('p').hasText('RemEmber Stuff is a web application I built to learn about EmberJS.');
@@ -45,8 +46,9 @@ module('Acceptance | remember stuff', function (hooks) {
 
     assert.strictEqual(currentURL(), '/messages', 'url should be /messages');
     assert.dom('nav').exists();
-    assert.dom('footer.menu').exists();
-    assert.dom('footer.version').exists();
+    assert.dom('footer').exists();
+    assert.dom('footer .links').exists();
+    assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Chat Messages');
     assert.dom('div.messages').exists();
@@ -61,8 +63,9 @@ module('Acceptance | remember stuff', function (hooks) {
 
     assert.strictEqual(currentURL(), '/music', 'url should be /music');
     assert.dom('nav').exists();
-    assert.dom('footer.menu').exists();
-    assert.dom('footer.version').exists();
+    assert.dom('footer').exists();
+    assert.dom('footer .links').exists();
+    assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Music');
 
@@ -76,8 +79,9 @@ module('Acceptance | remember stuff', function (hooks) {
 
     assert.strictEqual(currentURL(), '/links', 'url should be /links');
     assert.dom('nav').exists();
-    assert.dom('footer.menu').exists();
-    assert.dom('footer.version').exists();
+    assert.dom('footer').exists();
+    assert.dom('footer .links').exists();
+    assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Related Links');
     assert.dom('ul li').exists();
@@ -92,8 +96,9 @@ module('Acceptance | remember stuff', function (hooks) {
 
     assert.strictEqual(currentURL(), '/contact', 'url should be /contact');
     assert.dom('nav').exists();
-    assert.dom('footer.menu').exists();
-    assert.dom('footer.version').exists();
+    assert.dom('footer').exists();
+    assert.dom('footer .links').exists();
+    assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Contact');
     assert.dom('.contact-form form').exists();
@@ -108,8 +113,9 @@ module('Acceptance | remember stuff', function (hooks) {
 
     assert.strictEqual(currentURL(), '/debuggery', 'url should be /debuggery');
     assert.dom('nav').exists();
-    assert.dom('footer.menu').exists();
-    assert.dom('footer.version').exists();
+    assert.dom('footer').exists();
+    assert.dom('footer .links').exists();
+    assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Debuggery');
 

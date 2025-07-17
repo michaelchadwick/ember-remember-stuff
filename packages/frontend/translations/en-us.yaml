@@ -142,9 +142,12 @@ general:
   overview: Overview
   owner: Owner
   password: Password
+  pause: Pausar
+  play: Reproducir
   perPage: Per Page
   previous: Previous
   reconnectNow: Reconnect Now
+  refresh: Refresh
   remove: Remove
   removeAll: Remove All
   required: Required
@@ -189,6 +192,7 @@ general:
   userRole: User Role
   validFileTypes: .jpg, .jpeg, .png, .txt
   view: View
+  volume: Volume
   weak: Weak
   wednesday: Wednesday
   week: Week

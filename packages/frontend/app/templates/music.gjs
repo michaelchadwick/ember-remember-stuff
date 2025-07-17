@@ -14,9 +14,11 @@ import SongList from 'frontend/components/song-list';
     <p>{{t "sections.music.description"}}</p>
 
     {{! this works, but always returns the same data...for now }}
-    <button type="button" {{on "click" @controller.refreshModel}}><FaIcon
-        @icon="arrows-rotate"
-      /></button>
+    <button
+      type="button"
+      aria-label={{t "general.refresh"}}
+      {{on "click" @controller.refreshModel}}
+    ><FaIcon @icon="arrows-rotate" /></button>
 
     {{! if we are testing, just pass nothing along to SongList }}
     {{#if (or @model (eq @controller.env "test"))}}
