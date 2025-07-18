@@ -38,6 +38,7 @@ export default class DebuggeryRoute extends Route {
       dave: daveData.body,
       detailsGalleryExpanded: this.detailsGalleryExpanded,
       ghUser: this.store.findRecord('gh-user', ENV.APP.GITHUB_USERNAME),
+      stackedIcon: ['circle-check', 'slash'],
     });
   }
 

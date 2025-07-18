@@ -5,6 +5,7 @@ import BoxGallery from 'frontend/components/box-gallery';
 import Chart from 'frontend/components/chart';
 import Concurrency from 'frontend/components/concurrency';
 import DetailsGallery from 'frontend/components/details-gallery';
+import FaIconStack from 'frontend/components/fa-icon-stack';
 import PasswordValidator from 'frontend/components/password-validator';
 import RandomText from 'frontend/components/random-text';
 <template>
@@ -14,6 +15,9 @@ import RandomText from 'frontend/components/random-text';
   <ul>
     <li>
       <LinkTo @route="upload">{{t "layout.headFileUpload"}}</LinkTo>
+    </li>
+    <li>
+      <FaIconStack @icons={{@model.stackedIcon}} />
     </li>
   </ul>
 
