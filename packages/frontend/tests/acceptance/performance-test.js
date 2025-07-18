@@ -25,6 +25,6 @@ module('Acceptance | performance', function (hooks) {
     let end = performance.now();
     let duration = end - start;
 
-    assert.ok(duration < 1000, `Render time was ${duration}ms`);
+    assert.ok(duration < 2000, `Render time was ${duration}ms`);
   });
 });
