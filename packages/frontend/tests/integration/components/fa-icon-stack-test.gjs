@@ -63,17 +63,23 @@ module('Integration | Component | fa-icon-stack', function (hooks) {
   test('it renders vertically and horizontally flipped', async function (assert) {
     this.set('flip', '');
     await render(<template><FaIconStack @icons={{this.icons}} @flip={{this.flip}} /></template>);
-    assert.dom('svg').doesNotHaveClass('flip-horizontal');
-    assert.dom('svg').doesNotHaveClass('flip-vertical');
+    assert.strictEqual(component.icons[0].classes, 'awesome-icon fa-circle-check');
+    assert.strictEqual(component.icons[1].classes, 'awesome-icon fa-slash');
     this.set('flip', 'horizontal');
-    assert.dom('svg').hasClass('flip-horizontal');
-    assert.dom('svg').doesNotHaveClass('flip-vertical');
+    assert.strictEqual(component.icons[0].classes, 'awesome-icon fa-circle-check flip-horizontal');
+    assert.strictEqual(component.icons[1].classes, 'awesome-icon fa-slash flip-horizontal');
     this.set('flip', 'vertical');
-    assert.dom('svg').doesNotHaveClass('flip-horizontal');
-    assert.dom('svg').hasClass('flip-vertical');
+    assert.strictEqual(component.icons[0].classes, 'awesome-icon fa-circle-check flip-vertical');
+    assert.strictEqual(component.icons[1].classes, 'awesome-icon fa-slash flip-vertical');
     this.set('flip', 'both');
-    assert.dom('svg').hasClass('flip-horizontal');
-    assert.dom('svg').hasClass('flip-vertical');
+    assert.strictEqual(
+      component.icons[0].classes,
+      'awesome-icon fa-circle-check flip-horizontal flip-vertical',
+    );
+    assert.strictEqual(
+      component.icons[1].classes,
+      'awesome-icon fa-slash flip-horizontal flip-vertical',
+    );
   });
 
   test('it binds title', async function (assert) {
@@ -120,7 +126,8 @@ module('Integration | Component | fa-icon-stack', function (hooks) {
 
   test('it defaults to ariaHidden', async function (assert) {
     await render(<template><FaIconStack @icons={{this.icons}} /></template>);
-    assert.dom('svg').hasAttribute('aria-hidden', 'true');
+    assert.strictEqual(component.icons[0].ariaHidden, 'true');
+    assert.strictEqual(component.icons[1].ariaHidden, 'true');
   });
 
   test('it binds ariaHidden', async function (assert) {
