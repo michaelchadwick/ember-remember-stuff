@@ -17,7 +17,7 @@ import RandomText from 'frontend/components/random-text';
       <LinkTo @route="upload">{{t "layout.headFileUpload"}}</LinkTo>
     </li>
     <li>
-      <FaIconStack @icons={{@model.stackedIcon}} />
+      <FaIconStack @icons={{@model.stackedIcon}} @title="Unpublished" />
     </li>
   </ul>
 
