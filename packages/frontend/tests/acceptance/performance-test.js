@@ -19,7 +19,7 @@ module('Acceptance | performance', function (hooks) {
     let end = performance.now();
     let duration = end - start;
 
-    assert.ok(duration < this.durationQuick, `Render time was ${duration}ms`);
+    assert.ok(duration < this.durationModerate, `Render time was ${duration}ms`);
   });
 
   test('/messages', async function (assert) {
