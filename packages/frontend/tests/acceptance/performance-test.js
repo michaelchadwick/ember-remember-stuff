@@ -1,7 +1,6 @@
 import { visit } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
-// import page from 'frontend/tests/pages/music';
 
 module('Acceptance | performance', function (hooks) {
   setupApplicationTest(hooks);
