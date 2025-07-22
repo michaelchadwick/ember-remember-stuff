@@ -126,6 +126,7 @@
     "webpack": "^5.99.9",
     "webpack-bundle-analyzer": "^4.10.2",
     "webpack-retry-chunk-load-plugin": "^3.0.0",
+    "yup": "^1.4.0",
     "zxcvbn": "^4.4.2"
   },
   "engines": {
