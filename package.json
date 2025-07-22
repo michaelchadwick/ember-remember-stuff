@@ -14,10 +14,12 @@
     "lint:fix": "pnpm run --parallel lint:fix",
     "lint:deps": "pnpm run --parallel lint:deps",
     "start": "pnpm --filter frontend exec ember serve",
+    "test": "pnpm test:frontend",
     "test:frontend": "pnpm --filter frontend exec ember exam --parallel=8 --load-balance",
     "test:coverage": "COVERAGE=true pnpm --filter frontend exec ember test",
     "test:ember": "pnpm --filter frontend exec ember test",
     "test:percy": "pnpm --filter frontend exec percy exec -- ember test",
+    "test:perf": "pnpm --filter frontend exec ember test --filter='performance'",
     "update:deps": "rm pnpm-lock.yaml; pnpm install --fix-lockfile; pnpm dedupe",
     "ember-version": "pnpm --filter frontend --filter rs-common exec ember -v",
     "prepare": "husky"
