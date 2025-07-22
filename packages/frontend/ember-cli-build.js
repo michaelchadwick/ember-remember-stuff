@@ -54,11 +54,6 @@ module.exports = async function (defaults) {
       silenceDeprecations: ['mixed-decls'],
       includePaths: ['node_modules/ember-a11y-refocus/dist/styles'],
     },
-    emberData: {
-      deprecations: {
-        DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
-      },
-    },
     '@embroider/macros': {
       setConfig: {
         'ember-qunit': {
