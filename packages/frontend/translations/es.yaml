@@ -124,6 +124,7 @@ general:
   loading: Cargando...
   location: Ubicación
   login: Inicio
+  logout: Cerrar aplicación
   lt: "<"
   message: Mensaje
   minute: Minudo
@@ -188,6 +189,7 @@ general:
   uploadYourFile: Sube tu archivo
   url: URL
   user: Usuario
+  username: Nombre de Usuario
   users: Usuarios
   userRole: Función de Usuario
   validFileTypes: .jpg, .jpeg, .png, .txt
