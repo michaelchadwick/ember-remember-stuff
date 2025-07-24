@@ -21,4 +21,7 @@ Router.map(function () {
   this.route('debuggery');
 
   this.route('upload');
+
+  this.route('login');
+  this.route('logout');
 });
