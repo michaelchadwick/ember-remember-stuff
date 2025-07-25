@@ -1,6 +1,7 @@
 import t from 'ember-intl/helpers/t';
 import { pageTitle } from 'ember-page-title';
 import ErrorDisplay from 'frontend/components/error-display';
+import FaIcon from 'frontend/components/fa-icon';
 import Footer from 'frontend/components/layout/footer';
 import NavBar from 'frontend/components/layout/nav-bar';
 import Ribbon from 'frontend/components/layout/ribbon';
@@ -16,6 +17,18 @@ import TomsterPopper from 'frontend/components/tomster-popper';
     <header>
       <NavBar />
     </header>
+
+    {{#if this.session.isAuthenticated}}
+      <div>
+        <FaIcon @icon="user" @title={{this.session.data.authenticated.username}} />
+        <span>{{this.session.data.authenticated.username}}</span>
+      </div>
+    {{else}}
+      <div>
+        <FaIcon @icon="user-secret" @title={{t "general.anonymousUser"}} />
+        <span>{{t "general.anonymousUser"}}</span>
+      </div>
+    {{/if}}
 
     <main>
       {{#if @controller.showErrorDisplay}}
