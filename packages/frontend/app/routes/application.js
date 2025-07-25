@@ -7,8 +7,8 @@ export default class AuthenticatedRoute extends Route {
   @service headData;
   @service intl;
   @service router;
+  @service session;
   // @service currentUser;
-  // @service session;
 
   @tracked appEnv = ENV.environment;
 
@@ -16,13 +16,22 @@ export default class AuthenticatedRoute extends Route {
     controller.set('appEnv', ENV.environment);
   }
 
-  beforeModel() {
+  async beforeModel() {
+    // await this.session.setup();
     this.intl.setLocale(['en-us']);
     const locale = this.intl.primaryLocale;
     window.document.querySelector('html').setAttribute('lang', locale);
   }
 
   afterModel() {
+    // accessing the Session service breaks the site,
+    // so something is up with the Session service :-/
+    // if (this.session.isAuthenticated) {
+    //   console.info('session authenticated!', this.session);
+    // } else {
+    //   console.info('session not authenticated yet', this.session);
+    // }
+
     this.headData.title = 'RemEmberStuff';
     this.headData.ogTitle = 'RemEmberStuff Tutorial';
     this.headData.routeTitle = null;
