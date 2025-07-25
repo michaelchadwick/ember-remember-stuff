@@ -5,9 +5,11 @@ import { service } from '@ember/service';
 
 export default class SessionService extends ESASessionService {
   @service fetch;
-  // @service currentUser;
+  @service currentUser;
 
   async handleAuthentication() {
+    console.info('SessionService handleAuthentication');
+
     super.handleAuthentication(...arguments);
 
     // if ('serviceWorker' in navigator) {
@@ -24,7 +26,10 @@ export default class SessionService extends ESASessionService {
   }
 
   async handleInvalidation() {
+    console.info('SessionService handleInvalidation');
+
     // Sentry.getCurrentScope().clear();
+
     // if (config.environment !== 'test') {
     //   const logoutUrl = '/auth/logout';
     //   return this.fetch.getJsonFromApiHost(logoutUrl).then((response) => {
