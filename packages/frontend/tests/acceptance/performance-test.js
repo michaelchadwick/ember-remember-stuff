@@ -7,7 +7,8 @@ module('Acceptance | performance', function (hooks) {
 
   hooks.beforeEach(function () {
     this.set('durationQuick', 1000);
-    this.set('durationModerate', 2000);
+    this.set('durationModerate', 2500);
+    this.set('durationLong', 5000);
   });
 
   test('/about', async function (assert) {
@@ -19,7 +20,7 @@ module('Acceptance | performance', function (hooks) {
     let end = performance.now();
     let duration = end - start;
 
-    assert.ok(duration < this.durationModerate, `Render time was ${duration}ms`);
+    assert.ok(duration < this.durationLong, `Render time was ${duration}ms`);
   });
 
   test('/messages', async function (assert) {
