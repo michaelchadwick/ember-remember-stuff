@@ -60,6 +60,7 @@ general:
   author: Autor
   back: Volver
   bad: Malo
+  badCredentials: Incorrecta contraseña o nombre de usuario
   by: de
   cancel: Cancelar
   chooseFile: Seleccione Archivo
@@ -185,6 +186,7 @@ general:
   tryHarder: Esforzarse Más
   tuesday: Martes
   type: Tipo
+  unauthorized: Acceso no autorizado
   uploadedFilename: Archivo subido
   uploading: Subiendo...
   uploadYourFile: Sube tu archivo
