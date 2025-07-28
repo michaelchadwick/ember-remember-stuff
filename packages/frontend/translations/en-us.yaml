@@ -60,6 +60,7 @@ general:
   author: Author
   back: Back
   bad: Bad
+  badCredentials: "Incorrect username or password"
   by: by
   cancel: Cancel
   chooseFile: Choose File
@@ -185,6 +186,7 @@ general:
   tryHarder: Try Harder
   tuesday: Tuesday
   type: Type
+  unauthorized: Unauthorized
   uploadedFilename: Uploaded File
   uploading: Uploading...
   uploadYourFile: Upload your file
