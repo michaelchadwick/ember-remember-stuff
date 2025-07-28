@@ -20,6 +20,10 @@ export default class User extends Model {
     return this.root;
   }
 
+  get fullName() {
+    return this.displayName ? this.displayName : this.fullNameFromFirstLastName;
+  }
+
   get fullNameFromDisplayName() {
     return this.displayName ?? this.fullNameFromFirstLastName;
   }

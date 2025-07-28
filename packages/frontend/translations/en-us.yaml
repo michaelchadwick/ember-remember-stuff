@@ -56,9 +56,11 @@ general:
   actions: Actions
   add: Add
   addNew: Add New
+  anonymousUser: Anonymous User
   author: Author
   back: Back
   bad: Bad
+  badCredentials: "Incorrect username or password"
   by: by
   cancel: Cancel
   chooseFile: Choose File
@@ -124,6 +126,7 @@ general:
   loading: Loading...
   location: Location
   login: Login
+  logout: Logout
   lt: "<"
   message: Message
   minute: Minute
@@ -183,11 +186,13 @@ general:
   tryHarder: Try Harder
   tuesday: Tuesday
   type: Type
+  unauthorized: Unauthorized
   uploadedFilename: Uploaded File
   uploading: Uploading...
   uploadYourFile: Upload your file
   url: URL
   user: User
+  username: Username
   users: Users
   userRole: User Role
   validFileTypes: .jpg, .jpeg, .png, .txt
