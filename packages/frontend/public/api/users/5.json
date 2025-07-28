@@ -1,0 +1,13 @@
+{
+  "data": {
+    "type": "user",
+    "id": "5",
+    "attributes": {
+      "firstName": "Tomster",
+      "lastName": "Hamster",
+      "displayName": "Tommy",
+      "email": "tomster@emberjs.com",
+      "root": false
+    }
+  }
+}
