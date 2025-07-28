@@ -20,19 +20,21 @@ export default class UserMenuComponent extends Component {
   }
 
   <template>
-    {{#if this.session.isAuthenticated}}
-      <div class="authenticated-session-data">
-        <FaIcon @icon="user" @title={{get this.model "fullName"}} />
-        <span class="username">{{get this.model "fullName"}}</span>
-      </div>
-      <LinkTo @route="logout">
-        {{t "general.logout"}}
-      </LinkTo>
-    {{else}}
-      <div>
-        <FaIcon @icon="user-secret" @title={{t "general.anonymousUser"}} />
-        <span>{{t "general.anonymousUser"}}</span>
-      </div>
-    {{/if}}
+    <div data-test-user-menu>
+      {{#if this.session.isAuthenticated}}
+        <div class="authenticated-session-data" data-test-user-authenticated>
+          <FaIcon @icon="user" @title={{get this.model "fullName"}} />
+          <span class="username">{{get this.model "fullName"}}</span>
+        </div>
+        <LinkTo @route="logout">
+          {{t "general.logout"}}
+        </LinkTo>
+      {{else}}
+        <div data-test-user-anonymous>
+          <FaIcon @icon="user-secret" @title={{t "general.anonymousUser"}} />
+          <span>{{t "general.anonymousUser"}}</span>
+        </div>
+      {{/if}}
+    </div>
   </template>
 }
