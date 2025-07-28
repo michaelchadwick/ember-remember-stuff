@@ -6,8 +6,7 @@ export default class UsersRoute extends Route {
   @service store;
 
   async beforeModel(transition) {
-    console.info('UsersRoute beforeModel transition:', transition.to.name);
-    // this.session.requireAuthentication(transition, 'login');
+    this.session.requireAuthentication(transition, 'login');
   }
 
   model() {

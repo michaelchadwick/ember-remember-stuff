@@ -37,19 +37,16 @@ export default class LoginFormComponent extends Component {
       this.error = null;
       const session = this.session;
       const authenticator = 'authenticator:rs-jwt';
+
       await session.authenticate(authenticator, {
         username: this.username,
         password: this.password,
       });
-
-      console.info('successful login');
     } catch (response) {
       const keys = response.json.errors.map((key) => {
         return 'general.' + key;
       });
       this.error = { keys };
-
-      console.error('failed to login');
     } finally {
       this.validations.clearErrorDisplay();
     }

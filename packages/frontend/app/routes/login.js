@@ -56,7 +56,7 @@ export default class LoginRoute extends Route {
 
     const authenticator = 'authenticator:rs-jwt';
     const response = {
-      jwt: 'foo',
+      jwt: null,
     };
     this.session.authenticate(authenticator, { jwt: response.jwt });
   }

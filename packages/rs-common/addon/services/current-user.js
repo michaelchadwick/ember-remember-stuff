@@ -5,23 +5,26 @@ import jwtDecode from 'rs-common/utils/jwt-decode';
 
 export default class CurrentUserService extends Service {
   @service store;
-  // @service session;
+  @service session;
 
   _userPromise = null;
 
-  // get currentUserId() {
-  //   if (
-  //     !this.session ||
-  //     !this.session.data ||
-  //     !this.session.data.authenticated ||
-  //     !this.session.data.authenticated.jwt
-  //   ) {
-  //     return null;
-  //   }
-  //   const obj = jwtDecode(this.session.data.authenticated.jwt);
+  get currentUserId() {
+    if (
+      !this.session ||
+      !this.session.data ||
+      !this.session.data.authenticated ||
+      // !this.session.data.authenticated.jwt
+      !this.session.data.authenticated.username
+    ) {
+      return null;
+    }
+    // const obj = jwtDecode(this.session.data.authenticated.jwt);
 
-  //   return obj.user_id;
-  // }
+    const obj = this.session.data.authenticated;
+
+    return obj.user_id;
+  }
 
   async getModel() {
     const currentUserId = this.currentUserId;
@@ -34,9 +37,7 @@ export default class CurrentUserService extends Service {
     }
 
     if (!this._userPromise) {
-      this._userPromise = this.store.findRecord('user', currentUserId, {
-        include: 'sessionMaterialStatuses',
-      });
+      this._userPromise = this.store.findRecord('user', currentUserId);
     }
     return await this._userPromise;
   }

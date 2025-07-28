@@ -6,13 +6,23 @@ import Base from 'ember-simple-auth/authenticators/base';
 
 export default class RsJWT extends Base {
   @service rsConfig;
+  @service intl;
   // #tokenExpirationTimeout = null;
 
   async authenticate(credentials) {
-    console.info('RsJWT authenticate', credentials);
-
     if (credentials.username === 'tomster' && credentials.password === 't0m5t3r') {
-      return credentials.username;
+      // faked username and id for now
+      const username = credentials.username;
+      const user_id = 5;
+      return { username, user_id };
+    } else {
+      const fakeAuthObj = {
+        json: { status: 'error', errors: ['badCredentials'], jwt: null },
+        status: 401,
+        statusText: this.intl.t('general.unauthorized'),
+        text: '{"status":"error","errors":["badCredentials"],"jwt":null}',
+      };
+      throw fakeAuthObj;
     }
   }
 
