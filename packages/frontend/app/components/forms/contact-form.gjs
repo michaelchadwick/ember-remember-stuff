@@ -97,7 +97,7 @@ export default class ContactFormComponent extends Component {
 
       <form {{on "submit" this.handleSubmit}} data-test-form>
         <div class="item" data-test-name>
-          <label for="name"></label>
+          <label for="name" aria-label={{t "general.name"}}></label>
           <input
             autocapitalize="off"
             autocorrect="off"
@@ -113,7 +113,7 @@ export default class ContactFormComponent extends Component {
           {{/if}}
         </div>
         <div class="item" data-test-email>
-          <label for="email"></label>
+          <label for="email" aria-label={{t "general.email"}}></label>
           <input
             autocapitalize="off"
             autocorrect="off"
@@ -129,7 +129,7 @@ export default class ContactFormComponent extends Component {
           {{/if}}
         </div>
         <div class="item" data-test-message>
-          <label for="message"></label>
+          <label for="message" aria-label={{t "general.message"}}></label>
           <textarea
             class="light{{if this.errors.message ' error'}}"
             id="message"

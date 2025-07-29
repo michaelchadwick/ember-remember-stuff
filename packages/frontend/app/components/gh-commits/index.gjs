@@ -10,10 +10,6 @@ export default class GhCommitsComponent extends Component {
       <h3>{{if @title @title (t "components.ghCommits.head")}}</h3>
       {{#if @commits}}
         <table>
-          <thead>
-            <th></th>
-            <th></th>
-          </thead>
           <tbody>
             {{#each @commits as |commit|}}
               <tr>

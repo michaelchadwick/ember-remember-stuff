@@ -20,7 +20,7 @@ import UserMenu from 'frontend/components/user-menu';
 
     <UserMenu />
 
-    <main>
+    <main id="main">
       {{#if @controller.showErrorDisplay}}
         <ErrorDisplay @errors={{@controller.errors}} @clearErrors={{@controller.clearErrors}} />
       {{else}}
