@@ -1,0 +1,11 @@
+.html-editor {
+  flex-grow: 1;
+
+  input[type="text"] {
+    z-index: 0;
+  }
+}
+
+.ql-toolbar button:not(:disabled):not(.disabled):hover {
+  background-color: inherit;
+}
