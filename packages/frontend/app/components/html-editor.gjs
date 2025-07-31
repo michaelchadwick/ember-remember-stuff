@@ -71,8 +71,8 @@ export default class HtmlEditorComponent extends Component {
 
   editorInserted = modifier((element, [options]) => {
     if (!this.editor) {
-      const { Quill } = this.loadQuillData.value;
-      this.editor = new Quill(element, options);
+      const { QuillEditor } = this.loadQuillData.value;
+      this.editor = new QuillEditor(element, options);
       this.editor.on('text-change', () => {
         if (!this.isDestroyed && !this.isDestroying) {
           this.args.update(this.editor.getText());
