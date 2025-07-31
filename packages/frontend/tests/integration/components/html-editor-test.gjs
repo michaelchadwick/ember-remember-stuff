@@ -8,12 +8,9 @@ module('Integration | Component | html editor', function (hooks) {
 
   test('it renders', async function (assert) {
     await render(<template><HtmlEditor /></template>);
-    assert.dom(this.element).hasText('');
-    // await waitFor('[data-test-load-finished]');
 
-    // assert
-    //   .dom(this.element)
-    //   .hasText('BoldItalicSubscriptSuperscriptOrdered ListUnordered ListInsert LinkUndoRedo');
-    // assert.dom('svg').exists({ count: 9 });
+    assert.dom('.ql-toolbar').exists();
+    assert.dom('.ql-editor').exists();
+    assert.dom('svg').exists({ count: 9 });
   });
 });
