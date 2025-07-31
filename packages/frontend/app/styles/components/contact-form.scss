@@ -1,26 +1,29 @@
 .contact-form {
+  width: 100%;
+
   form {
     gap: 0;
+    width: 50%;
+  }
 
-    button {
-      border-radius: 5px;
-      width: 200px;
-    }
+  button {
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  input {
+    width: 100%;
   }
 
   .item {
     display: flex;
+    margin: 0.25em 0.25em 0.25em 0;
+    width: 100%;
   }
 
   .editor {
     background-color: #fff;
+    border-radius: 10px;
     display: block;
-    padding: 0.25em;
-    max-width: 51.625%;
-  }
-
-  .ql-container,
-  .ql-toolbar {
-    height: auto;
   }
 }
