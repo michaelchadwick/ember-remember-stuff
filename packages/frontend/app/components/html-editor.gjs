@@ -38,34 +38,7 @@ export default class HtmlEditorComponent extends Component {
       redo: () => this.editor.history.redo(),
       link: () => {
         this.togglePopup();
-        //   open: () => {
-        //     // This is called when the modal is opened
-        //     console.log('Link modal opened');
-        //   },
-        //   close: () => {
-        //     // This is called when the modal is closed
-        //     console.log('Link modal closed');
-        //   }
       },
-      // link: () => {
-      //   const range = this.editor.getSelection(true);
-
-      //   // no text yet, add text and link around it
-      //   if (!range.length) {
-      //     const text = prompt('Enter link text');
-      //     const url = prompt('Enter URL');
-      //     if (text && url) {
-      //       this.addLink(this.editor, range.index, url, text);
-      //       this.editor.setSelection(range.index + text.length);
-      //     }
-      //   } else {
-      //     // TODO: add link to existing text
-      //     // const url = prompt('Enter URL');
-      //     // if (url) {
-      //     //   this.addLinkToText(this.editor, range.index, url);
-      //     // }
-      //   }
-      // },
     },
   };
 
