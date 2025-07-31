@@ -5,4 +5,15 @@
       width: 200px;
     }
   }
+
+  .editor {
+    background-color: #fff;
+    padding: 0.25em;
+    max-width: 51.625%;
+  }
+
+  .ql-container,
+  .ql-toolbar {
+    height: auto;
+  }
 }
