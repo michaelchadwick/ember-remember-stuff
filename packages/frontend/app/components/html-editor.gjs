@@ -99,7 +99,7 @@ export default class HtmlEditorComponent extends Component {
   willDestroy() {
     super.willDestroy(...arguments);
     if (this.editor) {
-      this.editor.destroy();
+      // this.editor.destroy();
       this.editor = null;
     }
   }
