@@ -113,6 +113,8 @@ general:
   inactive: inactive
   include: Include
   info: Info
+  insert: Insert
+  insertLink: Insert Link
   language:
     en-us: English (en)
     es: Español (es)
@@ -172,6 +174,7 @@ general:
   summary: Summary
   sunday: Sunday
   teachingTomster: Teaching Tomster
+  text: Text
   thursday: Thursday
   time: Time
   timezone: Timezone

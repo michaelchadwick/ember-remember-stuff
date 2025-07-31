@@ -113,6 +113,8 @@ general:
   inactive: inactivo
   include: Incluir
   info: Info
+  insert: Insertar
+  insertLink: Insertar enlace
   language:
     en-us: English (en)
     es: Español (es)
@@ -172,6 +174,7 @@ general:
   summary: Resumen
   sunday: Domingo
   teachingTomster: Tomster de Enseñanza
+  text: Texto
   thursday: Jueves
   time: Hora
   timezone: Zona horaria

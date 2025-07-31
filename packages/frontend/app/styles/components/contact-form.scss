@@ -1,13 +1,20 @@
 .contact-form {
   form {
+    gap: 0;
+
     button {
       border-radius: 5px;
       width: 200px;
     }
   }
 
+  .item {
+    display: flex;
+  }
+
   .editor {
     background-color: #fff;
+    display: block;
     padding: 0.25em;
     max-width: 51.625%;
   }

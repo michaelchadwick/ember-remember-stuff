@@ -5,4 +5,5 @@ import ContactForm from 'frontend/components/forms/contact-form';
   {{pageTitle (t "layout.navContact")}}
   <h2>{{t "layout.headContact"}}</h2>
   <ContactForm />
+  <ContactForm />
 </template>

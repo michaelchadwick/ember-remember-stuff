@@ -1,8 +1,13 @@
 import Component from '@glimmer/component';
 import { service } from '@ember/service';
 import { cached, tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 import { guidFor } from '@ember/object/internals';
 import { modifier } from 'ember-modifier';
+import { on } from '@ember/modifier';
+import t from 'ember-intl/helpers/t';
+import pick from 'rs-common/helpers/pick';
+import set from 'ember-set-helper/helpers/set';
 import { TrackedAsyncData } from 'ember-async-data';
 import { loadQuillEditor } from 'rs-common/utils/load-quill-editor';
 
@@ -10,6 +15,8 @@ export default class HtmlEditorComponent extends Component {
   @service intl;
   @tracked editorId = null;
   @tracked loadFinished = false;
+  @tracked popupUrlValue;
+  @tracked popupTextValue;
 
   editor = null;
 
@@ -30,44 +37,37 @@ export default class HtmlEditorComponent extends Component {
       undo: () => this.editor.history.undo(),
       redo: () => this.editor.history.redo(),
       link: () => {
-        const range = this.editor.getSelection(true);
-
-        // no text yet, add text and link around it
-        if (!range.length) {
-          const text = prompt('Enter link text');
-          const url = prompt('Enter URL');
-          if (text && url) {
-            this.addLink(this.editor, range.index, url, text);
-            this.editor.setSelection(range.index + text.length);
-          }
-        } else {
-          // TODO: add link to existing text
-          // const url = prompt('Enter URL');
-          // if (url) {
-          //   this.addLinkToText(this.editor, range.index, url);
-          // }
-        }
+        this.togglePopup();
+        //   open: () => {
+        //     // This is called when the modal is opened
+        //     console.log('Link modal opened');
+        //   },
+        //   close: () => {
+        //     // This is called when the modal is closed
+        //     console.log('Link modal closed');
+        //   }
       },
+      // link: () => {
+      //   const range = this.editor.getSelection(true);
+
+      //   // no text yet, add text and link around it
+      //   if (!range.length) {
+      //     const text = prompt('Enter link text');
+      //     const url = prompt('Enter URL');
+      //     if (text && url) {
+      //       this.addLink(this.editor, range.index, url, text);
+      //       this.editor.setSelection(range.index + text.length);
+      //     }
+      //   } else {
+      //     // TODO: add link to existing text
+      //     // const url = prompt('Enter URL');
+      //     // if (url) {
+      //     //   this.addLinkToText(this.editor, range.index, url);
+      //     // }
+      //   }
+      // },
     },
   };
-
-  addLink(quill, index, url, text) {
-    quill.insertText(index, text, 'user');
-    quill.setSelection(index, text.length);
-    quill.theme.tooltip.edit('link', url);
-    quill.theme.tooltip.save();
-  }
-  // addLinkToText(quill, index, url) {}
-
-  constructor() {
-    super(...arguments);
-    this.editorId = guidFor(this);
-  }
-
-  @cached
-  get loadQuillData() {
-    return new TrackedAsyncData(loadQuillEditor());
-  }
 
   editorInserted = modifier((element, [options]) => {
     if (!this.editor) {
@@ -80,10 +80,18 @@ export default class HtmlEditorComponent extends Component {
       });
     }
 
-    // console.log('this.editor', this.editor);
-
     return true;
   });
+
+  constructor() {
+    super(...arguments);
+    this.editorId = guidFor(this);
+  }
+
+  @cached
+  get loadQuillData() {
+    return new TrackedAsyncData(loadQuillEditor());
+  }
 
   get options() {
     return {
@@ -96,6 +104,65 @@ export default class HtmlEditorComponent extends Component {
       placeholder: 'Message',
     };
   }
+
+  get popupId() {
+    return `${this.editorId}-popup`;
+  }
+  get popupUrlId() {
+    return `${this.editorId}-popup-link-url`;
+  }
+  get popupTextId() {
+    return `${this.editorId}-popup-link-text`;
+  }
+
+  get toolbarLinkPosition() {
+    return document.querySelector(`.ql-toolbar:has(+#${this.editorId}) .ql-link`).offsetLeft;
+  }
+
+  @action
+  addLink() {
+    const quill = this.editor;
+    const range = quill.getSelection(true);
+
+    if (this.popupUrlValue && this.popupTextValue) {
+      // no text yet, add text and link around it
+      if (!range.length) {
+        quill.insertText(range.index, this.popupTextValue, 'user');
+      }
+
+      quill.setSelection(range.index, this.popupTextValue.length);
+      quill.theme.tooltip.edit('link', this.popupUrlValue);
+      quill.theme.tooltip.save();
+      this.editor.setSelection(range.index + this.popupTextValue.length);
+
+      this.popupUrlValue = '';
+      this.popupTextValue = '';
+
+      this.togglePopup();
+    }
+  }
+
+  @action
+  togglePopup() {
+    const editor = document.querySelector(`#${this.editorId}`);
+    const popup = document.querySelector(`#${this.popupId}`);
+    popup.classList.toggle('ql-active');
+
+    if (popup.classList.contains('ql-active')) {
+      popup.style.left = `${this.toolbarLinkPosition}px`;
+      popup.style.top = `${editor.offsetTop - 10}px`;
+
+      const quill = this.editor;
+      const range = quill.getSelection(true);
+
+      if (range.length) {
+        this.popupTextValue = quill.getText(range.index, range.length);
+      }
+
+      popup.querySelector('input').focus();
+    }
+  }
+
   willDestroy() {
     super.willDestroy(...arguments);
     if (this.editor) {
@@ -112,6 +179,32 @@ export default class HtmlEditorComponent extends Component {
         data-test-html-editor
         data-test-load-finished={{this.loadFinished}}
       >
+      </div>
+      <div id={{this.popupId}} class="ql-popup">
+        <h4>{{t "general.insertLink"}}</h4>
+        <label for={{this.popupUrlId}}>
+          <input
+            type="text"
+            id={{this.popupUrlId}}
+            aria-label={{t "general.url"}}
+            placeholder={{t "general.url"}}
+            value={{this.popupUrlValue}}
+            {{on "input" (pick "target.value" (set this "popupUrlValue"))}}
+          />
+        </label>
+        <br />
+        <label for={{this.popupTextId}}>
+          <input
+            type="text"
+            id={{this.popupTextId}}
+            aria-label={{t "general.text"}}
+            placeholder={{t "general.text"}}
+            value={{this.popupTextValue}}
+            {{on "input" (pick "target.value" (set this "popupTextValue"))}}
+          />
+        </label>
+        <br />
+        <button type="button" {{on "click" this.addLink}}>{{t "general.insert"}}</button>
       </div>
     {{/if}}
   </template>
