@@ -51,6 +51,7 @@
     "ember-truth-helpers": "^4.0.0",
     "luxon": ">= 3.6.1",
     "query-string": ">= 9.1.0",
+    "quill": "^2.0.3",
     "scroll-into-view": ">= 1.16.0",
     "striptags": ">= 3.2.0",
     "validator": ">= 13.12.0",
@@ -71,6 +72,7 @@
     "ember-source": ">= 4.0.0",
     "luxon": ">= 3.6.1",
     "query-string": ">= 9.1.0",
+    "quill": "^2.0.3",
     "scroll-into-view": ">= 1.16.0",
     "striptags": ">= 3.2.0",
     "validator": ">= 13.12.0"
