@@ -4,6 +4,8 @@ import { action } from '@ember/object';
 import { service } from '@ember/service';
 import t from 'ember-intl/helpers/t';
 import { on } from '@ember/modifier';
+import { guidFor } from '@ember/object/internals';
+import HtmlEditor from 'frontend/components/html-editor';
 
 class Errors {
   @tracked name = null;
@@ -17,6 +19,10 @@ export default class ContactFormComponent extends Component {
   @tracked message = '';
   @tracked errors = new Errors();
   @service intl;
+
+  get uniqueId() {
+    return guidFor(this);
+  }
 
   get isNameValid() {
     return this.name.trim().length > 0;
@@ -80,9 +86,14 @@ export default class ContactFormComponent extends Component {
   }
 
   @action
+  changeMessage(contents) {
+    this.message = contents;
+  }
+
+  @action
   sendMessage() {
     window.alert(
-      `${this.name} (${this.email}) said:\n${this.message}\n\nTODO: actually send this somewhere :D`,
+      `${this.uniqueId}: ${this.name} (${this.email}) said:\n${this.message}\n\nTODO: actually send this somewhere :D`,
     );
 
     // Clear the form
@@ -91,8 +102,9 @@ export default class ContactFormComponent extends Component {
     this.message = '';
     this.errors = new Errors();
   }
+
   <template>
-    <div class="contact-form" data-test-contact-form ...attributes>
+    <div class="contact-form" id={{this.uniqueId}} data-test-contact-form ...attributes>
       <p>{{t "sections.contact.description"}}</p>
 
       <form {{on "submit" this.handleSubmit}} data-test-form>
@@ -128,19 +140,14 @@ export default class ContactFormComponent extends Component {
             <div class="validation-error">{{this.errors.email}}</div>
           {{/if}}
         </div>
-        <div class="item" data-test-message>
+        <div class="item editor" data-test-message>
           <label for="message" aria-label={{t "general.message"}}></label>
-          <textarea
-            class="light{{if this.errors.message ' error'}}"
-            id="message"
-            name="message"
-            placeholder={{t "general.message"}}
-            value={{this.message}}
-            {{on "input" this.handleInput}}
+
+          <HtmlEditor
+            @content={{this.message}}
+            @update={{this.changeMessage}}
+            @autofocus={{true}}
           />
-          {{#if this.errors.message}}
-            <div class="validation-error">{{this.errors.message}}</div>
-          {{/if}}
         </div>
 
         <button type="submit" data-test-submit>

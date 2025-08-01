@@ -29,6 +29,29 @@ components:
     gists: Esencias Públicos
     head: GithubUser (FE)
     repos: Repos Públicos
+  htmlEditor:
+    labels:
+      bold: negrita
+      italic: itálica
+      insert: insertar
+      insertLink: enlace
+      listOrdered: "lista: ordenada"
+      listUnordered: "lista: desordenada"
+      redo: rehacer
+      subscript: subíndice
+      superscript: sobrescrita
+      undo: deshacer
+    titles:
+      bold: Negrita (⌘B)
+      italic: Itálica (⌘I)
+      insert: Insertar
+      insertLink: Insertar Enlace
+      listOrdered: Lista Ordenada
+      listUnordered: Lista Desordenada
+      redo: Rehacer (⌘⇧Z)
+      subscript: Subíndice
+      superscript: Sobrescrita
+      undo: Deshacer (⌘Z)
   newMessageInput:
     nothingSaved: "¡<em>Nota</em>: los mensajes nuevos no se guardarán (...todavía)!"
     placeholder: Escribe el mensaje aquí y presiona enter
@@ -121,6 +144,7 @@ general:
   lastUpdate: Última actualización
   level: Nivel
   link: Enlace de la Web
+  linkNewTarget: Abrir en nueva pestaña
   listen: Escuchar
   localTime: Hora local
   loading: Cargando...
@@ -172,6 +196,7 @@ general:
   summary: Resumen
   sunday: Domingo
   teachingTomster: Tomster de Enseñanza
+  text: Texto
   thursday: Jueves
   time: Hora
   timezone: Zona horaria

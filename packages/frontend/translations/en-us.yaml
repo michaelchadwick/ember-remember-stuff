@@ -29,6 +29,29 @@ components:
     gists: Public Gists
     head: GithubUser (FE)
     repos: Public Repos
+  htmlEditor:
+    labels:
+      bold: bold
+      italic: italic
+      insert: insert
+      insertLink: link
+      listOrdered: "list: ordered"
+      listUnordered: "list: bullet"
+      redo: redo
+      subscript: subscript
+      superscript: superscript
+      undo: undo
+    titles:
+      bold: Bold (⌘B)
+      italic: Italic (⌘I)
+      insert: Insert
+      insertLink: Insert Link
+      listOrdered: Ordered List
+      listUnordered: Unordered List
+      redo: Redo (⌘⇧Z)
+      subscript: Subscript
+      superscript: Superscript
+      undo: Undo (⌘Z)
   newMessageInput:
     nothingSaved: "<em>Note</em>: new messages will not be saved (...yet)!"
     placeholder: Type message here and hit enter
@@ -121,6 +144,7 @@ general:
   lastUpdate: Last Update
   level: Level
   link: Web Link
+  linkNewTarget: Open in new tab
   listen: Listen
   localTime: Local time
   loading: Loading...
@@ -172,6 +196,7 @@ general:
   summary: Summary
   sunday: Sunday
   teachingTomster: Teaching Tomster
+  text: Text
   thursday: Thursday
   time: Time
   timezone: Timezone

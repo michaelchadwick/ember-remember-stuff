@@ -1,8 +1,29 @@
 .contact-form {
+  width: 100%;
+
   form {
-    button {
-      border-radius: 5px;
-      width: 200px;
-    }
+    gap: 0;
+    width: 50%;
+  }
+
+  button {
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .item {
+    display: flex;
+    margin: 0.25em 0.25em 0.25em 0;
+    width: 100%;
+  }
+
+  .editor {
+    background-color: #fff;
+    border-radius: 10px;
+    display: block;
   }
 }
