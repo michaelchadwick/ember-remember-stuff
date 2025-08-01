@@ -14,7 +14,7 @@ export default class TomsterPopperComponent extends Component {
     console.info(`tomster says...${this.isVisible ? 'hello' : 'goodbye'}`);
   }
   <template>
-    <div
+    <aside
       id="tomster-popper"
       class={{if this.isVisible "show" "hide"}}
       {{onKey "ctrl+shift+KeyT" this.popToggle}}
@@ -23,6 +23,6 @@ export default class TomsterPopperComponent extends Component {
         {{t "general.greeting" name="Tomster"}}
       </div>
       <img src="/assets/images/teaching-tomster.png" alt={{t "general.teachingTomster"}} />
-    </div>
+    </aside>
   </template>
 }

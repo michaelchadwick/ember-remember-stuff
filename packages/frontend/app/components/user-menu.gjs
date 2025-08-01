@@ -20,7 +20,7 @@ export default class UserMenuComponent extends Component {
   }
 
   <template>
-    <div data-test-user-menu>
+    <nav data-test-user-menu>
       {{#if this.session.isAuthenticated}}
         <div class="authenticated-session-data" data-test-user-authenticated>
           <FaIcon @icon="user" @title={{get this.model "fullName"}} />
@@ -32,9 +32,9 @@ export default class UserMenuComponent extends Component {
       {{else}}
         <div data-test-user-anonymous>
           <FaIcon @icon="user-secret" @title={{t "general.anonymousUser"}} />
-          <span>{{t "general.anonymousUser"}}</span>
+          <span class="username">{{t "general.anonymousUser"}}</span>
         </div>
       {{/if}}
-    </div>
+    </nav>
   </template>
 }
