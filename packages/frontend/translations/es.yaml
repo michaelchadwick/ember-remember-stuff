@@ -123,6 +123,7 @@ general:
   lastUpdate: Última actualización
   level: Nivel
   link: Enlace de la Web
+  linkNewTarget: Abrir en nueva pestaña
   listen: Escuchar
   localTime: Hora local
   loading: Cargando...

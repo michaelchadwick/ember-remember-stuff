@@ -17,6 +17,7 @@ export default class HtmlEditorComponent extends Component {
   @tracked loadFinished = false;
   @tracked popupUrlValue;
   @tracked popupTextValue;
+  @tracked popupLinkNewTarget;
 
   editor = null;
 
@@ -86,6 +87,9 @@ export default class HtmlEditorComponent extends Component {
   }
   get popupTextId() {
     return `${this.editorId}-popup-link-text`;
+  }
+  get popupLinkNewTargetId() {
+    return `${this.editorId}-popup-new-target`;
   }
 
   get toolbarLinkPosition() {
@@ -177,6 +181,13 @@ export default class HtmlEditorComponent extends Component {
           />
         </label>
         <br />
+        <div class="form-group">
+          <input type="checkbox" id={{this.popupLinkNewTargetId}} checked disabled />
+          <label for={{this.popupLinkNewTargetId}}>
+            {{t "general.linkNewTarget"}}
+          </label>
+        </div>
+
         <button type="button" {{on "click" this.addLink}}>{{t "general.insert"}}</button>
       </div>
     {{/if}}

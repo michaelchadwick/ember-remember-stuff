@@ -29,8 +29,19 @@
     display: block;
   }
 
-  input {
+  .form-group {
+    align-items: center;
+    display: flex;
+    padding: 1em 0 0;
+  }
+
+  input[type="text"] {
     width: auto;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 0.5em;
+    min-width: auto;
   }
 
   button {
