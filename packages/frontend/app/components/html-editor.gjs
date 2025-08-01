@@ -21,28 +21,6 @@ export default class HtmlEditorComponent extends Component {
 
   editor = null;
 
-  toolbarOptions = {
-    container: [
-      [
-        'bold',
-        'italic',
-        { script: 'sub' },
-        { script: 'super' },
-        { list: 'ordered' },
-        { list: 'bullet' },
-        'link',
-      ],
-      ['undo', 'redo'],
-    ],
-    handlers: {
-      undo: () => this.editor.history.undo(),
-      redo: () => this.editor.history.redo(),
-      link: () => {
-        this.togglePopup();
-      },
-    },
-  };
-
   editorInserted = modifier((element, [options]) => {
     if (!this.editor) {
       const { QuillEditor } = this.loadQuillData.value;
@@ -71,7 +49,16 @@ export default class HtmlEditorComponent extends Component {
     return {
       debug: 'warn',
       modules: {
-        toolbar: this.toolbarOptions,
+        toolbar: {
+          container: this.toolbarId,
+          handlers: {
+            undo: () => this.editor.history.undo(),
+            redo: () => this.editor.history.redo(),
+            link: () => {
+              this.togglePopup();
+            },
+          },
+        },
         history: true,
       },
       theme: 'snow',
@@ -91,9 +78,12 @@ export default class HtmlEditorComponent extends Component {
   get popupLinkNewTargetId() {
     return `${this.editorId}-popup-new-target`;
   }
+  get toolbarId() {
+    return `#${this.editorId}-toolbar`;
+  }
 
   get toolbarLinkPosition() {
-    return document.querySelector(`.ql-toolbar:has(+#${this.editorId}) .ql-link`).offsetLeft;
+    return document.querySelector(`#${this.editorId}-toolbar .ql-link`).offsetLeft;
   }
 
   @action
@@ -127,7 +117,7 @@ export default class HtmlEditorComponent extends Component {
 
     if (popup.classList.contains('ql-active')) {
       popup.style.left = `${this.toolbarLinkPosition}px`;
-      popup.style.top = `${editor.offsetTop - 10}px`;
+      popup.style.top = `${editor.offsetTop - 8}px`;
 
       const quill = this.editor;
       const range = quill.getSelection(true);
@@ -149,6 +139,72 @@ export default class HtmlEditorComponent extends Component {
   }
   <template>
     {{#if this.loadQuillData.isResolved}}
+      <div id="{{this.editorId}}-toolbar">
+        <div class="button-group">
+          <button
+            type="button"
+            class="ql-bold"
+            title={{t "components.htmlEditor.titles.bold"}}
+            aria-label={{t "components.htmlEditor.labels.bold"}}
+          ></button>
+          <button
+            type="button"
+            class="ql-italic"
+            title={{t "components.htmlEditor.titles.italic"}}
+            aria-label={{t "components.htmlEditor.labels.italic"}}
+          ></button>
+          <button
+            type="button"
+            class="ql-script"
+            value="sub"
+            title={{t "components.htmlEditor.titles.subscript"}}
+            aria-label={{t "components.htmlEditor.labels.subscript"}}
+          ></button>
+          <button
+            type="button"
+            class="ql-script"
+            value="super"
+            title={{t "components.htmlEditor.titles.superscript"}}
+            aria-label={{t "components.htmlEditor.labels.superscript"}}
+          ></button>
+          <button
+            type="button"
+            class="ql-list"
+            value="ordered"
+            title={{t "components.htmlEditor.titles.listOrdered"}}
+            aria-label={{t "components.htmlEditor.labels.listOrdered"}}
+          ></button>
+          <button
+            type="button"
+            class="ql-list"
+            value="bullet"
+            title={{t "components.htmlEditor.titles.listUnordered"}}
+            aria-label={{t "components.htmlEditor.labels.listUnordered"}}
+          ></button>
+          <button
+            type="button"
+            class="ql-link"
+            title={{t "components.htmlEditor.titles.insertLink"}}
+            aria-label={{t "components.htmlEditor.labels.insertLink"}}
+          ></button>
+        </div>
+        <div class="button-group">
+          <button
+            type="button"
+            class="ql-undo"
+            title={{t "components.htmlEditor.titles.undo"}}
+            aria-label={{t "components.htmlEditor.labels.undo"}}
+          ></button>
+          <button
+            type="button"
+            class="ql-redo"
+            title={{t "components.htmlEditor.titles.redo"}}
+            aria-label={{t "components.htmlEditor.labels.redo"}}
+          ></button>
+        </div>
+      </div>
+      <div id="editor"></div>
+
       <div
         {{this.editorInserted this.options}}
         id={{this.editorId}}
@@ -158,7 +214,7 @@ export default class HtmlEditorComponent extends Component {
       >
       </div>
       <div id={{this.popupId}} class="ql-popup">
-        <h4>{{t "general.insertLink"}}</h4>
+        <h4>{{t "components.htmlEditor.titles.insertLink"}}</h4>
         <label for={{this.popupUrlId}}>
           <input
             type="text"
@@ -188,7 +244,9 @@ export default class HtmlEditorComponent extends Component {
           </label>
         </div>
 
-        <button type="button" {{on "click" this.addLink}}>{{t "general.insert"}}</button>
+        <button type="button" {{on "click" this.addLink}}>{{t
+            "components.htmlEditor.titles.insert"
+          }}</button>
       </div>
     {{/if}}
   </template>

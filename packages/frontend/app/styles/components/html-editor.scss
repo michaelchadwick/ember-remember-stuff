@@ -61,6 +61,13 @@
   height: auto;
 
   button:not(:disabled):not(.disabled):hover {
-    background-color: inherit;
+    background-color: #e8e8e8;
+  }
+
+  .button-group {
+    &:last-of-type {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }

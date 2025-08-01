@@ -29,6 +29,29 @@ components:
     gists: Esencias Públicos
     head: GithubUser (FE)
     repos: Repos Públicos
+  htmlEditor:
+    labels:
+      bold: negrita
+      italic: itálica
+      insert: insertar
+      insertLink: enlace
+      listOrdered: "lista: ordenada"
+      listUnordered: "lista: desordenada"
+      redo: rehacer
+      subscript: subíndice
+      superscript: sobrescrita
+      undo: deshacer
+    titles:
+      bold: Negrita (⌘B)
+      italic: Itálica (⌘I)
+      insert: Insertar
+      insertLink: Insertar Enlace
+      listOrdered: Lista Ordenada
+      listUnordered: Lista Desordenada
+      redo: Rehacer (⌘⇧Z)
+      subscript: Subíndice
+      superscript: Sobrescrita
+      undo: Deshacer (⌘Z)
   newMessageInput:
     nothingSaved: "¡<em>Nota</em>: los mensajes nuevos no se guardarán (...todavía)!"
     placeholder: Escribe el mensaje aquí y presiona enter
@@ -113,8 +136,6 @@ general:
   inactive: inactivo
   include: Incluir
   info: Info
-  insert: Insertar
-  insertLink: Insertar enlace
   language:
     en-us: English (en)
     es: Español (es)
