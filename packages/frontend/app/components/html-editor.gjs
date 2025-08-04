@@ -25,6 +25,11 @@ export default class HtmlEditorComponent extends Component {
     if (!this.editor) {
       const { QuillEditor } = this.loadQuillData.value;
       this.editor = new QuillEditor(element, options);
+      if (this.args.autofocus) {
+        this.editor.focus();
+      }
+      this.loadFinished = true;
+
       this.editor.on('text-change', () => {
         if (!this.isDestroyed && !this.isDestroying) {
           this.args.update(this.editor.getText());
@@ -203,8 +208,6 @@ export default class HtmlEditorComponent extends Component {
           ></button>
         </div>
       </div>
-      <div id="editor"></div>
-
       <div
         {{this.editorInserted this.options}}
         id={{this.editorId}}
@@ -213,6 +216,7 @@ export default class HtmlEditorComponent extends Component {
         data-test-load-finished={{this.loadFinished}}
       >
       </div>
+
       <div id={{this.popupId}} class="ql-popup">
         <h4>{{t "components.htmlEditor.titles.insertLink"}}</h4>
         <label for={{this.popupUrlId}}>
