@@ -22,6 +22,8 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('h1').hasText('RemEmber Stuff');
 
     assert.dom('.checklists').exists();
+
+    assert.strictEqual(document.title, 'RemEmber Stuff', '<title> matches route name');
   });
 
   test('visiting /about', async function (assert) {
@@ -35,6 +37,8 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('About the Site');
     assert.dom('p').hasText('RemEmber Stuff is a web application I built to learn about EmberJS.');
+
+    assert.strictEqual(document.title, 'About | RemEmber Stuff', '<title> matches route name');
 
     await click('nav a h1');
 
@@ -53,6 +57,8 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('h2').hasText('Chat Messages');
     assert.dom('div.messages').exists();
 
+    assert.strictEqual(document.title, 'Messages | RemEmber Stuff', '<title> matches route name');
+
     await click('nav a h1');
 
     assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
@@ -68,6 +74,8 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Music');
+
+    assert.strictEqual(document.title, 'Music | RemEmber Stuff', '<title> matches route name');
 
     await click('nav a h1');
 
@@ -86,6 +94,8 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('h2').hasText('Related Links');
     assert.dom('ul li').exists();
 
+    assert.strictEqual(document.title, 'Links | RemEmber Stuff', '<title> matches route name');
+
     await click('nav a h1');
 
     assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
@@ -103,6 +113,8 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('h2').hasText('Contact');
     assert.dom('.contact-form form').exists();
 
+    assert.strictEqual(document.title, 'Contact | RemEmber Stuff', '<title> matches route name');
+
     await click('nav a h1');
 
     assert.strictEqual(currentURL(), '/', 'clicking nav link for homepage goes to /');
@@ -118,6 +130,8 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('RemEmber Stuff');
     assert.dom('h2').hasText('Debuggery');
+
+    assert.strictEqual(document.title, 'Debuggery | RemEmber Stuff', '<title> matches route name');
 
     await click('nav a h1');
 
