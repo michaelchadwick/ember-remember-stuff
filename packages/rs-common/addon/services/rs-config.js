@@ -30,7 +30,7 @@ export default class RsConfigService extends Service {
       statusText: 'OK',
     };
 
-    if (ENV.environment != 'production') {
+    if (ENV.environment == 'production') {
       if (!this._configPromise) {
         this._configPromise = this.fetch.getJsonFromApiHost('?config');
 
