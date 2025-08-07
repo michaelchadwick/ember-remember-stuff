@@ -9,7 +9,7 @@ import UserMenu from 'frontend/components/user-menu';
 
 <template>
   {{pageTitle (t "general.siteTitle") separator=" | " front=false}}
-  <div class="application-wrapper">
+  <div class="application-wrapper" id="base-wrapper">
     <TomsterPopper />
 
     <Ribbon @position="right" @content={{@controller.appEnv}} />

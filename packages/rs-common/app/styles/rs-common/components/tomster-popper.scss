@@ -1,6 +1,5 @@
 #tomster-popper {
-  bottom: -100vw;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   left: 50%;
@@ -17,7 +16,7 @@
   &.hide {
     animation-duration: 1s;
     animation-name: slideout;
-    bottom: -100vw;
+    bottom: -150vw;
     display: flex;
   }
 
@@ -42,12 +41,14 @@
     bottom: -100vw;
     translate: 0 10vw;
     scale: 50% 50%;
+    visibility: hidden;
   }
 
   to {
     bottom: -70px;
     translate: 0 0;
     scale: 100% 1;
+    visibility: visible;
   }
 }
 
@@ -56,11 +57,13 @@
     bottom: -70px;
     translate: 0 0;
     scale: 100% 1;
+    visibility: visible;
   }
 
   to {
-    bottom: -100vw;
+    bottom: -150vw;
     translate: 0 10vw;
     scale: 50% 50%;
+    visibility: hidden;
   }
 }
