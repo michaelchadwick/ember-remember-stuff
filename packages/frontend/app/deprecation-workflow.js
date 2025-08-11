@@ -37,5 +37,6 @@ setupDeprecationWorkflow({
       handler: 'silence',
       matchId: 'deprecate-import-test-from-ember',
     },
+    { handler: 'silence', matchId: 'ember-concurrency.deprecate-task-group' },
   ],
 });
