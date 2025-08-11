@@ -233,6 +233,8 @@ general:
   year: Año
   yes: Sí
 layout:
+  navPrimary: Principal
+  navUserMenu: Menú del Usuario
   navAbout: Sobre
   navContact: Contacto
   navLinks: Enlaces

@@ -20,7 +20,7 @@ export default class UserMenuComponent extends Component {
   }
 
   <template>
-    <nav data-test-user-menu>
+    <nav aria-label={{t "layout.navUserMenu"}} data-test-user-menu>
       {{#if this.session.isAuthenticated}}
         <div class="authenticated-session-data" data-test-user-authenticated>
           <FaIcon @icon="user" @title={{get this.model "fullName"}} />

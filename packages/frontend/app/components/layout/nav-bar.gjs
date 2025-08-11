@@ -69,7 +69,7 @@ export default class NavBarComponent extends Component {
       @skipText={{t "general.skipToMainContent"}}
       @routeChangeValidator={{this.checkRouteChange}}
     />
-    <nav class="nav-bar">
+    <nav aria-label={{t "layout.navPrimary"}} class="nav-bar" data-test-nav-bar>
       <LinkTo @route="index" class="menu-index">
         <h1>{{t "general.siteTitle"}}</h1>
       </LinkTo>
