@@ -53,7 +53,7 @@ export default class FileUploadComponent extends Component {
   <template>
     {{#let (uniqueId) as |templateId|}}
       <div class="file-upload" ...attributes>
-        <label for="file-input" class="upload-label">{{t "general.uploadYourFile"}}
+        <label for="file-input-{{templateId}}" class="upload-label">{{t "general.uploadYourFile"}}
           (<code>{{t "general.validFileTypes"}}</code>):</label>
         <input
           id="file-input-{{templateId}}"
