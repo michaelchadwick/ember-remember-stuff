@@ -78,6 +78,34 @@ general:
   helloWorld: ¡Hola Mundo!
   hour: Hora
   hours: Horas
+  htmlEditor:
+    errors:
+      linkText: Text de Enlace
+      linkUrl: URL de Enlace
+    labels:
+      bold: negrita
+      italic: itálica
+      insert: insertar
+      insertLink: enlace
+      linkNewTarget: nueva pestaña
+      listOrdered: "lista: ordenada"
+      listUnordered: "lista: desordenada"
+      redo: rehacer
+      subscript: subíndice
+      superscript: sobrescrita
+      undo: deshacer
+    titles:
+      bold: Negrita (⌘B)
+      italic: Itálica (⌘I)
+      insert: Insertar
+      insertLink: Insertar Enlace
+      linkNewTarget: Abrir en nueva pestaña
+      listOrdered: Lista Ordenada
+      listUnordered: Lista Desordenada
+      redo: Rehacer (⌘⇧Z)
+      subscript: Subíndice
+      superscript: Sobrescrita
+      undo: Deshacer (⌘Z)
   inactive: inactivo
   include: Incluir
   info: Info
