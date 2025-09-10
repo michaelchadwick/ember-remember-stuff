@@ -51,7 +51,6 @@ module.exports = async function (defaults) {
     },
     sassOptions: {
       extension: 'scss',
-      silenceDeprecations: ['mixed-decls'],
       includePaths: ['node_modules/ember-a11y-refocus/dist/styles'],
     },
     '@embroider/macros': {
