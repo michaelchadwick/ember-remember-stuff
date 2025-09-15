@@ -10,14 +10,15 @@
   --fs-xxl: 2.074rem;
   --fs-xxxl: 2.488rem;
   --fs-huge: 15rem;
+
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: calc(4px + 2ex);
+
   @include media.for-tablet-and-up {
     --fs-huge: 25rem;
   }
   @include media.for-laptop-and-up {
     --fs-huge: 30rem;
   }
-
-  line-height: calc(4px + 2ex);
-  font-family: sans-serif;
-  font-size: 16px;
 }
