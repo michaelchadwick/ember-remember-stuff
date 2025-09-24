@@ -106,8 +106,7 @@ jobs:
         node-version: [22]
         workspace:
           - frontend
-          - lti-course-manager
-          - lti-dashboard
+
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
