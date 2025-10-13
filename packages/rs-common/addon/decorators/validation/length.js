@@ -1,5 +1,5 @@
 import { registerDecorator } from 'class-validator';
-import { getOwner } from '@ember/application';
+import { getOwner } from '@ember/owner';
 import { isBlank } from '@ember/utils';
 
 export function Length(min, max, validationOptions) {

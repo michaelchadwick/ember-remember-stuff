@@ -1,5 +1,5 @@
 import { registerDecorator } from 'class-validator';
-import { getOwner } from '@ember/application';
+import { getOwner } from '@ember/owner';
 
 export function NotBlank(validationOptions) {
   return function (object, propertyName) {

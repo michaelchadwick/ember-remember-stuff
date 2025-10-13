@@ -1,7 +1,7 @@
 import { service } from '@ember/service';
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
-import { getOwner } from '@ember/application';
+import { getOwner } from '@ember/owner';
 
 export default class MusicController extends Controller {
   @service router;
