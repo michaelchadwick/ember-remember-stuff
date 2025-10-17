@@ -1,9 +1,9 @@
-# RemEmber Stuff Test Site
+# Tomster Club
 
-![Continuous Integration](https://github.com/michaelchadwick/ember-remember-stuff/workflows/Continuous%20Integration/badge.svg)
-[![Code Climate](https://codeclimate.com/github/michaelchadwick/ember-remember-stuff/badges/gpa.svg)](https://codeclimate.com/github/michaelchadwick/ember-remember-stuff)
-[![Test Coverage](https://codeclimate.com/github/michaelchadwick/ember-remember-stuff/badges/coverage.svg)](https://codeclimate.com/github/michaelchadwick/ember-remember-stuff/coverage)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/57adfefa-0be0-4ab8-8958-13357cd524f6/deploy-status)](https://app.netlify.com/sites/mc-emberjs-remember-stuff/deploys)
+![Continuous Integration](https://github.com/michaelchadwick/tomster-club/workflows/Continuous%20Integration/badge.svg)
+[![Code Climate](https://codeclimate.com/github/michaelchadwick/tomster-club/badges/gpa.svg)](https://codeclimate.com/github/michaelchadwick/tomster-club)
+[![Test Coverage](https://codeclimate.com/github/michaelchadwick/tomster-club/badges/coverage.svg)](https://codeclimate.com/github/michaelchadwick/tomster-club/coverage)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/57adfefa-0be0-4ab8-8958-13357cd524f6/deploy-status)](https://app.netlify.com/sites/tomster-club/deploys)
 
 Test app to learn about [Ember Core Concepts](https://guides.emberjs.com/release/components/).
 
@@ -20,7 +20,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 - `git clone <repository-url>` this repository
-- `cd remember-stuff`
+- `cd tomster-club`
 - `pnpm install`
 
 ## Running / Development
@@ -57,7 +57,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Currently being built on [Netlify](https://mc-emberjs-remember-stuff.netlify.app). Re-deploys on pushes to master.
+Currently being built on [Netlify](https://tomster-club.netlify.app). Re-deploys on pushes to master.
 
 ### Notable Dependencies
 

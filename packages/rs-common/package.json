@@ -1,7 +1,7 @@
 {
   "name": "rs-common",
   "version": "0.0.0",
-  "description": "Common shared code for the Remember Stuff web app.",
+  "description": "Common shared code for the Tomster Club web app.",
   "keywords": [
     "ember-addon"
   ],

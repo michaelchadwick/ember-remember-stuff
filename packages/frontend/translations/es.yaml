@@ -59,7 +59,7 @@ components:
     goToProd: Ir a Producción
 sections:
   about:
-    description: "<p><strong>RemEmber Stuff</strong> es una aplicación web que creé para aprender sobre EmberJS.</p>
+    description: "<p><strong>Tomster Club</strong> es una aplicación web que creé para aprender sobre EmberJS.</p>
 
     <p>Comenzó como una aplicación de chat falsa, como <a href=https://guides.emberjs.com/v5.8.0/components/introducing-components/>eso</a>. Sin embargo, se ha convertido en una página de inicio más personal que incorpora lo que he aprendido sobre EmberJS hasta ahora. Utilizando mis propios intereses y aplicándolos a través de los conceptos de la documentación de EmberJS, he llegado a comprender mejor este marco.</p>
 
@@ -74,7 +74,7 @@ sections:
   contact:
     description: ¿Quieres saludar? ¿Tiene alguna sugerencia para esta aplicación. Escribirme una línea.
   users:
-    description: List of users that exist on RemEmber Stuff
+    description: List of users that exist on Tomster Club
 general:
   actions: Acciones
   add: Agregue
@@ -160,7 +160,7 @@ general:
   month: Mes
   name: Nombre
   navigation: Navegación
-  navigationCompleteText: La navegación de la página de RemEmber Stuff está completa. Ahora puede navegar por el contenido de la página como desee.
+  navigationCompleteText: La navegación de la página de Tomster Club está completa. Ahora puede navegar por el contenido de la página como desee.
   next: Siguiente
   no: No
   noneFound: "No se encontraron {items}."
@@ -186,7 +186,7 @@ general:
   search: Buscar
   send: Enviar
   sendMessage: Envia Mensaje
-  siteTitle: RemEmber Stuff
+  siteTitle: Tomster Club
   skipToMainContent: Saltar al contenido principal
   start: Inicio
   startDate: Fecha de Iniciar
