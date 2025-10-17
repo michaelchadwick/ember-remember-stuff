@@ -27,7 +27,7 @@ export default function (config) {
       this.namespace = '';
 
       this.urlPrefix = 'https://api.github.com/';
-      this.get('repos/michaelchadwick/ember-remember-stuff/commits', (schema, request) => {
+      this.get('repos/michaelchadwick/tomster-club/commits', (schema, request) => {
         console.info('"api.github.com/commits" miragejs request', request);
         return {};
       });

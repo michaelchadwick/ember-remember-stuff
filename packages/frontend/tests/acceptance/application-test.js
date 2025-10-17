@@ -5,7 +5,7 @@ import percySnapshot from '@percy/ember';
 import ENV from 'frontend/config/environment';
 import { getUniqueName } from '../helpers/percy-snapshot-name';
 
-module('Acceptance | remember stuff', function (hooks) {
+module('Acceptance | tomster club', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /', async function (assert) {
@@ -17,11 +17,11 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer.menu').exists();
     assert.dom('footer .links').exists();
     assert.dom('footer .versions').exists();
-    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h1').hasText('Tomster Club');
 
     assert.dom('.checklists').exists();
 
-    assert.strictEqual(document.title, 'RemEmber Stuff', '<title> matches route name');
+    assert.strictEqual(document.title, 'Tomster Club', '<title> matches route name');
   });
 
   test('visiting /about', async function (assert) {
@@ -32,11 +32,11 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer').exists();
     assert.dom('footer .links').exists();
     assert.dom('footer .versions').exists();
-    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h1').hasText('Tomster Club');
     assert.dom('h2').hasText('About the Site');
-    assert.dom('p').hasText('RemEmber Stuff is a web application I built to learn about EmberJS.');
+    assert.dom('p').hasText('Tomster Club is a web application I built to learn about EmberJS.');
 
-    assert.strictEqual(document.title, 'About | RemEmber Stuff', '<title> matches route name');
+    assert.strictEqual(document.title, 'About | Tomster Club', '<title> matches route name');
 
     await click('nav a h1');
 
@@ -51,11 +51,11 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer').exists();
     assert.dom('footer .links').exists();
     assert.dom('footer .versions').exists();
-    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h1').hasText('Tomster Club');
     assert.dom('h2').hasText('Chat Messages');
     assert.dom('div.messages').exists();
 
-    assert.strictEqual(document.title, 'Messages | RemEmber Stuff', '<title> matches route name');
+    assert.strictEqual(document.title, 'Messages | Tomster Club', '<title> matches route name');
 
     await click('nav a h1');
 
@@ -70,10 +70,10 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer').exists();
     assert.dom('footer .links').exists();
     assert.dom('footer .versions').exists();
-    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h1').hasText('Tomster Club');
     assert.dom('h2').hasText('Music');
 
-    assert.strictEqual(document.title, 'Music | RemEmber Stuff', '<title> matches route name');
+    assert.strictEqual(document.title, 'Music | Tomster Club', '<title> matches route name');
 
     await click('nav a h1');
 
@@ -88,11 +88,11 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer').exists();
     assert.dom('footer .links').exists();
     assert.dom('footer .versions').exists();
-    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h1').hasText('Tomster Club');
     assert.dom('h2').hasText('Related Links');
     assert.dom('ul li').exists();
 
-    assert.strictEqual(document.title, 'Links | RemEmber Stuff', '<title> matches route name');
+    assert.strictEqual(document.title, 'Links | Tomster Club', '<title> matches route name');
 
     await click('nav a h1');
 
@@ -108,11 +108,11 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer').exists();
     assert.dom('footer .links').exists();
     assert.dom('footer .versions').exists();
-    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h1').hasText('Tomster Club');
     assert.dom('h2').hasText('Contact');
     assert.dom('.contact-form form').exists();
 
-    assert.strictEqual(document.title, 'Contact | RemEmber Stuff', '<title> matches route name');
+    assert.strictEqual(document.title, 'Contact | Tomster Club', '<title> matches route name');
 
     await click('nav a h1');
 
@@ -127,10 +127,10 @@ module('Acceptance | remember stuff', function (hooks) {
     assert.dom('footer').exists();
     assert.dom('footer .links').exists();
     assert.dom('footer .versions').exists();
-    assert.dom('h1').hasText('RemEmber Stuff');
+    assert.dom('h1').hasText('Tomster Club');
     assert.dom('h2').hasText('Debuggery');
 
-    assert.strictEqual(document.title, 'Debuggery | RemEmber Stuff', '<title> matches route name');
+    assert.strictEqual(document.title, 'Debuggery | Tomster Club', '<title> matches route name');
 
     await click('nav a h1');
 
@@ -141,7 +141,7 @@ module('Acceptance | remember stuff', function (hooks) {
     await visit('/');
 
     assert.dom('nav').exists();
-    assert.dom('nav a.menu-index').hasText('RemEmber Stuff');
+    assert.dom('nav a.menu-index').hasText('Tomster Club');
     assert.dom('nav a.menu-about').hasText('About');
     assert.dom('nav a.menu-messages').hasText('Messages');
     assert.dom('nav a.menu-music').hasText('Music');
