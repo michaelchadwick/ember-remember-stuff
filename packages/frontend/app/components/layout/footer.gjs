@@ -5,6 +5,7 @@ import t from 'ember-intl/helpers/t';
 import { LinkTo } from '@ember/routing';
 import AudioPlayer from 'frontend/components/audio-player';
 import FaIcon from 'frontend/components/fa-icon';
+import Aardvark from 'frontend/components/aardvark';
 
 export default class FooterComponent extends Component {
   @service intl;
@@ -88,6 +89,8 @@ export default class FooterComponent extends Component {
         {{@rsVersionTag}}
         {{@apiVersionTag}}
         {{@frontendVersionTag}}
+        [{{t "general.antCount"}}:
+        <Aardvark />]
       </div>
     </footer>
   </template>
