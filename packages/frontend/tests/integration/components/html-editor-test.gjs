@@ -1,7 +1,7 @@
 import { module, test, todo } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, triggerKeyEvent } from '@ember/test-helpers';
-import { component } from 'rs-common/page-objects/components/html-editor';
+import { component } from 'tc-common/page-objects/components/html-editor';
 import HtmlEditor from 'frontend/components/html-editor';
 
 module('Integration | Component | html editor', function (hooks) {

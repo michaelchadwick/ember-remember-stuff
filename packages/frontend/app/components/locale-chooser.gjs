@@ -3,14 +3,14 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 import { guidFor } from '@ember/object/internals';
-import { findById, uniqueValues } from 'rs-common/utils/array-helpers';
+import { findById, uniqueValues } from 'tc-common/utils/array-helpers';
 import { task, timeout } from 'ember-concurrency';
 import onClickOutside from 'ember-click-outside/modifiers/on-click-outside';
 import { on } from '@ember/modifier';
 import t from 'ember-intl/helpers/t';
 import { concat, fn } from '@ember/helper';
 import eq from 'ember-truth-helpers/helpers/eq';
-import focus from 'rs-common/modifiers/focus';
+import focus from 'tc-common/modifiers/focus';
 import FaIcon from 'frontend/components/fa-icon';
 
 export default class LocaleChooserComponent extends Component {

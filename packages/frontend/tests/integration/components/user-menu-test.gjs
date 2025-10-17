@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
 import component from 'frontend/tests/pages/components/user-menu';
 import a11yAudit from 'ember-a11y-testing/test-support/audit';
-// import { setupAuthentication } from 'rs-common';
+// import { setupAuthentication } from 'tc-common';
 import { setupMirage } from 'frontend/tests/test-support/mirage';
 import UserMenu from 'frontend/components/user-menu';
 

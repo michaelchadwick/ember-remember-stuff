@@ -1,7 +1,7 @@
 import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
-import { component } from 'rs-common/page-objects/components/user-name-info';
+import { component } from 'tc-common/page-objects/components/user-name-info';
 import { setupMirage } from 'frontend/tests/test-support/mirage';
 import UserNameInfo from 'frontend/components/user-name-info';
 

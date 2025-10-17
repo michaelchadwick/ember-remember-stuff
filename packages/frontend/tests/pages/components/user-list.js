@@ -1,5 +1,5 @@
 import { clickable, collection, create } from 'ember-cli-page-object';
-import userNameInfo from 'rs-common/page-objects/components/user-name-info';
+import userNameInfo from 'tc-common/page-objects/components/user-name-info';
 
 const definition = {
   scope: '[data-test-user-list]',

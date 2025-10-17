@@ -5,7 +5,7 @@ import { htmlSafe } from '@ember/template';
 import { restartableTask, timeout } from 'ember-concurrency';
 import perform from 'ember-concurrency/helpers/perform';
 import SimpleChart from 'ember-simple-charts/components/simple-chart';
-import getElement from 'rs-common/modifiers/get-element';
+import getElement from 'tc-common/modifiers/get-element';
 
 export default class ChartComponent extends Component {
   @tracked tooltipContent = null;

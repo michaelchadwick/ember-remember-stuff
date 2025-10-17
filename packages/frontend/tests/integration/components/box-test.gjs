@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, click, waitFor } from '@ember/test-helpers';
-import { component } from 'rs-common/page-objects/components/box';
+import { component } from 'tc-common/page-objects/components/box';
 import Box from 'frontend/components/box';
 
 module('Integration | Component | box', function (hooks) {

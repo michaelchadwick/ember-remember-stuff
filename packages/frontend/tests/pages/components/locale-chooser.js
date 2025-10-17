@@ -1,5 +1,5 @@
 import { create, collection, triggerable } from 'ember-cli-page-object';
-import { hasFocus } from 'rs-common';
+import { hasFocus } from 'tc-common';
 export default create({
   scope: '[data-test-locale-chooser]',
   toggle: {

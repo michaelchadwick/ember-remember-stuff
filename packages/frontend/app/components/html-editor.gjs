@@ -6,17 +6,17 @@ import { guidFor } from '@ember/object/internals';
 import { modifier } from 'ember-modifier';
 import { on } from '@ember/modifier';
 import t from 'ember-intl/helpers/t';
-import pick from 'rs-common/helpers/pick';
+import pick from 'tc-common/helpers/pick';
 import set from 'ember-set-helper/helpers/set';
 import not from 'ember-truth-helpers/helpers/not';
 import onKey from 'ember-keyboard/modifiers/on-key';
 import { task } from 'ember-concurrency';
 import perform from 'ember-concurrency/helpers/perform';
-import YupValidations from 'rs-common/classes/yup-validations';
+import YupValidations from 'tc-common/classes/yup-validations';
 import { string } from 'yup';
 import YupValidationMessage from 'frontend/components/yup-validation-message';
 import { TrackedAsyncData } from 'ember-async-data';
-import { loadQuillEditor } from 'rs-common/utils/load-quill-editor';
+import { loadQuillEditor } from 'tc-common/utils/load-quill-editor';
 
 const DEFAULT_URL_VALUE = 'https://';
 

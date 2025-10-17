@@ -3,7 +3,7 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { on } from '@ember/modifier';
 import t from 'ember-intl/helpers/t';
-import pick from 'rs-common/helpers/pick';
+import pick from 'tc-common/helpers/pick';
 import set from 'ember-set-helper/helpers/set';
 import autofocus from 'frontend/modifiers/autofocus';
 

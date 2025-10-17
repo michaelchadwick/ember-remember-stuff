@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-// import { loadQuillEditor } from 'rs-common/utils/load-quill-editor';
+// import { loadQuillEditor } from 'tc-common/utils/load-quill-editor';
 
 export default class ContactRoute extends Route {
   model() {

@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { htmlSafe } from '@ember/template';
-import { component } from 'rs-common/page-objects/components/fa-icon';
+import { component } from 'tc-common/page-objects/components/fa-icon';
 import FaIcon from 'frontend/components/fa-icon';
 
 module('Integration | Component | fa-icon', function (hooks) {

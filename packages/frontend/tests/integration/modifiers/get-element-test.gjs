@@ -1,7 +1,7 @@
 import { module, test, todo } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import getElement from 'rs-common/modifiers/get-element';
+import getElement from 'tc-common/modifiers/get-element';
 
 module('Integration | Modifier | get-element', function (hooks) {
   setupRenderingTest(hooks);

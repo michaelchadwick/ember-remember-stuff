@@ -2,7 +2,7 @@ import { module, skip } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, click } from '@ember/test-helpers';
 import ErrorDisplay from 'frontend/components/error-display';
-import noop from 'rs-common/helpers/noop';
+import noop from 'tc-common/helpers/noop';
 
 module('Integration | Component | error display', function (hooks) {
   setupRenderingTest(hooks);

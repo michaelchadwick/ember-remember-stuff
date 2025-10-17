@@ -47,7 +47,7 @@ module.exports = async function (defaults) {
     autoImport: {
       // adding insertScriptsAt breaks things for this app -_-
       // insertScriptsAt: 'auto-import-scripts',
-      watchDependencies: ['rs-common'],
+      watchDependencies: ['tc-common'],
     },
     sassOptions: {
       extension: 'scss',

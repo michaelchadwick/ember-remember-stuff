@@ -4,7 +4,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { click, render } from '@ember/test-helpers';
 import { on } from '@ember/modifier';
-import pick from 'rs-common/helpers/pick';
+import pick from 'tc-common/helpers/pick';
 
 module('Integration | Helper | pick', function (hooks) {
   setupRenderingTest(hooks);

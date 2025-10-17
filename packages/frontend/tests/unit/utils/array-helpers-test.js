@@ -7,7 +7,7 @@ import {
   uniqueBy,
   uniqueById,
   uniqueValues,
-} from 'rs-common/utils/array-helpers';
+} from 'tc-common/utils/array-helpers';
 import { module, test, todo } from 'qunit';
 
 function getDogs() {
