@@ -83,7 +83,7 @@ export default [
     files: [
       '**/*.cjs',
       'config/**/*.js',
-      'index.js',
+      'tests/dummy/config/**/*.js',
       'testem.js',
       'testem*.js',
       'index.js',
