@@ -273,6 +273,14 @@ ul {
 
 header {
   margin-bottom: 1em;
+
+  img {
+    &.tomster-kawaii {
+      position: relative;
+      top: 6px;
+      transform: rotate(-13deg);
+    }
+  }
 }
 
 main {

@@ -70,6 +70,13 @@ export default class NavBarComponent extends Component {
       @routeChangeValidator={{this.checkRouteChange}}
     />
     <nav aria-label={{t "layout.navPrimary"}} class="nav-bar" data-test-nav-bar>
+      <LinkTo @route="index">
+        <img
+          src="/assets/images/tomster-kawaii-32.png"
+          class="tomster-kawaii"
+          alt={{t "general.siteTitle"}}
+        />
+      </LinkTo>
       <LinkTo @route="index" class="menu-index">
         <h1>{{t "general.siteTitle"}}</h1>
       </LinkTo>
