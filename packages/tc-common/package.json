@@ -12,8 +12,10 @@
     "test": "tests"
   },
   "scripts": {
+    "format": "prettier . --cache --write",
     "lint:css": "stylelint \"**/*.scss\"",
     "lint:css:fix": "stylehint \"**/*.scss\" --fix",
+    "lint:format": "prettier . --cache --check",
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
