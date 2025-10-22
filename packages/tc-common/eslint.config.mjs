@@ -12,24 +12,22 @@
  *     npx eslint --inspect-config
  *
  */
-import globals from "globals";
-import js from "@eslint/js";
+import globals from 'globals';
+import js from '@eslint/js';
 
-import ember from "eslint-plugin-ember/recommended";
-import eslintConfigPrettier from "eslint-config-prettier";
-import qunit from "eslint-plugin-qunit";
-import n from "eslint-plugin-n";
+import ember from 'eslint-plugin-ember/recommended';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import qunit from 'eslint-plugin-qunit';
+import n from 'eslint-plugin-n';
 
-import babelParser from "@babel/eslint-parser";
+import babelParser from '@babel/eslint-parser';
 
 const esmParserOptions = {
   ecmaFeatures: { modules: true },
-  ecmaVersion: "latest",
+  ecmaVersion: 'latest',
   requireConfigFile: false,
   babelOptions: {
-    plugins: [
-      ["@babel/plugin-proposal-decorators", { decoratorsBeforeExport: true }],
-    ],
+    plugins: [['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }]],
   },
 };
 
@@ -43,28 +41,28 @@ export default [
    * https://eslint.org/docs/latest/use/configure/ignore
    */
   {
-    ignores: ["dist/", "node_modules/", "coverage/", "!**/.*"],
+    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
   },
   /**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
    */
   {
     linterOptions: {
-      reportUnusedDisableDirectives: "error",
+      reportUnusedDisableDirectives: 'error',
     },
     rules: {
-      "no-duplicate-imports": "error",
-      "no-console": ["error", { allow: ["info", "warn", "error"] }],
+      'no-duplicate-imports': 'error',
+      'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
     },
   },
   {
-    files: ["**/*.js"],
+    files: ['**/*.js'],
     languageOptions: {
       parser: babelParser,
     },
   },
   {
-    files: ["**/*.{js,gjs}"],
+    files: ['**/*.{js,gjs}'],
     languageOptions: {
       parserOptions: esmParserOptions,
       globals: {
@@ -73,7 +71,8 @@ export default [
     },
   },
   {
-    files: ["tests/**/*-test.{js,gjs}"],
+    ...qunit.configs.recommended,
+    files: ['tests/**/*-test.{js,gjs}'],
     plugins: {
       qunit,
     },
@@ -82,26 +81,27 @@ export default [
    * CJS node files
    */
   {
+    ...n.configs['flat/recommended-script'],
     files: [
-      "**/*.cjs",
-      "config/**/*.js",
-      "tests/dummy/config/**/*.js",
-      "testem.js",
-      "testem*.js",
-      "index.js",
-      ".prettierrc.js",
-      ".stylelintrc.js",
-      ".template-lintrc.js",
-      "ember-cli-build.js",
-      "lib/*/index.js",
+      '**/*.cjs',
+      'config/**/*.js',
+      'tests/dummy/config/**/*.js',
+      'testem.js',
+      'testem*.js',
+      'index.js',
+      '.prettierrc.js',
+      '.stylelintrc.js',
+      '.template-lintrc.js',
+      'ember-cli-build.js',
+      'lib/*/index.js',
     ],
     plugins: {
       n,
     },
 
     languageOptions: {
-      sourceType: "script",
-      ecmaVersion: "latest",
+      sourceType: 'script',
+      ecmaVersion: 'latest',
       globals: {
         ...globals.node,
       },
@@ -111,14 +111,15 @@ export default [
    * ESM node files
    */
   {
-    files: ["**/*.mjs"],
+    ...n.configs['flat/recommended-module'],
+    files: ['**/*.mjs'],
     plugins: {
       n,
     },
 
     languageOptions: {
-      sourceType: "module",
-      ecmaVersion: "latest",
+      sourceType: 'module',
+      ecmaVersion: 'latest',
       parserOptions: esmParserOptions,
       globals: {
         ...globals.node,

@@ -3,5 +3,21 @@
     Setting `isTypeScriptProject` to true will force the blueprint generators to generate TypeScript
     rather than JavaScript by default, when a TypeScript version of a given blueprint is available.
   */
+<<<<<<< HEAD
   "isTypeScriptProject": false
+=======
+  "isTypeScriptProject": false,
+
+  /**
+    Setting `componentAuthoringFormat` to "strict" will force the blueprint generators to generate GJS
+    or GTS files for the component and the component rendering test. "strict" is the default.
+  */
+  "componentAuthoringFormat": "strict",
+
+  /**
+    Setting `routeAuthoringFormat` to "strict" will force the blueprint generators to generate GJS
+    or GTS templates for routes. "strict" is the default
+  */
+  "routeAuthoringFormat": "strict"
+>>>>>>> 909fb2c (v6.5.0...v6.8.0)
 }
